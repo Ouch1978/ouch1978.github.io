@@ -18,9 +18,7 @@ draft: false
 
 基本上會看到的現象就是瀏覽器無法被正常啟動，而從 Appium 的 Console 裡則會看到如下圖的錯誤訊息：
 
-[![Chrome version must be => xxx][image-01]][image-01]
-
-[image-01]: 01-chrome-version-must-be-greator-than-error.png "Chrome version must be => xxx"
+![image-01] (01-chrome-version-must-be-greator-than-error.png "Chrome version must be => xxx")
 
 > Encountered internal error running command: Error: unknown error: Chrome version must be >= 55.0.2883.0
 > (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)
@@ -35,9 +33,7 @@ draft: false
 
 原來就在 Appium Desktop 的 `Advanced` 頁籤下的 `Chromedriver Binary Path` 。
 
-[![Chromedriver Binary Path][image-02]][image-02]
-
-[image-02]: 02-chromedriver-binary-path.png "Chromedriver Binary Path"
+![image-02](02-chromedriver-binary-path.png "Chromedriver Binary Path")
 
 遇到類似問題的話，只要到 [ChromeDriver 官方下載網站][link-01]下載舊版的 ChromeDriver ，並且把完整的路徑(包含檔名)填入 Chromedriver Binary Path 欄位裡就行啦!!
 
@@ -45,9 +41,7 @@ draft: false
 
 設定完畢之後，按下 Start Server v1.6.4，應該會看到 Appium Console 裡面出現我們自訂的 ChromeDriver 路徑。
 
-[![套用自訂版本的 Chromedriver][image-03]][image-03]
-
-[image-03]: 03-customized-version-of-chromedriver-applied.png "套用自訂版本的 Chromedriver"
+![image-03](03-customized-version-of-chromedriver-applied.png "套用自訂版本的 Chromedriver")
 
 只要使用有支援作業系統中內建瀏覽器版本的 ChromeDriver ，測試應該就又可以順利的跑完囉!!~
 

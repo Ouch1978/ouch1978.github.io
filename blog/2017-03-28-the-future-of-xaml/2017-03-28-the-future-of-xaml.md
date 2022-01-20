@@ -41,21 +41,15 @@ XAML 的全名為 E`x`tensible `A`pplication `M`arkup `L`anguage ，我們可以
 平常有在以 C# 撰寫程式的朋友們應該對 Edit & Continue 的功能不陌生，也應該因為它的存在，在進行除錯的的時候得到了不少的幫助。
 而自從 Visual Studio 2015 Update 2 推出之後， XAML 開發者們也能享受到相同的好處，透過 XAML Edit & Continue 的功能在進行除錯的同時，也可以透過所視即所得的方式同時以 XAML 語法編輯你的 UI。
 
-[![透過 XAML Edit & Continue 功能在除錯時編輯 UI][image-01]][image-01]
-
-[image-01]: 01-xaml-edit-and-continue.gif "透過 XAML Edit & Continue 功能在除錯時編輯 UI"
+![image-01](01-xaml-edit-and-continue.gif "透過 XAML Edit & Continue 功能在除錯時編輯 UI")
 
 我們也可以透過 Live Visual Tree 面板來觀查我們所設計出來的 UI 的視覺樹是什麼樣的構造，這個在我們想自已刻控制項或是效能校調的時候是非常有幫助的一個功能。
 
-[![透過 Live Visual Tree 面板觀查視覺樹結構][image-02]][image-02]
-
-[image-02]: 02-live-visual-tree.gif "透過 Live Visual Tree 面板觀查視覺樹結構"
+![image-02](02-live-visual-tree.gif "透過 Live Visual Tree 面板觀查視覺樹結構")
 
 同時，也可以透過 Live Property Explorer 來即時的對視覺樹中的控制項進行屬性的編輯並且即時看到效果，而不影響 XAML Code。
 
-[![透過 Live Property Explorer 面板修改控制項屬性][image-03]][image-03]
-
-[image-03]: 03-live-property-explorer.gif "透過 Live Property Explorer 修改控制項屬性"
+![image-03](03-live-property-explorer.gif "透過 Live Property Explorer 修改控制項屬性")
 
 是不是很方便啊!?
 

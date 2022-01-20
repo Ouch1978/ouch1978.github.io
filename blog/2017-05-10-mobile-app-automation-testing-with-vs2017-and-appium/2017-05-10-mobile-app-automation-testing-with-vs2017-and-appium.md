@@ -8,18 +8,17 @@ draft: false
 
 ## 前言
 
-在先前的 [透過 Visual Studio 2017 與 Appium 測試安卓手機上的行動版網頁](/2017/04/17/mobile-web-automation-testing-with-vs2017-and-appium/) 一文中跟大家介紹了使用 Appium 來達到 Mobile Web 測試的自動化。
+在先前的 [透過 Visual Studio 2017 與 Appium 測試安卓手機上的行動版網頁](/2017/04/17/mobile-web-automation-testing-with-vs2017-and-appium/2017-04-17-mobile-web-automation-testing-with-vs2017-and-appium) 一文中跟大家介紹了使用 Appium 來達到 Mobile Web 測試的自動化。
 
 不過，在 Mobile 的世界裡， App 才是大家更想關心的事。所以，這次就來跟大家分享使用 Appium 來作到 Moble App 的測試自動化囉!!
 
 <!--truncate-->
 
 在接下去之前，讓我們再來看一次 Appium 的運作架構。
-[![Appium 的運作架構][image-00]][image-00]
 
-[image-00]: 00-the-architecture-of-appium.png "Appium 的運作架構"
+![image-00](00-the-architecture-of-appium.png "Appium 的運作架構")
 
-## 環境準備 
+## 環境準備
 
 在我們動手開始寫程式之前，得要先確認下列項目都已經安裝/設定好：
 
@@ -36,9 +35,8 @@ draft: false
 - 在 Windows 的系統變數中加入 `ANDROID_HOME`，並且將它指到 Android SDK 的安裝路徑(預設為 C:\Program Files (x86)\Android\android-sdk)
 
 - 在 Windows 的系統變數中加入 `JAVA_HOME` ，並且並將它指定到 Java SDK 的 bin 資料夾
-  [![設定 JAVA_HOME 路徑][image-01]][image-01]
 
-  [image-01]: 01-set-android-home-and-java-home.png "設定 JAVA_HOME 路徑"
+  ![image-01](01-set-android-home-and-java-home.png "設定 JAVA_HOME 路徑")
 
 - 在 Windows 系統變數中的 Path 項目中加上以下幾個路徑：
 
@@ -46,9 +44,8 @@ draft: false
   - %ANDROID_HOME%
   - %ANDROID_HOME%\tools\
   - %ANDROID_HOME%\platform-tools\
-    [![設定 Path 中的路徑][image-02]][image-02]
 
-    [image-02]: 02-add-paths.png "設定 Path 中的路徑"
+    ![image-02] (02-add-paths.png "設定 Path 中的路徑")
 
 ## Android 模擬器設定
 
@@ -59,23 +56,17 @@ draft: false
 
 [haxm]: https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager "Intel® Hardware Accelerated Execution Manager"
 
-[![安裝Google APIs Intel x86 Atom System Image][image-03]][image-03]
-
-[image-03]: 03-install-google-apis-intel-x86-atom-system-image.png "安裝Google APIs Intel x86 Atom System Image"
+![image-03](03-install-google-apis-intel-x86-atom-system-image.png "安裝Google APIs Intel x86 Atom System Image")
 
 > 若有啟用 Hyper-V 的話，HAXM 可能會和它相衝，這時候可以透過在命令提示字元輸入 `bcdedit /set hypervisorlaunchtype off` 之後重新開機以關閉 Hyper-V 。
 
 SDK 更新完之後，就可以透過 Tools -> Android -> Android Emulator Manager... 來管理虛擬機囉。在這邊，我選擇修改原來內建的 AVD_GalaxyNexus_ToolsForApacheCordova，並且調整 CPU/ABI 為 `Google APIs Intel Atom (x86)`、Skin 為 `Skin with dynamic hardware controls`、勾選 `Use Host GPU`。
 
-[![編輯安卓模擬器設定][image-04]][image-04]
-
-[image-04]: 04-edit-android-virtual-device.png "編輯安卓模擬器設定"
+![image-04](04-edit-android-virtual-device.png "編輯安卓模擬器設定")
 
 設定完成之後，就可以按下 Android Virtual Device (AVD) Manager 裡面的啟動按鈕來開啟模擬器啦~
 
-[![按下Start鈕啟動模擬器][image-05]][image-05]
-
-[image-05]: 05-press-start-button-to-launch-android-emulator.png "按下Start鈕啟動模擬器"
+![image-05](05-press-start-button-to-launch-android-emulator.png "按下Start鈕啟動模擬器")
 
 如果看到模擬器正常執行，就可以開始動手寫測試程式囉。
 
@@ -218,15 +209,11 @@ AppiumDriver<AndroidElement> \_driver;
 在進行測試之前，請先將 App 佈署到要測試的裝置上，並且打開桌上面的 Appium 圖示來啟動 Appium Server。
 基本上，完全不需要更改任何設定，只需要按下 Start Server 1.6.4 按鈕就行了。
 
-[![按下 Start Server 1.6.4 按鈕][image-07]][image-07]
-
-[image-07]: 07-start-appium-server.png "按下 Start Server 1.6.4 按鈕"
+![image-07](07-start-appium-server.png "按下 Start Server 1.6.4 按鈕")
 
 Appium Server 啟動之後的畫面如下：
 
-[![Appium Server 啟動後的畫面][image-08]][image-08]
-
-[image-08]: 08-appium-server-started.png "Appium Server 啟動後的畫面"
+![image-08](08-appium-server-started.png "Appium Server 啟動後的畫面")
 
 > 在開始執行測試之前，請務必先確認 Appium Server 已經正常啟動，而且 Android 模擬器也能正常運作。
 
@@ -240,9 +227,7 @@ Appium Server 啟動之後的畫面如下：
 
 在撰寫測試程式的時候，也可以透過 Android SDK 中的 UI Automator Viewer 來了解 App 中控制項的名稱和位置等等關係。
 
-[![UI Automator Viewer][image-09]][image-09]
-
-[image-09]: 09-ui-automator-viewer.png "UI Automator Viewer"
+![image-09](09-ui-automator-viewer.png "UI Automator Viewer")
 
 > 可以透過 C:\Program Files (x86)\Android\android-sdk\tools\uiautomatorviewer.bat 來啟動 UI Automator Viewer。
 

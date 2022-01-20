@@ -10,9 +10,7 @@ draft: false
 
 這幾天在試玩 Windows Insider Preview 版 Windows 的時候，赫然發現在 Windows Indider Program 裡面的更新選項變得跟之前不太一樣了 -- 除了之前可以選取從 Fast Ring 和 Slow Ring 進行更新之外，現在在 Fast Ring 中的使用者們還會得到另一個 "`您想要接收哪一類的內容?`" 選項，而裡面的項目則包含了 "`Active development of Windows`" 和 "`Skip ahead to the next Windows release`" 這兩種。
 
-[![Windows 測試人員計畫的新選項][image-01]][image-01]
-
-[image-01]: 01-new-options-in-fast-ring.png "Windows 測試人員計畫的新選項"
+![image-01](01-new-options-in-fast-ring.png "Windows 測試人員計畫的新選項")
 
 而且手機版和桌機版都有這個選項。(但是我的手機還來不及截圖，很開心的升級到 15237 版之後，那個選項就不見了)
 
@@ -26,9 +24,7 @@ draft: false
 
 簡單的說，目前的 Windows 10 原始碼可以分成幾個分支，分別是開發中版本、Windows 測試人員預覽分支和當前版本分支(雖然還有企業版分支和長期支援分支，不過我們就先略過不看...)
 
-[![Windows 版本分支與測試人員計畫關係簡圖][image-02]][image-02]
-
-[image-02]: 02-windows-branches.png "Windows 版本分支與測試人員計畫關係簡圖"
+![image-02](02-windows-branches.png "Windows 版本分支與測試人員計畫關係簡圖")
 
 目前的當前版本分支當然就是一般使用者正在使用中的 RS2 正式版的內容啦。
 
@@ -50,14 +46,10 @@ draft: false
 
 很神奇的，這幾天重新下載了 Insider Preview 16251 版重新安裝之後，Skip ahead to the next Windows release 這個選項又被打開了，而且還可以直接透過 Windwos Update 更新到 Build 16257.re_prerelease.170728-1630 版。(雖然說這個應該和 Skip ahead to the next Windows release 應該沒有什麼直接的關係啦...)
 
-[![已經可以透過 Windwos Update 更新到 Build 16257.re_prerelease.170728-1630 版][image-03]][image-03]
-
-[image-03]: 03-update-to-16257.rs_prerelease.png "已經可以透過 Windwos Update 更新到 Build 16257.re_prerelease.170728-1630 版"
+![image-03]( 03-update-to-16257.rs_prerelease.png "已經可以透過 Windwos Update 更新到 Build 16257.re_prerelease.170728-1630 版)"
 
 但是至少 Skip ahead to the next Windows release 現在是可以選的囉!!
 
-[![Skip ahead to the next Windows release 選項又復活了][image-04]][image-04]
-
-[image-04]: 04-skip-ahead-to-the-next-Windows-release-enabled-again.png "Skip ahead to the next Windows release 選項又復活了"
+![image-04](04-skip-ahead-to-the-next-Windows-release-enabled-again.png "Skip ahead to the next Windows release 選項又復活了")
 
 至於之後什麼時候才能得到 RS4 相關功能的更新呢?? 讓我們繼續看下去~~

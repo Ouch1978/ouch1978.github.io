@@ -24,9 +24,7 @@ draft: false
 
 接著在彈出來的 Advanced Build Settings(進階建置設定) 視窗中的 Language version(語言版本) 下拉選單中挑選 C# 7.2 後按下 OK 按鈕。
 
-[![設定專案支援的語言版本為 C# 7.2][image-01]][image-01]
-
-[image-01]: 01-set-language-version-to-csharp-7.2.png "設定專案支援的語言版本為 C# 7.2"
+![image-01](01-set-language-version-to-csharp-7.2.png "設定專案支援的語言版本為 C# 7.2")
 
 之後就可以在專案中使用 C# 7.2 進行開發囉!!
 
@@ -132,9 +130,7 @@ private int[] \_binaryWithSeparaters = { 0b_0000_0001 , 0b_0000_0010 , 0b_0000_0
 
 所以目前 C# 7.2 所支援的各種修飾詞和提供的組合及效果如下：
 
-[![設定專案支援的語言版本為 C# 7.2][image-02]][image-02]
-
-[image-02]: 02-modifiers-in-csharp-7.2.png "設定專案支援的語言版本為 C# 7.2"
+![image-02](02-modifiers-in-csharp-7.2.png "設定專案支援的語言版本為 C# 7.2")
 
 ## 後記
 
@@ -142,4 +138,5 @@ private int[] \_binaryWithSeparaters = { 0b_0000_0001 , 0b_0000_0010 , 0b_0000_0
 在此也將當天的[投影片][link-01]和[活動投影片連結][link-02]分享出來，有興趣的朋友不妨也下載來看看。
 
 [link-01]: https://github.com/Study4/study4love-2018/blob/master/light%20talk/%E4%BA%94%E5%88%86%E9%90%98%E7%9C%8B%E5%AE%8C%20C%23%207.2.pptx "五分鐘看完 C# 7.2 投影片"
+
 [link-02]: https://github.com/Study4/study4love-2018 "Study4.TW Study4Love - 與大師對談 投影片"

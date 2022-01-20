@@ -64,9 +64,7 @@ Id 我們可以很輕鬆的透過擴充功能在 Chrome Web Store 裡的連結�
 
 以 Betternet 為例，透過 Chrome extension source viewer 查看內容的話會看到的檔案列表如下圖：
 
-[![The specified Account already exists 錯誤][image-01]][image-01]
-
-[image-01]: 01-view-contents-with-chrome-extension-source-viewer.png "透過 Chrome extension source viewer 查看 Betternet 擴充功能的內容"
+![image-01]( 01-view-contents-with-chrome-extension-source-viewer.png "透過 Chrome extension source viewer 查看 Betternet 擴充)功能的內容"
 
 而那個 `panel/index.html` 就是我們之後要用來互動的目標。
 
@@ -74,9 +72,7 @@ Id 我們可以很輕鬆的透過擴充功能在 Chrome Web Store 裡的連結�
 
 所以我們只要在 Chrome 的網址列輸入 `chrome-extension://gjknjjomckknofjidppipffbpoekiipm/panel/index.html` 網址，就可以看到該擴充功能的頁面，如下圖：
 
-[![The specified Account already exists 錯誤][image-02]][image-02]
-
-[image-02]: 02-browse-extension-page-with-url.png "透過網址直接開啟擴充功能的頁面"
+![image-02](02-browse-extension-page-with-url.png "透過網址直接開啟擴充功能的頁面")
 
 ### 在自動化程式中指定 Chrome 開啟擴充功能
 
