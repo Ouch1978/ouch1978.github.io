@@ -35,9 +35,7 @@ bcdedit /copy {current} /d "Microsoft Windows 10 – No Hypervisor"
 
 執行成功之後會得到一串機碼值，如下圖。
 
-[![建立一組新的開機設定][image-01]][image-01]
-
-[image-01]: 01-copy-a-new-boot-setting.png "建立一組新的開機設定"
+![image-01](01-copy-a-new-boot-setting.png "建立一組新的開機設定")
 
 1. 複製步驟一產生的機碼，並且接著輸入：
 
@@ -47,15 +45,11 @@ bcdedit /set {步驟一產生的機碼} hypervisorlaunchtype off
 
 如果出現操作順利完成的訊息，就代表完成啦!!~
 
-[![將新的開機設定中的 Hypervisor 啟動方式設定為 Off][image-02]][image-02]
-
-[image-02]: 02-set-hypervisor-launchtype-off.png "將新的開機設定中的 Hypervisor 啟動方式設定為 Off"
+![image-02](02-set-hypervisor-launchtype-off.png "將新的開機設定中的 Hypervisor 啟動方式設定為 Off")
 
 之後只要重新開機，就會出現像下圖的選單，這時候我們就可以在要使用安卓模擬器的時候用關閉 Hypervisor 的設定來開機囉!!~
 
-[![之後開機時就能選擇是否要開啟 Hypervisor 囉!!][image-03]][image-03]
-
-[image-03]: 03-can-choose-between-enable-hypervisor-or-not.png "之後開機時就能選擇是否要開啟 Hypervisor 囉!!"
+![image-03](03-can-choose-between-enable-hypervisor-or-not.png "之後開機時就能選擇是否要開啟 Hypervisor 囉!!")
 
 ## 解法二：安裝 Visual Studio Emulator for Android
 
@@ -63,23 +57,17 @@ bcdedit /set {步驟一產生的機碼} hypervisorlaunchtype off
 
 不過幸好我們還是可以手動下載之前在 Visual Studio 2015 裡內建的 Visual Studio Emulator for Android。
 
-[![Visual Studio Emulator for Android 的模擬器外觀][image-04]][image-04]
-
-[image-04]: 04-visual-studio-emulator-for-android.png "Visual Studio Emulator for Android 的模擬器外觀"
+![image-04](04-visual-studio-emulator-for-android.png "Visual Studio Emulator for Android 的模擬器外觀")
 
 更讓人開心的是，它原生就支援 x86 架構的安卓模擬器，有了它，就不用再忍受 ARM 架構模擬器的龜速囉!!
 
-[![Visual Studio Emulator for Android 原生就支援 x86 架構][image-05]][image-05]
-
-[image-05]: 05-x86-architecture-supported-for-visual-studio-emulator-for-android.png "Visual Studio Emulator for Android 原生就支援 x86 架構"
+![image-05]( 05-x86-architecture-supported-for-visual-studio-emulator-for-android.png "Visual Studio Emulator for Android 原)生就支援 x86 架構"
 
 尤於 Visual Studio Emulator for Android 也是基於 Hyper-V 技術打造出來的，所以它和 Hyper-V 完全不會互相衝突。
 
 而且它也內建了加速器、GPS、電量、相機等等相關的模擬功能，用起來並不輸給 Google 原生的模擬器喔!!
 
-[![Visual Studio Emulator for Android 內建的加速器模擬功能][image-06]][image-06]
-
-[image-06]: 06-built-in-accelerometer-simulator.png "Visual Studio Emulator for Android 內建的加速器模擬功能"
+![image-06](06-built-in-accelerometer-simulator.png "Visual Studio Emulator for Android 內建的加速器模擬功能")
 
 Visual Studio Emulator for Android 的下載點[在此][link-01]。
 

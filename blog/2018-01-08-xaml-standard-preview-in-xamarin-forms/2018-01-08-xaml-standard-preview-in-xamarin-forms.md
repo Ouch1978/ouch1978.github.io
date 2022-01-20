@@ -32,9 +32,7 @@ draft: false
 
 首先透過 Visual Studio 2017 建立一個 Cross Platform 的專案，並且在專案樣版設定的步驟選取使用 .Net Standard 作為程式碼共享的策略。
 
-[![以 .Net Standard 作為共享策略][image-01]][image-01]
-
-[image-01]: 01-create-with-dot-net-standard.png "以 .Net Standard 作為共享策略"
+![image-01](01-create-with-dot-net-standard.png "以 .Net Standard 作為共享策略")
 
 在專案建立完成之後，可以先下載 [Xamarin.Forms.Alias.2.5.1.87875.nupkg][link-01]，並且將它放到一個好記的資料夾裡面。
 
@@ -42,33 +40,25 @@ draft: false
 
 接著在 Visual Studio 2017 中點選 Tools -> NuGet Package Manager -> Package Manager Settings，如下圖：
 
-[![NuGet Package Manager Settings][image-02]][image-02]
-
-[image-02]: 02-open-package-manager-settings.png "NuGet Package Manager Settings"
+![image-02](02-open-package-manager-settings.png "NuGet Package Manager Settings")
 
 然後在 Package Sources 中加入一個自定的 Package Source，並且將 Source 的路徑指到存放 nupkg 檔的資料夾。
 
-[![自訂 Package Source][image-03]][image-03]
-
-[image-03]: 03-add-custom-nuget-source.png "自訂 Package Source"
+![image-03](03-add-custom-nuget-source.png "自訂 Package Source")
 
 完成之後，就依序在我們想要使用 XAML Standrd 的專案中各自加入 Xamarin.Forms.Alias 的參考。
 
 比較快的作法是：點選 Tools -> NuGet Package Manager -> Manage NuGet Package for Solution...
 
-[![開啟 Manage Nuget Package for Solutions 功能][image-04]][image-04]
-
-[image-04]: 04-open-manage-nuget-package-for-solution-window.png "開啟 Manage Nuget Package for Solutions 功能"
+![image-04](04-open-manage-nuget-package-for-solution-window.png "開啟 Manage Nuget Package for Solutions 功能")
 
 然後勾選 'Include prerelease'，在 Package source 下拉選單中選取我們在上一個步驟手動加入的 source，再勾選要安裝的專案後按下 Install 鈕，即可一次針對多個專案進行安裝。
 
-[![透過 Manage NuGet Package for Solution 為多個專案加入 NuGet 參考][image-05]][image-05]
-
-[image-05]: 05-install-xamarin-forms-alias-to-projects.png "透過 Manage NuGet Package for Solution 為多個專案加入 NuGet 參考"
+![image-05](05-install-xamarin-forms-alias-to-projects.png "透過 Manage NuGet Package for Solution 為多個專案加入 NuGet 參考")
 
 接下來，我們得先在兩個 .cs 檔裡面透過 Alias.Init() 方法針對 XAML Standrd 作初始化 - 分別是安卓專案中的 MainActivity.cs 檔，以及 iOS 專案中的 AppDelegate.cs 檔，修改如下：
 
-``` csharp title="安卓專案裡的 MainActivity.cs"
+```csharp title="安卓專案裡的 MainActivity.cs"
 using System;
 
 using Android.App;
@@ -106,7 +96,7 @@ ToolbarResource = Resource.Layout.Toolbar;
 }
 ```
 
-``` csharp title="安卓專案裡的 AppDelegate.cs"
+```csharp title="安卓專案裡的 AppDelegate.cs"
 
 using System;
 using System.Collections.Generic;
@@ -151,7 +141,7 @@ global::Xamarin.Forms.Forms.Init();
 
 還有要在我們想使用 XAML Standard 的 XAML 檔中加入對 Xamarin.Forms.Alias 的參考。
 
-``` xml title=".Net Standard 專案裡的 MainPage.xaml"
+```xml title=".Net Standard 專案裡的 MainPage.xaml"
 
 <?xml version="1.0" encoding="utf-8" ?>
 
@@ -168,7 +158,7 @@ global::Xamarin.Forms.Forms.Init();
 
 以目前 XAML Standard Preview 已經支援的控制項作出來的小範例如下：
 
-``` xml title=".Net Standard 專案裡的 MainPage.xaml"
+```xml title=".Net Standard 專案裡的 MainPage.xaml"
 
 <?xml version="1.0" encoding="utf-8" ?>
 
@@ -233,9 +223,7 @@ global::Xamarin.Forms.Forms.Init();
 
 上面的程式碼在安卓執行的結果如下圖：
 
-[![本範例在安卓的執行結果][image-06]][image-06]
-
-[image-06]: 06-screenshot-of-android.png "本範例在安卓的執行結果"
+![image-06](06-screenshot-of-android.png "本範例在安卓的執行結果")
 
 本文的範例原始碼連結如下，請自行取用：
 

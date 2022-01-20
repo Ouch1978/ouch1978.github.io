@@ -24,8 +24,6 @@ draft: false
 
 有圖有真相，我們先來看看套用它之後跑起來會長什麼樣子：
 
-[![套用 MaterialDesignXamlToolkit 的應用程式][image-00]][image-00]
-
 [image-00]: 00-material-design-xaml-toolkit-in-live.gif "套用 MaterialDesignXamlToolkit 的應用程式"
 
 ## 安裝與基本使用
@@ -34,9 +32,7 @@ draft: false
 
 首先我們透過 Blend 來建立一個 WPF 專案，接著透過 Manage NuGet Packages... 功能以 `MaterialDesignThemes` 為關鍵字搜尋並且安裝該套件，如下圖：
 
-[![搜尋並安裝 MaterialDesignThemes 套件][image-01]][image-01]
-
-[image-01]: 01-install-through-nuget.png "搜尋並安裝 MaterialDesignThemes 套件"
+![image-01](01-install-through-nuget.png "搜尋並安裝 MaterialDesignThemes 套件")
 
 安裝完畢之後，就可以開啟專案中的 `App.xaml` 檔來進行初步主題的套用囉。
 
@@ -116,9 +112,7 @@ Material Design 的精神之一，就是使用圖示來替代文字，透過簡�
 
 要連視窗都一起套用顏色的話，只需要透過 Nuget 安裝 `MaterialDesignThemes.MahApps` 套件。
 
-[![透過 Nuget 安裝 MaterialDesignThemes.MahApps 套件][image-02]][image-02]
-
-[image-02]: 02-install-materialdesignthemes-mahapps-package.png "透過 Nuget 安裝 MaterialDesignThemes.MahApps 套件"
+![image-02](02-install-materialdesignthemes-mahapps-package.png "透過 Nuget 安裝 MaterialDesignThemes.MahApps 套件")
 
 接著進一步的修改 App.xaml 檔的內容：
 
@@ -200,9 +194,7 @@ Material Design 的精神之一，就是使用圖示來替代文字，透過簡�
 
 執行起來就會像下圖這樣喔!! 是不是很酷炫啊!?
 
-[![套用 MaterialDesignThemes.MahApps 後的視窗樣貌][image-03]][image-03]
-
-[image-03]: 03-apply-material-design-themes-mahapps.png "套用 MaterialDesignThemes.MahApps 後的視窗樣貌"
+![image-03](03-apply-material-design-themes-mahapps.png "套用 MaterialDesignThemes.MahApps 後的視窗樣貌")
 
 ## 總結
 

@@ -24,9 +24,7 @@ draft: false
 
 附帶一提，Appium 的運作架構如下：
 
-[![Appium 的運作架構][image-00]][image-00]
-
-[image-00]: 00-the-architecture-of-appium.png "Appium 的運作架構"
+![image-00](00-the-architecture-of-appium.png "Appium 的運作架構")
 
 ## 環境準備
 
@@ -45,9 +43,8 @@ draft: false
 - 在 Windows 的系統變數中加入 `ANDROID_HOME`，並且將它指到 Android SDK 的安裝路徑(預設為 C:\Program Files (x86)\Android\android-sdk)
 
 - 在 Windows 的系統變數中加入 `JAVA_HOME` ，並且並將它指定到 Java SDK 的 bin 資料夾
-  [![設定 JAVA_HOME 路徑][image-01]][image-01]
 
-  [image-01]: 01-set-android-home-and-java-home.png "設定 JAVA_HOME 路徑"
+  ![image-01](01-set-android-home-and-java-home.png "設定 JAVA_HOME 路徑")
 
 - 在 Windows 系統變數中的 Path 項目中加上以下幾個路徑：
 
@@ -55,9 +52,8 @@ draft: false
   - %ANDROID_HOME%
   - %ANDROID_HOME%\tools\
   - %ANDROID_HOME%\platform-tools\
-    [![設定 Path 中的路徑][image-02]][image-02]
 
-    [image-02]: 02-add-paths.png "設定 Path 中的路徑"
+    ![image-02](02-add-paths.png "設定 Path 中的路徑")
 
 ## Android 模擬器設定
 
@@ -68,23 +64,17 @@ draft: false
 
 [haxm]: https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager "Intel® Hardware Accelerated Execution Manager"
 
-[![安裝Google APIs Intel x86 Atom System Image][image-03]][image-03]
-
-[image-03]: 03-install-google-apis-intel-x86-atom-system-image.png "安裝Google APIs Intel x86 Atom System Image"
+![image-03](03-install-google-apis-intel-x86-atom-system-image.png "安裝Google APIs Intel x86 Atom System Image")
 
 > 若有啟用 Hyper-V 的話，HAXM 可能會和它相衝，這時候可以透過在命令提示字元輸入 `bcdedit /set hypervisorlaunchtype off` 之後重新開機以關閉 Hyper-V 。
 
 SDK 更新完之後，就可以透過 Tools -> Android -> Android Emulator Manager... 來管理虛擬機囉。在這邊，我選擇修改原來內建的 AVD_GalaxyNexus_ToolsForApacheCordova，並且調整 CPU/ABI 為 `Google APIs Intel Atom (x86)`、Skin 為 `Skin with dynamic hardware controls`、勾選 `Use Host GPU`。
 
-[![編輯安卓模擬器設定][image-04]][image-04]
-
-[image-04]: 04-edit-android-virtual-device.png "編輯安卓模擬器設定"
+![image-04](04-edit-android-virtual-device.png "編輯安卓模擬器設定")
 
 設定完成之後，就可以按下 Android Virtual Device (AVD) Manager 裡面的啟動按鈕來開啟模擬器啦~
 
-[![按下Start鈕啟動模擬器][image-05]][image-05]
-
-[image-05]: 05-press-start-button-to-launch-android-emulator.png "按下Start鈕啟動模擬器"
+![image-05](05-press-start-button-to-launch-android-emulator.png "按下Start鈕啟動模擬器")
 
 如果看到模擬器正常執行，就可以開始動手寫測試程式囉。
 
@@ -92,15 +82,13 @@ SDK 更新完之後，就可以透過 Tools -> Android -> Android Emulator Manag
 
 透過 Visual Studio 2017 建立出 Unit Test 專案之後，首先要作的是透過 NuGet Package Manager 在專案中加入 Appium.WebDriver 的參考。
 
-[![透過 NuGet 加入對 Appium 的參考][image-06]][image-06]
-
-[image-06]: 06-add-appium-webdriver-reference-through-nuget.png "透過 NuGet 加入對 Appium 的參考"
+![image-06](06-add-appium-webdriver-reference-through-nuget.png "透過 NuGet 加入對 Appium 的參考")
 
 再來就可以開心的寫程式啦!!~
 
 我的範例程式如下：
 
-``` csharp title="UnitTest1.cs"
+```csharp title="UnitTest1.cs"
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium;
@@ -180,31 +168,23 @@ AppiumDriver<AndroidElement> \_driver;
 在進行測試之前，請先打開桌上面的 Appium 圖示來啟動 Appium Server。
 基本上，完全不需要更改任何設定，只需要按下 Start Server 1.6.4 按鈕就行了。
 
-[![按下 Start Server 1.6.4 按鈕][image-07]][image-07]
-
-[image-07]: 07-start-appium-server.png "按下 Start Server 1.6.4 按鈕"
+![image-07](07-start-appium-server.png "按下 Start Server 1.6.4 按鈕")
 
 Appium Server 啟動之後的畫面如下：
 
-[![Appium Server 啟動後的畫面][image-08]][image-08]
-
-[image-08]: 08-appium-server-started.png "Appium Server 啟動後的畫面"
+![image-08](08-appium-server-started.png "Appium Server 啟動後的畫面")
 
 在開始執行測試之前，請務必先確認 Appium Server 已經正常啟動，而且 Android 模擬器也能正常運作。
 
 接著就可以透過 Test Explorer 來執行我們的測試程式，驗證看看 Appium 是不是真的有那麼厲害囉。
 
-[![實際執行畫面][image-09]][image-09]
-
-[image-09]: 09-automation-running.gif "實際執行畫面"
+![image-09](09-automation-running.gif "實際執行畫面")
 
 因為我最後驗證的條件只有檢查文字，只要瀏覽器中的 Dom 物件找得到該文字就算測試成功了，所以並不需要將畫面往下捲，也是可以通過測試的。
 
 另外，在執行的過程中，我們也可以看到 Appium Server 視窗中處理測試程式中各個動作的 Log。
 
-[![Appium Server 測試期間的 Log][image-10]][image-10]
-
-[image-10]: 10-appium-server-console-log.png "Appium Server 測試期間的 Log"
+![image-10](10-appium-server-console-log.png "Appium Server 測試期間的 Log")
 
 ## 結語
 

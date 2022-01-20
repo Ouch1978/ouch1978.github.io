@@ -12,9 +12,7 @@ draft: false
 
 就當安裝完 Visual Studio 2017 之後，準備首次啟動的時候，輸入完帳號按下下一步按鈕之後，畫面上就出現了 `We are getting things ready` 的訊息，不過因為當時已屆下班時間，我就索性放著讓它跑。
 
-[![We are getting thins ready][image-01]][image-01]
-
-[image-01]: /images/blog-images/2017-08-15-fix-visual-studio-2017-first-launch-stucking\01-we're-getting-things-ready.png "We are getting thins ready"
+![image-01](01-we're-getting-things-ready.png "We are getting thins ready")
 
 沒想到... 隔天回到公司，一看電腦，它居然還是停留在一樣的畫面!!...
 
@@ -30,9 +28,7 @@ draft: false
 
 當時也不知道是哪來的靈感，想說會不會是視窗被擋住了或是被藏起來了，所以就索性的按了 `Alt + Tab` 鈕...
 
-[![透過 Alt + Tab 鈕找到被藏起來的視窗][image-02]][image-02]
-
-[image-02]: /images/blog-images/2017-08-15-fix-visual-studio-2017-first-launch-stucking\02-find-the-missing-window-by-task-switch.png "透過 Alt + Tab 鈕找到被藏起來的視窗"
+![image-02](02-find-the-missing-window-by-task-switch.png "透過 Alt + Tab 鈕找到被藏起來的視窗")
 
 沒想到，還真的是被藏起來了!! 只要手動切換到那個視窗，就可以繼續完成登入的動作了。
 

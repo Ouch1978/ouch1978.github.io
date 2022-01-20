@@ -1,0 +1,8 @@
+build
+
+/node_modules
+
+/src/plugins
+
+/static
+.eslintrc.js

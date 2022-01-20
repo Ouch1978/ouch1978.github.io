@@ -29,23 +29,17 @@ Xamarin.UITest 最吸引人的地方就是可以直接透過 Visual Studio 來�
 廢話不多說，馬上開啟 Visual Studio 2017 來建立一個 Xamarin.UITest 測試專案。
 專案類型使用 `Cross-Platform` -> `UI Test App (Xamarin.UITest|Cross-Platform)`。
 
-[![建立 Xamarin.UITest 測試專案][image-01]][image-01]
-
-[image-01]: 01-create-uitest-project.png "建立 Xamarin.UITest 測試專案"
+![image-01] (01-create-uitest-project.png "建立 Xamarin.UITest 測試專案")
 
 專案建立完成之後，透過方案總管打開內建的 Tests.cs 檔，應該可以看到如下圖的畫面：
 
-[![預設的 Test.cs 內容][image-02]][image-02]
-
-[image-02]: 02-default-test-cs.png "預設的 Test.cs 內容"
+![image-02](02-default-test-cs.png "預設的 Test.cs 內容")
 
 在開始錄製測試的步驟之前，建議先將電腦中的安卓模擬器開起來準備；如果要使用實機進行錄製的話，也請先把機器接上電腦。
 
 只要點選那個錄製符號加閃電的圖示，並且選取 `Record New Test` -> `Select APK`，接著選取要進行測試的 APK 之後，接下來，Visual Studio 就會幫我們把 APK 安裝到模擬器上，並且自動打開它，錄製我們接下來的所有行為。
 
-[![選取 APK 檔][image-03]][image-03]
-
-[image-03]: 03-select-apk-file.png "選取 APK 檔"
+![image-03](03-select-apk-file.png "選取 APK 檔")
 
 這邊我就一樣使用之前用來示範 Appium 自動化測試的同一個 APK 檔來進行測試。
 
@@ -127,33 +121,23 @@ Xamarin.UITest 裡面提供了一個名為 REPL 的工具，可以讓我們在�
 
 當測試程式執行到這一行的時候，就會把 REPL 叫出來，同時將測試暫停在這一行。
 
-[![REPL 視窗][image-04]][image-04]
-
-[image-04]: 04-launch-repl.png "REPL 視窗"
+![image-04](04-launch-repl.png "REPL 視窗")
 
 REPL 裡面也提供了類似 IntelliSense 的功能，只要輸入 app. ，下面就會出現可供使用的方法。
 
-[![REPL 中也支援類似 IntelliSense 的功能][image-05]][image-05]
-
-[image-05]: 05-repl-intelli-sense.png "REPL 中也支援類似 IntelliSense 的功能"
+![image-05](05-repl-intelli-sense.png "REPL 中也支援類似 IntelliSense 的功能")
 
 例如說，我想輸入 app.Query ，我只需要先輸入 app.q , REPL 就會幫我們過濾能使用的方法，再來只要透過 Tab 鍵，就能幫我們完成指令的輸入。
 
-[![REPL 的指令提示功能][image-06]][image-06]
-
-[image-06]: 06-repl-command-hint.png "REPL 的指令提示功能"
+![image-06](06-repl-command-hint.png "REPL 的指令提示功能")
 
 所以我們就可以透過 REPL 來拆解 App 的結構，或是先行一步驗證指令的結果。
 
-[![REPL 的自動完成功能][image-07]][image-07]
-
-[image-07]: 07-repl-command-auto-complete.png "REPL 的自動完成功能"
+![image-07](07-repl-command-auto-complete.png "REPL 的自動完成功能")
 
 也可以在 REPL 裡面直接輸入 tree 指令，列出整個 App UI 的樹狀結構。
 
-[![透過 REPL 的 Tree 指令列出 UI 結構][image-08]][image-08]
-
-[image-08]: 08-repl-tree-command.png "透過 REPL 的 Tree 指令列出 UI 結構"
+![image-08](08-repl-tree-command.png "透過 REPL 的 Tree 指令列出 UI 結構")
 
 有了 REPL 的協助，開發的過程應該就會輕鬆很多囉!!~
 
