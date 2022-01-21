@@ -2,18 +2,6 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
-import {
-  FontAwesomeIcon
-} from "@fortawesome/react-fontawesome";
-
-import {
-  faLinkedin,
-  faGithub,
-  faWeixin,
-} from "@fortawesome/free-brands-svg-icons";
-
-import useBaseUrl from "@docusaurus/useBaseUrl";
-
 const FeatureList = [
   {
     title: 'Easy to Use',
