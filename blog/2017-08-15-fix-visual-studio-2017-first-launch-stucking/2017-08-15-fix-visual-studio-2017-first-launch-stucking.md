@@ -12,7 +12,7 @@ draft: false
 
 就當安裝完 Visual Studio 2017 之後，準備首次啟動的時候，輸入完帳號按下下一步按鈕之後，畫面上就出現了 `We are getting things ready` 的訊息，不過因為當時已屆下班時間，我就索性放著讓它跑。
 
-![image-01](01-we're-getting-things-ready.png "We are getting thins ready")
+![image-01](01-we-are-getting-things-ready.png "We are getting thins ready")
 
 沒想到... 隔天回到公司，一看電腦，它居然還是停留在一樣的畫面!!...
 
