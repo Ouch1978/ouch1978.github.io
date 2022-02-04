@@ -14,6 +14,7 @@
   --ifm-color-primary-lighter: #f24866;
   --ifm-color-primary-lightest: #f56e86;
   --ifm-code-font-size: 95%;
+  --wave-color: #800020;
 }
 
 .docusaurus-highlight-code-line {
@@ -23,6 +24,87 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .docusaurus-highlight-code-line {
+html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.herowave {
+  position: relative;
+  background: #18191a;
+  color: white;
+  height: 40vh;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.herowave h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 4.5rem;
+  margin: 0 0 10px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.herowave h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  margin: 0 0 10px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.herowave p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-color: var(--wave-color);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 500ms;
+}
+
+.waves::before,
+.waves::after {
+  content: "";
+  position: absolute;
+  width: 300vw;
+  height: 300vw;
+  top: -65vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.waves::before {
+  border-radius: 44%;
+  background: rgba(0, 0, 0, 0.25);
+  animation: waves 8s linear infinite;
+}
+
+.waves::after {
+  border-radius: 44%;
+  background: rgba(24, 25, 26, 1);
+  animation: waves 15s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
 }
