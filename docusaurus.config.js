@@ -60,7 +60,7 @@ module.exports = {
     hideableSidebar: true,
     zoomSelector: ".markdown :not(em) > img",
     prism: {
-      additionalLanguages: ["powershell", "csharp", "java", "php"],
+      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php"],
       theme: require("prism-react-renderer/themes/vsDark"),
     },
     navbar: {
