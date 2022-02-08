@@ -4,157 +4,244 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React from 'react';
-import clsx from 'clsx';
-import {MDXProvider} from '@mdx-js/react';
-import Translate, {translate} from '@docusaurus/Translate';
-import Link from '@docusaurus/Link';
-import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
-import {usePluralForm} from '@docusaurus/theme-common';
-import MDXComponents from '@theme/MDXComponents';
-import EditThisPage from '@theme/EditThisPage';
-import styles from './styles.module.css';
-import TagsListInline from '@theme/TagsListInline';
-import BlogPostAuthors from '@theme/BlogPostAuthors'; // Very simple pluralization: probably good enough for now
 
-function useReadingTimePlural() {
-  const {selectMessage} = usePluralForm();
-  return (readingTimeFloat) => {
-    const readingTime = Math.ceil(readingTimeFloat);
-    return selectMessage(
-      readingTime,
-      translate(
-        {
-          id: 'theme.blog.post.readingTime.plurals',
-          description:
-            'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: 'One min read|{readingTime} min read',
-        },
-        {
-          readingTime,
-        },
-      ),
-    );
-  };
-}
+import React, { useContext, useEffect, useState } from "react";
+import clsx from "clsx";
+import { MDXProvider } from "@mdx-js/react";
+
+import Head from "@docusaurus/Head";
+import Link from "@docusaurus/Link";
+import MDXComponents from "@theme/MDXComponents";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
+import { useColorMode } from "@docusaurus/theme-common";
+
+import styles from "./styles.module.css";
+import { MarkdownSection, StyledBlogItem } from "./style";
+
+import Eye from "@site/static/img/eye.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTags } from "@fortawesome/free-solid-svg-icons";
+
+import Translate from "@docusaurus/Translate";
 
 function BlogPostItem(props) {
-  const readingTimePlural = useReadingTimePlural();
-  const {withBaseUrl} = useBaseUrlUtils();
   const {
     children,
     frontMatter,
-    assets,
     metadata,
     truncated,
     isBlogPostPage = false,
+    views,
   } = props;
+  const { date, permalink, tags, readingTime } = metadata;
+
   const {
-    date,
-    formattedDate,
-    permalink,
-    tags,
-    readingTime,
+    slug: postId,
+    author,
     title,
-    editUrl,
-    authors,
-  } = metadata;
-  const image = assets.image ?? frontMatter.image;
-  const truncatedPost = !isBlogPostPage && truncated;
-  const tagsExists = tags.length > 0;
+    image
+  } = frontMatter;
+
+  const authorURL = frontMatter.author_url || frontMatter.authorURL;
+  const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
+  const authorImageURL =
+    frontMatter.author_image_url || frontMatter.authorImageURL;
+  const imageUrl = useBaseUrl(image, { absolute: true });
+
+  // 是否為深色主題：
+  const { isDarkTheme } = useColorMode();
+
+  // 目前語言
+  const {
+    i18n: { currentLocale },
+  } = useDocusaurusContext();
+
+  const dateObj = new Date(date);
+
+  const year = dateObj.getFullYear();
+  let month = dateObj.getMonth() + 1;
+  const day = dateObj.getDate();
+
+  let dateStr = `${year}年${month}月`;
+
+  if (currentLocale === "en") {
+    month = dateObj.toLocaleString("default", { month: "long" });
+    dateStr = `${month}, ${year}`;
+  }
 
   const renderPostHeader = () => {
-    const TitleHeading = isBlogPostPage ? 'h1' : 'h2';
+    const TitleHeading = isBlogPostPage ? "h1" : "h2";
+
     return (
       <header>
-        <TitleHeading className={styles.blogPostTitle} itemProp="headline">
-          {isBlogPostPage ? (
-            title
-          ) : (
-            <Link itemProp="url" to={permalink}>
-              {title}
-            </Link>
+        <TitleHeading
+          className={clsx(
+            isBlogPostPage ? "margin-bottom--md" : "margin-vert--md",
+            styles.blogPostTitle,
+            isBlogPostPage ? "text--center" : ""
           )}
+        >
+          {isBlogPostPage ? title : <Link to={permalink}>{title}</Link>}
         </TitleHeading>
-        <div className={clsx(styles.blogPostData, 'margin-vert--md')}>
-          <time dateTime={date} itemProp="datePublished">
-            {formattedDate}
+        {/* <div className="margin-vert--md">
+          <time dateTime={date} className={styles.blogPostDate}>
+            {month} {day}, {year}{" "}
+            {readingTime && <> · {Math.ceil(readingTime)} min read</>}
           </time>
-
-          {typeof readingTime !== 'undefined' && (
-            <>
-              {' · '}
-              {readingTimePlural(readingTime)}
-            </>
-          )}
-        </div>
-        <BlogPostAuthors authors={authors} assets={assets} />
+        </div> */}
       </header>
     );
   };
 
+  const renderTags = () => {
+    return (
+      (tags.length > 0 || truncated) && (
+        <div className="post__tags-container margin-top--none margin-bottom--md">
+          {tags.length > 0 && (
+            <>
+              <FontAwesomeIcon
+                icon={faTags}
+                color="#c4d3e0"
+                className="margin-right--md"
+              />
+              {tags
+                .slice(0, 4)
+                .map(({ label, permalink: tagPermalink }, index) => (
+                  <Link
+                    key={tagPermalink}
+                    className={`post__tags ${index > 0 ? "margin-horiz--sm" : "margin-right--sm"
+                      }`}
+                    to={tagPermalink}
+                    style={{ fontSize: "0.75em", fontWeight: 500 }}
+                  >
+                    {label}
+                  </Link>
+                ))}
+            </>
+          )}
+        </div>
+      )
+    );
+  };
+
   return (
-    <article
-      className={!isBlogPostPage ? 'margin-bottom--xl' : undefined}
-      itemProp="blogPost"
-      itemScope
-      itemType="http://schema.org/BlogPosting">
-      {renderPostHeader()}
+    <StyledBlogItem
+      isDark={isDarkTheme}
+      isBlogPostPage={isBlogPostPage}
+    // className={isBlogPostPage ? "margin-top--xl" : ""}
+    >
+      <Head>
+        {image && <meta property="og:image" content={imageUrl} />}
+        {image && <meta property="twitter:image" content={imageUrl} />}
+        {image && (
+          <meta name="twitter:image:alt" content={`Image for ${title}`} />
+        )}
+      </Head>
 
-      {image && (
-        <meta
-          itemProp="image"
-          content={withBaseUrl(image, {
-            absolute: true,
-          })}
-        />
-      )}
-
-      <div className="markdown" itemProp="articleBody">
-        <MDXProvider components={MDXComponents}>{children}</MDXProvider>
-      </div>
-
-      {(tagsExists || truncated) && (
-        <footer
-          className={clsx('row docusaurus-mt-lg', {
-            [styles.blogPostDetailsFull]: isBlogPostPage,
-          })}>
-          {tagsExists && (
-            <div
-              className={clsx('col', {
-                'col--9': truncatedPost,
-              })}>
-              <TagsListInline tags={tags} />
+      {/* 統計 */}
+      {isBlogPostPage}
+      <div
+        className={`row 
+         ${!isBlogPostPage ? "blog-list--item" : ""}`}
+        style={{ margin: 0 }}
+      >
+        {/* 列表頁日期 */}
+        {!isBlogPostPage && (
+          <div className="post__date-container col col--3 padding-right--lg margin-bottom--lg">
+            <div className="post__date">
+              <div className="post__day">{day}</div>
+              <div className="post__year_month">{dateStr}</div>
             </div>
-          )}
+            <div className="line__decor"></div>
+          </div>
+        )}
+        <div
+          className={`col ${isBlogPostPage ? `col--12 article__details` : `col--9`
+            }`}
+        >
+          {/* 部落格文章 */}
+          <article
+            className={!isBlogPostPage ? "margin-bottom--md" : undefined}
+          >
+            {/* 標題 */}
+            {renderPostHeader()}
+            {/* 列表頁標籤 */}
+            {!isBlogPostPage && renderTags()}
+            {/* 發佈日期與閱讀時間 */}
+            {isBlogPostPage && (
+              <p className={`single-post--date text--center`}>
+                {dateStr} ·{" "}
+                <Translate
+                  id="blogpage.estimated.time"
+                  description="blog page estimated time"
+                >
+                  預計閱讀時間：
+                </Translate>
+                {readingTime && (
+                  <>
+                    {" "}
+                    {Math.ceil(readingTime)}{" "}
+                    <Translate
+                      id="blogpage.estimated.time.label"
+                      description="blog page estimated time label"
+                    >
+                      分鐘
+                    </Translate>
+                  </>
+                )}
+              </p>
+            )}
+            {/* 標籤 */}
+            {isBlogPostPage && (
+              <>
+                <div className="text--center margin-bottom--xs padding-bottom--xs">
+                  {renderTags()}
+                </div>
+              </>
+            )}
 
-          {isBlogPostPage && editUrl && (
-            <div className="col margin-top--sm">
-              <EditThisPage editUrl={editUrl} />
-            </div>
-          )}
-
-          {truncatedPost && (
-            <div
-              className={clsx('col text--right', {
-                'col--3': tagsExists,
-              })}>
-              <Link
-                to={metadata.permalink}
-                aria-label={`Read more about ${title}`}>
-                <b>
-                  <Translate
-                    id="theme.blog.post.readMore"
-                    description="The label used in blog post item excerpts to link to full blog posts">
-                    Read More
-                  </Translate>
-                </b>
+            {/* 正文 */}
+            <MarkdownSection
+              isBlogPostPage={isBlogPostPage}
+              isDark={isDarkTheme}
+              className="markdown"
+            >
+              <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+            </MarkdownSection>
+            {/* {isBlogPostPage && (
+              <div style={{ marginTop: "1em" }}>
+                {adConfig.articleFooter.map(({ id, alt, imageSrc, link }) => (
+                  <Ad key={id} link={link} src={imageSrc} alt={alt} />
+                ))}
+              </div>
+            )} */}
+            {isBlogPostPage}
+          </article>
+          <footer className="article__footer padding-top--md margin-top--lg margin-bottom--lg">
+            {!isBlogPostPage && (
+              <span className="footer__read_count">
+                <Eye
+                  // color={isDarkTheme ? "#76baff" : "#006dfe"}
+                  className="footer__eye"
+                  style={{ verticalAlign: "middle" }}
+                />{" "}
+                {views}
+              </span>
+            )}
+            {truncated && (
+              <Link to={metadata.permalink} aria-label={`閱讀 ${title} 的全文`}>
+                <strong className={styles.readMore}>
+                  <Translate description="read full text">閱讀全文</Translate>
+                </strong>
               </Link>
-            </div>
-          )}
-        </footer>
-      )}
-    </article>
+            )}
+            {isBlogPostPage}
+          </footer>
+        </div>
+      </div>
+    </StyledBlogItem>
   );
 }
 
