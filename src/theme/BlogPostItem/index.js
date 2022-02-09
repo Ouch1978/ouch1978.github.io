@@ -103,7 +103,6 @@ function BlogPostItem(props) {
             <>
               <FontAwesomeIcon
                 icon={faTags}
-                color="#c4d3e0"
                 className="margin-right--md"
               />
               {tags
