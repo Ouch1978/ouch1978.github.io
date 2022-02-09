@@ -147,7 +147,6 @@ margin - bottom: -2 em;
 
   /* 卡片新拟态特效 */
   .blog-list--item {
-    border-radius: 12px;
     background: var(--blog-item-background-color);
     box-shadow: var(--blog-item-shadow);
     padding: 1em 1em;
