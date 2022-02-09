@@ -15,6 +15,8 @@ draft: false
 
 為了讓這個習慣得以延續下去，路不轉，人轉囉!! 以下就簡單的分享一下怎麼把控制台這個選項加回來的方法：
 
+<!--truncate-->
+
 ## 方法一：透過手動的方式加回來
 
 基本上，Windows 10 開始按鈕右鍵選單的內容會存放在 `%USERPROFILE%\AppData\Local\Microsoft\Windows\WinX` 資料夾裡。所以我們可以這樣作：

@@ -14,6 +14,8 @@
   --ifm-color-primary-lighter: #f24866;
   --ifm-color-primary-lightest: #f56e86;
   --ifm-code-font-size: 95%;
+
+  --ifm-pagination-nav-border-radius: 0;
   --wave-color: #800020;
 
   /* 卡片背景 */
@@ -23,7 +25,7 @@
   --btn-selected: var(--ifm-color-primary);
   --btn-unselected: #cecece;
 
-  --blog-item-shadow: 5px 5px 10px #333333, 0px 0px 0px #333333;
+  --blog-item-shadow: 3px 3px 5px #333333, 0px 0px 0px #333333;
 
   --content-background-color: #fafafa;
 }
