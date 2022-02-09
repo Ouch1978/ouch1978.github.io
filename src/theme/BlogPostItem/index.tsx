@@ -74,20 +74,6 @@ function BlogPostItem(props) {
             </Link>
           )}
         </TitleHeading>
-        <div className='margin-vert--md'>
-          <time dateTime={date} className={styles.blogPostDate}>
-            {dayjs(date).format('YYYY-MM-DD')}
-            {!isBlogPostPage && readingTime && <> · {Math.ceil(readingTime)} min read</>}
-            {isBlogPostPage && readingTime && <> · 预计阅读时间 {Math.ceil(readingTime)} 分钟</>}
-          </time>
-          {isBlogPostPage && (
-            <span className='margin-left--sm' style={{ color: '#8c8c8c' }}>
-              <FontAwesomeIcon icon={Eye} color='#c4d3e0' style={{ verticalAlign: 'middle', marginRight: '0.25rem' }} />
-              <span style={{ fontSize: '0.9rem' }}>{views}</span>
-            </span>
-          )}
-          {renderTags()}
-        </div>
 
         {/*{isBlogPostPage && authors && <BlogPostAuthors authors={authors} assets={assets} />}*/}
       </header>
