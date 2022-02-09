@@ -46,6 +46,10 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "Ouch1978", // Usually your GitHub org/user name.
   projectName: "Ouch1978", // Usually your repo name.
+  i18n: {
+    defaultLocale: 'zh-TW',
+    locales: ['en', 'zh-TW'],
+  },
   plugins: [
     "plugin-image-zoom",
     [

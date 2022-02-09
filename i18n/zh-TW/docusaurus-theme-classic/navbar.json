@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "OUCH1978@GITHUB",
+    "description": "The title in the navbar"
+  },
+  "item.label.Documents": {
+    "message": "Documents",
+    "description": "Navbar item with label Documents"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  }
+}
