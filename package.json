@@ -30,6 +30,7 @@
     "bootstrap": "4.6.0",
     "cheerio-select": "^1.4.0",
     "clsx": "^1.1.1",
+    "dayjs": "^1.10.7",
     "docusaurus2-dotenv": "^1.4.0",
     "entities": "^2.2.0",
     "file-loader": "^6.2.0",

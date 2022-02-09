@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -25,29 +26,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 
 import Translate from "@docusaurus/Translate";
+import dayjs from 'dayjs';
 
 function BlogPostItem(props) {
-  const {
-    children,
-    frontMatter,
-    metadata,
-    truncated,
-    isBlogPostPage = false,
-    views,
-  } = props;
+  const { children, frontMatter, metadata, truncated, isBlogPostPage = false, views } = props;
   const { date, permalink, tags, readingTime } = metadata;
 
-  const {
-    slug: postId,
-    author,
-    title,
-    image
-  } = frontMatter;
+  const { slug: postId, author, title, image } = frontMatter;
 
   const authorURL = frontMatter.author_url || frontMatter.authorURL;
   const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
-  const authorImageURL =
-    frontMatter.author_image_url || frontMatter.authorImageURL;
+  const authorImageURL = frontMatter.author_image_url || frontMatter.authorImageURL;
   const imageUrl = useBaseUrl(image, { absolute: true });
 
   // 是否為深色主題：
@@ -64,7 +53,7 @@ function BlogPostItem(props) {
   let month = dateObj.getMonth() + 1;
   const day = dateObj.getDate();
 
-  let dateStr = `${year}年${month}月`;
+  let dateStr = `${year} 年 ${month} 月`;
 
   if (currentLocale === "en") {
     month = dateObj.toLocaleString("default", { month: "long" });
@@ -76,21 +65,31 @@ function BlogPostItem(props) {
 
     return (
       <header>
-        <TitleHeading
-          className={clsx(
-            isBlogPostPage ? "margin-bottom--md" : "margin-vert--md",
-            styles.blogPostTitle,
-            isBlogPostPage ? "text--center" : ""
+        <TitleHeading className={styles.blogPostTitle} itemProp='headline'>
+          {isBlogPostPage ? (
+            title
+          ) : (
+            <Link itemProp='url' to={permalink}>
+              {title}
+            </Link>
           )}
-        >
-          {isBlogPostPage ? title : <Link to={permalink}>{title}</Link>}
         </TitleHeading>
-        {/* <div className="margin-vert--md">
+        <div className='margin-vert--md'>
           <time dateTime={date} className={styles.blogPostDate}>
-            {month} {day}, {year}{" "}
-            {readingTime && <> · {Math.ceil(readingTime)} min read</>}
+            {dayjs(date).format('YYYY-MM-DD')}
+            {!isBlogPostPage && readingTime && <> · {Math.ceil(readingTime)} min read</>}
+            {isBlogPostPage && readingTime && <> · 预计阅读时间 {Math.ceil(readingTime)} 分钟</>}
           </time>
-        </div> */}
+          {isBlogPostPage && (
+            <span className='margin-left--sm' style={{ color: '#8c8c8c' }}>
+              <FontAwesomeIcon icon={Eye} color='#c4d3e0' style={{ verticalAlign: 'middle', marginRight: '0.25rem' }} />
+              <span style={{ fontSize: '0.9rem' }}>{views}</span>
+            </span>
+          )}
+          {renderTags()}
+        </div>
+
+        {/*{isBlogPostPage && authors && <BlogPostAuthors authors={authors} assets={assets} />}*/}
       </header>
     );
   };
@@ -101,23 +100,17 @@ function BlogPostItem(props) {
         <div className="post__tags-container margin-top--none margin-bottom--md">
           {tags.length > 0 && (
             <>
-              <FontAwesomeIcon
-                icon={faTags}
-                className="margin-right--md"
-              />
-              {tags
-                .slice(0, 4)
-                .map(({ label, permalink: tagPermalink }, index) => (
-                  <Link
-                    key={tagPermalink}
-                    className={`post__tags ${index > 0 ? "margin-horiz--sm" : "margin-right--sm"
-                      }`}
-                    to={tagPermalink}
-                    style={{ fontSize: "0.75em", fontWeight: 500 }}
-                  >
-                    {label}
-                  </Link>
-                ))}
+              <FontAwesomeIcon icon={faTags} className="margin-right--md" />
+              {tags.slice(0, 4).map(({ label, permalink: tagPermalink }, index) => (
+                <Link
+                  key={tagPermalink}
+                  className={`post__tags ${index > 0 ? "margin-horiz--sm" : "margin-right--sm"}`}
+                  to={tagPermalink}
+                  style={{ fontSize: "0.75em", fontWeight: 500 }}
+                >
+                  {label}
+                </Link>
+              ))}
             </>
           )}
         </div>
@@ -126,21 +119,16 @@ function BlogPostItem(props) {
   };
 
   return (
-    <StyledBlogItem
-      isDark={isDarkTheme}
-      isBlogPostPage={isBlogPostPage}
-    // className={isBlogPostPage ? "margin-top--xl" : ""}
-    >
+    <StyledBlogItem isDark={isDarkTheme} isBlogPostPage={isBlogPostPage}>
       <Head>
         {image && <meta property="og:image" content={imageUrl} />}
         {image && <meta property="twitter:image" content={imageUrl} />}
-        {image && (
-          <meta name="twitter:image:alt" content={`Image for ${title}`} />
-        )}
+        {image && <meta name="twitter:image:alt" content={`Image for ${title}`} />}
       </Head>
 
       {/* 統計 */}
       {isBlogPostPage}
+
       <div
         className={`row 
          ${!isBlogPostPage ? "blog-list--item" : ""}`}
@@ -156,14 +144,9 @@ function BlogPostItem(props) {
             <div className="line__decor"></div>
           </div>
         )}
-        <div
-          className={`col ${isBlogPostPage ? `col--12 article__details` : `col--9`
-            }`}
-        >
+        <div className={`col ${isBlogPostPage ? `col--12 article__details` : `col--9`}`}>
           {/* 部落格文章 */}
-          <article
-            className={!isBlogPostPage ? "margin-bottom--md" : undefined}
-          >
+          <article className={!isBlogPostPage ? "margin-bottom--md" : undefined}>
             {/* 標題 */}
             {renderPostHeader()}
             {/* 列表頁標籤 */}
@@ -172,20 +155,14 @@ function BlogPostItem(props) {
             {isBlogPostPage && (
               <p className={`single-post--date text--center`}>
                 {dateStr} ·{" "}
-                <Translate
-                  id="blogpage.estimated.time"
-                  description="blog page estimated time"
-                >
+                <Translate id="blogpage.estimated.time" description="blog page estimated time">
                   預計閱讀時間：
                 </Translate>
                 {readingTime && (
                   <>
                     {" "}
                     {Math.ceil(readingTime)}{" "}
-                    <Translate
-                      id="blogpage.estimated.time.label"
-                      description="blog page estimated time label"
-                    >
+                    <Translate id="blogpage.estimated.time.label" description="blog page estimated time label">
                       分鐘
                     </Translate>
                   </>
@@ -195,38 +172,19 @@ function BlogPostItem(props) {
             {/* 標籤 */}
             {isBlogPostPage && (
               <>
-                <div className="text--center margin-bottom--xs padding-bottom--xs">
-                  {renderTags()}
-                </div>
+                <div className="text--center margin-bottom--xs padding-bottom--xs">{renderTags()}</div>
               </>
             )}
 
             {/* 正文 */}
-            <MarkdownSection
-              isBlogPostPage={isBlogPostPage}
-              isDark={isDarkTheme}
-              className="markdown"
-            >
+            <MarkdownSection isBlogPostPage={isBlogPostPage} isDark={isDarkTheme} className="markdown">
               <MDXProvider components={MDXComponents}>{children}</MDXProvider>
             </MarkdownSection>
-            {/* {isBlogPostPage && (
-              <div style={{ marginTop: "1em" }}>
-                {adConfig.articleFooter.map(({ id, alt, imageSrc, link }) => (
-                  <Ad key={id} link={link} src={imageSrc} alt={alt} />
-                ))}
-              </div>
-            )} */}
-            {isBlogPostPage}
           </article>
           <footer className="article__footer padding-top--md margin-top--lg margin-bottom--lg">
             {!isBlogPostPage && (
               <span className="footer__read_count">
-                <Eye
-                  // color={isDarkTheme ? "#76baff" : "#006dfe"}
-                  className="footer__eye"
-                  style={{ verticalAlign: "middle" }}
-                />{" "}
-                {views}
+                <Eye className="footer__eye" style={{ verticalAlign: "middle" }} /> {views}
               </span>
             )}
             {truncated && (
@@ -236,7 +194,6 @@ function BlogPostItem(props) {
                 </strong>
               </Link>
             )}
-            {isBlogPostPage}
           </footer>
         </div>
       </div>
