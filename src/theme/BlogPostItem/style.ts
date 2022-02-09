@@ -1,6 +1,8 @@
-import styled, { css } from "styled-components";
+import styled, {
+  css
+} from 'styled-components';
 
-const light = css`
+const light = css `
   h2 {
     /* font-size: 1.6em; */
 
@@ -34,34 +36,41 @@ const light = css`
   }
 `;
 
-export const MarkdownSection = styled.section`
-  ${({ isDark }) => (isDark ? `` : light)};
+export const MarkdownSection = styled.section `
+  ${({ isDark }) => (isDark ? `
+` : light)};
   ${({ isBlogPostPage }) =>
     isBlogPostPage
-      ? ""
+      ? ''
       : css`
-          /* img {
-            width: 100%;
-            height: 40%;
-            max-width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            object-position: top;
-          } */
-        `}
+/* img {
+  width: 100%;
+  height: 40%;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: top;
+} */
+`}
 `;
 
-export const StyledBlogItem = styled.div`
+export const StyledBlogItem = styled.div `
   margin-top: 0em;
-  margin-bottom: 7.25em;
+  margin-bottom: 1.5em;
 
   ${({ isBlogPostPage }) =>
     isBlogPostPage &&
     css`
-      /* box-shadow: var(--post-shadow);
-      padding: 3em 2em; */
-      margin-top: 0;
-    `}
+$ {
+  '' /* box-shadow: var(--post-shadow); */
+}
+border - radius: var (--ifm - pagination - nav - border - radius);
+$ {
+  '' /* padding: 2em 2em; */
+}
+margin - top: 0;
+margin - bottom: -2 em;
+`}
 
   @media (max-width: 570px) {
     .article__details {
@@ -89,8 +98,8 @@ export const StyledBlogItem = styled.div`
 
       > h2 {
         font-size: 2em;
-        line-height: 1.5em;
-        margin-bottom: 20px !important;
+        /* line-height: 1.5em; */
+        margin-bottom: 10px !important;
         a {
           color: var(--ifm-heading-color);
           &:hover {
@@ -113,6 +122,27 @@ export const StyledBlogItem = styled.div`
     .markdown ul {
       font-family: var(--content-font-family);
     }
+
+    > section {
+      /*pre {
+        > code {
+          padding: 1.8rem 1rem 1rem 1rem;
+        }
+      }
+
+       pre:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 15px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #fc625d;
+        box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+        z-index: 1;
+      } */
+    }
   }
 
   /* 卡片新拟态特效 */
@@ -120,7 +150,7 @@ export const StyledBlogItem = styled.div`
     border-radius: 12px;
     background: var(--blog-item-background-color);
     box-shadow: var(--blog-item-shadow);
-    padding: 2em 1em;
+    padding: 1em 1em;
 
     position: relative;
   }

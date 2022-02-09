@@ -16,7 +16,7 @@
   --ifm-code-font-size: 95%;
   --wave-color: #800020;
 
-    /* 卡片背景 */
+  /* 卡片背景 */
   --card-background: #ffffff;
 
   /* 選取與未選取 */
@@ -29,6 +29,11 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+html {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
 }
 
 html[data-theme="dark"] .docusaurus-highlight-code-line {
@@ -118,7 +123,6 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 
 /*****************************************************************************/
 
-
 table {
   word-break: keep-all;
   white-space: nowrap;
@@ -126,15 +130,15 @@ table {
 }
 
 .main-wrapper h1,
-.markdown > h1 {
+.markdown>h1 {
   font-size: 2.2em;
 }
 
-.markdown > h2 {
+.markdown>h2 {
   font-size: 1.8em;
 }
 
-.markdown > h3 {
+.markdown>h3 {
   font-size: 1.5em;
 }
 
@@ -146,13 +150,18 @@ table {
   /* border-top: 1px solid rgb(236 244 255); */
 }
 
-article > p,
-article > a,
-article > span,
-article > li {
+article>p,
+article>a,
+article>span,
+article>li {
   line-height: 1.8em;
   /* letter-spacing: 0.04em; */
   /* text-align: justify; */
+}
+
+.blogPostTitle_src-theme-BlogPostItem-styles-module
+{
+  font-size: 3em;
 }
 
 .math.math-display {
@@ -173,7 +182,7 @@ article > li {
   color: var(--ifm-color-primary);
 }
 
-html[data-theme="dark"] .bloghome__intro > p {
+html[data-theme="dark"] .bloghome__intro>p {
   color: #dfdfdf;
 }
 
@@ -338,15 +347,6 @@ html[data-theme="dark"] .bloghome__intro > p {
   color: var(--post-pub-date-color);
 }
 
-.line__decor {
-  width: 65%;
-  height: 4px;
-  background-color: var(--ifm-color-primary);
-  align-self: end;
-  margin-bottom: 1.15em;
-  opacity: 0.25;
-}
-
 .post__tags-container {
   white-space: nowrap;
   overflow: auto;
@@ -368,7 +368,7 @@ html[data-theme="dark"] .bloghome__intro > p {
 
 html[data-theme="dark"] .post__tags {
   color: #d4e8fa;
-  background: #0179fa77;
+  background:  var(--ifm-color-primary);
 }
 
 .article__footer {
@@ -398,11 +398,7 @@ html[data-theme="dark"] .footer_eye {
 .pagination-nav__link {
   /* border: none; */
   margin: 2em 0;
-  background: linear-gradient(
-    90deg,
-    var(--ifm-color-primary-light) 11.3%,
-    var(--ifm-color-primary) 161.54%
-  );
+  background: linear-gradient(90deg, var(--ifm-color-primary-light) 11.3%, var(--ifm-color-primary) 161.54%);
   box-shadow: 0px 0px 32px rgb(0 105 165 / 35%);
   color: white;
   border: none;
@@ -416,12 +412,8 @@ pagination-nav__item:hover .pagination-nav__link {
   border: none;
 }
 
-.pagination-nav__item--next > .pagination-nav__link {
-  background: linear-gradient(
-    90deg,
-    var(--ifm-color-primary) 11.3%,
-    var(--ifm-color-primary-light) 161.54%
-  );
+.pagination-nav__item--next>.pagination-nav__link {
+  background: linear-gradient(90deg, var(--ifm-color-primary) 11.3%, var(--ifm-color-primary-light) 161.54%);
 }
 
 .pagination-nav__sublabel {
@@ -429,11 +421,11 @@ pagination-nav__item:hover .pagination-nav__link {
 }
 
 /* 博客详情页 CSS 覆盖 */
-.blog-wrapper > .container {
+.blog-wrapper>.container {
   width: 100vw;
 }
 
-.blog-wrapper > .container > .row:not([class~="blog-tags__page"]) {
+.blog-wrapper>.container>.row:not([class~="blog-tags__page"]) {
   display: grid;
   grid-template-areas:
     "detail recent"
@@ -442,28 +434,30 @@ pagination-nav__item:hover .pagination-nav__link {
   grid-template-columns: minmax(0, 1fr) 250px;
 }
 
-.blog-wrapper > .container > .row .col[class*="col--"] {
+.blog-wrapper>.container>.row .col[class*="col--"] {
   max-width: unset;
 }
 
 /* 近期文章 */
-.blog-wrapper > .container > .row > *:nth-child(1) {
+.blog-wrapper>.container>.row>*:nth-child(1) {
   grid-area: recent;
   align-self: start;
   /* height: 200px; */
 }
-.blog-wrapper > .container > .row > *:nth-child(1) > div {
+
+.blog-wrapper>.container>.row>*:nth-child(1)>div {
   position: static;
 }
 
-.blog-wrapper > .container > .row > *:nth-child(2) {
+.blog-wrapper>.container>.row>*:nth-child(2) {
   grid-area: detail;
 }
-.blog-wrapper > .container > .row > *:nth-child(3) {
+
+.blog-wrapper>.container>.row>*:nth-child(3) {
   grid-area: outline;
 }
 
-.blog-wrapper > .container > .row > *:nth-child(3) > div > div::before {
+.blog-wrapper>.container>.row>*:nth-child(3)>div>div::before {
   content: "文章目录";
   display: block;
   margin-bottom: 0.5rem;
@@ -489,14 +483,10 @@ pagination-nav__item:hover .pagination-nav__link {
   .post__date-container {
     justify-items: start;
   }
-
-  .line__decor {
-    display: none;
-  }
 }
 
 /* 文档侧栏字体大小 */
-.menu__list-item > .menu__link[tabindex] {
+.menu__list-item>.menu__link[tabindex] {
   font-size: 0.875rem;
   font-weight: normal;
   font-family: serif;
@@ -510,7 +500,7 @@ pagination-nav__item:hover .pagination-nav__link {
 }
 
 @media only screen and (max-width: 996px) {
-  .blog-wrapper > .container > .row {
+  .blog-wrapper>.container>.row {
     display: flex;
   }
 }
@@ -521,28 +511,31 @@ pagination-nav__item:hover .pagination-nav__link {
     row-gap: 36px;
     grid-template-columns: minmax(0, max-content);
   }
+
   .post__list-style-ad {
     grid-column: initial;
   }
 }
 
 @media (max-width: 570px) {
+
   .main-wrapper h1,
-  .markdown > h1 {
+  .markdown>h1 {
     font-size: 1.6em;
   }
 
-  .markdown > h2 {
+  .markdown>h2 {
     font-size: 1.4em;
   }
 
-  .markdown > h3 {
+  .markdown>h3 {
     font-size: 1.2em;
   }
 
   .blog__section_title {
     margin-top: 2em;
   }
+
   .post__date-container {
     margin-bottom: 1em !important;
   }
@@ -566,6 +559,7 @@ pagination-nav__item:hover .pagination-nav__link {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -573,19 +567,24 @@ pagination-nav__item:hover .pagination-nav__link {
 
 /* 导航收缩相应尺寸调大 */
 @media (max-width: 1100px) {
-  .navbar > .container,
-  .navbar > .container-fluid {
+
+  .navbar>.container,
+  .navbar>.container-fluid {
     padding: 0;
   }
+
   .navbar__toggle {
     display: inherit;
   }
+
   .navbar__item {
     display: none;
   }
+
   .navbar__search-input {
     width: 9rem;
   }
+
   .navbar-sidebar {
     display: block;
   }
@@ -593,7 +592,7 @@ pagination-nav__item:hover .pagination-nav__link {
 
 /* 博客目录隐藏后，回复 row 默认样式 */
 @media (max-width: 996px) {
-  .blog-wrapper > .container > .row:not([class~="blog-tags__page"]) {
+  .blog-wrapper>.container>.row:not([class~="blog-tags__page"]) {
     display: initial;
   }
 }
@@ -605,4 +604,16 @@ pagination-nav__item:hover .pagination-nav__link {
 
 ins {
   max-height: 100% !important;
+}
+
+article>header>h1 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 3em !important; 
+}
+
+article>header>h2 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 2.5em !important; 
 }

@@ -40,7 +40,7 @@ module.exports = {
   title: "OUCH1978@GITHUB",
   tagline: "不務正業的架構師",
   url: "https://ouch1978.github.io", //process.env.URL,
-  baseUrl: "/",//process.env.BASE_URL,
+  baseUrl: "/", //process.env.BASE_URL,
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -69,8 +69,7 @@ module.exports = {
         alt: "My Site Logo",
         src: "img/logo.png",
       },
-      items: [
-        {
+      items: [{
           type: "doc",
           docId: "intro/intro",
           position: "left",
@@ -99,7 +98,10 @@ module.exports = {
           remarkPlugins: [math, remarkGridTables],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
-          sidebarItemsGenerator: async function ({ defaultSidebarItemsGenerator, ...args }) {
+          sidebarItemsGenerator: async function ({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
             const sidebarItems = await defaultSidebarItemsGenerator(args);
             return unwrapCategory(sidebarItems);
           },
@@ -118,16 +120,19 @@ module.exports = {
       },
     ],
   ],
-  stylesheets: [
-    {
+  stylesheets: [{
       href: "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css",
       type: "text/css",
       integrity: "sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc",
       crossorigin: "anonymous",
     },
-  ],
-  scripts: [
     {
+      href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap",
+      type: "text/css",
+      crossorigin: "anonymous",
+    },
+  ],
+  scripts: [{
       src: "https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js",
       async: true,
     },
