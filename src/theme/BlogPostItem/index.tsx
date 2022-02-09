@@ -115,11 +115,7 @@ function BlogPostItem(props) {
       {/* 統計 */}
       {isBlogPostPage}
 
-      <div
-        className={`row 
-         ${!isBlogPostPage ? "blog-list--item" : ""}`}
-        style={{ margin: 0 }}
-      >
+      <div className={`row ${!isBlogPostPage ? "blog-list--item" : ""}`} style={{ margin: "0px" }}>
         {/* 列表頁日期 */}
         {!isBlogPostPage && (
           <div className="post__date-container col col--3 padding-right--lg margin-bottom--lg">

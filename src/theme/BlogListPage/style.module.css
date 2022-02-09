@@ -3,7 +3,6 @@
 }
 
 .card {
-  border-radius: 12px;
   background: var(--blog-item-background-color);
   box-shadow: var(--blog-item-shadow);
   padding: 1em 1em;

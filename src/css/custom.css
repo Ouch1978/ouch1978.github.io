@@ -22,11 +22,19 @@
   /* 選取與未選取 */
   --btn-selected: var(--ifm-color-primary);
   --btn-unselected: #cecece;
+
+  --blog-item-shadow: 5px 5px 10px #333333, 0px 0px 0px #333333;
+
+  --content-background-color: #fafafa;
 }
 
 html {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
+}
+
+.container-wrapper {
+  background: var(--content-background-color);
 }
 
 .herowave {
@@ -162,7 +170,6 @@ article > header > h2 {
 .post__tags {
   background: var(--ifm-color-primary);
   padding: 6px 10px;
-  border-radius: 6px;
   color: #ffffff;
 }
 
@@ -209,7 +216,6 @@ html[data-theme="dark"] .footer_eye {
     var(--ifm-color-primary-light) 11.3%,
     var(--ifm-color-primary) 161.54%
   );
-  box-shadow: 0px 0px 32px rgb(0 105 165 / 35%);
   color: white;
   border: none;
 }
@@ -278,7 +284,6 @@ pagination-nav__item:hover .pagination-nav__link {
   align-items: center;
   padding: 1em 1.2em;
   background: var(--card-background);
-  border-radius: 6px;
   position: relative;
 }
 
@@ -317,4 +322,5 @@ pagination-nav__item:hover .pagination-nav__link {
   justify-self: end;
   color: var(--ifm-color-emphasis-600);
 }
+
 /*****************************************************************************/
