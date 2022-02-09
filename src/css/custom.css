@@ -291,7 +291,8 @@ pagination-nav__item:hover .pagination-nav__link {
 
 .post__list-item .post__list-title {
   color: inherit;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 600;
   text-decoration: none;
   transition: 0.6s;
   grid-area: title;
@@ -309,7 +310,6 @@ pagination-nav__item:hover .pagination-nav__link {
 
 .post__list-tags {
   grid-area: tags;
-  overflow-x: auto;
   padding: 0.2em 0;
 }
 
