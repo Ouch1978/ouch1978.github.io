@@ -83,7 +83,7 @@ function BlogPostItem(props) {
   const renderTags = () => {
     return (
       (tags.length > 0 || truncated) && (
-        <div className="post__tags-container margin-top--none margin-bottom--md">
+        <div className="post__tags-container margin-bottom--md">
           {tags.length > 0 && (
             <>
               <FontAwesomeIcon icon={faTags} className="margin-right--md" />
@@ -120,8 +120,8 @@ function BlogPostItem(props) {
         {!isBlogPostPage && (
           <div className="post__date-container col col--3 padding-right--lg margin-bottom--lg">
             <div className="post__date">
-              <div className="post__day">{day}</div>
               <div className="post__year_month">{dateStr}</div>
+              <div className="post__day">{day}</div>
             </div>
             <div className="line__decor"></div>
           </div>
