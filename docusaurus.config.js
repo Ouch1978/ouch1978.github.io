@@ -51,18 +51,25 @@ module.exports = {
     locales: ['en', 'zh-TW'],
   },
   plugins: [
-    "plugin-image-zoom",
-    [
-      "docusaurus2-dotenv",
+    require.resolve("docusaurus-plugin-image-zoom"),
+    ["docusaurus2-dotenv",
       {
         systemvars: true, // Set to true if you would rather load all system variables as well (useful for CI purposes)
       },
-    ],
+    ]
   ],
   themes: ["@saucelabs/theme-github-codeblock"],
   themeConfig: {
     hideableSidebar: true,
-    zoomSelector: ".markdown :not(em) > img",
+    zoom: {
+      selector: '.markdown :not(em,a) > img',
+      config: {
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
+        }
+      }
+    },
     prism: {
       additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php"],
       theme: require("prism-react-renderer/themes/vsDark"),
@@ -70,25 +77,25 @@ module.exports = {
     navbar: {
       title: "OUCH1978@GITHUB",
       logo: {
-        alt: "My Site Logo",
+        alt: "Site Logo",
         src: "img/logo.png",
       },
       items: [{
           type: "doc",
           docId: "intro/intro",
           position: "left",
-          label: "Documents",
+          label: "文件庫",
         },
         {
           to: "/blog",
-          label: "Blog",
+          label: "部落格",
           position: "left",
         }
       ],
     },
     footer: {
       style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} Ouch1978, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ouch Liu(Ouch1978). Built with Docusaurus.`,
     },
   },
   presets: [
