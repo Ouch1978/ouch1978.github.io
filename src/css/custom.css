@@ -6,13 +6,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #ef2246;
-  --ifm-color-primary-dark: #e51136;
-  --ifm-color-primary-darker: #d81033;
-  --ifm-color-primary-darkest: #b20d2a;
-  --ifm-color-primary-light: #f13b5b;
-  --ifm-color-primary-lighter: #f24866;
-  --ifm-color-primary-lightest: #f56e86;
+  --ifm-color-primary: #800020;
+  --ifm-color-primary-dark: #73001d;
+  --ifm-color-primary-darker: #6d001b;
+  --ifm-color-primary-darkest: #5a0016;
+  --ifm-color-primary-light: #8d0023;
+  --ifm-color-primary-lighter: #930025;
+  --ifm-color-primary-lightest: #a6002a;
   --ifm-code-font-size: 95%;
 
   --ifm-pagination-nav-border-radius: 0;
@@ -44,6 +44,14 @@ html {
 }
 
 html[data-theme="dark"] {
+  --ifm-color-primary: #ef2246;
+  --ifm-color-primary-dark: #e51136;
+  --ifm-color-primary-darker: #d81033;
+  --ifm-color-primary-darkest: #b20d2a;
+  --ifm-color-primary-light: #f13b5b;
+  --ifm-color-primary-lighter: #f24866;
+  --ifm-color-primary-lightest: #f56e86;
+
   --post-title-color: hsl(220deg 79% 58%);
   --post-pub-date-color: #8c8c8c;
   --content-background-color: inherit;
