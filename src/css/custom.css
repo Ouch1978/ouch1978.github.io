@@ -35,6 +35,53 @@ html {
   font-weight: 400;
 }
 
+html {
+  --post-title-color: hsl(220deg 79% 58%);
+  --post-pub-date-color: #8c8c8c;
+  --content-background-color: #fafafa;
+  --blog-item-background-color: linear-gradient(50deg, #ffffff, hsl(0deg 0% 95%));
+  --ifm-heading-color: #000000;
+}
+
+html[data-theme="dark"] {
+  --post-title-color: hsl(220deg 79% 58%);
+  --post-pub-date-color: #8c8c8c;
+  --content-background-color: inherit;
+  --blog-item-background-color: black;
+  --card-background: #0c0c0c;
+}
+
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  --ifm-heading-color: white;
+}
+
+html[data-theme="dark"] .post__tags {
+  color: white;
+  background: var(--ifm-color-primary);
+}
+
+html[data-theme="dark"] .footer__read_count {
+  color: var(--ifm-color-primary-light);
+}
+
+html[data-theme="dark"] .footer_eye {
+  fill: var(--ifm-color-primary-light);
+}
+
 .container-wrapper {
   background: var(--content-background-color);
 }
@@ -126,10 +173,22 @@ article > header > h1 {
   font-size: 3em !important;
 }
 
-article > header > h2 {
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 900;
+.hCLosQ article > header > h2 {
   font-size: 2.5em !important;
+  margin-bottom: 10px !important;
+  font-weight: 900;
+}
+
+.markdown {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.markdown > h1 {
+  font-weight: 800;
+}
+
+.markdown > h2 {
+  font-weight: 800;
 }
 
 /* 發佈日期 */
@@ -146,14 +205,14 @@ article > header > h2 {
   align-items: center;
   width: 10.5em;
   height: 10.5em;
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-weight: 600;
 }
 
 .post__day {
   font-size: 4.75em;
-  line-height: 1em;
   font-weight: 900;
+  margin-top: -1em;
 }
 
 .post__year_month {
@@ -167,6 +226,7 @@ article > header > h2 {
   overflow: auto;
   padding-bottom: 12px;
   color: var(--ifm-color-primary);
+  margin-top: 1.5em;
 }
 
 .post__tags {
@@ -178,11 +238,6 @@ article > header > h2 {
 .post__tags:hover {
   color: #ffffff;
   text-decoration: none;
-}
-
-html[data-theme="dark"] .post__tags {
-  color: #d4e8fa;
-  background: var(--ifm-color-primary);
 }
 
 /* 分頁 */
@@ -202,22 +257,10 @@ html[data-theme="dark"] .post__tags {
   fill: var(--ifm-color-primary);
 }
 
-html[data-theme="dark"] .footer__read_count {
-  color: var(--ifm-color-primary-light);
-}
-
-html[data-theme="dark"] .footer_eye {
-  fill: var(--ifm-color-primary-light);
-}
-
 .pagination-nav__link {
   /* border: none; */
   margin: 2em 0;
-  background: linear-gradient(
-    90deg,
-    var(--ifm-color-primary-light) 11.3%,
-    var(--ifm-color-primary) 161.54%
-  );
+  background: linear-gradient(90deg, var(--ifm-color-primary-light) 11.3%, var(--ifm-color-primary) 161.54%);
   color: white;
   border: none;
 }
@@ -226,16 +269,12 @@ html[data-theme="dark"] .footer_eye {
   color: white;
 }
 
-pagination-nav__item:hover .pagination-nav__link {
+.pagination-nav__item:hover .pagination-nav__link {
   border: none;
 }
 
 .pagination-nav__item--next > .pagination-nav__link {
-  background: linear-gradient(
-    90deg,
-    var(--ifm-color-primary) 11.3%,
-    var(--ifm-color-primary-light) 161.54%
-  );
+  background: linear-gradient(90deg, var(--ifm-color-primary) 11.3%, var(--ifm-color-primary-light) 161.54%);
 }
 
 .pagination-nav__sublabel {
@@ -296,6 +335,8 @@ pagination-nav__item:hover .pagination-nav__link {
   text-decoration: none;
   transition: 0.6s;
   grid-area: title;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 800;
 }
 
 .post__list-item .post__list:hover {
