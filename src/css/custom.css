@@ -94,6 +94,24 @@ html[data-theme="dark"] .footer_eye {
   background: var(--content-background-color);
 }
 
+/* Prism.js 相關 */
+.prism-code {
+  counter-reset: line-number;
+}
+
+.prism-code .token-line::marker {
+  color: var(--ifm-color-gray-700);
+  content: counter(line-number);
+}
+
+.prism-code .token-line {
+  counter-increment: line-number;
+  display: list-item;
+  padding-left: var(--ifm-pre-padding);
+  margin-left: var(--ifm-global-spacing);
+}
+
+/* Hero */
 .herowave {
   position: relative;
   background: #18191a;
@@ -175,6 +193,7 @@ html[data-theme="dark"] .footer_eye {
   }
 }
 
+/* 文章格式 */
 article > header > h1 {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 900;

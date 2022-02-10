@@ -81,7 +81,6 @@ Id 我們可以很輕鬆的透過擴充功能在 Chrome Web Store 裡的連結�
 廢話不多說，直接上 Code。
 
 ```csharp title="SwitchCountryTest.cs"
-
 using System;
 using FluentAssertions;
 using FluentAutomation;
@@ -92,9 +91,9 @@ using OpenQA.Selenium.Chrome;
 
 namespace AutomationWithChromeExtension
 {
-[TestClass]
-public class SwitchCountryTest : FluentTest
-{
+    [TestClass]
+    public class SwitchCountryTest : FluentTest
+    {
 
         private const string BetterNetCrxPath = "gjknjjomckknofjidppipffbpoekiipm.crx";
 
@@ -191,7 +190,6 @@ public class SwitchCountryTest : FluentTest
             I.Click( isTurnOn ? "div.button.disconnected" : "div.button.connected" )
                 .Wait( TimeSpan.FromSeconds( 5 ) );
         }
-
 
     }
 
