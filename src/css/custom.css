@@ -28,6 +28,8 @@
   --blog-item-shadow: 3px 3px 5px #333333, 0px 0px 0px #333333;
 
   --content-background-color: #fafafa;
+
+  --progress-bar-background-color: #ff0000;
 }
 
 html {
