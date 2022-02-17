@@ -13,6 +13,10 @@ return (
     <div class="content">
       <h2>{siteConfig.title}</h2>
       <h3>{siteConfig.tagline}</h3>
+      <br/>
+      <p> {
+        "嘛...文件庫裡應該會放一些可以分門別類的文章，小筆記或是比較難分類的東西就應該會往部落格丟了吧。"
+      } </p>
     </div>
     <div class="waves"></div>
   </section>
