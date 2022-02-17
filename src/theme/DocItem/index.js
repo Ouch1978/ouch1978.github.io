@@ -16,6 +16,11 @@ import TOCCollapsible from '@theme/TOCCollapsible';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import {ThemeClassNames, useWindowSize} from '@docusaurus/theme-common';
+
+import {
+  DiscussionEmbed
+} from 'disqus-react';
+
 export default function DocItem(props) {
   const {content: DocContent} = props;
   const {metadata, frontMatter} = DocContent;
@@ -26,8 +31,9 @@ export default function DocItem(props) {
     hide_table_of_contents: hideTableOfContents,
     toc_min_heading_level: tocMinHeadingLevel,
     toc_max_heading_level: tocMaxHeadingLevel,
+    no_comments
   } = frontMatter;
-  const {description, title} = metadata; // We only add a title if:
+  const {description, title,slug} = metadata; // We only add a title if:
   // - user asks to hide it with front matter
   // - the markdown content does not already contain a top-level h1 heading
 
@@ -90,6 +96,20 @@ export default function DocItem(props) {
               <DocItemFooter {...props} />
             </article>
 
+                {
+                  !no_comments && ( <
+                    DiscussionEmbed shortname = 'ouch1978'
+                    config = {
+                      {
+                        url: window.location.href,
+                        identifier: slug,
+                        title: title,
+                        language: 'zh-TW',
+                      }
+                    }
+                    />
+                  )
+                }
             <DocPaginator previous={metadata.previous} next={metadata.next} />
           </div>
         </div>
