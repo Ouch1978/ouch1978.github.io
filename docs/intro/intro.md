@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 author: ouch1978
+slug: docs-intro
+draft: false
 ---
 
 # Tutorial Intro
