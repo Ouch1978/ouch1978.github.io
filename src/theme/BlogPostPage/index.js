@@ -94,7 +94,7 @@ function BlogPostPage(props) {
         DiscussionEmbed shortname = 'ouch1978'
         config = {
           {
-            url: slug,
+            url: window.location.href,
             identifier: slug,
             title: title,
             language: 'zh-TW',
