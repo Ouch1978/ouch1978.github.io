@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./HomepageFeatures.module.css";
+import styles from "./Achievements.module.css";
 
 const FeatureList = [
   {
@@ -44,7 +44,7 @@ function Feature({ image, title, earned }) {
   );
 }
 
-export default function HomepageFeatures() {
+export default function Achievements() {
   return (
     <section className={styles.features}>
       <h1>認證與成就</h1>
