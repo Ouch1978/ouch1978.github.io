@@ -23,10 +23,10 @@ import { MarkdownSection, StyledBlogItem } from "./style";
 
 import Eye from "@site/static/img/eye.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTags, faClock , faCalendarPlus} from "@fortawesome/free-solid-svg-icons";
+import { faTags, faClock, faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 
 import Translate from "@docusaurus/Translate";
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
 function BlogPostItem(props) {
   const { children, frontMatter, metadata, truncated, isBlogPostPage = false, views } = props;
@@ -57,7 +57,7 @@ function BlogPostItem(props) {
 
   let dateStr = `${year} 年 ${month} 月`;
 
-  let dateTimeStr = `${year} 年 ${month} 月 ${day} 日 ${hours} 時 ${minutes} 分`;
+  const dateTimeStr = `${year} 年 ${month} 月 ${day} 日 ${hours} 時 ${minutes} 分`;
 
   if (currentLocale === "en") {
     month = dateObj.toLocaleString("default", { month: "long" });
@@ -69,11 +69,11 @@ function BlogPostItem(props) {
 
     return (
       <header>
-        <TitleHeading className={styles.blogPostTitle} itemProp='headline'>
+        <TitleHeading className={styles.blogPostTitle} itemProp="headline">
           {isBlogPostPage ? (
             title
           ) : (
-            <Link itemProp='url' to={permalink}>
+            <Link itemProp="url" to={permalink}>
               {title}
             </Link>
           )}
@@ -106,13 +106,12 @@ function BlogPostItem(props) {
     );
   };
 
-
   const renderPostDateAndReadingTime = () => {
     return (
       <p className={`single-post--date text--center`}>
         <FontAwesomeIcon icon={faCalendarPlus} className="margin-right--md" />
         {dateTimeStr}
-        <p/>
+        <p />
         <FontAwesomeIcon icon={faClock} className="margin-right--md" />
         <Translate id="blogpage.estimated.time" description="blog page estimated time">
           預計閱讀時間：
