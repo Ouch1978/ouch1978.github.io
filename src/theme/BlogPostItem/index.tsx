@@ -23,7 +23,7 @@ import { MarkdownSection, StyledBlogItem } from "./style";
 
 import Eye from "@site/static/img/eye.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTags } from "@fortawesome/free-solid-svg-icons";
+import { faTags, faClock , faCalendarPlus} from "@fortawesome/free-solid-svg-icons";
 
 import Translate from "@docusaurus/Translate";
 import dayjs from 'dayjs';
@@ -52,8 +52,12 @@ function BlogPostItem(props) {
   const year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   const day = dateObj.getDate();
+  const hours = dateObj.getUTCHours();
+  const minutes = dateObj.getMinutes();
 
   let dateStr = `${year} 年 ${month} 月`;
+
+  let dateTimeStr = `${year} 年 ${month} 月 ${day} 日 ${hours} 時 ${minutes} 分`;
 
   if (currentLocale === "en") {
     month = dateObj.toLocaleString("default", { month: "long" });
@@ -74,8 +78,6 @@ function BlogPostItem(props) {
             </Link>
           )}
         </TitleHeading>
-
-        {/*{isBlogPostPage && authors && <BlogPostAuthors authors={authors} assets={assets} />}*/}
       </header>
     );
   };
@@ -101,6 +103,50 @@ function BlogPostItem(props) {
           )}
         </div>
       )
+    );
+  };
+
+
+  const renderPostDateAndReadingTime = () => {
+    return (
+      <p className={`single-post--date text--center`}>
+        <FontAwesomeIcon icon={faCalendarPlus} className="margin-right--md" />
+        {dateTimeStr}
+        <p/>
+        <FontAwesomeIcon icon={faClock} className="margin-right--md" />
+        <Translate id="blogpage.estimated.time" description="blog page estimated time">
+          預計閱讀時間：
+        </Translate>
+        {readingTime && (
+          <>
+            {" "}
+            {Math.ceil(readingTime)}{" "}
+            <Translate id="blogpage.estimated.time.label" description="blog page estimated time label">
+              分鐘
+            </Translate>
+          </>
+        )}
+      </p>
+    );
+  };
+
+  const renderReadingTime = () => {
+    return (
+      <p className={`reading-time`}>
+        <FontAwesomeIcon icon={faClock} className="margin-right--md" />
+        <Translate id="blogpage.estimated.time" description="blog page estimated time">
+          預計閱讀時間：
+        </Translate>
+        {readingTime && (
+          <>
+            {" "}
+            {Math.ceil(readingTime)}{" "}
+            <Translate id="blogpage.estimated.time.label" description="blog page estimated time label">
+              分鐘
+            </Translate>
+          </>
+        )}
+      </p>
     );
   };
 
@@ -131,26 +177,12 @@ function BlogPostItem(props) {
           <article className={!isBlogPostPage ? "margin-bottom--md" : undefined}>
             {/* 標題 */}
             {renderPostHeader()}
+            {/* 列表頁閱讀時間 */}
+            {!isBlogPostPage && renderReadingTime()}
             {/* 列表頁標籤 */}
             {!isBlogPostPage && renderTags()}
             {/* 發佈日期與閱讀時間 */}
-            {isBlogPostPage && (
-              <p className={`single-post--date text--center`}>
-                {dateStr} ·{" "}
-                <Translate id="blogpage.estimated.time" description="blog page estimated time">
-                  預計閱讀時間：
-                </Translate>
-                {readingTime && (
-                  <>
-                    {" "}
-                    {Math.ceil(readingTime)}{" "}
-                    <Translate id="blogpage.estimated.time.label" description="blog page estimated time label">
-                      分鐘
-                    </Translate>
-                  </>
-                )}
-              </p>
-            )}
+            {isBlogPostPage && renderPostDateAndReadingTime()}
             {/* 標籤 */}
             {isBlogPostPage && (
               <>

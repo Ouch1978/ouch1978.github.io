@@ -226,6 +226,11 @@ article > header > h1 {
   justify-items: center;
 }
 
+/* 閱讀時間 */
+.reading-time {
+  color: var(--ifm-color-primary);
+}
+
 .post__date {
   background-size: contain;
   background-position: center;
