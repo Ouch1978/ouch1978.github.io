@@ -28,7 +28,7 @@ import Link from "@docusaurus/Link";
 import { useViewType } from "./useViewType";
 
 function BlogListPage(props) {
-  const { metadata, items, tags, sidebar } = props;
+  const { metadata, items, sidebar } = props;
 
   const {
     siteConfig: { title: siteTitle },
@@ -44,70 +44,6 @@ function BlogListPage(props) {
 
   const isCardView = viewType === "card";
   const isListView = viewType === "list";
-
-  /*
-  const InfoCard = () => {
-    function getCategoryOfTag(tag) {
-      return tag[0].toUpperCase();
-    }
-
-    const tagCategories: { [category: string]: string[] } = {};
-    Object.keys(tags).forEach((tag) => {
-      const category = getCategoryOfTag(tag);
-      tagCategories[category] = tagCategories[category] || [];
-      tagCategories[category].push(tag);
-    });
-
-    const tagsList = Object.entries(tagCategories).sort(([a], [b]) => a.localeCompare(b));
-    const tagsSection = tagsList
-      .map(([category, tagsForCategory]) => (
-        <div key={category} style={{ display: "flex", flexWrap: "wrap" }}>
-          {tagsForCategory.map((tag, index) => (
-            <Link className={`post__tags margin-right--sm margin-bottom--sm`} href={tags[tag].permalink} key={tag}>
-              {tags[tag].name}({tags[tag].count})
-            </Link>
-          ))}
-        </div>
-      ))
-      .filter((item) => item != null);
-
-    const { totalCount: blogCount } = metadata;
-    const tagCount = Object.values(tagCategories["/"]).length;
-
-    return (
-      <div
-        className={viewType === "card" ? `col col--3 ${styles["info-wrapper"]}` : ""}
-        style={{ display: `${viewType === "card" && isBlogPage ? "" : "none"}` }}
-      >
-        <div className="bloghome__posts">
-          <div className={`bloghome__posts-card ${styles["info-wrapper"]}`}>
-            <div className={`row ${styles.card}`}>
-              <div className={styles["personal-info-wrapper"]}>
-                <img className={styles["personal-img"]} src="/img/logo.webp" alt="logo"></img>
-                <h3 className={styles["personal-name"]}>{siteConfig.organizationName}</h3>
-                <h3 className={styles["personal-name"]}>
-                  文章數 {blogCount} | 標籤數 {tagCount}
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className={`bloghome__posts-card ${styles["info-wrapper"]}`}>
-            <div className={`row ${styles.card}`}>
-              <div className={styles["personal-info-wrapper"]}>
-                <FontAwesomeIcon icon={faTags} color="#c4d3e0" />
-                <Link className={`margin-horiz--sm`} href={"./tags"}>
-                  標籤
-                </Link>
-                <div className="margin-bottom--md"></div>
-                <div>{tagsSection}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-*/
 
   return (
     <Layout title={title} wrapperClassName="blog-list__page">
