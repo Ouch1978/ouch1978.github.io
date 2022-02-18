@@ -1,49 +1,44 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./HomepageFeatures.module.css";
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: "Certified ScrumMaster",
+    image: "../../img/seal-csm.png",
+    earned: "2018-12-31",
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: "Certified Scrum Product Owner",
+    image: "../../img/seal-cspo.png",
+    earned: "2019-09-29",
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: "Certified Scrum Developer",
+    image: "../../img/seal-csd.png",
+    earned: "2018-12-31",
+  },
+  {
+    title: "Advanced Certified Scrum Developer",
+    image: "../../img/seal-advcsd.png",
+    earned: "2018-12-31",
+  },
+  {
+    title: "Professional Scrum Master I",
+    image: "../../img/badge-psm-i.png",
+    earned: "2020-01-28",
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ image, title, earned }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+        <img src={image} className={styles.featureSvg} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3> {title} </h3>
+        <p> {earned} </p>
       </div>
     </div>
   );
@@ -52,6 +47,7 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
+      <h1>認證與成就</h1>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
