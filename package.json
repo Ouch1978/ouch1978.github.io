@@ -39,8 +39,6 @@
     "hast-util-is-element": "1.1.0",
     "immediate": "^3.2.3",
     "klaw-sync": "^6.0.0",
-    "lunr": "^2.3.9",
-    "lunr-languages": "^1.4.0",
     "mark.js": "^8.11.1",
     "mermaid": "^8.11.0",
     "nodejieba": "^2.5.2",
