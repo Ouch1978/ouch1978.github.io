@@ -61,6 +61,12 @@ module.exports = {
   themes: ["@saucelabs/theme-github-codeblock"],
   themeConfig: {
     hideableSidebar: true,
+    algolia: {
+      appId: 'AG6O0X1DB7',
+      apiKey: '849e564e75143705de1058ace77a188d',
+      indexName: 'Ouch1978 @GitHub.io',
+      contextualSearch: true,
+    },
     zoom: {
       selector: '.markdown :not(em,a) > img',
       config: {
