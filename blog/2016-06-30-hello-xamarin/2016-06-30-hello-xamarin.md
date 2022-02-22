@@ -1,7 +1,8 @@
 ---
 title: Hello Xamarin
-date: "2016-07-01 21:00"
 description: 日前微軟公開了收購Xamarin的消息，也很佛心的把它提供給Visual Studio的使用者們使用，這麼佛心的東西，怎麼可以不玩看看呢?
+slug: 2016-06-30-hello-xamarin
+date: "2016-06-30 21:00"
 category: 程式開發
 tags:
   - Xamarin

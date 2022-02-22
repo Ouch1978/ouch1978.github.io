@@ -1,5 +1,6 @@
 ---
 title: 初探 Visual Studio 2017 RC - IDE 使用者體驗篇
+slug: 2017-01-28-first-look-on-vs2017-rc-ide-ux-enhancement
 date: 2017-01-28 22:30:00
 autohrs: ouch1978
 tags: [Visual Studio]

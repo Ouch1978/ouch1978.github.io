@@ -1,5 +1,6 @@
 ---
 title: 使用 Visual Studio 2017 搭配 Xamarin.UITest 進行安卓應用程式的自動化測試
+slug: 2017-05-25-mobile-ui-automation-with-xamarin-uitest
 date: 2017-05-25 23:30:00
 autohrs: ouch1978
 tags: [Visual Studio 2017, Xamarin.UITest, Automation Testing]
@@ -47,10 +48,7 @@ Xamarin.UITest 最吸引人的地方就是可以直接透過 Visual Studio 來�
 
 請看 VCR !!
 
-<div style="position:relative;height:0;padding-bottom:56.25%;max-width:56.25rem;margin:0 auto;">
-  <iframe src="https://www.youtube.com/embed/-F111OKB2bg?rel=0&amp;showinfo=0?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen>
-  </iframe>
-</div>
+<iframe src="https://www.youtube.com/embed/-F111OKB2bg?rel=0&showinfo=0?ecver=2" width="640" height="360" frameborder="0"/>
 
 影片中有幾個重點，在這邊再透過文字來提醒大家：
 

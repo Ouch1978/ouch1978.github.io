@@ -1,7 +1,8 @@
 ---
 title: 強制 OneDrive 立刻與伺服器的檔案進行同步
-date: "2016-10-20 23:00"
+slug: 2016-10-20-force-onedrive-to-sync-immediately
 description: 把 OneDrive 當作主要雲端備份方案的我，常常遇到它不聽話的狀況，得要重新啟動它才能讓它乖乖同步，這邊就來記錄一下透過命令列讓它醒來的方法。
+date: "2016-10-20 23:00"
 category: 實用小技巧
 tags:
   - Windows 10

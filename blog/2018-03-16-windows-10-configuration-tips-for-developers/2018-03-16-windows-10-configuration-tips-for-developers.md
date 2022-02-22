@@ -1,5 +1,6 @@
 ---
 title: 軟體工程師們不可不知道的 Windows 10 設定小撇步
+slug: 2018-03-16-windows-10-configuration-tips-for-developers
 date: 2018-03-16 23:30:00
 autohrs: ouch1978
 tags: [Windows 10, 實用小技巧, extension]

@@ -1,29 +1,28 @@
+/* eslint-disable react/jsx-filename-extension */
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React from 'react';
-import clsx from 'clsx';
-import DocPaginator from '@theme/DocPaginator';
-import DocVersionBanner from '@theme/DocVersionBanner';
-import DocVersionBadge from '@theme/DocVersionBadge';
-import Seo from '@theme/Seo';
-import DocItemFooter from '@theme/DocItemFooter';
-import TOC from '@theme/TOC';
-import TOCCollapsible from '@theme/TOCCollapsible';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import {ThemeClassNames, useWindowSize} from '@docusaurus/theme-common';
+import React from "react";
+import clsx from "clsx";
+import DocPaginator from "@theme/DocPaginator";
+import DocVersionBanner from "@theme/DocVersionBanner";
+import DocVersionBadge from "@theme/DocVersionBadge";
+import Seo from "@theme/Seo";
+import DocItemFooter from "@theme/DocItemFooter";
+import TOC from "@theme/TOC";
+import TOCCollapsible from "@theme/TOCCollapsible";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+import { ThemeClassNames, useWindowSize } from "@docusaurus/theme-common";
 
-import {
-  DiscussionEmbed
-} from 'disqus-react';
+import { DiscussionEmbed } from "disqus-react";
 
 export default function DocItem(props) {
-  const {content: DocContent} = props;
-  const {metadata, frontMatter} = DocContent;
+  const { content: DocContent } = props;
+  const { metadata, frontMatter } = DocContent;
   const {
     image,
     keywords,
@@ -31,19 +30,27 @@ export default function DocItem(props) {
     hide_table_of_contents: hideTableOfContents,
     toc_min_heading_level: tocMinHeadingLevel,
     toc_max_heading_level: tocMaxHeadingLevel,
-    no_comments
+    no_comments,
   } = frontMatter;
-  const {description, title,slug} = metadata; // We only add a title if:
+  const { description, title, slug } = metadata; // We only add a title if:
   // - user asks to hide it with front matter
   // - the markdown content does not already contain a top-level h1 heading
 
-  const shouldAddTitle =
-    !hideTitle && typeof DocContent.contentTitle === 'undefined';
+  const shouldAddTitle = !hideTitle && typeof DocContent.contentTitle === "undefined";
   const windowSize = useWindowSize();
-  const canRenderTOC =
-    !hideTableOfContents && DocContent.toc && DocContent.toc.length > 0;
-  const renderTocDesktop =
-    canRenderTOC && (windowSize === 'desktop' || windowSize === 'ssr');
+  const canRenderTOC = !hideTableOfContents && DocContent.toc && DocContent.toc.length > 0;
+  const renderTocDesktop = canRenderTOC && (windowSize === "desktop" || windowSize === "ssr");
+
+  const WindowLocation = () => {
+    return (
+      <BrowserOnly>
+        {() => {
+          window.location.href;
+        }}
+      </BrowserOnly>
+    );
+  };
+
   return (
     <>
       <Seo
@@ -57,9 +64,10 @@ export default function DocItem(props) {
 
       <div className="row">
         <div
-          className={clsx('col', {
+          className={clsx("col", {
             [styles.docItemCol]: !hideTableOfContents,
-          })}>
+          })}
+        >
           <DocVersionBanner />
           <div className={styles.docItemContainer}>
             <article>
@@ -70,15 +78,11 @@ export default function DocItem(props) {
                   toc={DocContent.toc}
                   minHeadingLevel={tocMinHeadingLevel}
                   maxHeadingLevel={tocMaxHeadingLevel}
-                  className={clsx(
-                    ThemeClassNames.docs.docTocMobile,
-                    styles.tocMobile,
-                  )}
+                  className={clsx(ThemeClassNames.docs.docTocMobile, styles.tocMobile)}
                 />
               )}
 
-              <div
-                className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
+              <div className={clsx(ThemeClassNames.docs.docMarkdown, "markdown")}>
                 {/*
                 Title can be declared inside md content or declared through front matter and added manually
                 To make both cases consistent, the added title is added under the same div.markdown block
@@ -96,20 +100,17 @@ export default function DocItem(props) {
               <DocItemFooter {...props} />
             </article>
 
-                {
-                  !no_comments && ( <
-                    DiscussionEmbed shortname = 'ouch1978'
-                    config = {
-                      {
-                        url: window.location.href,
-                        identifier: slug,
-                        title: title,
-                        language: 'zh-TW',
-                      }
-                    }
-                    />
-                  )
-                }
+            {!no_comments && (
+              <DiscussionEmbed
+                shortname="ouch1978"
+                config={{
+                  url: WindowLocation,
+                  identifier: slug,
+                  title: title,
+                  language: "zh-TW",
+                }}
+              />
+            )}
             <DocPaginator previous={metadata.previous} next={metadata.next} />
           </div>
         </div>
