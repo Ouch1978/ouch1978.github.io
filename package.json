@@ -57,7 +57,9 @@
     "remark-parse": "^8.0.3",
     "remark-rehype": "^8.1.0",
     "styled-components": "^5.3.3",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "reveal-md": "^5.3.2",
+    "reveal.js-menu": "^2.1.0"
   },
   "browserslist": {
     "production": [

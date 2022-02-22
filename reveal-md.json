@@ -1,0 +1,27 @@
+{
+  "separator": "\r?\n---\r?\n",
+  "verticalSeparator": "\r?\n----\r?\n",
+  "scripts": [
+    "plugin/reveal.js-menu/menu.js",
+    "plugin/chalkboard/plugin.js",
+    "plugin/chart/plugin.js",
+    "plugin/chart/chart.min.js",
+    "plugin/fullscreen/plugin.js",
+    "plugin/seminar/plugin.js",
+    "plugin/seminar/socket.io.js",
+    "plugin/seminar/qrious.min.js",
+    "plugin/poll/plugin.js",
+    "plugin/questions/plugin.js",
+    "plugin/audio-slideshow/plugin.js",
+    "plugin/audio-slideshow/recorder.js",
+    "plugin/audio-slideshow/RecordRTC.js",
+    "plugin.js"
+  ],
+  "css": [
+    "theme/mytheme.css",
+    "plugin/reveal.js-menu/menu.css",
+    "plugin/chalkboard/style.css",
+    "plugin/poll/style.css",
+    "plugin/questions/style.css"
+  ]
+}
