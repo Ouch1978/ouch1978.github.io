@@ -1,5 +1,6 @@
 ---
 title: 跟著Ouch寫程式 - 前言
+slug: 2010-10-30-learning-c-sharp-intro
 date: 2010-10-30 00:00:00
 autohrs: ouch1978
 tags: [C#]

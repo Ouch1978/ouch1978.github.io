@@ -1,9 +1,9 @@
 ---
 title: Line 原創貼圖 - 尼古這一家系列
+slug: 2016-06-14-line-stickers-nicolas-family
 date: 2016-06-14 15:49:00
 autohrs: ouch1978
-tags: []
-draft: false
+tags: [貼圖]
 ---
 
 其實我早在兩年前就一直想要畫以我家的喵星人們為主題的 Line 貼圖了，但是夢想總是美好的，現實是殘酷的。一直拖到了今年，才有空真的動筆下去生出四十張一組的貼圖。

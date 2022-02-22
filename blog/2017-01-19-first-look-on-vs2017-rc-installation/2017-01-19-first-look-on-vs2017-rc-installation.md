@@ -1,14 +1,11 @@
 ---
 title: 初探 Visual Studio 2017 RC - 安裝篇
+slug: 2017-01-19-first-look-on-vs2017-rc-installation
 description: 地表最強開發工具 - Visual Studio 推出的生命週期越來越快，一轉眼 Visual Studio 2017 就進到RC階段了，這邊就簡單的分享一下安裝試用的心得。
-
 date: 2017-01-19T21:30:00
-modified: 2017-01-19T21:30:00
 category: 程式開發
 tags:
   - Visual Studio
-
-chart: null
 ---
 
 在 2016 年的 11 月，微軟藉由 Connect 大會發佈了"地表最強開發工具" Visual Studio 2017 的 RC (發行候選)版本。

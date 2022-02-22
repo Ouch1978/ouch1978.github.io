@@ -1,7 +1,8 @@
 ---
 title: 解決遊戲在 Windows 10 執行時出現 XAudio2_7.dll_unloaded 錯誤造成的閃退
-date: "2016-07-02 17:00"
+slug: 2016-07-02-solve-xaudio2_7.dll-unloaded-error
 description: 放假的時候想要玩個遊戲放鬆一下，但是遊戲卻動不動就自己閃退，在事件檢視器中看到失敗的模組名稱為 XAudio2_7.dll_unloaded ，這邊就來分享解決之道。
+date: "2016-07-02 17:00"
 category: 實用小技巧
 tags:
   - Windows 10

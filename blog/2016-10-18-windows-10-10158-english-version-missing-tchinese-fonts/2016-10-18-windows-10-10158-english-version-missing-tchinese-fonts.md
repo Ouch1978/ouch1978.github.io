@@ -1,7 +1,8 @@
 ---
 title: 解決 Windows 10 10586 英文版無法正常顯示 Non-Unicode 中文的問題
-date: "2016-10-18 22:00"
+slug: 2016-10-18-windows-10-10158-english-version-missing-tchinese-fonts
 description: 之前重灌工作機的時候，發現一個 Windows 10 10586 英文版神奇的問題，特別寫篇文章來記念一下。
+date: "2016-10-18 22:00"
 category: 實用小技巧
 tags:
   - Windows 10

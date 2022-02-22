@@ -12,7 +12,7 @@
     "description": "read full text"
   },
   "theme.blog.post.plurals": {
-    "message": "One post|{count} posts",
+    "message": "{count} 篇文章",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {

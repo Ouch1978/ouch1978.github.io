@@ -48,7 +48,7 @@ module.exports = {
   projectName: "Ouch1978", // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-TW',
-    locales: ['en', 'zh-TW'],
+    locales: ['zh-TW'],
   },
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),

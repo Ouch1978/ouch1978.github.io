@@ -1,5 +1,6 @@
 ---
 title: C#命名方針
+slug: 2010-10-30-c-sharp-naming-convention
 date: 2010-10-30 00:00:00
 autohrs: ouch1978
 tags: [C#]
