@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="utf-8" />
+  <title>DNG's Slides</title>
+  <link rel="stylesheet" href="{{{themeUrl}}}" id="theme" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+    body {
+      font-size: 20px;
+      font-family: "Ubuntu";
+    }
+
+    li {
+      list-style-type: square;
+    }
+
+    img {
+      height: 1.4em;
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container is-fullwidth">
+      <h2 class="title">DNG's Slides</h2>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Tags</th>
+            <th>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#files}}
+          <tr>
+            <td>{{date}}</td>
+            <td>{{tags}}</td>
+            <td><a href="{{filePath}}" title="{{title}}-slide">
+                {{title}}
+              </a> <a href="{{filePath}}?print-pdf" title="{{title}}-pdf">(PDF)</a></td>
+            <td>
+          </tr>
+          {{/files}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+
+</html>
