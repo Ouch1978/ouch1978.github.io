@@ -104,7 +104,6 @@ export default function DocItem(props) {
               <DiscussionEmbed
                 shortname="ouch1978"
                 config={{
-                  url: WindowLocation,
                   identifier: slug,
                   title: title,
                   language: "zh-TW",
