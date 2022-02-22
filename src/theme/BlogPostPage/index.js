@@ -28,16 +28,6 @@ function BlogPostPage(props) {
   } = frontMatter;
   const image = assets.image ?? frontMatter.image;
 
-  const WindowLocation = () => {
-    return (
-      <BrowserOnly>
-        {() => {
-          window.location.href;
-        }}
-      </BrowserOnly>
-    );
-  };
-
   return (
     <BlogLayout
       wrapperClassName={ThemeClassNames.wrapper.blogPages}
@@ -80,7 +70,6 @@ function BlogPostPage(props) {
         <DiscussionEmbed
           shortname="ouch1978"
           config={{
-            url: WindowLocation,
             identifier: slug,
             title: title,
             language: "zh-TW",
