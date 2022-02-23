@@ -1,0 +1,5 @@
+position: 99 # float position is supported
+label: '雜七雜八'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+className: red
