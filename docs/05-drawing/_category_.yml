@@ -1,0 +1,5 @@
+position: 5 # float position is supported
+label: '我有畫要說'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+className: red
