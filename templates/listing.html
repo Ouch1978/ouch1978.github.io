@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>DNG's Slides</title>
+  <title>Ouch's Slides</title>
   <link rel="stylesheet" href="{{{themeUrl}}}" id="theme" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 
     body {
       font-size: 20px;
-      font-family: "Ubuntu";
+      font-family: 'Noto Sans TC', sans-serif;
     }
 
     li {
@@ -21,14 +21,13 @@
     img {
       height: 1.4em;
     }
-
   </style>
 </head>
 
 <body>
   <section class="section">
     <div class="container is-fullwidth">
-      <h2 class="title">DNG's Slides</h2>
+      <h2 class="title">Ouch's Slides</h2>
     </div>
   </section>
   <section class="section">
@@ -46,9 +45,9 @@
           <tr>
             <td>{{date}}</td>
             <td>{{tags}}</td>
-            <td><a href="{{filePath}}" title="{{title}}-slide">
+            <td><a href="/slides/{{filePath}}" title="{{title}}-slide">
                 {{title}}
-              </a> <a href="{{filePath}}?print-pdf" title="{{title}}-pdf">(PDF)</a></td>
+              </a> <a href="/slides/{{filePath}}?print-pdf" title="{{title}}-pdf" target="_blank">(PDF)</a></td>
             <td>
           </tr>
           {{/files}}
