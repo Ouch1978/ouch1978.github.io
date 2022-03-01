@@ -96,6 +96,11 @@ module.exports = {
           to: "/blog",
           label: "部落格",
           position: "left",
+        },
+        {
+          to: "/slides",
+          label: "投影片",
+          position: "right",
         }
       ],
     },
