@@ -13,7 +13,7 @@
       font-weight: 600;
       line-height: 1.42em;
       color: #A7A1AE;
-      background-color: #1F2739;
+      background-color: #18191A;
     }
 
     h1 {
@@ -21,47 +21,28 @@
       font-weight: 900;
       line-height: 1em;
       text-align: center;
-      color: #4DC3FA;
+      color: rgb(38, 212, 255);
     }
 
-    h2 {
-      font-size: 1em;
-      font-weight: 300;
-      text-align: center;
-      display: block;
-      line-height: 1em;
-      padding-bottom: 2em;
-      color: #FB667A;
-    }
-
-    h2 a {
+    a {
       font-weight: 700;
       text-transform: uppercase;
-      color: #FB667A;
-      text-decoration: none;
+      color: #ef2246;
+      text-decoration: underline;
     }
 
-    .blue {
-      color: #185875;
-    }
-
-    .yellow {
-      color: #FFF842;
-    }
-
-    .container th h1 {
-      font-weight: bold;
-      font-size: 1em;
-      text-align: left;
-      color: #185875;
+    .container th {
+      font-size: 1.25em;
+      font-weight: 700;
+      padding-left: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      color: white;
     }
 
     .container td {
       font-weight: normal;
       font-size: 1em;
-      -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-      -moz-box-shadow: 0 2px 2px -2px #0E1119;
-      box-shadow: 0 2px 2px -2px #0E1119;
     }
 
     .container {
@@ -73,11 +54,10 @@
       padding: 0 0 8em 0;
     }
 
-    .container td,
-    .container th {
-      padding-bottom: 2%;
-      padding-top: 2%;
-      padding-left: 2%;
+    .container td {
+      padding-bottom: 1.5em;
+      padding-top: 1.5em;
+      padding-left: 1em;
     }
 
     /* Background-color of the odd rows */
@@ -91,50 +71,22 @@
     }
 
     .container th {
-      background-color: #1F2739;
-    }
-
-    .container td:first-child {
-      color: #FB667A;
+      background-color: #18191A;
     }
 
     .container tr:hover {
       background-color: #464A52;
-      -webkit-box-shadow: 0 6px 6px -6px #0E1119;
-      -moz-box-shadow: 0 6px 6px -6px #0E1119;
-      box-shadow: 0 6px 6px -6px #0E1119;
-    }
-
-    .container td:hover {
-      background-color: #FFF842;
-      color: #403E10;
-      font-weight: bold;
-
-      box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
-      transform: translate3d(6px, -6px, 0);
-
-      transition-delay: 0s;
-      transition-duration: 0.4s;
-      transition-property: all;
-      transition-timing-function: line;
-    }
-
-    @media (max-width: 800px) {
-      .container td:nth-child(4),
-      .container th:nth-child(4) {
-        display: none;
-      }
     }
   </style>
 </head>
 
 <body>
   <section>
-    <div >
+    <div>
       <h1 class="title">Ouch's Slides</h1>
     </div>
   </section>
-  <section >
+  <section>
     <div>
       <table class="container">
         <thead>
@@ -151,8 +103,8 @@
             <td>{{tags}}</td>
             <td><a href="/slides/{{filePath}}" title="{{title}}-slide">
                 {{title}}
-              </a> <a href="/slides/{{filePath}}?print-pdf" title="{{title}}-pdf" target="_blank">(PDF)</a></td>
-            <td>
+              </a> <a href="/slides/{{filePath}}?print-pdf" title="{{title}}-pdf" target="_blank">(PDF)</a>
+            </td>
           </tr>
           {{/files}}
         </tbody>
