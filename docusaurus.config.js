@@ -98,7 +98,7 @@ module.exports = {
           position: "left",
         },
         {
-          to: "/slides",
+          to: "pathname:///slides",
           label: "投影片",
           position: "right",
         }
