@@ -17,14 +17,14 @@ import TOCCollapsible from "@theme/TOCCollapsible";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import { ThemeClassNames, useWindowSize } from "@docusaurus/theme-common";
+import DocBreadcrumbs from "@theme/DocBreadcrumbs";
 
 import { DiscussionEmbed } from "disqus-react";
 
 export default function DocItem(props) {
   const { content: DocContent } = props;
-  const { metadata, frontMatter } = DocContent;
+  const { metadata, frontMatter, assets } = DocContent;
   const {
-    image,
     keywords,
     hide_title: hideTitle,
     hide_table_of_contents: hideTableOfContents,
@@ -32,7 +32,9 @@ export default function DocItem(props) {
     toc_max_heading_level: tocMaxHeadingLevel,
     no_comments,
   } = frontMatter;
-  const { description, title, slug } = metadata; // We only add a title if:
+  const { description, title, slug } = metadata;
+
+  const image = assets.image ?? frontMatter.image; // We only add a title if:
   // - user asks to hide it with front matter
   // - the markdown content does not already contain a top-level h1 heading
 
@@ -71,6 +73,7 @@ export default function DocItem(props) {
           <DocVersionBanner />
           <div className={styles.docItemContainer}>
             <article>
+              <DocBreadcrumbs />
               <DocVersionBadge />
 
               {canRenderTOC && (
