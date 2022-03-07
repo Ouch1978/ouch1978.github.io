@@ -45,7 +45,7 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "Ouch1978", // Usually your GitHub org/user name.
-  projectName: "Ouch1978", // Usually your repo name.
+  projectName: "Ouch1978.github.io", // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-TW',
     locales: ['zh-TW'],
@@ -77,7 +77,7 @@ module.exports = {
       }
     },
     prism: {
-      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php"],
+      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php", "aspnet"],
       theme: require("prism-react-renderer/themes/vsDark"),
     },
     navbar: {
@@ -115,11 +115,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main/website",
           remarkPlugins: [math, remarkGridTables],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
+          breadcrumbs: true,
           sidebarItemsGenerator: async function ({
             defaultSidebarItemsGenerator,
             ...args

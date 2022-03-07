@@ -1,0 +1,5 @@
+position: 2 # float position is supported
+label: 'Docker 小技巧'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+className: red
