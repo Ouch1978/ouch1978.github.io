@@ -60,6 +60,10 @@ module.exports = {
   ],
   themes: ["@saucelabs/theme-github-codeblock"],
   themeConfig: {
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 5,
+    },
     hideableSidebar: true,
     algolia: {
       appId: 'AG6O0X1DB7',
