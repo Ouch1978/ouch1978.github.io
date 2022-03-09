@@ -1,9 +1,7 @@
 ---
 title: 初探 Visual Studio 2017 RC - 安裝篇
 slug: 2017-01-19-first-look-on-vs2017-rc-installation
-description: 地表最強開發工具 - Visual Studio 推出的生命週期越來越快，一轉眼 Visual Studio 2017 就進到RC階段了，這邊就簡單的分享一下安裝試用的心得。
-date: 2017-01-19T21:30:00
-category: 程式開發
+authors: ouch1978
 tags:
   - Visual Studio
 ---
@@ -24,7 +22,7 @@ tags:
 
 接下來就各位分享一下安裝和試用的心得。
 
-##下載
+## 下載
 
 首先，這次釋出的 RC 版和之前的版本有些不同，在官網上並沒有官方的 ISO 檔可供下載，也沒有官方的離線安裝檔，只有線上安裝檔可供下載。
 
@@ -38,7 +36,7 @@ tags:
 
 > 雖然說官方並不提供離線安裝檔，但還是很佛心的寫了一篇文章教我們怎麼[製作離線安裝檔](https://docs.microsoft.com/zh-tw/visualstudio/install/create-an-offline-installation-of-visual-studio "Create an offline installation of Visual Studio 2017 RC")。
 
-##安裝
+## 安裝
 
 接下來，就安裝 Enterprise 版來體驗一下吧!!
 
@@ -75,7 +73,7 @@ tags:
 安裝完成之後，會需要重新開機。
 [![安裝完成之後需要重新開機](07-reboot-required.png)
 
-##心得
+## 心得
 
 依照我選擇的功能，整個安裝的過程大約花了一個小時出頭，還包含各功能模組的下載時間，整個安裝的體驗比之前的版本要來得流暢許多。
 

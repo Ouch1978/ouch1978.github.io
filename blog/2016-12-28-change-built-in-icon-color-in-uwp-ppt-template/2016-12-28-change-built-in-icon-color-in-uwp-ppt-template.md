@@ -1,10 +1,7 @@
 ---
 title: 更改 UWP PowerPoint 設計範本中內建的 AppBar 圖示顏色
 slug: 2016-12-28-change-built-in-icon-color-in-uwp-ppt-template
-description: 之前介紹的 UWP 的 PowerPoint 設計範本裡面內建了不少的 AppBar 圖示，但是有些是圖片，好像沒辦法直接改變顏色....
-date: 2016-12-28T21:30:00
-modified: 2016-14-28T21:30:00
-category: PowerPoint
+authors: ouch1978
 tags:
   - UWP
   - 設計

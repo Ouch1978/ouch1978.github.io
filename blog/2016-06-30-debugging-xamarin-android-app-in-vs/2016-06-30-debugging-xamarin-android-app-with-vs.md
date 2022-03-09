@@ -1,11 +1,8 @@
 ---
 title: 透過Visual Studio對Xamarin Android專案進行除錯
-description: "透過Visual Studio對Xamarin Android專案進行除錯"
 slug: 2016-06-30-debugging-xamarin-android-app-in-vs
-date: 2016-06-30 22:00:00
-categories: []
-tags: []
 authors: ouch1978
+tags: []
 ---
 
 很開心的可以成功建置出Android應用程式之後...咦!? 怎麼不能Debug!!??Visual Studio把應用程式佈署到模擬器之後就不管了??哪招啊!?

@@ -1,9 +1,7 @@
 ---
 title: 透過 Roaming Extension Manager 在不同機器上同步 Visual Studio 2015 的擴充功能
 slug: 2016-11-01-roaming-extension-manager
-description: 常常在工作的時候找到不錯用的 Visual Studio 擴充功能，但是往往回家又得再安裝一次，有時候忙過頭隔個幾天想安裝就忘記名字叫什麼了。一直在想說怎麼沒有一個功能可以在不同的電腦之間同步安裝過的擴充功能，果不其然，還真的有耶!!
-date: "2016-11-01 23:00"
-category: 程式開發
+authors: ouch1978
 tags:
   - Visual Studio 2015
 ---

@@ -1,10 +1,7 @@
 ---
 title: 使用 Dev Center 提供的 PowerPoint 設計範本製作 UWP 的 UI 雛型
 slug: 2016-12-14-using-powerpoint-template-for-designing-uwp-app
-description: 在構思 App 的 UI 時，如果能有一個方便製作/記錄雛型的工具，應該會是很有幫助的一件事，在 Dev Center 裡就有這麼一個東西....
-date: 2016-12-14T13:30:00
-modified: 2016-14-14T13:30:00
-category: UI/UX 設計
+authors: ouch1978
 tags:
   - UWP
   - 設計

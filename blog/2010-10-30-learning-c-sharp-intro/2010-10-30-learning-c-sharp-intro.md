@@ -1,10 +1,8 @@
 ---
 title: 跟著Ouch寫程式 - 前言
 slug: 2010-10-30-learning-c-sharp-intro
-date: 2010-10-30 00:00:00
 autohrs: ouch1978
 tags: [C#]
-draft: false
 ---
 
 最近身邊有些朋友正在學習寫程式，算是新手中的新手，想想我也曾是過來人，就在這邊順便一下分享我小小的經驗，希望能對剛起步的朋友們有所幫助。

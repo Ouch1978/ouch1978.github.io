@@ -1,10 +1,8 @@
 ---
 title: 徹底移除 Skype 廣告
 slug: 2016-06-08-remove-skype-ads
-date: 2016-06-08 00:00:00.00
 autohrs: ouch1978
 tags: [Skype]
-draft: false
 ---
 
 最近新版的 Skype 預設都會開啟對話視窗和主視窗的廣告功能，佔掉不小的版面，實在是有點惱人。這邊就跟大家分享怎麼把討人厭的廣告移乾淨吧。

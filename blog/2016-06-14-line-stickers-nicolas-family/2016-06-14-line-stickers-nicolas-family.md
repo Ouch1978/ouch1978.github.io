@@ -1,7 +1,6 @@
 ---
 title: Line 原創貼圖 - 尼古這一家系列
 slug: 2016-06-14-line-stickers-nicolas-family
-date: 2016-06-14 15:49:00
 autohrs: ouch1978
 tags: [貼圖]
 ---

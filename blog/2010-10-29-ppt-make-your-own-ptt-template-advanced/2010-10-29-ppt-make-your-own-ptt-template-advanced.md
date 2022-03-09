@@ -1,11 +1,8 @@
 ---
 title: 輕鬆製作獨一無二的投影片-加強版
 slug: 2010-10-29-ppt-make-your-own-ptt-template-advanced
-date: 2010-10-29 00:00:00
 autohrs: ouch1978
 tags: [Power Point]
-keywords: [ppt, 母片, 樣版, 不求人, 鏡面]
-draft: false
 ---
 
 上次跟各位介紹了母片的應用，這次再來介紹兩個小撇步，一樣只利用 PowerPoint 原生的功能，`不借助任何外部圖片`，做出類似璃鏡面的效果，以及可以放在標題頁的自我介紹小卡片。
