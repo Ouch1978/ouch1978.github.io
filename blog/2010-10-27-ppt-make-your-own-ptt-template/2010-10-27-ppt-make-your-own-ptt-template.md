@@ -1,11 +1,8 @@
 ---
 title: 輕鬆製作獨一無二的投影片
 slug: 2010-10-27-ppt-make-your-own-ptt-template
-date: 2010-10-27 00:00:00
 autohrs: ouch1978
 tags: [Power Point]
-keywords: [ppt, 母片, 樣版, 不求人]
-draft: false
 ---
 
 相信 Power Point 大家都會用，但是真的要自己從無到有，`不使用任何別人做好的樣板或是美工圖片`，快速的製作出一份「看起來」有一定的專業程度的簡報，應該就會難倒某些人吧!?

@@ -1,10 +1,8 @@
 ---
 title: C#命名方針
 slug: 2010-10-30-c-sharp-naming-convention
-date: 2010-10-30 00:00:00
 autohrs: ouch1978
 tags: [C#]
-draft: false
 ---
 
 寫程式其實也是有規矩在的，尤其是要團體協同開發的時候，如果每個人使用的規則都不一樣，那要求每個人看得懂別人的程式碼，真的是會要了人的命。

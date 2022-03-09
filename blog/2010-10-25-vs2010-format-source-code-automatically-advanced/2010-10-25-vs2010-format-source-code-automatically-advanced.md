@@ -1,11 +1,8 @@
 ---
 title: 使用 Visual Studio 進行 Source Code 自動格式化 - 加強版
 slug: 2010-10-25-vs2010-format-source-code-automatically-advanced
-date: 2010-10-25 00:30:00
 autohrs: ouch1978
 tags: [Visual Studio]
-keywords: [visual studio, format code, macro, coding style]
-draft: false
 ---
 
 上篇講到了怎麼做 Source Code 的自動格式化，但是用內建的功能，其實有個不太方便的地方 -- 一次只能格式化一個檔案，這個問題對於我來說就頭很大了，通常一個專案不太可能只有兩三個檔，動不動就要每個檔案都開來自動格式化一下也是很累人而且浪費時間的一件事，這時候，整個專案裡面的檔案都可以自動格式化的功能就變成是必備的了!!

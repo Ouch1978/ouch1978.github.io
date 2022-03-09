@@ -1,11 +1,8 @@
 ---
 title: 初探 Visual Studio 2017 RC - IDE 使用者體驗篇
 slug: 2017-01-28-first-look-on-vs2017-rc-ide-ux-enhancement
-date: 2017-01-28 22:30:00
 autohrs: ouch1978
 tags: [Visual Studio]
-keywords: [UX, coding style]
-draft: false
 ---
 
 [installation]: http://ouch1978.github.io/2017/01/20/first-look-on-vs2017-rc-installation/ "初探 VISUAL STUDIO 2017 RC - 安裝篇"

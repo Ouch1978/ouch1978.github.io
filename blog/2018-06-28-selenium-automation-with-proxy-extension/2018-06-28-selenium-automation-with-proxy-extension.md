@@ -1,10 +1,8 @@
 ---
 title: 被擋的嫑嫑的嗎? 透過 CHROME 的擴充功能讓你的 SELENIUM 自動化突破國家的界線!!
 slug: 2018-06-28-selenium-automation-with-proxy-extension
-date: 2018-06-28 23:30:00
 autohrs: ouch1978
 tags: [selenium, automation, extension]
-draft: false
 ---
 
 ## 前言

@@ -1,10 +1,8 @@
 ---
 title: 透過 Xamarin.Forms 來玩玩傳說中的 XAML Standard (preview) 吧!!
 slug: 2018-01-08-xaml-standard-preview-in-xamarin-forms
-date: 2018-01-08 3:30:00
 autohrs: ouch1978
 tags: [Visual Studio, Xamarin, XAML Standard]
-draft: false
 ---
 
 ## 前言

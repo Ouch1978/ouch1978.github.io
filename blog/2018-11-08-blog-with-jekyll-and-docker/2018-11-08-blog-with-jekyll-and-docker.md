@@ -1,10 +1,8 @@
 ---
 title: 透過 Docker 執行 Jekyll 產出部落格文章
 slug: 2018-11-08-blog-with-jekyll-and-docker
-date: 2018-11-08 22:30:00
 autohrs: ouch1978
 tags: [jekyll, docker]
-draft: false
 ---
 
 ## 古早之前的故事

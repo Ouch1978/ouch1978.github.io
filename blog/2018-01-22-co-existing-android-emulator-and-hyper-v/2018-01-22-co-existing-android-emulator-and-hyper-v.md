@@ -1,10 +1,8 @@
 ---
 title: 誰說魚與熊掌不可兼得? 讓你的安卓模擬器與 Hyper-V 可以和平共處
 slug: 2018-01-22-co-existing-android-emulator-and-hyper-v
-date: 2018-01-22 23:30:00
 autohrs: ouch1978
 tags: [Visual Studio, Xamarin, Intel HAXM]
-draft: false
 ---
 
 ## 前言

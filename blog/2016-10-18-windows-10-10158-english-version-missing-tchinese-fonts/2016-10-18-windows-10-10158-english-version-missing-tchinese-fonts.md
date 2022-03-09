@@ -1,26 +1,24 @@
 ---
 title: 解決 Windows 10 10586 英文版無法正常顯示 Non-Unicode 中文的問題
 slug: 2016-10-18-windows-10-10158-english-version-missing-tchinese-fonts
-description: 之前重灌工作機的時候，發現一個 Windows 10 10586 英文版神奇的問題，特別寫篇文章來記念一下。
-date: "2016-10-18 22:00"
-category: 實用小技巧
+authors: ouch1978
 tags:
   - Windows 10
 ---
 
 話說，之前重灌工作機的時候，試了不同的 Windows 10 版本，一開始安裝的是 10586(1511) 英文版，但是發現非 Unicode 的中文無法正常顯示。
 
-# 症狀
+## 症狀
 
 只要是 Non-Unicde 的中文部份，全部都變成了一個一個的方塊。
 [![無法正確顯示非Unicode中文內容](non-unicode-chinese-not-displayed-correctly.png)
 
-# 直接講結論
+## 直接講結論
 
 其實解法非常簡單，只要 **`手動安裝新細明體和標楷體字型`** 就可以解決這個問題了。
 但是這一連串的插波休停 (Trouble Shooting) 的過程可是花了我好幾個小時啊!!!~
 
-# 對我插波休停過程有興趣的請繼續往下閱讀
+## 對我插波休停過程有興趣的請繼續往下閱讀
 
 1. 通常，遇到中文沒辦法正常顯示的情況都會先檢查 Non-Unicode Language 的設定。很好，我的確有選繁中，台灣。
    [![Non-Unicode 語言設定](setting-for-non-unicode-language.png)
@@ -44,7 +42,7 @@ tags:
 7. 喔耶!! 中文回來了~~大家都回來了!!
    [![可以正常顯示中文啦](get-chinese-back.png)
 
-# 後記
+## 後記
 
 這真的是一件很神奇的事...
 
