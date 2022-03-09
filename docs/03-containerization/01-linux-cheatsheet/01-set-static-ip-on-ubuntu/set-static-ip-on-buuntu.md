@@ -1,7 +1,7 @@
 ---
 title: 在 Ubuntu 中透過指令設定固定 IP
 author: ouch1978
-tags: [ubuntu,command,cli,static ip,]
+tags: [ubuntu,command,cli,static ip]
 slug: set-fixed-ip-on-ubuntu
 draft: false
 ---
