@@ -1,5 +1,8 @@
-const math = require("remark-math");
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
+
 const katex = require("rehype-katex");
+const math = require("remark-math");
 const path = require("path");
 
 const unified = require("unified");

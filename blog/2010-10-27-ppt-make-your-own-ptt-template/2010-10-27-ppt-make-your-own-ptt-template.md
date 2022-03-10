@@ -1,7 +1,7 @@
 ---
 title: 輕鬆製作獨一無二的投影片
 slug: 2010-10-27-ppt-make-your-own-ptt-template
-autohrs: ouch1978
+authors: ouch1978
 tags: [Power Point]
 ---
 

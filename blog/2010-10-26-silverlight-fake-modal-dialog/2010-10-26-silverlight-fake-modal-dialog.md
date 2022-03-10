@@ -1,7 +1,7 @@
 ---
 title: 自製 Modal 元件
 slug: 2010-10-26-silverlight-fake-modal-dialog
-autohrs: ouch1978
+authors: ouch1978
 tags: [Silverlight]
 ---
 

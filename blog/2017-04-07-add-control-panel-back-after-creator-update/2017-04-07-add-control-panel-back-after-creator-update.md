@@ -1,7 +1,7 @@
 ---
 title: 回來吧!! Creator Update 開始按鈕右鍵選單裡的控制台選項!!
 slug: 2017-04-07-add-control-panel-back-after-creator-update
-autohrs: ouch1978
+authors: ouch1978
 tags: [Windows 10]
 ---
 
