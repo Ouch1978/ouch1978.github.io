@@ -1,51 +1,49 @@
 /**
- * Copyright (c) 2017-present, Facebook, Inc.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useEffect } from "react";
+import React from 'react';
 
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import BlogLayout from '@theme/BlogLayout';
+import BlogPostItem from '@theme/BlogPostItem';
+import BlogListPaginator from '@theme/BlogListPaginator';
+import type {Props} from '@theme/BlogListPage';
+import {ThemeClassNames} from '@docusaurus/theme-common';
+
 import Layout from "@theme/Layout";
-import BlogPostItem from "@theme/BlogPostItem";
-import BlogListPaginator from "@theme/BlogListPaginator";
-
-import styles from "./styles.module.css";
-import Fade from "react-reveal/Fade";
-
-import Translate from "@docusaurus/Translate";
 import Head from "@docusaurus/Head";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTags, faHistory } from "@fortawesome/free-solid-svg-icons";
-
+import Fade from "react-reveal/Fade";
+import styles from "./styles.module.css";
 import ListFilter from "./img/list.svg";
 import CardFilter from "./img/card.svg";
 
 import Link from "@docusaurus/Link";
+
 import { useViewType } from "./useViewType";
 
-function BlogListPage(props) {
-  const { metadata, items, sidebar } = props;
 
+
+export default function BlogListPage(props: Props): JSX.Element {
+  const {metadata, items, sidebar} = props;
   const {
-    siteConfig: { title: siteTitle },
+    siteConfig: {title: siteTitle},
   } = useDocusaurusContext();
+  const {blogDescription, blogTitle, permalink} = metadata;
+  const isBlogOnlyMode = permalink === '/';
+  const title = isBlogOnlyMode ? siteTitle : blogTitle;
 
   const isPaginated = metadata.page > 1;
-  const isBlogPage = metadata.permalink === "/";
 
-  const title = siteTitle + " - Blog";
-
-  // list or card view
   const { viewType, toggleViewType } = useViewType();
 
   const isCardView = viewType === "card";
   const isListView = viewType === "list";
 
-  return (
+  return ( 
     <Layout title={title} wrapperClassName="blog-list__page">
       <Head>
         <title>{title}</title>
@@ -76,6 +74,7 @@ function BlogListPage(props) {
                           <BlogPostItem
                             key={BlogPostContent.metadata.permalink}
                             frontMatter={BlogPostContent.frontMatter}
+                            assets={BlogPostContent.assets}
                             metadata={BlogPostContent.metadata}
                             truncated={BlogPostContent.metadata.truncated}
                           >
@@ -137,8 +136,5 @@ function BlogListPage(props) {
           </div>
         </div>
       </div>
-    </Layout>
-  );
+    </Layout>  );
 }
-
-export default BlogListPage;
