@@ -1,7 +1,7 @@
 ---
 title: 五分鐘看完 C# 7.2
 slug: 2018-01-31-understand-csharp-7.2-in-5-minutes
-autohrs: ouch1978
+authors: ouch1978
 tags: [Visual Studio, C#]
 ---
 

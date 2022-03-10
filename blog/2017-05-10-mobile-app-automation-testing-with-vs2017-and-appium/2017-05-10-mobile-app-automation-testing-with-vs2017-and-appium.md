@@ -1,7 +1,7 @@
 ---
 title: 透過 Visual Studio 2017 與 Appium 測試安卓手機上的 App
 slug: 2017-05-10-mobile-app-automation-testing-with-vs2017-and-appium
-autohrs: ouch1978
+authors: ouch1978
 tags: [Visual Studio 2017, Appium, Automation Testing]
 ---
 

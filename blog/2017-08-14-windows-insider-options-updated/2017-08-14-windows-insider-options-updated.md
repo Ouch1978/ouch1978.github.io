@@ -1,7 +1,7 @@
 ---
 title: 直衝 Redstone 4!? Windows 測試人員計畫選項更新
 slug: 2017-08-14-windows-insider-options-updated
-autohrs: ouch1978
+authors: ouch1978
 tags: [Windows 10, Creators Update, Insider Program]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 使用 Visual Studio 2017 搭配 Xamarin.UITest 進行安卓應用程式的自動化測試
 slug: 2017-05-25-mobile-ui-automation-with-xamarin-uitest
-autohrs: ouch1978
+authors: ouch1978
 tags: [Visual Studio 2017, Xamarin.UITest, Automation Testing]
 ---
 

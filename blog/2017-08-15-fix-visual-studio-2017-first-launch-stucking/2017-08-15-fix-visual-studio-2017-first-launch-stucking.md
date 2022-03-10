@@ -1,7 +1,7 @@
 ---
 title: 解決 Visual Studio 2017 首次執行時卡在 We are getting things ready 的問題
 slug: 2017-08-15-fix-visual-studio-2017-first-launch-stucking
-autohrs: ouch1978
+authors: ouch1978
 tags: [Visual Studio]
 ---
 

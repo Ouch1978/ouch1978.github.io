@@ -1,7 +1,7 @@
 ---
 title: 徹底移除 Skype 廣告
 slug: 2016-06-08-remove-skype-ads
-autohrs: ouch1978
+authors: ouch1978
 tags: [Skype]
 ---
 

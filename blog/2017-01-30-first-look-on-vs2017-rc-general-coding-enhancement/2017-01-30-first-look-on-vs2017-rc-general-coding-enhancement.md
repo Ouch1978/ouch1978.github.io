@@ -1,7 +1,7 @@
 ---
 title: 初探 Visual Studio 2017 RC - 程式撰寫體驗篇
 slug: 2017-01-30-first-look-on-vs2017-rc-general-coding-enhancement
-autohrs: ouch1978
+authors: ouch1978
 tags: [Visual Studio]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 解決透過 Appium 測試安卓裝置上的行動網站發生 ChromeDriver 版本不相容的問題
 slug: 2017-05-11-fix-appium-chrome-driver-error
-autohrs: ouch1978
+authors: ouch1978
 tags: [Visual Studio 2017, Appium, Automation Testing]
 ---
 
