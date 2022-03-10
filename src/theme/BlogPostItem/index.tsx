@@ -15,28 +15,51 @@ import Link from "@docusaurus/Link";
 import MDXComponents from "@theme/MDXComponents";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-
-import { useColorMode } from "@docusaurus/theme-common";
+import EditThisPage from '@theme/EditThisPage';
+import BlogPostAuthors from "@theme/BlogPostAuthors"; // Very simple pluralization: probably good enough for now
+import Translate, { translate } from '@docusaurus/Translate';
+import { usePluralForm, useColorMode } from '@docusaurus/theme-common';
 
 import styles from "./styles.module.css";
 import { MarkdownSection, StyledBlogItem } from "./style";
-
-import Eye from "@site/static/img/eye.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags, faClock, faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 
-import Translate from "@docusaurus/Translate";
-import dayjs from "dayjs";
 
-function BlogPostItem(props) {
-  const { children, frontMatter, metadata, truncated, isBlogPostPage = false, views } = props;
-  const { date, permalink, tags, readingTime } = metadata;
+// Very simple pluralization: probably good enough for now
+function useReadingTimePlural() {
+  const { selectMessage } = usePluralForm();
+  return (readingTimeFloat: number) => {
+    const readingTime = Math.ceil(readingTimeFloat);
+    return selectMessage(
+      readingTime,
+      translate(
+        {
+          id: 'theme.blog.post.readingTime.plurals',
+          description:
+            'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
+          message: 'One min read|{readingTime} min read',
+        },
+        { readingTime },
+      ),
+    );
+  };
+}
 
-  const { slug: postId, author, title, image } = frontMatter;
+export default function BlogPostItem(props: Props): JSX.Element {
+  const readingTimePlural = useReadingTimePlural();
+  const { children, frontMatter, assets, metadata, truncated, isBlogPostPage = false, views } = props;
+  const { date,
+    formattedDate,
+    permalink,
+    tags,
+    readingTime,
+    title,
+    editUrl,
+    authors, } = metadata;
 
-  const authorURL = frontMatter.author_url || frontMatter.authorURL;
-  const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
-  const authorImageURL = frontMatter.author_image_url || frontMatter.authorImageURL;
+  const { slug: postId, image } = frontMatter;
+
   const imageUrl = useBaseUrl(image, { absolute: true });
 
   // 是否為深色主題：
@@ -52,16 +75,12 @@ function BlogPostItem(props) {
   const year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   const day = dateObj.getDate();
-  const hours = dateObj.getUTCHours();
-  const minutes = dateObj.getMinutes();
 
   let dateStr = `${year} 年 ${month} 月`;
 
-  const dateTimeStr = `${year} 年 ${month} 月 ${day} 日 ${hours} 時 ${minutes} 分`;
-
   if (currentLocale === "en") {
     month = dateObj.toLocaleString("default", { month: "long" });
-    dateStr = `${month}, ${year}`;
+    dateStr = ` ${year} - ${month}`;
   }
 
   const renderPostHeader = () => {
@@ -78,6 +97,7 @@ function BlogPostItem(props) {
             </Link>
           )}
         </TitleHeading>
+        <BlogPostAuthors authors={authors} assets={assets} />
       </header>
     );
   };
@@ -110,19 +130,15 @@ function BlogPostItem(props) {
     return (
       <p className={`single-post--date text--center`}>
         <FontAwesomeIcon icon={faCalendarPlus} className="margin-right--md" />
-        {dateTimeStr}
-        <p />
+        <time dateTime={date} itemProp="datePublished">
+          {formattedDate}
+        </time>
+        <br/>
+        <br />
         <FontAwesomeIcon icon={faClock} className="margin-right--md" />
-        <Translate id="blogpage.estimated.time" description="blog page estimated time">
-          預計閱讀時間：
-        </Translate>
-        {readingTime && (
+        {typeof readingTime !== 'undefined' && (
           <>
-            {" "}
-            {Math.ceil(readingTime)}{" "}
-            <Translate id="blogpage.estimated.time.label" description="blog page estimated time label">
-              分鐘
-            </Translate>
+            {readingTimePlural(readingTime)}
           </>
         )}
       </p>
@@ -133,16 +149,9 @@ function BlogPostItem(props) {
     return (
       <p className={`reading-time`}>
         <FontAwesomeIcon icon={faClock} className="margin-right--md" />
-        <Translate id="blogpage.estimated.time" description="blog page estimated time">
-          預計閱讀時間：
-        </Translate>
-        {readingTime && (
+        {typeof readingTime !== 'undefined' && (
           <>
-            {" "}
-            {Math.ceil(readingTime)}{" "}
-            <Translate id="blogpage.estimated.time.label" description="blog page estimated time label">
-              分鐘
-            </Translate>
+            {readingTimePlural(readingTime)}
           </>
         )}
       </p>
@@ -156,9 +165,6 @@ function BlogPostItem(props) {
         {image && <meta property="twitter:image" content={imageUrl} />}
         {image && <meta name="twitter:image:alt" content={`Image for ${title}`} />}
       </Head>
-
-      {/* 統計 */}
-      {isBlogPostPage}
 
       <div className={`row ${!isBlogPostPage ? "blog-list--item" : ""}`} style={{ margin: "0px" }}>
         {/* 列表頁日期 */}
@@ -197,14 +203,32 @@ function BlogPostItem(props) {
           <footer className="article__footer padding-top--md margin-top--lg margin-bottom--lg">
             {!isBlogPostPage && (
               <span className="footer__read_count">
-                <Eye className="footer__eye" style={{ verticalAlign: "middle" }} /> {views}
               </span>
             )}
+            {isBlogPostPage && editUrl && (
+              <div className="col margin-top--sm">
+                <EditThisPage editUrl={editUrl} />
+              </div>
+            )}
             {truncated && (
-              <Link to={metadata.permalink} aria-label={`閱讀 ${title} 的全文`}>
-                <strong className={styles.readMore}>
-                  <Translate description="read full text">閱讀全文</Translate>
-                </strong>
+              <Link
+                to={metadata.permalink}
+                aria-label={translate(
+                  {
+                    message: 'Read more about {title}',
+                    id: 'theme.blog.post.readMoreLabel',
+                    description:
+                      'The ARIA label for the link to full blog posts from excerpts',
+                  },
+                  { title },
+                )}>
+                <b>
+                  <Translate
+                    id="theme.blog.post.readMore"
+                    description="The label used in blog post item excerpts to link to full blog posts">
+                    Read More
+                  </Translate>
+                </b>
               </Link>
             )}
           </footer>
@@ -213,5 +237,3 @@ function BlogPostItem(props) {
     </StyledBlogItem>
   );
 }
-
-export default BlogPostItem;
