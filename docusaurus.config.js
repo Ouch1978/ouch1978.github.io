@@ -48,7 +48,7 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "Ouch1978", // Usually your GitHub org/user name.
-  projectName: "Ouch1978.github.io", // Usually your repo name.
+  projectName: "ouch1978.github.io", // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-TW',
     locales: ['zh-TW'],
@@ -71,7 +71,7 @@ module.exports = {
     algolia: {
       appId: 'AG6O0X1DB7',
       apiKey: '849e564e75143705de1058ace77a188d',
-      indexName: 'Ouch1978 @GitHub.io',
+      indexName: 'ouch1978@GitHub.io',
       contextualSearch: true,
     },
     zoom: {
@@ -113,7 +113,7 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} Ouch Liu(Ouch1978). Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ouch Liu(劉耀群). Built with Docusaurus.`,
     },
   },
   presets: [
@@ -126,7 +126,7 @@ module.exports = {
         },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main/website",
+          editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
           remarkPlugins: [math, remarkGridTables],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
@@ -143,7 +143,7 @@ module.exports = {
           blogSidebarCount: 0,
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main/website",
+          editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
           remarkPlugins: [math, remarkGridTables],
           rehypePlugins: [katex],
         },
