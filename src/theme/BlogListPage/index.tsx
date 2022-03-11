@@ -5,14 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import BlogLayout from '@theme/BlogLayout';
-import BlogPostItem from '@theme/BlogPostItem';
-import BlogListPaginator from '@theme/BlogListPaginator';
-import type {Props} from '@theme/BlogListPage';
-import {ThemeClassNames} from '@docusaurus/theme-common';
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import BlogLayout from "@theme/BlogLayout";
+import BlogPostItem from "@theme/BlogPostItem";
+import BlogListPaginator from "@theme/BlogListPaginator";
+import type { Props } from "@theme/BlogListPage";
+import { ThemeClassNames } from "@docusaurus/theme-common";
 
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
@@ -25,15 +25,13 @@ import Link from "@docusaurus/Link";
 
 import { useViewType } from "./useViewType";
 
-
-
 export default function BlogListPage(props: Props): JSX.Element {
-  const {metadata, items, sidebar} = props;
+  const { metadata, items, sidebar } = props;
   const {
-    siteConfig: {title: siteTitle},
+    siteConfig: { title: siteTitle },
   } = useDocusaurusContext();
-  const {blogDescription, blogTitle, permalink} = metadata;
-  const isBlogOnlyMode = permalink === '/';
+  const { blogDescription, blogTitle, permalink } = metadata;
+  const isBlogOnlyMode = permalink === "/";
   const title = isBlogOnlyMode ? siteTitle : blogTitle;
 
   const isPaginated = metadata.page > 1;
@@ -43,7 +41,7 @@ export default function BlogListPage(props: Props): JSX.Element {
   const isCardView = viewType === "card";
   const isListView = viewType === "list";
 
-  return ( 
+  return (
     <Layout title={title} wrapperClassName="blog-list__page">
       <Head>
         <title>{title}</title>
@@ -67,7 +65,7 @@ export default function BlogListPage(props: Props): JSX.Element {
               </div>
               <div className="bloghome__posts">
                 {isCardView && (
-                  <div className='bloghome__posts-card'>
+                  <div className="bloghome__posts-card">
                     {items.map(({ content: BlogPostContent }, index) => (
                       <Fade key={BlogPostContent.metadata.permalink}>
                         <React.Fragment key={BlogPostContent.metadata.permalink}>
@@ -136,5 +134,6 @@ export default function BlogListPage(props: Props): JSX.Element {
           </div>
         </div>
       </div>
-    </Layout>  );
+    </Layout>
+  );
 }
