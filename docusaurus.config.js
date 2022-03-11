@@ -71,7 +71,7 @@ module.exports = {
     algolia: {
       appId: 'AG6O0X1DB7',
       apiKey: '849e564e75143705de1058ace77a188d',
-      indexName: 'ouch1978@GitHub.io',
+      indexName: 'ouch1978.github.io',
       contextualSearch: true,
     },
     zoom: {
