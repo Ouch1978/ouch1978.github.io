@@ -17,7 +17,7 @@ tags: [Visual Studio 2017, Appium, Automation Testing]
 
 基本上會看到的現象就是瀏覽器無法被正常啟動，而從 Appium 的 Console 裡則會看到如下圖的錯誤訊息：
 
-![image-01] (01-chrome-version-must-be-greator-than-error.png "Chrome version must be => xxx")
+![image-01](01-chrome-version-must-be-greator-than-error.png "Chrome version must be => xxx")
 
 > Encountered internal error running command: Error: unknown error: Chrome version must be >= 55.0.2883.0
 > (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)

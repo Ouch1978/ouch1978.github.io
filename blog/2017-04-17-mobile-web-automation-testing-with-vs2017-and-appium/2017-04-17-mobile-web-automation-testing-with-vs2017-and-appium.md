@@ -15,7 +15,7 @@ tags: [Visual Studio 2017, Automation Testing]
 
 <!--truncate-->
 
-在和[強者我同事 - 小黑][強者我同事 - 小黑]討論行動裝置上的網站和原生 App 測試相關的解決方案的時候，他提到了 Appium 這個測試框架。
+在和 [強者我同事 - 小黑][強者我同事 - 小黑] 討論行動裝置上的網站和原生 App 測試相關的解決方案的時候，他提到了 Appium 這個測試框架。
 
 [強者我同事 - 小黑]: http://blackie1019.github.io/ "強者我同事 - 小黑"
 
