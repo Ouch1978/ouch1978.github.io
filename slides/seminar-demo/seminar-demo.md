@@ -1,6 +1,6 @@
 ---
-title: Seminar 外掛使用範例
-date: 2021/08/17
+title: reveal-md - Seminar 外掛使用範例
+date: 2022/03/10
 # black, white, league, beige, sky, simple, serif, night, moon, solarized
 theme: black
 highlightTheme: monokai-sublime
