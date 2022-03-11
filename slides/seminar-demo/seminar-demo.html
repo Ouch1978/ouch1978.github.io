@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md - Seminar 外掛使用範例</title>
+    <link rel="shortcut icon" href="./../favicon.ico" />
+    <link rel="stylesheet" href="./../dist/reset.css" />
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/monokai-sublime.css" />
+
+    <link rel="stylesheet" href="./../_assets/theme/mytheme.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/reveal.js-menu/menu.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/chalkboard/style.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/poll/style.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/questions/style.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+# Seminar 外掛範例
+</script></section><section  data-markdown><script type="text/template">
+## 建立房間
+
+請按下下面的按鈕來建立房間
+
+<a id="host" href="#"><i class="fa fa-door-open"></i></a>
+</script></section><section  data-markdown><script type="text/template">
+## 加入房間
+
+### 掃描 QRCode 或超連結加入房間
+
+<div>
+    <canvas id="qrcode" style="width:300px;height:300px;"></canvas>
+</div>
+<a id="room"></a>
+</script></section><section  data-markdown><script type="text/template">
+## 我是測試頁
+</script></section><section  data-markdown><script type="text/template">
+## 投票功能
+
+### 換另一扇門得獎的機率是?
+
+<div style="height:320px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Monty_open_door.svg/1200px-Monty_open_door.svg.png"/>
+</div>
+
+<div class="poll" data-poll="1">
+    <button data-value="50">1/2</button>
+    <br>
+    <button data-value="67">2/3</button>
+</div>
+
+<p style="font-size:24px;color:gray;">已回答人數: <span class="voters" data-poll="1">0</span></p>
+</script></section><section  data-markdown><script type="text/template">
+## 投票/問卷結果
+
+### 結果可以用純文字顯示
+
+<blockquote class="results" data-poll="1">
+    1/2: <span data-value="50">0</span><br>
+    2/3: <span data-value="67">0</span><br>
+    <p style="font-size:24px;color:gray;">總回答數: <span class="voters" data-poll="1">0</span></p>
+</blockquote>
+</script></section><section  data-markdown><script type="text/template">
+## 投票/問卷結果：長條圖
+
+<div style="height:480px">
+<canvas data-chart="bar" data-poll="1">
+, 1/2, 2/3
+, 0, 0
+</canvas>
+</div>
+</script></section><section  data-markdown><script type="text/template">
+## 投票/問卷結果：圓餅圖
+
+<div style="height:480px">
+<canvas data-chart="pie" data-poll="1">
+, 1/2, 2/3
+, 0, 0
+</canvas>
+</div>
+</script></section><section  data-markdown><script type="text/template">
+## Close Room
+
+<a id="close" href="#"><i class="fa fa-door-closed"></i></a>
+</script></section></div>
+    </div>
+
+    <script src="./../dist/reveal.js"></script>
+
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"fade","controls":true,"progress":true,"history":false,"center":true,"slideNumber":true,"menu":{"side":"left","width":"normal","numbers":true,"markers":true,"custom":false,"themes":true,"themesPath":"../dist/theme/","transitions":true,"openButton":true,"openSlideNumber":false,"keyboard":true,"sticky":false,"autoOpen":true,"delayInit":false,"openOnInit":false,"loadIcons":true},"chalkboard":{"boardmarkerWidth":10,"chalkWidth":10,"chalkEffect":1,"readOnly":false,"src":null,"colorButtons":true,"toggleChalkboardButton":{"left":"75px","bottom":"30px","top":"auto","right":"auto"},"toggleNotesButton":{"left":"120px","bottom":"30px","top":"auto","right":"auto"},"eraser":{"radius":32,"src":"../_assets/plugin/chalkboard/img/sponge.png"}},"audio":{"prefix":"audio/","suffix":".ogg","textToSpeechURL":"http://api.voicerss.org/?key=09d9118852a04a89940796ce6f183998&hl=en-gb&c=ogg&src=","autoplay":false,"defaultDuration":5,"defaultAudios":false,"playerOpacity":0.05,"playerStyle":"position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;","startAtFragment":false},"chart":{"defaults":{"color":"lightgray","scale":{"beginAtZero":true,"ticks":{"stepSize":1},"grid":{"color":"lightgray"}}},"line":{"borderColor":["rgba(3, 225, 18,.8)","rgba(112, 101, 135,.8)","rgba(126, 194, 130,.8)","rgba(221, 232, 71,.8)","rgba(187, 155, 47,.8)","rgba(180, 119, 99,.8)","rgba(92, 229, 232,.8)","rgba(161, 30, 14,.8)","rgba(231, 34, 107,.8)","rgba(224, 183, 40,.8)","rgba(159, 148, 29,.8)","rgba(156, 55, 9,.8)","rgba(209, 147, 173,.8)","rgba(12, 135, 108,.8)","rgba(121, 255, 127,.8)","rgba(122, 44, 34,.8)","rgba(177, 163, 107,.8)","rgba(90, 51, 217,.8)","rgba(160, 241, 24,.8)","rgba(200, 114, 10,.8)"],"borderDash":[[5,10],[0,0]]},"bar":{"backgroundColor":["rgba(20,220,220,.8)","rgba(220,120,120,.8)","rgba(20,120,220,.8)"]},"pie":{"backgroundColor":[["rgba(3, 225, 18,.8)","rgba(112, 101, 135,.8)","rgba(126, 194, 130,.8)","rgba(221, 232, 71,.8)","rgba(187, 155, 47,.8)","rgba(180, 119, 99,.8)","rgba(92, 229, 232,.8)","rgba(161, 30, 14,.8)","rgba(231, 34, 107,.8)","rgba(224, 183, 40,.8)","rgba(159, 148, 29,.8)","rgba(156, 55, 9,.8)","rgba(209, 147, 173,.8)","rgba(12, 135, 108,.8)","rgba(121, 255, 127,.8)","rgba(122, 44, 34,.8)","rgba(177, 163, 107,.8)","rgba(90, 51, 217,.8)","rgba(160, 241, 24,.8)","rgba(200, 114, 10,.8)"]]},"radar":{"borderColor":["rgba(3, 225, 18,.8)","rgba(112, 101, 135,.8)","rgba(126, 194, 130,.8)","rgba(221, 232, 71,.8)","rgba(187, 155, 47,.8)","rgba(180, 119, 99,.8)","rgba(92, 229, 232,.8)","rgba(161, 30, 14,.8)","rgba(231, 34, 107,.8)","rgba(224, 183, 40,.8)","rgba(159, 148, 29,.8)","rgba(156, 55, 9,.8)","rgba(209, 147, 173,.8)","rgba(12, 135, 108,.8)","rgba(121, 255, 127,.8)","rgba(122, 44, 34,.8)","rgba(177, 163, 107,.8)","rgba(90, 51, 217,.8)","rgba(160, 241, 24,.8)","rgba(200, 114, 10,.8)"]}},"seminar":{"server":"https://reveal-seminar.herokuapp.com","port":4433,"room":"DNG-Slide-Room","password":"pass.123","logger":"logger","hash":"$2a$05$StoC1GND3DicZ4f0cF7ve.zeJx3NFUdN/XHZwdTzLVh3brdB6QkhC","autoJoin":true},"questions":{"toggleQnAButton":{"left":"180px"}},"dependencies":[{"src":"../_assets/plugin/reveald3/reveald3.js"}]}, queryOptions);
+    </script>
+
+    <script src="./../_assets/plugin/reveal.js-menu/menu.js"></script>
+    <script src="./../_assets/plugin/chalkboard/plugin.js"></script>
+    <script src="./../_assets/plugin/chart/plugin.js"></script>
+    <script src="./../_assets/plugin/chart/chart.min.js"></script>
+    <script src="./../_assets/plugin/fullscreen/plugin.js"></script>
+    <script src="./../_assets/plugin/seminar/plugin.js"></script>
+    <script src="./../_assets/plugin/seminar/socket.io.js"></script>
+    <script src="./../_assets/plugin/seminar/qrious.min.js"></script>
+    <script src="./../_assets/plugin/poll/plugin.js"></script>
+    <script src="./../_assets/plugin/questions/plugin.js"></script>
+    <script src="./../_assets/plugin/audio-slideshow/plugin.js"></script>
+    <script src="./../_assets/plugin/audio-slideshow/recorder.js"></script>
+    <script src="./../_assets/plugin/audio-slideshow/RecordRTC.js"></script>
+    <script src="./../_assets/plugin.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

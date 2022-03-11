@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[274],{97792:function(l){l.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/pen-imc-v-0400-dll","name":"PenIMC_v0400.dll","count":1,"permalink":"/blog/tags/pen-imc-v-0400-dll"}')}}]);

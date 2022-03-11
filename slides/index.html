@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ouch's Slides</title>
+  <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 600;
+      line-height: 1.42em;
+      color: #A7A1AE;
+      background-color: #18191A;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: 900;
+      line-height: 1em;
+      text-align: center;
+      color: rgb(38, 212, 255);
+    }
+
+    a {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ef2246;
+      text-decoration: underline;
+    }
+
+    .container th {
+      font-size: 1.25em;
+      font-weight: 700;
+      padding-left: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      color: white;
+    }
+
+    .container td {
+      font-weight: normal;
+      font-size: 1em;
+    }
+
+    .container {
+      text-align: left;
+      overflow: hidden;
+      width: 80%;
+      margin: 0 auto;
+      display: table;
+      padding: 0 0 8em 0;
+    }
+
+    .container td {
+      padding-bottom: 1.5em;
+      padding-top: 1.5em;
+      padding-left: 1em;
+    }
+
+    /* Background-color of the odd rows */
+    .container tr:nth-child(odd) {
+      background-color: #323C50;
+    }
+
+    /* Background-color of the even rows */
+    .container tr:nth-child(even) {
+      background-color: #2C3446;
+    }
+
+    .container th {
+      background-color: #18191A;
+    }
+
+    .container tr:hover {
+      background-color: #464A52;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div>
+      <h1 class="title">Ouch's Slides</h1>
+    </div>
+  </section>
+  <section>
+    <div>
+      <table class="container">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Tags</th>
+            <th>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2022&#x2F;03&#x2F;09</td>
+            <td>test1, test2, test3</td>
+            <td><a href="/slides/demo&#x2F;demo.html" title="reveal-md - Markdown to Slide 範例-slide">
+                reveal-md - Markdown to Slide 範例
+              </a> <a href="/slides/demo&#x2F;demo.html?print-pdf" title="reveal-md - Markdown to Slide 範例-pdf" target="_blank">(PDF)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2022&#x2F;03&#x2F;10</td>
+            <td></td>
+            <td><a href="/slides/seminar-demo&#x2F;seminar-demo.html" title="reveal-md - Seminar 外掛使用範例-slide">
+                reveal-md - Seminar 外掛使用範例
+              </a> <a href="/slides/seminar-demo&#x2F;seminar-demo.html?print-pdf" title="reveal-md - Seminar 外掛使用範例-pdf" target="_blank">(PDF)</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+
+</html>

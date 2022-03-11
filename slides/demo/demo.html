@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md - Markdown to Slide 範例</title>
+    <link rel="shortcut icon" href="./../favicon.ico" />
+    <link rel="stylesheet" href="./../dist/reset.css" />
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/monokai-sublime.css" />
+
+    <link rel="stylesheet" href="./../_assets/theme/mytheme.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/reveal.js-menu/menu.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/chalkboard/style.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/poll/style.css" />
+    <link rel="stylesheet" href="./../_assets/plugin/questions/style.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+# Md to Slide 範例
+
+## (built with reveal-md)
+
+Powered by Reveal.js
+</script></section><section  data-markdown><script type="text/template">
+# 一般功能介紹
+</script></section><section  data-markdown><script type="text/template">
+## 預設透過 --- 分頁
+
+![預設分頁](page-separator.png)
+</script></section><section  data-markdown><script type="text/template">
+## 標題階層
+
+# 第一階
+## 第二階
+### 第三階
+#### 第四階
+
+我是內文，我是內文，我是內文。
+</script></section><section  data-markdown><script type="text/template">
+粗體可以用 **兩個星號** 或是 __兩個底線__ 包起來
+
+斜體可以用 *一個星號* 或是 _一個底線_ 包起來
+
+或是 __*兩個底線夾一個星號*__ 呈現粗體+斜體
+
+當然，也可以用 ~~兩個波浪符號~~ 來寫出刪除線
+</script></section><section  data-markdown><script type="text/template">
+## 使用項目編號
+
+1. Ordered list
+2. Use a 1 on every line
+3. And they will be given the correct sequence
+
+..................................
+
+- Unordered list
+* Use any of these three characters
++ And you will get a bulleted list
+</script></section><section  data-markdown><script type="text/template">
+## 引用
+
+>You miss 100 percent of the shots you never take. ~Wayne Gretzky
+</script></section><section  data-markdown><script type="text/template">
+## 使用表格
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+</script></section><section  data-markdown><script type="text/template">
+  <h2>透過 LaTeX 語法呈現數學公式</h2>
+  \[\begin{aligned}
+  \dot{x} &amp; = \sigma(y-x) \\
+  \dot{y} &amp; = \rho x - y - xz \\
+  \dot{z} &amp; = -\beta z + xy
+  \end{aligned} \]
+
+  或是
+
+  `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
+
+  詳細使用方式請[點我](https://revealjs.com/math/)
+</script></section><section  data-markdown><script type="text/template">
+## 透過 highlight.js 呈現程式碼
+
+ 支援 [HighLightJs](https://highlightjs.org) 的 189 種語言和 94 種樣式。
+
+```csharp
+using System.IO.Compression;
+
+#pragma warning disable 414, 3021
+
+namespace MyApplication
+{
+    [Obsolete("...")]
+    class Program : IInterface
+    {
+        public static List<int> JustDoIt(int count)
+        {
+            Span<int> numbers = stackalloc int[length];
+            Console.WriteLine($"Hello {Name}!");
+            return new List<int>(new int[] { 1, 2, 3 })
+        }
+    }
+}
+```
+</script></section><section  data-markdown><script type="text/template">
+## 支援各種 Emojis
+
+😞 😟 😠 😡 🤬 😔 😕 🙁 ☹ 😬 🥺 😣 😖 😫 😩 🥱 😤 😮‍💨 😮 😱  
+</script></section><section  data-markdown><script type="text/template">
+# 特殊功能
+</script></section><section ><section data-markdown><script type="text/template">
+## 垂直投影片
+
+我是垂直的開始
+</script></section><section data-markdown><script type="text/template">
+### 我是子頁面一
+
+我是內容
+</script></section><section data-markdown><script type="text/template">
+
+### 我是子頁面二
+
+我是內容
+</script></section></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="pink" -->
+## 自訂背景色
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="https://github.com/webpro/reveal-md/blob/master/demo/sub/cat.jpg?raw=true"  -->
+
+## 使用圖片作為背景
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="https://www.marketersgo.com/wp-content/uploads/2019/01/tenor-1.gif" -->
+## 也支援 Gif 動態圖片作為背景
+</script></section><section  data-markdown><script type="text/template">
+## 自定轉場效果
+</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-transition="convex-in fade-out" data-background="#234" -->
+### "convex-in fade-out"
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-transition="zoom-in zoom-out" -->
+### "zoom-in zoom-out"
+
+也可以試試 none/fade/slide/convex/concave/zoom 各種搭配。
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-transition="zoom-in zoom-out" data-transition-speed="slow"-->
+### 轉場效果可以調整速度
+
+Slow 或是 Fast
+</script></section><section  data-markdown><script type="text/template">
+### 自訂文字出現順序
+
+- Item 1 <!-- .element: class="fragment " data-fragment-index="2" -->
+- Item 2 <!-- .element: class="fragment " data-fragment-index="1" -->
+</script></section><section  data-markdown><script type="text/template">
+## 自動動畫
+</script></section><section  data-markdown><script type="text/template">
+### 從這樣
+
+<!-- .slide: data-auto-animate -->
+  <div data-id="box" style="height: 50px; background: yellow;"></div>
+</script></section><section  data-markdown><script type="text/template">
+### 變這樣
+<!-- .slide: data-auto-animate -->
+  <div data-id="box" style="height: 100px; background: pink;"></div>
+</script></section><section  data-markdown><script type="text/template">
+## 在相同的物件上套用自動動畫
+</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-auto-animate -->
+
+### 看下面三個方塊
+
+<div class="r-hstack justify-center"><div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;" data-auto-animate-target=""></div><div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;" data-auto-animate-target=""></div><div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;" data-auto-animate-target=""></div></div>
+</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-auto-animate -->
+
+### 變成這樣
+
+<div class="r-hstack justify-center">
+<div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;" data-auto-animate-target="51"></div>
+<div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;" data-auto-animate-target="52"></div>
+<div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;" data-auto-animate-target="53"></div>
+</div>
+</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-auto-animate -->
+### 再變這樣
+
+<div class="r-stack">
+<div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;" data-auto-animate-target="55"></div>
+<div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;" data-auto-animate-target="56"></div>
+<div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;" data-auto-animate-target="57"></div>
+</div>
+</script></section><section  data-markdown><script type="text/template">
+# 特殊功能
+</script></section><section  data-markdown><script type="text/template">
+## 鍵盤控制
+
+### 按下 ? 鍵看看~
+</script></section><section  data-markdown><script type="text/template">
+## 講者視窗
+
+### 按下 S 鍵看看~
+
+<aside class="notes"><p>這段文字只會出現在講者視窗裡面。</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+## 程式碼逐行高亮
+
+```csharp [1,5|10-15]
+using System.IO.Compression;
+
+#pragma warning disable 414, 3021
+
+namespace MyApplication
+{
+    [Obsolete("...")]
+    class Program : IInterface
+    {
+        public static List<int> JustDoIt(int count)
+        {
+            Span<int> numbers = stackalloc int[length];
+            Console.WriteLine($"Hello {Name}!");
+            return new List<int>(new int[] { 1, 2, 3 })
+        }
+    }
+}
+```
+</script></section></div>
+    </div>
+
+    <script src="./../dist/reveal.js"></script>
+
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"fade","controls":true,"progress":true,"history":false,"center":true,"slideNumber":true,"menu":{"side":"left","width":"normal","numbers":true,"markers":true,"custom":false,"themes":true,"themesPath":"../dist/theme/","transitions":true,"openButton":true,"openSlideNumber":false,"keyboard":true,"sticky":false,"autoOpen":true,"delayInit":false,"openOnInit":false,"loadIcons":true},"chalkboard":{"boardmarkerWidth":10,"chalkWidth":10,"chalkEffect":1,"readOnly":false,"src":null,"colorButtons":true,"toggleChalkboardButton":{"left":"75px","bottom":"30px","top":"auto","right":"auto"},"toggleNotesButton":{"left":"120px","bottom":"30px","top":"auto","right":"auto"},"eraser":{"radius":32,"src":"../_assets/plugin/chalkboard/img/sponge.png"}},"audio":{"prefix":"audio/","suffix":".ogg","textToSpeechURL":"http://api.voicerss.org/?key=09d9118852a04a89940796ce6f183998&hl=en-gb&c=ogg&src=","autoplay":false,"defaultDuration":5,"defaultAudios":false,"playerOpacity":0.05,"playerStyle":"position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;","startAtFragment":false},"chart":{"defaults":{"color":"lightgray","scale":{"beginAtZero":true,"ticks":{"stepSize":1},"grid":{"color":"lightgray"}}},"line":{"borderColor":["rgba(3, 225, 18,.8)","rgba(112, 101, 135,.8)","rgba(126, 194, 130,.8)","rgba(221, 232, 71,.8)","rgba(187, 155, 47,.8)","rgba(180, 119, 99,.8)","rgba(92, 229, 232,.8)","rgba(161, 30, 14,.8)","rgba(231, 34, 107,.8)","rgba(224, 183, 40,.8)","rgba(159, 148, 29,.8)","rgba(156, 55, 9,.8)","rgba(209, 147, 173,.8)","rgba(12, 135, 108,.8)","rgba(121, 255, 127,.8)","rgba(122, 44, 34,.8)","rgba(177, 163, 107,.8)","rgba(90, 51, 217,.8)","rgba(160, 241, 24,.8)","rgba(200, 114, 10,.8)"],"borderDash":[[5,10],[0,0]]},"bar":{"backgroundColor":["rgba(20,220,220,.8)","rgba(220,120,120,.8)","rgba(20,120,220,.8)"]},"pie":{"backgroundColor":[["rgba(3, 225, 18,.8)","rgba(112, 101, 135,.8)","rgba(126, 194, 130,.8)","rgba(221, 232, 71,.8)","rgba(187, 155, 47,.8)","rgba(180, 119, 99,.8)","rgba(92, 229, 232,.8)","rgba(161, 30, 14,.8)","rgba(231, 34, 107,.8)","rgba(224, 183, 40,.8)","rgba(159, 148, 29,.8)","rgba(156, 55, 9,.8)","rgba(209, 147, 173,.8)","rgba(12, 135, 108,.8)","rgba(121, 255, 127,.8)","rgba(122, 44, 34,.8)","rgba(177, 163, 107,.8)","rgba(90, 51, 217,.8)","rgba(160, 241, 24,.8)","rgba(200, 114, 10,.8)"]]},"radar":{"borderColor":["rgba(3, 225, 18,.8)","rgba(112, 101, 135,.8)","rgba(126, 194, 130,.8)","rgba(221, 232, 71,.8)","rgba(187, 155, 47,.8)","rgba(180, 119, 99,.8)","rgba(92, 229, 232,.8)","rgba(161, 30, 14,.8)","rgba(231, 34, 107,.8)","rgba(224, 183, 40,.8)","rgba(159, 148, 29,.8)","rgba(156, 55, 9,.8)","rgba(209, 147, 173,.8)","rgba(12, 135, 108,.8)","rgba(121, 255, 127,.8)","rgba(122, 44, 34,.8)","rgba(177, 163, 107,.8)","rgba(90, 51, 217,.8)","rgba(160, 241, 24,.8)","rgba(200, 114, 10,.8)"]}},"seminar":{"server":"https://reveal-seminar.herokuapp.com","port":4433,"room":"DNG-Slide-Room","password":"pass.123","logger":"logger","hash":"$2a$05$StoC1GND3DicZ4f0cF7ve.zeJx3NFUdN/XHZwdTzLVh3brdB6QkhC","autoJoin":true},"questions":{"toggleQnAButton":{"left":"180px"}},"dependencies":[{"src":"../_assets/plugin/reveald3/reveald3.js"}]}, queryOptions);
+    </script>
+
+    <script src="./../_assets/plugin/reveal.js-menu/menu.js"></script>
+    <script src="./../_assets/plugin/chalkboard/plugin.js"></script>
+    <script src="./../_assets/plugin/chart/plugin.js"></script>
+    <script src="./../_assets/plugin/chart/chart.min.js"></script>
+    <script src="./../_assets/plugin/fullscreen/plugin.js"></script>
+    <script src="./../_assets/plugin/seminar/plugin.js"></script>
+    <script src="./../_assets/plugin/seminar/socket.io.js"></script>
+    <script src="./../_assets/plugin/seminar/qrious.min.js"></script>
+    <script src="./../_assets/plugin/poll/plugin.js"></script>
+    <script src="./../_assets/plugin/questions/plugin.js"></script>
+    <script src="./../_assets/plugin/audio-slideshow/plugin.js"></script>
+    <script src="./../_assets/plugin/audio-slideshow/recorder.js"></script>
+    <script src="./../_assets/plugin/audio-slideshow/RecordRTC.js"></script>
+    <script src="./../_assets/plugin.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
