@@ -44,7 +44,7 @@ export default function BlogListPage(props: Props): JSX.Element {
   return (
     <Layout title={title} wrapperClassName="blog-list__page">
       <Head>
-        <title>{title}</title>
+        <title>部落格 | OUCH1978@GITHUB</title>
       </Head>
 
       <div className="container-wrapper">
