@@ -129,7 +129,7 @@ html[data-theme="dark"] .footer_eye {
   position: relative;
   z-index: 1;
   font-size: 4.5rem;
-  font-size: 6vw;
+  font-size: calc(4vw + 2.5vh + 1vmin);
   margin: 0 0 10px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);
@@ -139,7 +139,7 @@ html[data-theme="dark"] .footer_eye {
   position: relative;
   z-index: 1;
   font-size: 3rem;
-  font-size: 3vw;
+  font-size: calc(1.5vw + 2vh + 1vmin);
   margin: 0 0 10px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.9);
