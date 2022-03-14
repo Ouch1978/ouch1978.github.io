@@ -170,7 +170,7 @@ module.exports = {
       async: true,
     },
     {
-      src: process.env.BASE_URL + "assets/enablePangu.js",
+      src: "/assets/enablePangu.js",
       async: true,
     },
   ],
