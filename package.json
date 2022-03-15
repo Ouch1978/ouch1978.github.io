@@ -45,6 +45,7 @@
     "mermaid": "^8.11.0",
     "nodejieba": "^2.5.2",
     "parse5-htmlparser2-tree-adapter": "^6.0.1",
+    "prism-react-renderer": "^1.3.1",
     "prism-themes": "^1.7.0",
     "prismjs": "^1.26.0",
     "react": "^17.0.1",
