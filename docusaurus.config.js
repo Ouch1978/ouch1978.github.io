@@ -12,6 +12,9 @@ const remark2rehype = require("remark-rehype");
 
 const remarkGridTables = require("remark-grid-tables");
 
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/vscode');
+
 require("dotenv").config();
 
 function unwrapCategory(items) {
@@ -85,7 +88,8 @@ module.exports = {
     },
     prism: {
       additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php", "aspnet"],
-      theme: require("prism-react-renderer/themes/vsDark"),
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
     },
     navbar: {
       title: "OUCH1978@GITHUB",

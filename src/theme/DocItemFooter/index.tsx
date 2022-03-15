@@ -1,10 +1,10 @@
-import React, { ComponentProps } from 'react';
-import type DocItemFooterType from '@theme/DocItemFooter';
-import DocItemFooter from '@theme-original/DocItemFooter';
+import React, { ComponentProps } from "react";
+import type DocItemFooterType from "@theme/DocItemFooter";
+import DocItemFooter from "@theme-original/DocItemFooter";
 
 import { DiscussionEmbed } from "disqus-react";
 
-type Props = ComponentProps<typeof DocItemFooterType>
+type Props = ComponentProps<typeof DocItemFooterType>;
 
 export default function DocItemFooterWrapper(props: Props): JSX.Element {
   const { content: DocContent } = props;
@@ -14,18 +14,16 @@ export default function DocItemFooterWrapper(props: Props): JSX.Element {
   return (
     <>
       <DocItemFooter {...props} />
-      {
-        (!no_comments && <DiscussionEmbed shortname="ouch1978"
-          config={
-            {
-              identifier: slug,
-              title: title,
-              language: "zh-TW",
-            }
-          }
+      {!no_comments && (
+        <DiscussionEmbed
+          shortname="ouch1978"
+          config={{
+            identifier: slug,
+            title: title,
+            language: "zh-TW",
+          }}
         />
-        )
-      }
+      )}
     </>
   );
 }

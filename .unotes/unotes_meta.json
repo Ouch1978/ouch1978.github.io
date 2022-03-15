@@ -262,7 +262,84 @@
     "docs": {
       "name": "docs",
       "isOrdered": true,
-      "folders": {},
+      "folders": {
+        "00-intro": {
+          "name": "00-intro",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "01-microsoft-dot-net": {
+          "name": "01-microsoft-dot-net",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "02-agile": {
+          "name": "02-agile",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "03-containerization": {
+          "name": "03-containerization",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "04-docusaurus": {
+          "name": "04-docusaurus",
+          "isOrdered": true,
+          "folders": {
+            "01-intro": {
+              "name": "01-intro",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "02-basic-usage": {
+              "name": "02-basic-usage",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "03-customization": {
+              "name": "03-customization",
+              "isOrdered": true,
+              "folders": {
+                "01-add-disqus-to-docusaurus-doc": {
+                  "name": "01-add-disqus-to-docusaurus-doc",
+                  "isOrdered": true,
+                  "folders": {},
+                  "files": {
+                    "add-disqus-to-docusaurus-doc": 0
+                  }
+                },
+                "02-add-disqus-to-blog-post-item": {
+                  "name": "02-add-disqus-to-blog-post-item",
+                  "isOrdered": true,
+                  "folders": {},
+                  "files": {}
+                }
+              },
+              "files": {}
+            }
+          },
+          "files": {}
+        },
+        "05-drawing": {
+          "name": "05-drawing",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "99-others": {
+          "name": "99-others",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
       "files": {}
     },
     "src": {
@@ -273,6 +350,42 @@
     },
     "static": {
       "name": "static",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "build": {
+      "name": "build",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "i18n": {
+      "name": "i18n",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "plugin": {
+      "name": "plugin",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "slides": {
+      "name": "slides",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "templates": {
+      "name": "templates",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "theme": {
+      "name": "theme",
       "isOrdered": true,
       "folders": {},
       "files": {}
