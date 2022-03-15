@@ -13,7 +13,7 @@ const remark2rehype = require("remark-rehype");
 const remarkGridTables = require("remark-grid-tables");
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/vscode');
+const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
 require("dotenv").config();
 
