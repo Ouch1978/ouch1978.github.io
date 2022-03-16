@@ -4,11 +4,11 @@
     "description": "The title in the navbar"
   },
   "item.label.Documents": {
-    "message": "Documents",
+    "message": "文件庫",
     "description": "Navbar item with label Documents"
   },
   "item.label.Blog": {
-    "message": "Blog",
+    "message": "部落格",
     "description": "Navbar item with label Blog"
   }
 }

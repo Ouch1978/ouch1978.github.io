@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.intro": {
-    "message": "intro",
+    "message": "介紹",
     "description": "The label for category intro in sidebar tutorialSidebar"
   }
 }
