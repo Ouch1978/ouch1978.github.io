@@ -4,9 +4,20 @@
         <title>OUCH1978@GITHUB Blog</title>
         <link>https://ouch1978.github.io/blog</link>
         <description>OUCH1978@GITHUB Blog</description>
-        <lastBuildDate>Thu, 08 Nov 2018 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Mar 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[遠端桌面連線出現因為 CredSSP 加密 Oracle 補救造成無法連線的應急解法]]></title>
+            <link>https://ouch1978.github.io/blog/2022-03-17-rdp-credssp-error-workaround</link>
+            <guid>2022-03-17-rdp-credssp-error-workaround</guid>
+            <pubDate>Thu, 17 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[前言]]></description>
+            <category>windows 10</category>
+            <category>CredSSP</category>
+            <category>rdp</category>
+            <category>remote desktop</category>
+        </item>
         <item>
             <title><![CDATA[透過 Docker 執行 Jekyll 產出部落格文章]]></title>
             <link>https://ouch1978.github.io/blog/2018-11-08-blog-with-jekyll-and-docker</link>
