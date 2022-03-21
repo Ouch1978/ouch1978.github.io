@@ -2,7 +2,7 @@
 title: 一次刪除所有容器的指令
 author: ouch1978
 tags: [ubuntu,command,docker,prune,cli]
-slug: prune-all-containers
+slug: ../prune-all-containers
 
 ---
 

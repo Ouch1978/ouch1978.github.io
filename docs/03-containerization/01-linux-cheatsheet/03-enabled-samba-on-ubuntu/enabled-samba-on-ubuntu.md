@@ -2,7 +2,7 @@
 title: 在 Ubuntu 中快速建立 Samba 服務
 author: ouch1978
 tags: [ubuntu,command,cli,samba]
-slug: enabled-samba-on-ubuntu
+slug: ../enabled-samba-on-ubuntu
 ---
 
 ## 前言

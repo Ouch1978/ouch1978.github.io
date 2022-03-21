@@ -2,7 +2,7 @@
 title: 在文件庫的文章下方加上 Disqus 留言區
 author: ouch1978
 tags: [customization]
-slug: add-disqus-to-docusaurus-doc
+slug: ../add-disqus-to-docusaurus-doc
 ---
 
 ## 前言

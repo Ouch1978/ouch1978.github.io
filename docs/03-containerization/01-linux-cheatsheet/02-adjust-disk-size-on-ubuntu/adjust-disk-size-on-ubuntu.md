@@ -2,7 +2,7 @@
 title: 在 Ubuntu 中透過指令調整磁碟大小
 author: ouch1978
 tags: [ubuntu,command,cli,disk size, overlay]
-slug: adjust-disk-size-on-ubuntu
+slug: ../adjust-disk-size-on-ubuntu
 ---
 
 ## 前言
