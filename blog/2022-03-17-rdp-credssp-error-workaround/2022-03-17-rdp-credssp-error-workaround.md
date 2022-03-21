@@ -65,7 +65,7 @@ tags: [windows 10, CredSSP, rdp, remote desktop]
 
 這個方法相較於修改群組原則來得簡單得多，只需要開啟命令提示字元，輸入下列指令：
 
-```shell
+```powershell
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters" /f /v AllowEncryptionOracle /t REG_DWORD /d 2
 ```
 

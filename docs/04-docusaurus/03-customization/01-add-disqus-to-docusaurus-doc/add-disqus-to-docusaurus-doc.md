@@ -17,7 +17,7 @@ slug: add-disqus-to-docusaurus-doc
 
 在 Console 中輸入下列指令以安裝 disqus-react 套件：
 
-```sh
+```powershell
 yarn add disqus-react
 ```
 
@@ -35,7 +35,7 @@ yarn add disqus-react
 
 所以我們接下來就要透過下面的指令把 DocItemFooter 的原始碼抽取出來：
 
-```sh
+```powershell
 yarn swizzle @docusaurus/theme-classic DocItemFooter -- --wrap
 ```
 

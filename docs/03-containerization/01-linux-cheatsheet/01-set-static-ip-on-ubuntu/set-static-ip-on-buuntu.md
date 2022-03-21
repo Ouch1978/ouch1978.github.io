@@ -20,7 +20,7 @@ slug: set-fixed-ip-on-ubuntu
 
 首先，透過 nano 編輯器來開啟 /etc/netplan/01-netcfg.yaml 檔。
 
-```shell
+```powershell
 sudo nano /etc/netplan/01-netcfg.yaml
 ```
 
@@ -42,7 +42,7 @@ network:
 
 存檔並退出之後，輸入下列指令讓設定生效：
 
-```shell
+```powershell
 sudo netplan apply
 ```
 
@@ -50,12 +50,12 @@ sudo netplan apply
 
 確認 IP 的設定是否生效，可以透過下面的指令來檢查。
 
-```shell
+```powershell
 ip a
 ```
 
 如果存在不需要的 IP，則可透過下列指令來刪除：
 
-```shell
+```powershell
 ip addr del 192.168.1.200/24 dev ens3
 ```

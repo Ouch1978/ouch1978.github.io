@@ -14,7 +14,7 @@ slug: prune-all-containers
 
 ## 停止所有容器
 
-```shell
+```powershell
 docker container stop $(docker container ls -aq)
 ```
 
@@ -24,24 +24,24 @@ docker container stop $(docker container ls -aq)
 
 ## 刪除所有容器
 
-```shell
+```powershell
 docker container rm $(docker container ls -aq)
 ```
 
 ## 刪除所有映像檔
 
-```shell
+```powershell
 docker image prune -a -f
 ```
 
 ## 刪除所有 Volume
 
-```shell
+```powershell
 docker volume prune -f
 ```
 
 ## 刪除所有網路
 
-```shell
+```powershell
 docker network prune -f
 ```
