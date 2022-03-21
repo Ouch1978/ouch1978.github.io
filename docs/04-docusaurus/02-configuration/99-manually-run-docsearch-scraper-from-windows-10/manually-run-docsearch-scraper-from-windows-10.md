@@ -114,7 +114,7 @@ API_KEY 是 Admin API Key，不是 Search-Only API Key 喔!!
 請在 Git Bash 中輸入下列指令來執行爬蟲：
 
 ```sh
-docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
+docker run --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
 ```
 
 如果沒意外的話，應該會看到爬蟲爬完建立了多少筆記錄，如下圖：
