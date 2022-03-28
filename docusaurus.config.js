@@ -64,7 +64,7 @@ module.exports = {
       },
     ]
   ],
-  themes: ["@saucelabs/theme-github-codeblock"],
+  themes: [],
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
