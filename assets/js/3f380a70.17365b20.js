@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[6514],{21698:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/one-drive","name":"OneDrive","count":1,"permalink":"/blog/tags/one-drive"}')}}]);

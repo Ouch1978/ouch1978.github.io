@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[3166],{22108:function(t){t.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/sikuli-4-net","name":"Sikuli4Net","count":1,"permalink":"/blog/tags/sikuli-4-net"}')}}]);

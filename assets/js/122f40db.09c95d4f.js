@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[9657],{21380:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"smss","count":1,"permalink":"/blog/tags/smss"}')}}]);

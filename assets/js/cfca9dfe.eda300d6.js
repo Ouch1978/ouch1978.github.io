@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[1346],{86884:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"XAML Standard","count":1,"permalink":"/blog/tags/xaml-standard"}')}}]);

@@ -4,9 +4,30 @@
         <title>OUCH1978@GITHUB Blog</title>
         <link>https://ouch1978.github.io/blog</link>
         <description>OUCH1978@GITHUB Blog</description>
-        <lastBuildDate>Thu, 17 Mar 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Mar 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh-TW</language>
+        <item>
+            <title><![CDATA[啟用 SQL Server Management Studio 的深色主題]]></title>
+            <link>https://ouch1978.github.io/blog/2022-03-23-enable-smss-18-dark-theme</link>
+            <guid>2022-03-23-enable-smss-18-dark-theme</guid>
+            <pubDate>Wed, 23 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[前言]]></description>
+            <category>smss</category>
+            <category>dark theme</category>
+        </item>
+        <item>
+            <title><![CDATA[還在一個一個專案 Clone 嗎? 用這招一次 Clone 所有在 GitLab 上的 Repo!!]]></title>
+            <link>https://ouch1978.github.io/blog/2022-03-18-clone-all-repositories-in-gitlab-at-once</link>
+            <guid>2022-03-18-clone-all-repositories-in-gitlab-at-once</guid>
+            <pubDate>Fri, 18 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[前言]]></description>
+            <category>GitLab</category>
+            <category>Python</category>
+            <category>clone</category>
+            <category>gitlabber</category>
+        </item>
         <item>
             <title><![CDATA[遠端桌面連線出現因為 CredSSP 加密 Oracle 補救造成無法連線的應急解法]]></title>
             <link>https://ouch1978.github.io/blog/2022-03-17-rdp-credssp-error-workaround</link>

@@ -2,11 +2,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ouch1978.github.io/blog</id>
     <title>OUCH1978@GITHUB Blog</title>
-    <updated>2022-03-17T00:00:00.000Z</updated>
+    <updated>2022-03-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ouch1978.github.io/blog"/>
     <subtitle>OUCH1978@GITHUB Blog</subtitle>
     <icon>https://ouch1978.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[啟用 SQL Server Management Studio 的深色主題]]></title>
+        <id>2022-03-23-enable-smss-18-dark-theme</id>
+        <link href="https://ouch1978.github.io/blog/2022-03-23-enable-smss-18-dark-theme"/>
+        <updated>2022-03-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[前言]]></summary>
+        <author>
+            <name>Ouch Liu</name>
+            <uri>https://github.com/ouch1978</uri>
+        </author>
+        <category label="smss" term="smss"/>
+        <category label="dark theme" term="dark theme"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[還在一個一個專案 Clone 嗎? 用這招一次 Clone 所有在 GitLab 上的 Repo!!]]></title>
+        <id>2022-03-18-clone-all-repositories-in-gitlab-at-once</id>
+        <link href="https://ouch1978.github.io/blog/2022-03-18-clone-all-repositories-in-gitlab-at-once"/>
+        <updated>2022-03-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[前言]]></summary>
+        <author>
+            <name>Ouch Liu</name>
+            <uri>https://github.com/ouch1978</uri>
+        </author>
+        <category label="GitLab" term="GitLab"/>
+        <category label="Python" term="Python"/>
+        <category label="clone" term="clone"/>
+        <category label="gitlabber" term="gitlabber"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[遠端桌面連線出現因為 CredSSP 加密 Oracle 補救造成無法連線的應急解法]]></title>
         <id>2022-03-17-rdp-credssp-error-workaround</id>
