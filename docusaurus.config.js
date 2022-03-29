@@ -135,6 +135,7 @@ module.exports = {
           rehypePlugins: [katex],
           showLastUpdateTime: true,
           breadcrumbs: true,
+          /*
           sidebarItemsGenerator: async function ({
             defaultSidebarItemsGenerator,
             ...args
@@ -142,6 +143,7 @@ module.exports = {
             const sidebarItems = await defaultSidebarItemsGenerator(args);
             return unwrapCategory(sidebarItems);
           },
+          */
         },
         blog: {
           blogSidebarCount: 0,
