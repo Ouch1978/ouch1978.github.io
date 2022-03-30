@@ -41,7 +41,7 @@ tags: [windows 10, CredSSP, rdp, remote desktop]
 
 修改群組原則的流程如下：
 
-1. 按下 `<kbd>⊞ Win</kbd> + <kbd>R</kbd>` 鍵，輸入 `gpedit.msc` 開啟群組原則編輯器。
+1. 按下 <kbd>⊞ Win</kbd> + <kbd>R</kbd> 鍵，輸入 `gpedit.msc` 開啟群組原則編輯器。
 
 2. 點選 `Computer Configuration`(電腦設定)。
 
@@ -74,4 +74,3 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\
 ## 參考資料
 
 [CVE-2018-0886 的 CredSSP 更新](https://support.microsoft.com/zh-tw/topic/cve-2018-0886-%E7%9A%84-credssp-%E6%9B%B4%E6%96%B0-5cbf9e5f-dc6d-744f-9e97-7ba400d6d3ea "CVE-2018-0886 的 CredSSP 更新")
-

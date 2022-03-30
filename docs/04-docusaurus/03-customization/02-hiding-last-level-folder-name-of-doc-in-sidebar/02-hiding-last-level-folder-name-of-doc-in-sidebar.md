@@ -13,20 +13,20 @@ slug: ../hiding-last-level-folder-name-of-doc-in-sidebar
 
 ```
 docs
-|-- category1
-    |-- document1
-        |-- document1.md
-        |-- image01.png
-        |-- image02.png
+└── category1
+    └── document1
+        ├── document1.md
+        ├── image01.png
+        └── image02.png
 ```
 
 那它輸出的時候就會長成下面這個樣子：
 
 ```
 docs
-|-- category1
-    |-- document1 (透過資料夾自動產生)
-        |-- document1 (透過 markdown 檔自動產生)
+└── category1
+    └── document1 (透過資料夾自動產生)
+        └── document1 (透過 markdown 檔自動產生)
 ```
 
 雖然說現在的版本(2.0.0-beta.18)已經支援當 markdown 檔和資料夾名稱相同時，不會再多產生一層相同名稱的目錄了，不過還是記錄一下當時的解法。
@@ -110,11 +110,11 @@ function unwrapCategory(items) {
 
 ```
 docs
-|-- category1
-    |-- 01-document1
-        |-- document1.md
-        |-- image01.png
-        |-- image02.png
+└── category1
+    └── 01-document1
+        ├── document1.md
+        ├── image01.png
+        └── image02.png
 ```
 
 那 Docusaurus 還是會自動多幫你產生一層目錄(markdown 檔和資料夾名稱一定要一模模一樣樣才不會多一層)。
