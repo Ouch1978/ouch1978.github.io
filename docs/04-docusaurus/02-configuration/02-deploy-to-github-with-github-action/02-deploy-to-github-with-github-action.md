@@ -16,7 +16,9 @@ slug: ../deploy-to-github-with-github-action
 
 更有趣的是，如果照著找到的資料去實際操作的話，應該會走不少冤枉路(咦!?...)
 
-什麼設定環境變數啊、Deploy Key 啊... **通!!通!!不!!用!!**
+什麼要在 GitHub 上設定環境變數啊、Deploy Key 啊... **通!!通!!不!!用!!**
+
+![不需要在 GitHub 上作任何其它設定](no-need-to-setup-manually.png "不需要在 GitHub 上作任何其它設定")
 
 這邊就來分享一下官方目前推薦的作法。
 
