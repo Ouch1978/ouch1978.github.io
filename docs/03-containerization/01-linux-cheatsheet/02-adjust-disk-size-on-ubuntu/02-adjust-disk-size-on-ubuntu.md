@@ -1,5 +1,6 @@
 ---
 title: 在 Ubuntu 中透過指令調整磁碟大小
+description: 簡單介紹如何透過命令模式來在 Ubuntu 中調整磁碟大小。
 author: ouch1978
 tags: [ubuntu,command,cli,disk size, overlay]
 slug: ../adjust-disk-size-on-ubuntu
