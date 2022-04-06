@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[8561],{26762:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"csr","count":1,"permalink":"/blog/tags/csr"}')}}]);

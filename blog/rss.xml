@@ -4,10 +4,20 @@
         <title>OUCH1978@GITHUB Blog</title>
         <link>https://ouch1978.github.io/blog</link>
         <description>OUCH1978@GITHUB Blog</description>
-        <lastBuildDate>Wed, 23 Mar 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Apr 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-TW</language>
+        <item>
+            <title><![CDATA[真正免費!!只要會複製貼上就能產生免費的 HTTPS 憑證!!]]></title>
+            <link>https://ouch1978.github.io/blog/2022-04-06-get-free-ssl-certificate</link>
+            <guid>2022-04-06-get-free-ssl-certificate</guid>
+            <pubDate>Wed, 06 Apr 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[前言]]></description>
+            <category>let's encrypt</category>
+            <category>csr</category>
+            <category>web</category>
+        </item>
         <item>
             <title><![CDATA[啟用 SQL Server Management Studio 的深色主題]]></title>
             <link>https://ouch1978.github.io/blog/2022-03-23-enable-smss-18-dark-theme</link>
