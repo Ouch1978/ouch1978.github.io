@@ -10,8 +10,8 @@
         <language>zh-TW</language>
         <item>
             <title><![CDATA[真正免費!!只要會複製貼上就能產生免費的 HTTPS 憑證!!]]></title>
-            <link>https://ouch1978.github.io/blog/2022-04-06-get-free-ssl-certificate</link>
-            <guid>2022-04-06-get-free-ssl-certificate</guid>
+            <link>https://ouch1978.github.io/blog/2022/04/06/get-free-ssl-certificate</link>
+            <guid>2022/04/06/get-free-ssl-certificate</guid>
             <pubDate>Wed, 06 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>let's encrypt</category>
@@ -20,8 +20,8 @@
         </item>
         <item>
             <title><![CDATA[啟用 SQL Server Management Studio 的深色主題]]></title>
-            <link>https://ouch1978.github.io/blog/2022-03-23-enable-smss-18-dark-theme</link>
-            <guid>2022-03-23-enable-smss-18-dark-theme</guid>
+            <link>https://ouch1978.github.io/blog/2022/03/23/enable-smss-18-dark-theme</link>
+            <guid>2022/03/23/enable-smss-18-dark-theme</guid>
             <pubDate>Wed, 23 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>smss</category>
@@ -29,8 +29,8 @@
         </item>
         <item>
             <title><![CDATA[還在一個一個專案 Clone 嗎? 用這招一次 Clone 所有在 GitLab 上的 Repo!!]]></title>
-            <link>https://ouch1978.github.io/blog/2022-03-18-clone-all-repositories-in-gitlab-at-once</link>
-            <guid>2022-03-18-clone-all-repositories-in-gitlab-at-once</guid>
+            <link>https://ouch1978.github.io/blog/2022/03/18/clone-all-repositories-in-gitlab-at-once</link>
+            <guid>2022/03/18/clone-all-repositories-in-gitlab-at-once</guid>
             <pubDate>Fri, 18 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>GitLab</category>
@@ -40,8 +40,8 @@
         </item>
         <item>
             <title><![CDATA[遠端桌面連線出現因為 CredSSP 加密 Oracle 補救造成無法連線的應急解法]]></title>
-            <link>https://ouch1978.github.io/blog/2022-03-17-rdp-credssp-error-workaround</link>
-            <guid>2022-03-17-rdp-credssp-error-workaround</guid>
+            <link>https://ouch1978.github.io/blog/2022/03/17/rdp-credssp-error-workaround</link>
+            <guid>2022/03/17/rdp-credssp-error-workaround</guid>
             <pubDate>Thu, 17 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>windows 10</category>
@@ -51,17 +51,17 @@
         </item>
         <item>
             <title><![CDATA[透過 Docker 執行 Jekyll 產出部落格文章]]></title>
-            <link>https://ouch1978.github.io/blog/2018-11-08-blog-with-jekyll-and-docker</link>
-            <guid>2018-11-08-blog-with-jekyll-and-docker</guid>
+            <link>https://ouch1978.github.io/blog/2018/11/08/blog-with-jekyll-and-docker</link>
+            <guid>2018/11/08/blog-with-jekyll-and-docker</guid>
             <pubDate>Thu, 08 Nov 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[古早之前的故事]]></description>
             <category>jekyll</category>
             <category>docker</category>
         </item>
         <item>
-            <title><![CDATA[被擋的嫑嫑的嗎? 透過 CHROME 的擴充功能讓你的 SELENIUM 自動化突破國家的界線!!]]></title>
-            <link>https://ouch1978.github.io/blog/2018-06-28-selenium-automation-with-proxy-extension</link>
-            <guid>2018-06-28-selenium-automation-with-proxy-extension</guid>
+            <title><![CDATA[被擋的嫑嫑的嗎? 透過 Chrome 的擴充功能讓你的 Selenium 自動化突破國家的界線!!]]></title>
+            <link>https://ouch1978.github.io/blog/2018/06/28/selenium-automation-with-proxy-extension</link>
+            <guid>2018/06/28/selenium-automation-with-proxy-extension</guid>
             <pubDate>Thu, 28 Jun 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>selenium</category>
@@ -70,8 +70,8 @@
         </item>
         <item>
             <title><![CDATA[解決傳統桌面版 Skype 在更新時出現 1603 "The specified Account already exists" 錯誤]]></title>
-            <link>https://ouch1978.github.io/blog/2018-04-10-fix-skype-update-error-1603</link>
-            <guid>2018-04-10-fix-skype-update-error-1603</guid>
+            <link>https://ouch1978.github.io/blog/2018/04/10/fix-skype-update-error-1603</link>
+            <guid>2018/04/10/fix-skype-update-error-1603</guid>
             <pubDate>Tue, 10 Apr 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Windows 10</category>
@@ -80,8 +80,8 @@
         </item>
         <item>
             <title><![CDATA[軟體工程師們不可不知道的 Windows 10 設定小撇步]]></title>
-            <link>https://ouch1978.github.io/blog/2018-03-16-windows-10-configuration-tips-for-developers</link>
-            <guid>2018-03-16-windows-10-configuration-tips-for-developers</guid>
+            <link>https://ouch1978.github.io/blog/2018/03/16/windows-10-configuration-tips-for-developers</link>
+            <guid>2018/03/16/windows-10-configuration-tips-for-developers</guid>
             <pubDate>Fri, 16 Mar 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Windows 10</category>
@@ -90,8 +90,8 @@
         </item>
         <item>
             <title><![CDATA[五分鐘看完 C# 7.2]]></title>
-            <link>https://ouch1978.github.io/blog/2018-01-31-understand-csharp-7.2-in-5-minutes</link>
-            <guid>2018-01-31-understand-csharp-7.2-in-5-minutes</guid>
+            <link>https://ouch1978.github.io/blog/2018/01/31/understand-csharp-7.2-in-5-minutes</link>
+            <guid>2018/01/31/understand-csharp-7.2-in-5-minutes</guid>
             <pubDate>Wed, 31 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio</category>
@@ -99,8 +99,8 @@
         </item>
         <item>
             <title><![CDATA[誰說魚與熊掌不可兼得? 讓你的安卓模擬器與 Hyper-V 可以和平共處]]></title>
-            <link>https://ouch1978.github.io/blog/2018-01-22-co-existing-android-emulator-and-hyper-v</link>
-            <guid>2018-01-22-co-existing-android-emulator-and-hyper-v</guid>
+            <link>https://ouch1978.github.io/blog/2018/01/22/co-existing-android-emulator-and-hyper-v</link>
+            <guid>2018/01/22/co-existing-android-emulator-and-hyper-v</guid>
             <pubDate>Mon, 22 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio</category>
@@ -109,8 +109,8 @@
         </item>
         <item>
             <title><![CDATA[透過 Xamarin.Forms 來玩玩傳說中的 XAML Standard (preview) 吧!!]]></title>
-            <link>https://ouch1978.github.io/blog/2018-01-08-xaml-standard-preview-in-xamarin-forms</link>
-            <guid>2018-01-08-xaml-standard-preview-in-xamarin-forms</guid>
+            <link>https://ouch1978.github.io/blog/2018/01/08/xaml-standard-preview-in-xamarin-forms</link>
+            <guid>2018/01/08/xaml-standard-preview-in-xamarin-forms</guid>
             <pubDate>Mon, 08 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio</category>
@@ -119,8 +119,8 @@
         </item>
         <item>
             <title><![CDATA[解決 Visual Studio 2017 在有手寫筆的裝置上沒有回應及重啟的問題]]></title>
-            <link>https://ouch1978.github.io/blog/2017-08-29-fix-visual-studio-2017-crash-on-pen-enabled-devices</link>
-            <guid>2017-08-29-fix-visual-studio-2017-crash-on-pen-enabled-devices</guid>
+            <link>https://ouch1978.github.io/blog/2017/08/29/fix-visual-studio-2017-crash-on-pen-enabled-devices</link>
+            <guid>2017/08/29/fix-visual-studio-2017-crash-on-pen-enabled-devices</guid>
             <pubDate>Tue, 29 Aug 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio</category>
@@ -128,16 +128,16 @@
         </item>
         <item>
             <title><![CDATA[解決 Visual Studio 2017 首次執行時卡在 We are getting things ready 的問題]]></title>
-            <link>https://ouch1978.github.io/blog/2017-08-15-fix-visual-studio-2017-first-launch-stucking</link>
-            <guid>2017-08-15-fix-visual-studio-2017-first-launch-stucking</guid>
+            <link>https://ouch1978.github.io/blog/2017/08/15/fix-visual-studio-2017-first-launch-stucking</link>
+            <guid>2017/08/15/fix-visual-studio-2017-first-launch-stucking</guid>
             <pubDate>Tue, 15 Aug 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio</category>
         </item>
         <item>
             <title><![CDATA[直衝 Redstone 4!? Windows 測試人員計畫選項更新]]></title>
-            <link>https://ouch1978.github.io/blog/2017-08-14-windows-insider-options-updated</link>
-            <guid>2017-08-14-windows-insider-options-updated</guid>
+            <link>https://ouch1978.github.io/blog/2017/08/14/windows-insider-options-updated</link>
+            <guid>2017/08/14/windows-insider-options-updated</guid>
             <pubDate>Mon, 14 Aug 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Windows 10</category>
@@ -146,8 +146,8 @@
         </item>
         <item>
             <title><![CDATA[使用 Visual Studio 2017 搭配 Xamarin.UITest 進行安卓應用程式的自動化測試]]></title>
-            <link>https://ouch1978.github.io/blog/2017-05-25-mobile-ui-automation-with-xamarin-uitest</link>
-            <guid>2017-05-25-mobile-ui-automation-with-xamarin-uitest</guid>
+            <link>https://ouch1978.github.io/blog/2017/05/25/mobile-ui-automation-with-xamarin-uitest</link>
+            <guid>2017/05/25/mobile-ui-automation-with-xamarin-uitest</guid>
             <pubDate>Thu, 25 May 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio 2017</category>
@@ -156,8 +156,8 @@
         </item>
         <item>
             <title><![CDATA[解決透過 Appium 測試安卓裝置上的行動網站發生 ChromeDriver 版本不相容的問題]]></title>
-            <link>https://ouch1978.github.io/blog/2017-05-11-fix-appium-chrome-driver-error</link>
-            <guid>2017-05-11-fix-appium-chrome-driver-error</guid>
+            <link>https://ouch1978.github.io/blog/2017/05/11/fix-appium-chrome-driver-error</link>
+            <guid>2017/05/11/fix-appium-chrome-driver-error</guid>
             <pubDate>Thu, 11 May 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[之前在使用 Appium 測試安卓裝置上的行動網站的時候，一切都很開心愉快。]]></description>
             <category>Visual Studio 2017</category>
@@ -166,8 +166,8 @@
         </item>
         <item>
             <title><![CDATA[透過 Visual Studio 2017 與 Appium 測試安卓手機上的 App]]></title>
-            <link>https://ouch1978.github.io/blog/2017-05-10-mobile-app-automation-testing-with-vs2017-and-appium</link>
-            <guid>2017-05-10-mobile-app-automation-testing-with-vs2017-and-appium</guid>
+            <link>https://ouch1978.github.io/blog/2017/05/10/mobile-app-automation-testing-with-vs2017-and-appium</link>
+            <guid>2017/05/10/mobile-app-automation-testing-with-vs2017-and-appium</guid>
             <pubDate>Wed, 10 May 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio 2017</category>
@@ -176,8 +176,8 @@
         </item>
         <item>
             <title><![CDATA[透過 Gorilla Player 在裝置上即時預覽 Xamarin Forms 介面]]></title>
-            <link>https://ouch1978.github.io/blog/2017-05-08-design-xamarin-forms-with-gorilla-player</link>
-            <guid>2017-05-08-design-xamarin-forms-with-gorilla-player</guid>
+            <link>https://ouch1978.github.io/blog/2017/05/08/design-xamarin-forms-with-gorilla-player</link>
+            <guid>2017/05/08/design-xamarin-forms-with-gorilla-player</guid>
             <pubDate>Mon, 08 May 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio 2017</category>
@@ -185,8 +185,8 @@
         </item>
         <item>
             <title><![CDATA[透過 Visual Studio 2017 與 Appium 測試安卓手機上的行動版網頁]]></title>
-            <link>https://ouch1978.github.io/blog/2017-04-17-mobile-web-automation-testing-with-vs2017-and-appium</link>
-            <guid>2017-04-17-mobile-web-automation-testing-with-vs2017-and-appium</guid>
+            <link>https://ouch1978.github.io/blog/2017/04/17/mobile-web-automation-testing-with-vs2017-and-appium</link>
+            <guid>2017/04/17/mobile-web-automation-testing-with-vs2017-and-appium</guid>
             <pubDate>Mon, 17 Apr 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Visual Studio 2017</category>
@@ -194,24 +194,24 @@
         </item>
         <item>
             <title><![CDATA[回來吧!! Creator Update 開始按鈕右鍵選單裡的控制台選項!!]]></title>
-            <link>https://ouch1978.github.io/blog/2017-04-07-add-control-panel-back-after-creator-update</link>
-            <guid>2017-04-07-add-control-panel-back-after-creator-update</guid>
+            <link>https://ouch1978.github.io/blog/2017/04/07/add-control-panel-back-after-creator-update</link>
+            <guid>2017/04/07/add-control-panel-back-after-creator-update</guid>
             <pubDate>Fri, 07 Apr 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>Windows 10</category>
         </item>
         <item>
             <title><![CDATA[XAML 的過去、現在與未來]]></title>
-            <link>https://ouch1978.github.io/blog/2017-03-28-the-future-of-xaml</link>
-            <guid>2017-03-28-the-future-of-xaml</guid>
+            <link>https://ouch1978.github.io/blog/2017/03/28/the-future-of-xaml</link>
+            <guid>2017/03/28/the-future-of-xaml</guid>
             <pubDate>Tue, 28 Mar 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>XAML</category>
         </item>
         <item>
             <title><![CDATA[透過 Material Design Xaml Toolkit 讓你的 WPF 應用程式潮又有料]]></title>
-            <link>https://ouch1978.github.io/blog/2017-03-25-material-design-xaml-toolkit</link>
-            <guid>2017-03-25-material-design-xaml-toolkit</guid>
+            <link>https://ouch1978.github.io/blog/2017/03/25/material-design-xaml-toolkit</link>
+            <guid>2017/03/25/material-design-xaml-toolkit</guid>
             <pubDate>Sat, 25 Mar 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>C#</category>
@@ -222,8 +222,8 @@
         </item>
         <item>
             <title><![CDATA[透過 Sikuli4Net 對 Flash UI 進行自動化測試]]></title>
-            <link>https://ouch1978.github.io/blog/2017-02-04-automation-flash-ui-test-with-sikuli4net</link>
-            <guid>2017-02-04-automation-flash-ui-test-with-sikuli4net</guid>
+            <link>https://ouch1978.github.io/blog/2017/02/04/automation-flash-ui-test-with-sikuli4net</link>
+            <guid>2017/02/04/automation-flash-ui-test-with-sikuli4net</guid>
             <pubDate>Sat, 04 Feb 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>C#</category>
@@ -233,40 +233,40 @@
         </item>
         <item>
             <title><![CDATA[部落格備份/搬家小工具 - Html to MD Exporter]]></title>
-            <link>https://ouch1978.github.io/blog/2017-02-03-html-to-md-exporter</link>
-            <guid>2017-02-03-html-to-md-exporter</guid>
+            <link>https://ouch1978.github.io/blog/2017/02/03/html-to-md-exporter</link>
+            <guid>2017/02/03/html-to-md-exporter</guid>
             <pubDate>Fri, 03 Feb 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[前言]]></description>
             <category>C#</category>
         </item>
         <item>
             <title><![CDATA[初探 Visual Studio 2017 RC - 程式撰寫體驗篇]]></title>
-            <link>https://ouch1978.github.io/blog/2017-01-30-first-look-on-vs2017-rc-general-coding-enhancement</link>
-            <guid>2017-01-30-first-look-on-vs2017-rc-general-coding-enhancement</guid>
+            <link>https://ouch1978.github.io/blog/2017/01/30/first-look-on-vs2017-rc-general-coding-enhancement</link>
+            <guid>2017/01/30/first-look-on-vs2017-rc-general-coding-enhancement</guid>
             <pubDate>Mon, 30 Jan 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[繼兩篇分別討論安裝與使用者體驗增強的文章之後，接下來要和大家分享的是 Visual Studio 2017 RC 在程式碼撰寫體驗增強的部份。]]></description>
             <category>Visual Studio</category>
         </item>
         <item>
             <title><![CDATA[初探 Visual Studio 2017 RC - IDE 使用者體驗篇]]></title>
-            <link>https://ouch1978.github.io/blog/2017-01-28-first-look-on-vs2017-rc-ide-ux-enhancement</link>
-            <guid>2017-01-28-first-look-on-vs2017-rc-ide-ux-enhancement</guid>
+            <link>https://ouch1978.github.io/blog/2017/01/28/first-look-on-vs2017-rc-ide-ux-enhancement</link>
+            <guid>2017/01/28/first-look-on-vs2017-rc-ide-ux-enhancement</guid>
             <pubDate>Sat, 28 Jan 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[[installation]//ouch1978.github.io/2017/01/20/first-look-on-vs2017-rc-installation/ "初探 VISUAL STUDIO 2017 RC - 安裝篇"]]></description>
             <category>Visual Studio</category>
         </item>
         <item>
             <title><![CDATA[初探 Visual Studio 2017 RC - 安裝篇]]></title>
-            <link>https://ouch1978.github.io/blog/2017-01-19-first-look-on-vs2017-rc-installation</link>
-            <guid>2017-01-19-first-look-on-vs2017-rc-installation</guid>
+            <link>https://ouch1978.github.io/blog/2017/01/19/first-look-on-vs2017-rc-installation</link>
+            <guid>2017/01/19/first-look-on-vs2017-rc-installation</guid>
             <pubDate>Thu, 19 Jan 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[在 2016 年的 11 月，微軟藉由 Connect 大會發佈了"地表最強開發工具" Visual Studio 2017 的 RC (發行候選)版本。]]></description>
             <category>Visual Studio</category>
         </item>
         <item>
             <title><![CDATA[更改 UWP PowerPoint 設計範本中內建的 AppBar 圖示顏色]]></title>
-            <link>https://ouch1978.github.io/blog/2016-12-28-change-built-in-icon-color-in-uwp-ppt-template</link>
-            <guid>2016-12-28-change-built-in-icon-color-in-uwp-ppt-template</guid>
+            <link>https://ouch1978.github.io/blog/2016/12/28/change-built-in-icon-color-in-uwp-ppt-template</link>
+            <guid>2016/12/28/change-built-in-icon-color-in-uwp-ppt-template</guid>
             <pubDate>Wed, 28 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[之前介紹的 UWP 的 PowerPoint 設計範本裡面內建了不少設計 App 時所需要的圖示。然而，它們有部份是圖形元件，可以直接修改顏色；但是有些是圖片，沒有辦法直接透過填色功能來改變它的顏色。]]></description>
             <category>UWP</category>
@@ -275,8 +275,8 @@
         </item>
         <item>
             <title><![CDATA[使用 Dev Center 提供的 PowerPoint 設計範本製作 UWP 的 UI 雛型]]></title>
-            <link>https://ouch1978.github.io/blog/2016-12-14-using-powerpoint-template-for-designing-uwp-app</link>
-            <guid>2016-12-14-using-powerpoint-template-for-designing-uwp-app</guid>
+            <link>https://ouch1978.github.io/blog/2016/12/14/using-powerpoint-template-for-designing-uwp-app</link>
+            <guid>2016/12/14/using-powerpoint-template-for-designing-uwp-app</guid>
             <pubDate>Wed, 14 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[設計和點子這種東西往往都是靈光一閃，在那一閃的瞬間往往只能透過紙筆來勾勒出心中的想法，但是對於像我這種懶人來說，如果能有一個方便製作/記錄雛型的工具，應該會是很有幫助的一件事。]]></description>
             <category>UWP</category>
@@ -284,16 +284,16 @@
         </item>
         <item>
             <title><![CDATA[透過 Roaming Extension Manager 在不同機器上同步 Visual Studio 2015 的擴充功能]]></title>
-            <link>https://ouch1978.github.io/blog/2016-11-01-roaming-extension-manager</link>
-            <guid>2016-11-01-roaming-extension-manager</guid>
+            <link>https://ouch1978.github.io/blog/2016/11/01/roaming-extension-manager</link>
+            <guid>2016/11/01/roaming-extension-manager</guid>
             <pubDate>Tue, 01 Nov 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[常常在工作的時候找到不錯用的 Visual Studio 擴充功能，但是往往回家又得再安裝一次，有時候忙過頭隔個幾天想安裝就忘記名字叫什麼了。一直在想說怎麼沒有一個功能可以在不同的電腦之間同步安裝過的擴充功能，果不其然，還真的有耶!!]]></description>
             <category>Visual Studio 2015</category>
         </item>
         <item>
             <title><![CDATA[強制 OneDrive 立刻與伺服器的檔案進行同步]]></title>
-            <link>https://ouch1978.github.io/blog/2016-10-20-force-onedrive-to-sync-immediately</link>
-            <guid>2016-10-20-force-onedrive-to-sync-immediately</guid>
+            <link>https://ouch1978.github.io/blog/2016/10/20/force-onedrive-to-sync-immediately</link>
+            <guid>2016/10/20/force-onedrive-to-sync-immediately</guid>
             <pubDate>Thu, 20 Oct 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[把 OneDrive 當作主要雲端備份方案的我，常常遇到它不聽話的狀況，得要重新啟動它才能讓它乖乖同步，這邊就來記錄一下透過命令列讓它醒來的方法。]]></description>
             <category>Windows 10</category>
@@ -301,31 +301,31 @@
         </item>
         <item>
             <title><![CDATA[解決 Windows 10 10586 英文版無法正常顯示 Non-Unicode 中文的問題]]></title>
-            <link>https://ouch1978.github.io/blog/2016-10-18-windows-10-10158-english-version-missing-tchinese-fonts</link>
-            <guid>2016-10-18-windows-10-10158-english-version-missing-tchinese-fonts</guid>
+            <link>https://ouch1978.github.io/blog/2016/10/18/windows-10-10158-english-version-missing-tchinese-fonts</link>
+            <guid>2016/10/18/windows-10-10158-english-version-missing-tchinese-fonts</guid>
             <pubDate>Tue, 18 Oct 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[話說，之前重灌工作機的時候，試了不同的 Windows 10 版本，一開始安裝的是 10586(1511) 英文版，但是發現非 Unicode 的中文無法正常顯示。]]></description>
             <category>Windows 10</category>
         </item>
         <item>
             <title><![CDATA[解決遊戲在 Windows 10 執行時出現 XAudio2_7.dll_unloaded 錯誤造成的閃退]]></title>
-            <link>https://ouch1978.github.io/blog/2016-07-02-solve-xaudio2_7.dll-unloaded-error</link>
-            <guid>2016-07-02-solve-xaudio2_7.dll-unloaded-error</guid>
+            <link>https://ouch1978.github.io/blog/2016/07/02/solve-xaudio2_7.dll-unloaded-error</link>
+            <guid>2016/07/02/solve-xaudio2_7.dll-unloaded-error</guid>
             <pubDate>Sat, 02 Jul 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[放假的時候想要玩個遊戲放鬆一下，但是遊戲卻動不動就自己閃退，在事件檢視器中看到失敗的模組名稱為 XAudio27.dllunloaded ，這邊就來分享解決之道。]]></description>
             <category>Windows 10</category>
         </item>
         <item>
-            <title><![CDATA[透過Visual Studio對Xamarin Android專案進行除錯]]></title>
-            <link>https://ouch1978.github.io/blog/2016-06-30-debugging-xamarin-android-app-in-vs</link>
-            <guid>2016-06-30-debugging-xamarin-android-app-in-vs</guid>
+            <title><![CDATA[透過 Visual Studio 對 Xamarin Android 專案進行除錯]]></title>
+            <link>https://ouch1978.github.io/blog/2016/06/30/debugging-xamarin-android-app-in-vs</link>
+            <guid>2016/06/30/debugging-xamarin-android-app-in-vs</guid>
             <pubDate>Thu, 30 Jun 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[很開心的可以成功建置出Android應用程式之後...咦!? 怎麼不能Debug!!??Visual Studio把應用程式佈署到模擬器之後就不管了??哪招啊!?]]></description>
         </item>
         <item>
             <title><![CDATA[Hello Xamarin]]></title>
-            <link>https://ouch1978.github.io/blog/2016-06-30-hello-xamarin</link>
-            <guid>2016-06-30-hello-xamarin</guid>
+            <link>https://ouch1978.github.io/blog/2016/06/30/hello-xamarin</link>
+            <guid>2016/06/30/hello-xamarin</guid>
             <pubDate>Thu, 30 Jun 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[日前微軟公開了收購 Xamarin 的消息，也很佛心的把它提供給 Visual Studio 的使用者們使用，這麼佛心的東西，怎麼可以不玩看看呢?]]></description>
             <category>Xamarin</category>
@@ -333,72 +333,72 @@
         </item>
         <item>
             <title><![CDATA[Line 原創貼圖 - 尼古這一家系列]]></title>
-            <link>https://ouch1978.github.io/blog/2016-06-14-line-stickers-nicolas-family</link>
-            <guid>2016-06-14-line-stickers-nicolas-family</guid>
+            <link>https://ouch1978.github.io/blog/2016/06/14/line-stickers-nicolas-family</link>
+            <guid>2016/06/14/line-stickers-nicolas-family</guid>
             <pubDate>Tue, 14 Jun 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[其實我早在兩年前就一直想要畫以我家的喵星人們為主題的 Line 貼圖了，但是夢想總是美好的，現實是殘酷的。一直拖到了今年，才有空真的動筆下去生出四十張一組的貼圖。]]></description>
             <category>貼圖</category>
         </item>
         <item>
             <title><![CDATA[徹底移除 Skype 廣告]]></title>
-            <link>https://ouch1978.github.io/blog/2016-06-08-remove-skype-ads</link>
-            <guid>2016-06-08-remove-skype-ads</guid>
+            <link>https://ouch1978.github.io/blog/2016/06/08/remove-skype-ads</link>
+            <guid>2016/06/08/remove-skype-ads</guid>
             <pubDate>Wed, 08 Jun 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[最近新版的 Skype 預設都會開啟對話視窗和主視窗的廣告功能，佔掉不小的版面，實在是有點惱人。這邊就跟大家分享怎麼把討人厭的廣告移乾淨吧。]]></description>
             <category>Skype</category>
         </item>
         <item>
-            <title><![CDATA[C#命名方針]]></title>
-            <link>https://ouch1978.github.io/blog/2010-10-30-c-sharp-naming-convention</link>
-            <guid>2010-10-30-c-sharp-naming-convention</guid>
+            <title><![CDATA[C# 命名方針]]></title>
+            <link>https://ouch1978.github.io/blog/2010/10/30/c-sharp-naming-convention</link>
+            <guid>2010/10/30/c-sharp-naming-convention</guid>
             <pubDate>Sat, 30 Oct 2010 00:00:00 GMT</pubDate>
             <description><![CDATA[寫程式其實也是有規矩在的，尤其是要團體協同開發的時候，如果每個人使用的規則都不一樣，那要求每個人看得懂別人的程式碼，真的是會要了人的命。]]></description>
             <category>C#</category>
         </item>
         <item>
-            <title><![CDATA[跟著Ouch寫程式 - 前言]]></title>
-            <link>https://ouch1978.github.io/blog/2010-10-30-learning-c-sharp-intro</link>
-            <guid>2010-10-30-learning-c-sharp-intro</guid>
+            <title><![CDATA[跟著 Ouch 寫程式 - 前言]]></title>
+            <link>https://ouch1978.github.io/blog/2010/10/30/learning-c-sharp-intro</link>
+            <guid>2010/10/30/learning-c-sharp-intro</guid>
             <pubDate>Sat, 30 Oct 2010 00:00:00 GMT</pubDate>
             <description><![CDATA[最近身邊有些朋友正在學習寫程式，算是新手中的新手，想想我也曾是過來人，就在這邊順便一下分享我小小的經驗，希望能對剛起步的朋友們有所幫助。]]></description>
             <category>C#</category>
         </item>
         <item>
             <title><![CDATA[輕鬆製作獨一無二的投影片-加強版]]></title>
-            <link>https://ouch1978.github.io/blog/2010-10-29-ppt-make-your-own-ptt-template-advanced</link>
-            <guid>2010-10-29-ppt-make-your-own-ptt-template-advanced</guid>
+            <link>https://ouch1978.github.io/blog/2010/10/29/ppt-make-your-own-ptt-template-advanced</link>
+            <guid>2010/10/29/ppt-make-your-own-ptt-template-advanced</guid>
             <pubDate>Fri, 29 Oct 2010 00:00:00 GMT</pubDate>
             <description><![CDATA[上次跟各位介紹了母片的應用，這次再來介紹兩個小撇步，一樣只利用 PowerPoint 原生的功能，不借助任何外部圖片，做出類似璃鏡面的效果，以及可以放在標題頁的自我介紹小卡片。]]></description>
             <category>Power Point</category>
         </item>
         <item>
             <title><![CDATA[輕鬆製作獨一無二的投影片]]></title>
-            <link>https://ouch1978.github.io/blog/2010-10-27-ppt-make-your-own-ptt-template</link>
-            <guid>2010-10-27-ppt-make-your-own-ptt-template</guid>
+            <link>https://ouch1978.github.io/blog/2010/10/27/ppt-make-your-own-ptt-template</link>
+            <guid>2010/10/27/ppt-make-your-own-ptt-template</guid>
             <pubDate>Wed, 27 Oct 2010 00:00:00 GMT</pubDate>
             <description><![CDATA[相信 Power Point 大家都會用，但是真的要自己從無到有，不使用任何別人做好的樣板或是美工圖片，快速的製作出一份「看起來」有一定的專業程度的簡報，應該就會難倒某些人吧!?]]></description>
             <category>Power Point</category>
         </item>
         <item>
             <title><![CDATA[自製 Modal 元件]]></title>
-            <link>https://ouch1978.github.io/blog/2010-10-26-silverlight-fake-modal-dialog</link>
-            <guid>2010-10-26-silverlight-fake-modal-dialog</guid>
+            <link>https://ouch1978.github.io/blog/2010/10/26/silverlight-fake-modal-dialog</link>
+            <guid>2010/10/26/silverlight-fake-modal-dialog</guid>
             <pubDate>Tue, 26 Oct 2010 00:00:00 GMT</pubDate>
             <description><![CDATA[有使用過 Silverlight/WPF 的朋友們不知道有沒有遇過一個問題：有時候想要跳出一個元件跟使用者互動，而且要鎖住原來的主畫面，等使用者操作完才能繼續操作主畫面，可是用 MessageBox 的話功能不夠，用 ChildWindow 的話功能又太多或是太複雜之類的問題...]]></description>
             <category>Silverlight</category>
         </item>
         <item>
             <title><![CDATA[使用 Visual Studio 進行 Source Code 自動格式化]]></title>
-            <link>https://ouch1978.github.io/blog/2010-10-25-vs2010-format-source-code-automatically</link>
-            <guid>2010-10-25-vs2010-format-source-code-automatically</guid>
+            <link>https://ouch1978.github.io/blog/2010/10/25/vs2010-format-source-code-automatically</link>
+            <guid>2010/10/25/vs2010-format-source-code-automatically</guid>
             <pubDate>Mon, 25 Oct 2010 00:00:00 GMT</pubDate>
             <description><![CDATA[通常自己一個人在寫 Code 的時候，想怎麼編排就怎麼排，自己看得懂、看得開心就好；但是遇到多人協力開發的專案，程式碼可能會來自不同的人手上，如果沒有事先規範好程式碼的編排規則的話，那讀別人的 Code 就會很吃力了，更別說要接手下去改，這個時候， Visual Studio 內建的格式化工具就很管用了。]]></description>
             <category>Visual Studio</category>
         </item>
         <item>
             <title><![CDATA[使用 Visual Studio 進行 Source Code 自動格式化 - 加強版]]></title>
-            <link>https://ouch1978.github.io/blog/2010-10-25-vs2010-format-source-code-automatically-advanced</link>
-            <guid>2010-10-25-vs2010-format-source-code-automatically-advanced</guid>
+            <link>https://ouch1978.github.io/blog/2010/10/25/vs2010-format-source-code-automatically-advanced</link>
+            <guid>2010/10/25/vs2010-format-source-code-automatically-advanced</guid>
             <pubDate>Mon, 25 Oct 2010 00:00:00 GMT</pubDate>
             <description><![CDATA[上篇講到了怎麼做 Source Code 的自動格式化，但是用內建的功能，其實有個不太方便的地方 -- 一次只能格式化一個檔案，這個問題對於我來說就頭很大了，通常一個專案不太可能只有兩三個檔，動不動就要每個檔案都開來自動格式化一下也是很累人而且浪費時間的一件事，這時候，整個專案裡面的檔案都可以自動格式化的功能就變成是必備的了!!]]></description>
             <category>Visual Studio</category>
