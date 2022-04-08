@@ -1,6 +1,6 @@
 ---
 title: 自製 Modal 元件
-slug: 2010-10-26-silverlight-fake-modal-dialog
+slug: 2010/10/26/silverlight-fake-modal-dialog
 authors: ouch1978
 tags: [Silverlight]
 ---

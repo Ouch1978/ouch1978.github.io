@@ -1,6 +1,6 @@
 ---
 title: 輕鬆製作獨一無二的投影片-加強版
-slug: 2010-10-29-ppt-make-your-own-ptt-template-advanced
+slug: 2010/10/29/ppt-make-your-own-ptt-template-advanced
 authors: ouch1978
 tags: [Power Point]
 ---

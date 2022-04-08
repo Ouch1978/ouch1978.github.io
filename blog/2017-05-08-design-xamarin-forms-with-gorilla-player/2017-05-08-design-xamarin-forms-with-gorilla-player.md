@@ -1,6 +1,6 @@
 ---
 title: 透過 Gorilla Player 在裝置上即時預覽 Xamarin Forms 介面
-slug: 2017-05-08-design-xamarin-forms-with-gorilla-player
+slug: 2017/05/08/design-xamarin-forms-with-gorilla-player
 authors: ouch1978
 tags: [Visual Studio 2017, XAML]
 ---

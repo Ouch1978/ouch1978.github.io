@@ -1,6 +1,6 @@
 ---
 title: 強制 OneDrive 立刻與伺服器的檔案進行同步
-slug: 2016-10-20-force-onedrive-to-sync-immediately
+slug: 2016/10/20/force-onedrive-to-sync-immediately
 authors: ouch1978
 tags:
   - Windows 10

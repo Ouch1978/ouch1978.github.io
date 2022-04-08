@@ -1,6 +1,6 @@
 ---
 title: 初探 Visual Studio 2017 RC - 安裝篇
-slug: 2017-01-19-first-look-on-vs2017-rc-installation
+slug: 2017/01/19/first-look-on-vs2017-rc-installation
 authors: ouch1978
 tags:
   - Visual Studio

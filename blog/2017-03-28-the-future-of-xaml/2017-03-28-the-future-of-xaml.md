@@ -1,6 +1,6 @@
 ---
 title: XAML 的過去、現在與未來
-slug: 2017-03-28-the-future-of-xaml
+slug: 2017/03/28/the-future-of-xaml
 authors: ouch1978
 tags: [XAML]
 ---

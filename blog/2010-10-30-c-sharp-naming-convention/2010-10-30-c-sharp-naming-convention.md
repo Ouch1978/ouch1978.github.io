@@ -1,6 +1,6 @@
 ---
-title: C#命名方針
-slug: 2010-10-30-c-sharp-naming-convention
+title: C# 命名方針
+slug: 2010/10/30/c-sharp-naming-convention
 authors: ouch1978
 tags: [C#]
 ---

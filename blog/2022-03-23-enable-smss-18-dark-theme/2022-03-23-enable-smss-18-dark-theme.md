@@ -1,6 +1,6 @@
 ---
 title: 啟用 SQL Server Management Studio 的深色主題
-slug: 2022-03-23-enable-smss-18-dark-theme
+slug: 2022/03/23/enable-smss-18-dark-theme
 authors: ouch1978
 tags: [smss, dark theme]
 ---

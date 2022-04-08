@@ -1,6 +1,6 @@
 ---
 title: 透過 Roaming Extension Manager 在不同機器上同步 Visual Studio 2015 的擴充功能
-slug: 2016-11-01-roaming-extension-manager
+slug: 2016/11/01/roaming-extension-manager
 authors: ouch1978
 tags:
   - Visual Studio 2015

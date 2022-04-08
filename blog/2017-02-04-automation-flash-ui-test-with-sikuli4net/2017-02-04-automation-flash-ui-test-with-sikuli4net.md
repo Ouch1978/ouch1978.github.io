@@ -1,6 +1,6 @@
 ---
 title: 透過 Sikuli4Net 對 Flash UI 進行自動化測試
-slug: 2017-02-04-automation-flash-ui-test-with-sikuli4net
+slug: 2017/02/04/automation-flash-ui-test-with-sikuli4net
 authors: ouch1978
 tags: [C#, Sikuli4Net, Visual Studio, Coded UI Test]
 keywords: [滑鼠, 圖形, 辨識]

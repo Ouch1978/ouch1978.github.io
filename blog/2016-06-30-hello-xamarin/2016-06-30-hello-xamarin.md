@@ -1,6 +1,6 @@
 ---
 title: Hello Xamarin
-slug: 2016-06-30-hello-xamarin
+slug: 2016/06/30/hello-xamarin
 authors: ouch1978
 tags:
   - Xamarin

@@ -1,6 +1,6 @@
 ---
 title: 解決遊戲在 Windows 10 執行時出現 XAudio2_7.dll_unloaded 錯誤造成的閃退
-slug: 2016-07-02-solve-xaudio2_7.dll-unloaded-error
+slug: 2016/07/02/solve-xaudio2_7.dll-unloaded-error
 authors: ouch1978
 tags:
   - Windows 10

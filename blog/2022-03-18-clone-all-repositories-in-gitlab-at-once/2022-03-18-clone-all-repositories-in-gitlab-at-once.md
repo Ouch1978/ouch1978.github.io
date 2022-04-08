@@ -1,6 +1,6 @@
 ---
 title: 還在一個一個專案 Clone 嗎? 用這招一次 Clone 所有在 GitLab 上的 Repo!!
-slug: 2022-03-18-clone-all-repositories-in-gitlab-at-once
+slug: 2022/03/18/clone-all-repositories-in-gitlab-at-once
 authors: ouch1978
 tags: [GitLab, Python, clone, gitlabber]
 ---

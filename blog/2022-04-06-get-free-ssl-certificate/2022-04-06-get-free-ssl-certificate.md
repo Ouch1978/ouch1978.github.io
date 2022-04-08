@@ -1,6 +1,6 @@
 ---
 title: 真正免費!!只要會複製貼上就能產生免費的 HTTPS 憑證!!
-slug: 2022-04-06-get-free-ssl-certificate
+slug: 2022/04/06/get-free-ssl-certificate 
 authors: ouch1978
 tags: [let's encrypt, csr, web]
 ---

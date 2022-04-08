@@ -1,6 +1,6 @@
 ---
 title: 解決 Visual Studio 2017 在有手寫筆的裝置上沒有回應及重啟的問題
-slug: 2017-08-29-fix-visual-studio-2017-crash-on-pen-enabled-devices
+slug: 2017/08/29/fix-visual-studio-2017-crash-on-pen-enabled-devices
 authors: ouch1978
 tags: [Visual Studio, PenIMC_v0400.dll]
 ---

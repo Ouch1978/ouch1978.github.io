@@ -1,6 +1,6 @@
 ---
 title: 使用 Visual Studio 進行 Source Code 自動格式化
-slug: 2010-10-25-vs2010-format-source-code-automatically
+slug: 2010/10/25/vs2010-format-source-code-automatically
 authors: ouch1978
 tags: [Visual Studio]
 ---

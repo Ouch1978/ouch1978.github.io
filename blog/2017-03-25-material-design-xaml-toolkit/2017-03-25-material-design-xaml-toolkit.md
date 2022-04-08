@@ -1,6 +1,6 @@
 ---
 title: 透過 Material Design Xaml Toolkit 讓你的 WPF 應用程式潮又有料
-slug: 2017-03-25-material-design-xaml-toolkit
+slug: 2017/03/25/material-design-xaml-toolkit
 authors: ouch1978
 tags: [C#, WPF, XAML, Material Design Xaml Toolkit, 設計]
 ---

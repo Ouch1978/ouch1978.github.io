@@ -1,6 +1,6 @@
 ---
-title: 跟著Ouch寫程式 - 前言
-slug: 2010-10-30-learning-c-sharp-intro
+title: 跟著 Ouch 寫程式 - 前言
+slug: 2010/10/30/learning-c-sharp-intro
 authors: ouch1978
 tags: [C#]
 ---

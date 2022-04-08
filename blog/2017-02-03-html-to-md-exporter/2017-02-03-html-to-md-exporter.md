@@ -1,6 +1,6 @@
 ---
 title: 部落格備份/搬家小工具 - Html to MD Exporter
-slug: 2017-02-03-html-to-md-exporter
+slug: 2017/02/03/html-to-md-exporter
 authors: ouch1978
 tags: [C#]
 keywords: [markdown, 部落格, 搬家, 點部落]

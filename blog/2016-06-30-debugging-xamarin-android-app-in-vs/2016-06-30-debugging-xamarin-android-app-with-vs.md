@@ -1,6 +1,6 @@
 ---
-title: 透過Visual Studio對Xamarin Android專案進行除錯
-slug: 2016-06-30-debugging-xamarin-android-app-in-vs
+title: 透過 Visual Studio 對 Xamarin Android 專案進行除錯
+slug: 2016/06/30/debugging-xamarin-android-app-in-vs
 authors: ouch1978
 tags: []
 ---

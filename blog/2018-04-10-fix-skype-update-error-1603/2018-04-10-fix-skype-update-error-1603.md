@@ -1,6 +1,6 @@
 ---
 title: 解決傳統桌面版 Skype 在更新時出現 1603 "The specified Account already exists" 錯誤
-slug: 2018-04-10-fix-skype-update-error-1603
+slug: 2018/04/10/fix-skype-update-error-1603
 authors: ouch1978
 tags: [Windows 10, automation, extension]
 ---

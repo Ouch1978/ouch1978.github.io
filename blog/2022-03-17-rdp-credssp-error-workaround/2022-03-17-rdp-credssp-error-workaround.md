@@ -1,6 +1,6 @@
 ---
 title: 遠端桌面連線出現因為 CredSSP 加密 Oracle 補救造成無法連線的應急解法
-slug: 2022-03-17-rdp-credssp-error-workaround
+slug: 2022/03/17/rdp-credssp-error-workaround
 authors: ouch1978
 tags: [windows 10, CredSSP, rdp, remote desktop]
 ---
