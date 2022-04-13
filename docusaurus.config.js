@@ -50,6 +50,7 @@ module.exports = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  trailingSlash: false,
   organizationName: "Ouch1978", // Usually your GitHub org/user name.
   projectName: "ouch1978.github.io", // Usually your repo name.
   i18n: {
