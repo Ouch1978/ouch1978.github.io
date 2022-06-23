@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[3517],{30792:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"Xamarin","count":3,"permalink":"/blog/tags/xamarin"}')}}]);

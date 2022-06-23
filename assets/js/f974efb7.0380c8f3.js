@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[3540],{38343:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"Xamarin.UITest","count":1,"permalink":"/blog/tags/xamarin-ui-test"}')}}]);

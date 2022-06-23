@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[1185],{13966:function(t){t.exports=JSON.parse('{"label":"remote desktop","permalink":"/blog/tags/remote-desktop","allTagsPath":"/blog/tags","count":1}')}}]);

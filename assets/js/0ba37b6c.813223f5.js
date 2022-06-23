@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[2158],{37524:function(a){a.exports=JSON.parse('{"label":"dark theme","permalink":"/blog/tags/dark-theme","allTagsPath":"/blog/tags","count":1}')}}]);

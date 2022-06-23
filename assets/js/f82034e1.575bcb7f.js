@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[8326],{34716:function(a){a.exports=JSON.parse('{"label":"UWP","permalink":"/blog/tags/uwp","allTagsPath":"/blog/tags","count":2}')}}]);

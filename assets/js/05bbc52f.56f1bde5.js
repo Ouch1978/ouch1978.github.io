@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[3701],{79940:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"gitlabber","count":1,"permalink":"/blog/tags/gitlabber"}')}}]);

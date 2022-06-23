@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[448],{47185:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"selenium","count":1,"permalink":"/blog/tags/selenium"}')}}]);
