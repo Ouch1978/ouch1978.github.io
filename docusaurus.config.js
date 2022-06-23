@@ -71,7 +71,11 @@ module.exports = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    hideableSidebar: true,
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     algolia: {
       appId: 'AG6O0X1DB7',
       apiKey: '849e564e75143705de1058ace77a188d',
@@ -133,7 +137,7 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
           remarkPlugins: [math, remarkGridTables],
-          rehypePlugins: [katex],
+          rehypePlugins: [[katex, { strict: false }]],
           showLastUpdateTime: true,
           breadcrumbs: true,
           /*
@@ -152,7 +156,7 @@ module.exports = {
           // Please change this to your repo.
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
           remarkPlugins: [math, remarkGridTables],
-          rehypePlugins: [katex],
+          rehypePlugins: [[katex, { strict: false }]],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -160,10 +164,31 @@ module.exports = {
       },
     ],
   ],
-  stylesheets: [{
+  stylesheets: [
+    {
       href: "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css",
       type: "text/css",
       integrity: "sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc",
+      crossorigin: "anonymous",
+    },
+    {
+      href: "/fonts/noto-sans-tc-regular.woff2",
+      type: "font/woff2",
+      as: "font",
+      rel: "preload",
+      crossorigin: "anonymous",
+    },
+    {
+      href: "/fonts/noto-sans-tc-700.woff2",
+      type: "font/woff2",
+      as: "font",
+      rel: "preload",
+      crossorigin: "anonymous",
+    }, {
+      href: "/fonts/noto-sans-tc-900.woff2",
+      type: "font/woff2",
+      as: "font",
+      rel: "preload",
       crossorigin: "anonymous",
     },
     /*
