@@ -77,9 +77,9 @@ module.exports = {
       },
     },
     algolia: {
-      appId: 'AG6O0X1DB7',
-      apiKey: '849e564e75143705de1058ace77a188d',
-      indexName: 'ouch1978.github.io',
+      appId: 'XA2FZH7CHR',
+      apiKey: '52ba1dbf6e599f15075a60d464318d01',
+      indexName: 'ouch1978',
       contextualSearch: true,
     },
     zoom: {
