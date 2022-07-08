@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ouch1978.github.io/blog</id>
     <title>OUCH1978@GITHUB Blog</title>
-    <updated>2022-04-06T00:00:00.000Z</updated>
+    <updated>2022-07-08T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ouch1978.github.io/blog"/>
     <subtitle>OUCH1978@GITHUB Blog</subtitle>
     <icon>https://ouch1978.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[使用 Microsoft Teams 的 Chat with Self 功能]]></title>
+        <id>2022-07-08-ms-teams-chat-with-self</id>
+        <link href="https://ouch1978.github.io/blog/2022-07-08-ms-teams-chat-with-self"/>
+        <updated>2022-07-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[前言]]></summary>
+        <author>
+            <name>Ouch Liu</name>
+            <uri>https://github.com/ouch1978</uri>
+        </author>
+        <category label="teams" term="teams"/>
+        <category label="office" term="office"/>
+        <category label="communication" term="communication"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[真正免費!!只要會複製貼上就能產生免費的 HTTPS 憑證!!]]></title>
         <id>2022/04/06/get-free-ssl-certificate</id>

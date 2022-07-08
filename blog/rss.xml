@@ -4,10 +4,20 @@
         <title>OUCH1978@GITHUB Blog</title>
         <link>https://ouch1978.github.io/blog</link>
         <description>OUCH1978@GITHUB Blog</description>
-        <lastBuildDate>Wed, 06 Apr 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 Jul 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-TW</language>
+        <item>
+            <title><![CDATA[使用 Microsoft Teams 的 Chat with Self 功能]]></title>
+            <link>https://ouch1978.github.io/blog/2022-07-08-ms-teams-chat-with-self</link>
+            <guid>2022-07-08-ms-teams-chat-with-self</guid>
+            <pubDate>Fri, 08 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[前言]]></description>
+            <category>teams</category>
+            <category>office</category>
+            <category>communication</category>
+        </item>
         <item>
             <title><![CDATA[真正免費!!只要會複製貼上就能產生免費的 HTTPS 憑證!!]]></title>
             <link>https://ouch1978.github.io/blog/2022/04/06/get-free-ssl-certificate</link>

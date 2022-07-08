@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[1731],{63102:function(a){a.exports=JSON.parse('{"label":"communication","permalink":"/blog/tags/communication","allTagsPath":"/blog/tags","count":1}')}}]);
