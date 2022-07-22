@@ -2,7 +2,8 @@
 title: 一次刪除所有容器的指令
 description: 收錄清理和容器相關資源的各種指令。
 author: ouch1978
-tags: [ubuntu,command,docker,prune,cli]
+tags: [docker, container]
+keywords: [docker, container, ubuntu, command , cli, prune]
 slug: ../prune-all-containers
 
 ---

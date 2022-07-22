@@ -2,7 +2,8 @@
 title: 使用 Microsoft Teams 的 Chat with Self 功能
 slug: 2022-07-08-ms-teams-chat-with-self
 authors: ouch1978
-tags: [teams, office, office, communication]
+tags: [teams, office]
+keywords: [teams, office, chat with self, communication]
 ---
 
 ## 前言

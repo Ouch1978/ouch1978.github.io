@@ -71,6 +71,7 @@ module.exports = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
+    metadata: [{ name: 'robots', content: 'max-image-preview:large' }],
     docs: {
       sidebar: {
         hideable: true,

@@ -2,7 +2,8 @@
 title: 在 Ubuntu 中設定全域的 Proxy
 description: 簡單介紹如何透過命令模式來在 Ubuntu 中設定全域的 Proxy。
 author: ouch1978
-tags: [ubuntu,command,cli,proxy]
+tags: [docker, container]
+keywords: [docker, container, ubuntu, command , cli, global proxy]
 slug: ../set-system-proxy-on-ubuntu
 ---
 

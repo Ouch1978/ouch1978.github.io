@@ -2,7 +2,8 @@
 title: 消除在數學公式裡使用中文時出現的警告
 description: 解決在數學公式中使用中文，編譯時會出現 LaTeX-incompatible input and strict mode is set to 'warn' 警告的方法。
 author: ouch1978
-tags: [configuration, katax, latex, unicode]
+tags: [docusaurus]
+keywords: [docusaurus, algolia, katax, latex, unicode]
 slug: ../04-fix-latex-incompatible-input-warning
 ---
 

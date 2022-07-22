@@ -2,7 +2,8 @@
 title: 透過 GitHub Action 自動執行 DocSearch 的爬蟲
 description: 介紹透過 GitHub Action 自動執行 DocSearch 的爬蟲的方法。
 author: ouch1978
-tags: [configuration, algolia, github action, docsearch]
+tags: [docusaurus, algolia]
+keywords: [docusaurus, algolia, deploy, github, docsearch]
 slug: ../03-automatically-run-docsearch-scraper-from-github-action
 ---
 
