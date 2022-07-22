@@ -7,7 +7,7 @@ tags: [Visual Studio 2017, Appium, Automation Testing]
 
 ## 前言
 
-在先前的 [透過 Visual Studio 2017 與 Appium 測試安卓手機上的行動版網頁](/2017/04/17/mobile-web-automation-testing-with-vs2017-and-appium/2017-04-17-mobile-web-automation-testing-with-vs2017-and-appium) 一文中跟大家介紹了使用 Appium 來達到 Mobile Web 測試的自動化。
+在先前的 [透過 Visual Studio 2017 與 Appium 測試安卓手機上的行動版網頁](/blog/2017/04/17/mobile-web-automation-testing-with-vs2017-and-appium) 一文中跟大家介紹了使用 Appium 來達到 Mobile Web 測試的自動化。
 
 不過，在 Mobile 的世界裡， App 才是大家更想關心的事。所以，這次就來跟大家分享使用 Appium 來作到 Moble App 的測試自動化囉!!
 
