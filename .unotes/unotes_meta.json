@@ -354,12 +354,6 @@
       "folders": {},
       "files": {}
     },
-    "build": {
-      "name": "build",
-      "isOrdered": true,
-      "folders": {},
-      "files": {}
-    },
     "i18n": {
       "name": "i18n",
       "isOrdered": true,

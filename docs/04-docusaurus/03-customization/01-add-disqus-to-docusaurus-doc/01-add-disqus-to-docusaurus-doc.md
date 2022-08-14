@@ -37,6 +37,55 @@ yarn add disqus-react
 
 所以我們接下來就要透過下面的指令把 DocItemFooter 的原始碼抽取出來：
 
+### Docusaurus 2.0.0 正式版之後的作法
+
+```powershell
+yarn run swizzle @docusaurus/theme-classic DocItem/Footer --wrap --typescript
+```
+
+抽取出原始碼之後，進行下列的調整：
+
+```jsx title="src/theme/DocItem/Footer/index.tsx"
+import React from "react";
+import Footer from "@theme-original/DocItem/Footer";
+import type FooterType from "@theme/DocItem/Footer";
+import type { WrapperProps } from "@docusaurus/types";
+
+{/* highlight-start */}
+import { DiscussionEmbed } from "disqus-react";
+import { useDoc } from "@docusaurus/theme-common/internal";
+{/* highlight-end */}
+
+type Props = WrapperProps<typeof FooterType>;
+
+export default function FooterWrapper(props: Props): JSX.Element {
+  {/* highlight-start */}
+  const { metadata, frontMatter, assets } = useDoc();
+  const { no_comments } = frontMatter;
+  const { title, slug } = metadata;
+  {/* highlight-end */}
+  return (
+    <>
+      <Footer {...props} />
+      {/* highlight-start */}
+      {!no_comments && (
+        <DiscussionEmbed
+          shortname="ouch1978"
+          config={{
+            identifier: slug,
+            title: title,
+            language: "zh-TW",
+          }}
+        />
+      )}
+      {/* highlight-end */}
+    </>
+  );
+}
+```
+
+### Docusaurus 2.0.0 Beta 版之前的作法
+
 ```powershell
 yarn swizzle @docusaurus/theme-classic DocItemFooter -- --wrap
 ```
