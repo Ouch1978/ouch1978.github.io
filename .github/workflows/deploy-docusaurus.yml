@@ -19,7 +19,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
       - name: Build slides
         run: yarn reveal        
       - name: Build website
