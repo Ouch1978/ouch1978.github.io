@@ -2,9 +2,15 @@
 title: 在 Windows 10 手動執行 DocSearch 的爬蟲
 description: 介紹在 Windows 10 手動執行 DocSearch 的爬蟲的方法和流程。
 author: ouch1978
-tags: [docusaurus, algolia]
-keywords: [docusaurus, algolia, configuration]
 slug: ../manually-run-docsearch-scraper-from-windows-10
+tags: 
+    - Docusaurus
+    - Algolia
+keywords: 
+    - Docusaurus
+    - Algolia
+    - 搜尋
+    - 爬蟲
 ---
 
 ## 前言

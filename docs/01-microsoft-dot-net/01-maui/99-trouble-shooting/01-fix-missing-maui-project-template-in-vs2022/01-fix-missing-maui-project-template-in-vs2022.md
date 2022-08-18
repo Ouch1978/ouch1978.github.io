@@ -2,9 +2,17 @@
 title: 修復 Visual Studio 2022 無法顯示 MAUI 專案樣版的問題
 description: 描述如何修復 Visual Studio 2022 中 MAUI 專案樣版無法顯示的問題。
 author: ouch1978
-tags: [MAUI, Visual Studio]
-keywords: [vs2022, MAUI, template, 專案, 樣版, 消失]
-slug: ../apply-kbd-style-in-markdown
+slug: ../fix-missing-maui-project-template-in-vs2022
+tags: 
+   - MAUI-
+   - Visual Studio
+keywords: 
+   - vs2022 
+   - MAUI
+   - Template
+   - 專案 
+   - 樣版 
+   - 消失
 draft: true
 ---
 

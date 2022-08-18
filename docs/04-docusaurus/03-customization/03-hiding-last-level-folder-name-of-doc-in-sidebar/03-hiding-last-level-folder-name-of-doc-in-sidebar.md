@@ -2,9 +2,14 @@
 title: 在 Sidebar 中隱藏最後一層的資料夾名稱
 description: 介紹透過程式碼來讓 Docusaurus 不要把文件的最後一層資料夾顯示在 Sidebar 中的方法。
 author: ouch1978
-tags: [docusaurus]
-keywords: [docusaurus, customization, hide last level]
 slug: ../hiding-last-level-folder-name-of-doc-in-sidebar
+tags: 
+    - Docusaurus
+keywords: 
+    - Docusaurus
+    - 客製
+    - 隱藏
+    - 資料夾
 ---
 
 ## 前言

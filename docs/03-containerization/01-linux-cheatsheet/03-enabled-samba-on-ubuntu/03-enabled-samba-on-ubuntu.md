@@ -2,9 +2,15 @@
 title: 在 Ubuntu 中快速建立 Samba 服務
 description: 簡單介紹如何透過命令模式來在 Ubuntu 中建立 Samba 服務。
 author: ouch1978
-tags: [docker, container]
-keywords: [docker, container, ubuntu, command , cli, samba]
 slug: ../enabled-samba-on-ubuntu
+tags: 
+  - Container
+  - Docker
+  - Ubuntu
+keywords:
+  - Ubuntu
+  - 指令
+  - Samba
 ---
 
 ## 前言
