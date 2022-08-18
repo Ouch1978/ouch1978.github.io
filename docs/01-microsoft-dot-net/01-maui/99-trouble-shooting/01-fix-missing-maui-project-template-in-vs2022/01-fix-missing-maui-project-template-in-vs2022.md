@@ -4,7 +4,7 @@ description: 描述如何修復 Visual Studio 2022 中 MAUI 專案樣版無法�
 author: ouch1978
 slug: ../fix-missing-maui-project-template-in-vs2022
 tags: 
-   - MAUI-
+   - MAUI
    - Visual Studio
 keywords: 
    - vs2022 
