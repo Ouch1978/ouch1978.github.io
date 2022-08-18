@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[2594],{24869:function(a){a.exports=JSON.parse('{"label":"Material Design Xaml Toolkit","permalink":"/blog/tags/material-design-xaml-toolkit","allTagsPath":"/blog/tags","count":1}')}}]);

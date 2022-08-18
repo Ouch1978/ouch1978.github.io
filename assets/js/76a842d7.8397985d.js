@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[8571],{28833:function(a){a.exports=JSON.parse('{"label":"office","permalink":"/blog/tags/office","allTagsPath":"/blog/tags","count":1}')}}]);

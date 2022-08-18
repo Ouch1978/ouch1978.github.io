@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[8664],{11271:function(a){a.exports=JSON.parse('{"label":"Creators Update","permalink":"/blog/tags/creators-update","allTagsPath":"/blog/tags","count":1}')}}]);
