@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ouch1978.github.io/blog</id>
     <title>OUCH1978@GITHUB Blog</title>
-    <updated>2022-08-15T00:00:00.000Z</updated>
+    <updated>2022-08-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ouch1978.github.io/blog"/>
     <subtitle>OUCH1978@GITHUB Blog</subtitle>
     <icon>https://ouch1978.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Windows 的視窗逃到螢幕外點不到了!? 叫它乖乖回來!!]]></title>
+        <id>/2022/08/19/move-window-out-of-screen-back</id>
+        <link href="https://ouch1978.github.io/blog/2022/08/19/move-window-out-of-screen-back"/>
+        <updated>2022-08-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[前言]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="前言">前言<a class="hash-link" href="#前言" title="Direct link to heading">​</a></h2><p>在使用 Windows 的漫長歲月裡，遇過幾次視窗跑到螢幕外，滑鼠點不到的狀況。</p><p>今天又遇到一次，就順手寫個筆記當紀念，也希望能幫到其他視窗叫不回來的朋友。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="解法">解法<a class="hash-link" href="#解法" title="Direct link to heading">​</a></h2><p>首先請按下鍵盤的 <kbd>Alt</kbd> + <kbd>Tab ↹</kbd> 鍵，切換到跑出螢幕外的程式。</p><p>接著按下鍵盤的 <kbd>Alt</kbd> + <kbd>Space</kbd> 鍵，叫出視窗選單。</p><p><img loading="lazy" alt="按下鍵盤的 Alt + 空白鍵叫出視窗選單" src="/assets/images/press-alt-and-space-to-open-windows-menu-642837ee5513cfad9cf3e67dac6264fb.png" title="按下鍵盤的 Alt + 空白鍵叫出視窗選單" width="2400" height="1600" class="img_ev3q"></p><p>然後用滑鼠點選移動，或是按下鍵盤的 <kbd>M</kbd> 鍵。</p><p><img loading="lazy" alt="點選移動或是按下 M 鍵" src="/assets/images/select-move-or-press-m-key-e2342960c48ae96a1394b7e79c22eceb.png" title="點選移動或是按下 M 鍵" width="2400" height="1600" class="img_ev3q"></p><p>沒意外的話，應該會看到滑鼠游標變成十字箭頭的形狀。</p><p><img loading="lazy" alt="滑鼠游標變成十字箭頭的形狀" src="/assets/images/mouse-cursor-will-become-move-cursor-00ef4a78b9ca5ebb0ef4134e42a0273c.png" title="滑鼠游標變成十字箭頭的形狀" width="2400" height="1600" class="img_ev3q"></p><p>這時候只需要用鍵盤的方向鍵來移動視窗，就可以讓視窗乖乖聽話回到你想要的地方囉!!</p><p>以上。</p>]]></content>
+        <author>
+            <name>Ouch Liu</name>
+            <uri>https://github.com/ouch1978</uri>
+        </author>
+        <category label="Windows" term="Windows"/>
+        <category label="小技巧" term="小技巧"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[為 Windows 11 家用版解除 Hyper-V 的封印]]></title>
         <id>/2022/08/15/enable-hyper-v-on-windows-11-home</id>
