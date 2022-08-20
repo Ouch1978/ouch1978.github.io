@@ -4,13 +4,13 @@ description: 介紹由 Facebook 所開發的 Docusaurus 這個靜態網站產生
 author: ouch1978
 slug: ../01-what-is-docusaurus
 tags: 
-   ：Docusaurus
+   - Docusaurus
 keywords: 
-   ：Docusaurus
-   ：介紹
-   ：知識庫
-   ：共筆
-   ：團隊
+   - Docusaurus
+   - 介紹
+   - 知識庫
+   - 共筆
+   - 團隊
 ---
 
 ## 先從身世說起
