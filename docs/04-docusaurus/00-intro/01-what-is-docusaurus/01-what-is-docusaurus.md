@@ -29,7 +29,7 @@ Docusaurus 早在 2017 年之前就發表了它的第一個版本，接著很快
 
 也把我的部落格從原本的 Jekyll 框架改成了 Docusaurus，也就是大家現在看到的版本。
 
-## Docusaurus 的誕生
+### Docusaurus 的誕生
 
 Docusaurus 又是怎麼被生出來的呢?
 
