@@ -1,4 +1,4 @@
-position: 901 # float position is supported
+position: 01 # float position is supported
 label: '簡介'
 collapsible: true # make the category collapsible
 collapsed: false # keep the category open by default
