@@ -1,6 +1,6 @@
 ---
 title: 自製 Modal 元件
-description: 有使用過 Silverlight/WPF 的朋友們不知道有沒有遇過一個問題：有時候想要跳出一個元件跟使用者互動，而且要鎖住原來的主畫面，等使用者操作完才能繼續操作主畫面，可是用 MessageBox 的話功能不夠，用 ChildWindow 的話功能又太多或是太複雜之類的問題...
+description: "有使用過 Silverlight/WPF 的朋友們不知道有沒有遇過一個問題：有時候想要跳出一個元件跟使用者互動，而且要鎖住原來的主畫面，等使用者操作完才能繼續操作主畫面，可是用 MessageBox 的話功能不夠，用 ChildWindow 的話功能又太多或是太複雜之類的問題..."
 authors: ouch1978
 tags: 
     - Silverlight

@@ -1,6 +1,6 @@
 ---
 title: 啟用 SQL Server Management Studio 的深色主題
-description: 好啦，其實呢，SMSS 還是有內建深色主題的，只是被封印起來了(可能還在內部測試的階段)。 這篇文章就來分享怎麼把它解封印。
+description: "好啦，其實呢，SMSS 還是有內建深色主題的，只是被封印起來了(可能還在內部測試的階段)。 這篇文章就來分享怎麼把它解封印。"
 authors: ouch1978
 tags: 
     - SMSS

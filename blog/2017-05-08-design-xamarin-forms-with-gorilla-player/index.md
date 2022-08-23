@@ -1,6 +1,6 @@
 ---
 title: 透過 Gorilla Player 在裝置上即時預覽 Xamarin Forms 介面
-description: 在使用 Visual Studio 中的 Xamarin 開發 App 的時候，雖然可以透過 Xamarin.Forms Previewer 來預覽 XAML 刻出來的畫面，不過如果能讓你直接在實機或是模擬器上直接看到畫面，是不是會更有感覺呢? 另外，雖然透過 Xamarin 目前也支援設計時期的範例資料，但是我們還是得要透過 ViewModelLocater 搭配手動刻出的 ViewModel 才能得到我們想要的結果。 最後， Xamarin.Forms Previewer 的穩定性也是很讓人垢病的一大致命傷。 基於以上幾點(其實最痛的是穩定性啦)，讓我不得不尋找一個 Xamarin.Forms Previewer 的替代方案，後來，我找到了 Gorilla 。
+description: "在使用 Visual Studio 中的 Xamarin 開發 App 的時候，雖然可以透過 Xamarin.Forms Previewer 來預覽 XAML 刻出來的畫面，不過如果能讓你直接在實機或是模擬器上直接看到畫面，是不是會更有感覺呢? 另外，雖然透過 Xamarin 目前也支援設計時期的範例資料，但是我們還是得要透過 ViewModelLocater 搭配手動刻出的 ViewModel 才能得到我們想要的結果。 最後， Xamarin.Forms Previewer 的穩定性也是很讓人垢病的一大致命傷。 基於以上幾點(其實最痛的是穩定性啦)，讓我不得不尋找一個 Xamarin.Forms Previewer 的替代方案，後來，我找到了 Gorilla 。"
 authors: ouch1978
 tags:
     - Visual Studio

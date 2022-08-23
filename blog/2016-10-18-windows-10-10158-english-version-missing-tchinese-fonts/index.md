@@ -1,6 +1,6 @@
 ---
 title: 解決 Windows 10 10586 英文版無法正常顯示 Non-Unicode 中文的問題
-description: 話說，之前重灌工作機的時候，試了不同的 Windows 10 版本，一開始安裝的是 10586(1511) 英文版，但是發現非 Unicode 的中文無法正常顯示。
+description: "話說，之前重灌工作機的時候，試了不同的 Windows 10 版本，一開始安裝的是 10586(1511) 英文版，但是發現非 Unicode 的中文無法正常顯示。"
 authors: ouch1978
 tags:
   - Windows 10

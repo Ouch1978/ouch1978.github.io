@@ -1,6 +1,6 @@
 ---
 title: 為 Windows 11 家用版解除 Hyper-V 的封印
-description: 目前市售的套裝電腦或是筆電，大多隨附的 Windows 版本都是家用版，也就是不內建 Hyper-V 的版本。 所以，這篇就來分享如何在 Windows 11 家用版中加入並且啟用 Hyper-V。
+description: "目前市售的套裝電腦或是筆電，大多隨附的 Windows 版本都是家用版，也就是不內建 Hyper-V 的版本。 所以，這篇就來分享如何在 Windows 11 家用版中加入並且啟用 Hyper-V。"
 authors: ouch1978
 tags: 
     - Windows 11

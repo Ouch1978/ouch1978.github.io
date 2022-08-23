@@ -1,6 +1,6 @@
 ---
 title: 初探 Visual Studio 2017 RC - 安裝篇
-description: 在 2016 年的 11 月，微軟藉由 Connect 大會發佈了"地表最強開發工具" Visual Studio 2017 的 RC (發行候選)版本。 如果沒什麼意外的話，應該在接下來的一兩個月裡面，我們就可以看到正式版出現了。 接下來就各位分享一下安裝和試用的心得。
+description: "在 2016 年的 11 月，微軟藉由 Connect 大會發佈了'地表最強開發工具' Visual Studio 2017 的 RC (發行候選)版本。 如果沒什麼意外的話，應該在接下來的一兩個月裡面，我們就可以看到正式版出現了。 接下來就各位分享一下安裝和試用的心得。"
 authors: ouch1978
 tags:
   - Visual Studio

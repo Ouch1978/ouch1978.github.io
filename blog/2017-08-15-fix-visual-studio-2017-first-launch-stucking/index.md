@@ -1,6 +1,6 @@
 ---
 title: 解決 Visual Studio 2017 首次執行時卡在 We are getting things ready 的問題
-description: 上星期筆電不知道是什麼原因，突然就沒辦法正常開機了，而且試過使用修復功能也沒救，只好整個重灌了。 就當安裝完 Visual Studio 2017 之後，準備首次啟動的時候，輸入完帳號按下下一步按鈕之後，畫面上就出現了 `We are getting things ready` 的訊息，不過因為當時已屆下班時間，我就索性放著讓它跑。 沒想到... 隔天回到公司，一看電腦，它居然還是停留在一樣的畫面!!...
+description: "上星期筆電不知道是什麼原因，突然就沒辦法正常開機了，而且試過使用修復功能也沒救，只好整個重灌了。 就當安裝完 Visual Studio 2017 之後，準備首次啟動的時候，輸入完帳號按下下一步按鈕之後，畫面上就出現了 'We are getting things ready' 的訊息，不過因為當時已屆下班時間，我就索性放著讓它跑。 沒想到... 隔天回到公司，一看電腦，它居然還是停留在一樣的畫面!!..."
 authors: ouch1978
 tags: 
     - Visual Studio

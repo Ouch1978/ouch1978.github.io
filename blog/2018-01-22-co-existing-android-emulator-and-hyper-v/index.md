@@ -1,6 +1,6 @@
 ---
 title: 誰說魚與熊掌不可兼得? 讓你的安卓模擬器與 Hyper-V 可以和平共處
-description: 有在使用 Visual Studio 2017 和 Xamarin 進行開發的朋友們可能會跟我一樣遇過同樣的問題：如果使用 Visual Studio 2017 裡面內建的安卓模擬器，就得把 Hyper-V 給關掉，不然就無法啟用 Intel® Hardware Accelerated Execution Manager 來替安卓模擬器加速。 在網路上爬了一些文章之後，歸納出了下面兩種解法。
+description: "有在使用 Visual Studio 2017 和 Xamarin 進行開發的朋友們可能會跟我一樣遇過同樣的問題：如果使用 Visual Studio 2017 裡面內建的安卓模擬器，就得把 Hyper-V 給關掉，不然就無法啟用 Intel® Hardware Accelerated Execution Manager 來替安卓模擬器加速。 在網路上爬了一些文章之後，歸納出了下面兩種解法。"
 authors: ouch1978
 tags: 
     - Visual Studio

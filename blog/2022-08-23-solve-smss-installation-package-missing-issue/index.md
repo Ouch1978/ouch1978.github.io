@@ -1,6 +1,6 @@
 ---
 title: 解決安裝 SQL Server Management Studio 時發生 xxx.msi 找不到的問題
-descrition: 最近在更新 SQL Server Management Studio 的時候，裝到一半突然跳出找不到 sql_smss.msi 的的訊息。本來以為是因為舊的安裝咬住了什麼，但是就連把舊的版本反安裝了，還是會出現一樣的問題。除了正規的反安裝之外，不管我直接刪檔案、刪登錄檔，也都無濟於事。
+descrition: "最近在更新 SQL Server Management Studio 的時候，裝到一半突然跳出找不到 sql_smss.msi 的的訊息。本來以為是因為舊的安裝咬住了什麼，但是就連把舊的版本反安裝了，還是會出現一樣的問題。除了正規的反安裝之外，不管我直接刪檔案、刪登錄檔，也都無濟於事。"
 authors: ouch1978
 tags: 
     - Windows

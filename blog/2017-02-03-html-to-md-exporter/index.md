@@ -1,7 +1,7 @@
 ---
 title: 部落格備份/搬家小工具 - Html to MD Exporter
-description: 忘記是去年的哪個時候，看到了強者我同事小黑用著 Markdown 語法寫他的部落格文章，然後透過一連串幾近自動化的流程上傳到 GitHub 上...
-當時的我，默默的看著我許久沒打開的 Windows Live Writer，再默默的看了一下我許久沒新文章的部落格...
+description: "忘記是去年的哪個時候，看到了強者我同事小黑用著 Markdown 語法寫他的部落格文章，然後透過一連串幾近自動化的流程上傳到 GitHub 上...
+當時的我，默默的看著我許久沒打開的 Windows Live Writer，再默默的看了一下我許久沒新文章的部落格..."
 authors: ouch1978
 tags: 
     - C#

@@ -1,6 +1,6 @@
 ---
 title: 透過 Docker 執行 Jekyll 產出部落格文章
-description: 很久很久之前，我把個人部落格從點部落搬家到 GitHub Pages，並且選擇了 Jekyll 作為產出靜態網站的框架。 雖然 GitHub 原生就支援透過 Jekyll 來產生靜態網站，但是如果想要在 push 之前先預覽文章的話，就得要在本機裝 Jekyll。 懶得裝 Ruby 開發環境的代價是得要讓它吃掉硬碟好幾 GB 的空間，而且每要在其他電腦撰寫文章的話就得要重新下載一次，對於電腦常常掛掉的我來說，這個點真的是很痛。
+description: "很久很久之前，我把個人部落格從點部落搬家到 GitHub Pages，並且選擇了 Jekyll 作為產出靜態網站的框架。 雖然 GitHub 原生就支援透過 Jekyll 來產生靜態網站，但是如果想要在 push 之前先預覽文章的話，就得要在本機裝 Jekyll。 懶得裝 Ruby 開發環境的代價是得要讓它吃掉硬碟好幾 GB 的空間，而且每要在其他電腦撰寫文章的話就得要重新下載一次，對於電腦常常掛掉的我來說，這個點真的是很痛。"
 authors: ouch1978
 tags: 
     - jekyll

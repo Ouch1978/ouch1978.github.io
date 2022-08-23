@@ -1,6 +1,6 @@
 ---
 title: 直衝 Redstone 4!? Windows 測試人員計畫選項更新
-description: 這幾天在試玩 Windows Insider Preview 版 Windows 的時候，赫然發現在 Windows Indider Program 裡面的更新選項變得跟之前不太一樣了 -- 除了之前可以選取從 Fast Ring 和 Slow Ring 進行更新之外，現在在 Fast Ring 中的使用者們還會得到另一個 "您想要接收哪一類的內容?" 選項，而裡面的項目則包含了 "Active development of Window`" 和 "Skip ahead to the next Windows release" 這兩種。
+description: "這幾天在試玩 Windows Insider Preview 版 Windows 的時候，赫然發現在 Windows Indider Program 裡面的更新選項變得跟之前不太一樣了 -- 除了之前可以選取從 Fast Ring 和 Slow Ring 進行更新之外，現在在 Fast Ring 中的使用者們還會得到另一個 '您想要接收哪一類的內容?' 選項，而裡面的項目則包含了 'Active development of Window' 和 'Skip ahead to the next Windows release' 這兩種。"
 authors: ouch1978
 tags: 
     - Windows 10
