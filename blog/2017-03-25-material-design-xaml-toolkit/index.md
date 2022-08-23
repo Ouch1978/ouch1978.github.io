@@ -1,5 +1,6 @@
 ---
 title: 透過 Material Design Xaml Toolkit 讓你的 WPF 應用程式潮又有料
+description: 在開發應用程式的時候， UI 和 UX 往往都是最讓工程師們最頭痛的地方。特別是以 XAML 設計應用程式外觀的時候，彈性更大，可以客製化的程度高；要設計出一個華麗又實用的系統，就得花更多時間在設計上。
 authors: ouch1978
 tags:
    - C#

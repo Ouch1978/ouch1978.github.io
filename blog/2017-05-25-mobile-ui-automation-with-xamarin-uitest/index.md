@@ -1,5 +1,6 @@
 ---
 title: 使用 Visual Studio 2017 搭配 Xamarin.UITest 進行安卓應用程式的自動化測試
+description: 介紹完了使用 Appium 來針對安卓應用程式進行自動化測試的方式之後。這回要跟大家分享的是更輕鬆愉快的方式--只要透過錄製的方式就能自動產生程式碼的 Xamarin.UITest。 如果要簡單的介紹一下 Xamarin.UITest ，它其實就是一個以 Calabash 為基礎，可以讓我們透過 NUnit 和 C# 來撰寫針對安卓和 iOS 原生 App 自動化測試的一個框架。
 authors: ouch1978
 tags:
     - Visual Studio

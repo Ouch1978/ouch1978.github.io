@@ -1,5 +1,6 @@
 ---
 title: 初探 Visual Studio 2017 RC - 程式撰寫體驗篇
+description: 繼兩篇分別討論安裝與使用者體驗增強的文章之後，接下來要和大家分享的是 Visual Studio 2017 RC 在程式碼撰寫體驗增強的部份。
 authors: ouch1978
 tags: 
   - Visual Studio

@@ -1,5 +1,6 @@
 ---
 title: Windows 的視窗逃到螢幕外點不到了!? 叫它乖乖回來!!
+description: 在使用 Windows 的漫長歲月裡，遇過幾次視窗跑到螢幕外，滑鼠點不到的狀況。 今天又遇到一次，就順手寫個筆記當紀念，也希望能幫到其他視窗叫不回來的朋友。
 authors: ouch1978
 tags: 
     - Windows

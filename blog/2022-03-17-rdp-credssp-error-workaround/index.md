@@ -1,5 +1,6 @@
 ---
 title: 遠端桌面連線出現因為 CredSSP 加密 Oracle 補救造成無法連線的應急解法
+description: 最近要使用遠端桌面連線到某台 Windows Server 的時候，出現了這個錯誤： CredSSP 加密 Oracle 補救(credssp encryption oracle-remediation error)。 雖然說這已經不是第一次看到了，不過只要一換電腦就又得要再撞到一次，就還是順手寫個筆記記錄一下。
 authors: ouch1978
 tags: 
     - Windows 10, 

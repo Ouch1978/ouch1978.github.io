@@ -1,5 +1,6 @@
 ---
 title: 透過 Xamarin.Forms 來玩玩傳說中的 XAML Standard (preview) 吧!!
+description: 除了 .NET Standard 2.0 之外，2017 年還有另一個讓我很期待的東西，據說可以讓 UWP 和 Xamarin.Forms 的 XAML 寫起來更直覺，而且可以無縫接軌，那就是我們今天要介紹的主角 ~~ XAML Standard!!
 authors: ouch1978
 tags: 
     - Visual Studio

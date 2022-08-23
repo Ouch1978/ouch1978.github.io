@@ -1,5 +1,6 @@
 ---
 title: 透過 Sikuli4Net 對 Flash UI 進行自動化測試
+description: 在導入 CI/CD 的時候，能將測試自動化是很重要的一個環節。 然而，除了「工程師生出來就應該要會」的 Unit Test 之外， UI 的自動化測試也很重要。
 authors: ouch1978
 tags: 
     - C#

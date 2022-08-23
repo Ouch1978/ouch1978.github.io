@@ -1,5 +1,6 @@
 ---
 title: XAML 的過去、現在與未來
+description: 自從 WPF 在 .Net Framework 3.0 中首度現身以來， XAML 就扮演了它的 UI 設計語言的角色。 時至今日，微軟在更多 UI/UX 的領域相繼投入了更多的關注在它身上。 透過這篇文章，我想用簡單快速的方式讓大家了解 XAML 的發展，也藉此跟大家介紹一個在 Visual Studio 2017 裡很方便，但不是新功能的功能。(好饒舌??)
 authors: ouch1978
 tags: 
   - XAML

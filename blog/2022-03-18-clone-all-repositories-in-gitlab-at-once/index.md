@@ -1,5 +1,6 @@
 ---
 title: 還在一個一個專案 Clone 嗎? 用這招一次 Clone 所有在 GitLab 上的 Repo!!
+description: 每當換電腦或是加入一個新的團隊的時候，把所有和自己相關的 Repo 都 Clone 一份到本機是少不了的工作之一。 如果專案少的話是可以乖乖的一個一個 Repo 慢慢 Clone。 這邊就來分享可以一次把所有和自己相關的 Repo Clone 下來的作法。
 authors: ouch1978
 tags: 
    - GitLab

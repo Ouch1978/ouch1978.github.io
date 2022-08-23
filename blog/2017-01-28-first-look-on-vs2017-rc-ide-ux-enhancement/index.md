@@ -1,5 +1,6 @@
 ---
 title: 初探 Visual Studio 2017 RC - IDE 使用者體驗篇
+description: 在初探 VISUAL STUDIO 2017 RC - 安裝篇 分享了 Visual Studio 2017 RC 的安裝體驗，這篇就要針對基本 IDE 的使用者體驗增強部份來作一些分享。
 authors: ouch1978
 tags: 
   - Visual Studio
@@ -9,7 +10,7 @@ keywords:
 
 [installation]: http://ouch1978.github.io/2017/01/20/first-look-on-vs2017-rc-installation/ "初探 VISUAL STUDIO 2017 RC - 安裝篇"
 
-在 [初探 VISUAL STUDIO 2017 RC - 安裝篇][installation] Visual Studio 2017 RC 的安裝體驗，這篇就要針對基本 IDE 的使用者體驗增強部份來作一些分享。
+在 [初探 VISUAL STUDIO 2017 RC - 安裝篇][installation] 分享了 Visual Studio 2017 RC 的安裝體驗，這篇就要針對基本 IDE 的使用者體驗增強部份來作一些分享。
 
 ## 程式啟動與開啟專案的速度提升
 

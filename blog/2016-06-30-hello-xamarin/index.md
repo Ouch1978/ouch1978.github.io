@@ -1,5 +1,6 @@
 ---
 title: Hello Xamarin
+description: 日前微軟公開了收購 Xamarin 的消息，也很佛心的把它提供給 Visual Studio 的使用者們使用，這麼佛心的東西，怎麼可以不玩看看呢? 這樣想的我，很開心的在安裝完 Visual Studio 2015 Update 3 之後，就隨手建了一個 Xamarin Form 的專案想來玩看看。 但是，故事的發展永遠沒有想像得那麼簡單...
 authors: ouch1978
 tags:
   - Xamarin

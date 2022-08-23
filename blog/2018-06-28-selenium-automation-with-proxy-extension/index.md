@@ -1,5 +1,6 @@
 ---
 title: 被擋的嫑嫑的嗎? 透過 Chrome 的擴充功能讓你的 Selenium 自動化突破國家的界線!!
+description: 在透過 Selenium 進行自動化測試的時候，可能會基於需求或是地域的限制，得要模擬在不同的地區進行測試，並且驗證結果是否符合預期。 以下就來分享透過 Selenium 的 Chrome Driver 安裝擴充功能 ，並且模擬從不同的國家連線到 Google.com 的方法。
 authors: ouch1978
 tags: 
     - Selenium

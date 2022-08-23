@@ -1,5 +1,6 @@
 ---
 title: 透過 Visual Studio 對 Xamarin Android 專案進行除錯
+description: 很開心的可以成功建置出Android應用程式之後...咦!? 怎麼不能Debug!!??Visual Studio把應用程式佈署到模擬器之後就不管了??哪招啊!? 相信大家應該都知道Visual Studio 2015裡面很佛心的包含了多種Android裝置的模擬器，讓我們在開發Android應用程式的時候也可以透過它來進行除錯。
 authors: ouch1978
 tags: 
     - Visual Studio

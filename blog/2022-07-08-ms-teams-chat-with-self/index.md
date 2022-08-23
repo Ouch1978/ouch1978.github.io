@@ -1,5 +1,6 @@
 ---
 title: 使用 Microsoft Teams 的 Chat with Self 功能
+description: 對於需要使用 Microsoft Teams 作為主要即時通訊軟體的朋友來說，如果能有一個只有自己看得到的群組，可以用來存放一些筆記或是檔案的話應該是很方便的功能。 雖然有點 Lag 了，不過還是來跟大家分享一下用法吧!!~
 authors: ouch1978
 tags: 
     - Teams

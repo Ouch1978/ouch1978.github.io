@@ -1,5 +1,6 @@
 ---
 title: 解決傳統桌面版 Skype 在更新時出現 1603 "The specified Account already exists" 錯誤
+description: 今天心血來潮想說檢查一下傳統桌面版的 Skype 有沒有更新，結果照著平常的更新步驟按下更新按鈕之後，卻出乎意料的無法順利更新成功，取而代之的是我之前沒看過的 "The specified Account already exists" 錯誤訊息...
 authors: ouch1978
 tags: 
    - Windows 10
