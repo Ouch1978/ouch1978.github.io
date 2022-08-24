@@ -8,9 +8,11 @@
   font-family: "Noto Sans TC";
   font-style: normal;
   font-weight: 400;
-  src: local(""), 
-    /* IE6-IE8 */ url("/fonts/noto-sans-tc-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/noto-sans-tc-regular.woff") format("woff");
+  src: local(""),
+    /* IE6-IE8 */
+    url("/fonts/noto-sans-tc-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("/fonts/noto-sans-tc-regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -20,9 +22,11 @@
   font-family: "Noto Sans TC";
   font-style: normal;
   font-weight: 700;
-  src: local(""), 
-    /* IE6-IE8 */ url("/fonts/noto-sans-tc-700.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/noto-sans-tc-700.woff") format("woff");
+  src: local(""),
+    /* IE6-IE8 */
+    url("/fonts/noto-sans-tc-700.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("/fonts/noto-sans-tc-700.woff") format("woff");
   font-display: swap;
 }
 
@@ -33,8 +37,10 @@
   font-style: normal;
   font-weight: 900;
   src: local(""),
-    /* IE6-IE8 */ url("/fonts/noto-sans-tc-900.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/noto-sans-tc-900.woff") format("woff");
+    /* IE6-IE8 */
+    url("/fonts/noto-sans-tc-900.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("/fonts/noto-sans-tc-900.woff") format("woff");
   font-display: swap;
 }
 
@@ -245,13 +251,13 @@ html[data-theme="dark"] .footer_eye {
 }
 
 /* 文章格式 */
-article > header > h1 {
+article>header>h1 {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 900;
   font-size: 3em !important;
 }
 
-article > header > h2 {
+article>header>h2 {
   font-size: 2.5em !important;
   margin-bottom: 10px !important;
   font-weight: 900;
@@ -261,11 +267,11 @@ article > header > h2 {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-.markdown > h1 {
+.markdown>h1 {
   font-weight: 700;
 }
 
-.markdown > h2 {
+.markdown>h2 {
   font-weight: 700;
 }
 
@@ -356,7 +362,7 @@ article > header > h2 {
   border: none;
 }
 
-.pagination-nav__item--next > .pagination-nav__link {
+.pagination-nav__item--next>.pagination-nav__link {
   background: linear-gradient(90deg, var(--ifm-color-primary) 11.3%, var(--ifm-color-primary-light) 161.54%);
 }
 
@@ -479,7 +485,12 @@ kbd {
   -webkit-border-radius: 3px;
 }
 
-code
-{
+code {
   font-family: "Noto Sans TC", sans-serif;
+}
+
+.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
+  font-family: "Noto Sans TC" !important;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
 }
