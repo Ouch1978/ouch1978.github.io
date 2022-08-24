@@ -489,7 +489,7 @@ code {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
+div[class^="admonitionHeading_"] {
   font-family: "Noto Sans TC" !important;
   font-size: 1.2em !important;
   font-weight: 700 !important;
