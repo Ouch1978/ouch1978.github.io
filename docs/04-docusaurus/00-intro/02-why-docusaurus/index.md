@@ -2,15 +2,14 @@
 title: 為什麼我選用 Docusaurus?
 description: 說明我選用 Docusaurus 的過程，以及它和幾個熱門靜態網站產生器的功能比較。
 author: ouch1978
-tags: 
-   - Docusaurus
-keywords: 
-   - Docusaurus
-   - 功能介紹
-   - 比較
-   - 靜態網站產生器
-   - 團隊
-draft: true
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - 功能介紹
+  - 比較
+  - 靜態網站產生器
+  - 團隊
 ---
 
 ## 契機
@@ -20,8 +19,8 @@ draft: true
 不過，後來因為以下幾個原因，我開始研究有沒有比 Jekyll 更適合團隊使用的框架：
 
 1. Jekyll 依賴 Ruby，要在 Windows 上安裝、設定完能編譯出 Jekyll 網站的所有工具的話會很花時間，也很花硬碟空間。
-   * 雖然有免安裝版的 [Portable Jekyll for Windows](https://github.com/madhur/PortableJekyll "Portable Jekyll for Windows") 但是它還是很吃硬碟空間和人品。
-   * 雖然可以透過 Docker 在本機建置 Jekyll 網站並且預覽，但是並不是每個人都會使用或是願意使用 Docker。
+   - 雖然有免安裝版的 [Portable Jekyll for Windows](https://github.com/madhur/PortableJekyll "Portable Jekyll for Windows") 但是它還是很吃硬碟空間和人品。
+   - 雖然可以透過 Docker 在本機建置 Jekyll 網站並且預覽，但是並不是每個人都會使用或是願意使用 Docker。
 2. Jekyll 的樣版雖然可以客製化，但是畢竟它還是比較適合用來打造部落格，而不是知識庫或是文件庫。
 3. Jekyll 比較難作到多語系和多版本的支援。
 4. Jekyll 使用 Liquid 樣版語言來處理樣版，但是一旦脫離了 Jekyll 或是更改樣版， Markdown 的內容可能就會壞掉。
@@ -68,8 +67,412 @@ draft: true
 
 ### 主流靜態網站產生器比較
 
+:::note 註記
+以下資料統計至 2022/08/25 為止。
+:::
+
+<table style={{fontSize: '0.8em', width: '100%', tableLayout: 'fixed', overflow: 'unset', display:'inline-table'}}>
+    <tr align="center">
+        <td>比較項目/框架</td>
+        <td><a href="https://nextjs.org/">Next.js</a></td>
+        <td><a href="https://gohugo.io/">Hugo</a></td>
+        <td><a href="https://www.gatsbyjs.com/">Gatsby</a></td>
+        <td><a href="https://jekyllrb.com/">Jekyll</a></td>
+        <td><a href="https://nuxtjs.org/">NuxtJS</a></td>
+        <td><a href="https://hexo.io/zh-tw/">Hexo</a></td>
+        <td><a href="https://docs.slatejs.org/">Slate</a></td>
+        <td><a href="https://docusaurus.io/">Docusaurus</a></td>
+    </tr>
+    <tr align="center">
+        <td>GitHub Stars</td>
+        <td>91,578</td>
+        <td>61,395</td>
+        <td>53,427</td>
+        <td>45,180</td>
+        <td>8,617</td>
+        <td>35,288</td>
+        <td>34,420</td>
+        <td>37,220</td>
+    </tr>
+    <tr align="center">
+        <td>GitHub Issues</td>
+        <td>1,100</td>
+        <td>581</td>
+        <td>82</td>
+        <td>87</td>
+        <td>385</td>
+        <td>73</td>
+        <td>42</td>
+        <td>185</td>
+    </tr>
+    <tr align="center">
+        <td>贊助/維護者</td>
+        <td>Vercel, Inc.</td>
+        <td>Steve Francia</td>
+        <td>Gatsby, Inc.</td>
+        <td>N/A</td>
+        <td>NuxtLabs</td>
+        <td>Abner Chou</td>
+        <td>Slate Docs</td>
+        <td>Facebook</td>
+    </tr>
+    <tr align="center">
+        <td>版本</td>
+        <td>12.2.5</td>
+        <td>0.101.0</td>
+        <td>4.21</td>
+        <td>4.2.2</td>
+        <td>3.3.0-rc.8</td>
+        <td>6.2.0</td>
+        <td>2.13.0</td>
+        <td>2.0.1</td>
+    </tr>
+    <tr align="center">
+        <td>更新日期</td>
+        <td>2022/08/12</td>
+        <td>2022/06/12</td>
+        <td>2022/08/17</td>
+        <td>2022/03/28</td>
+        <td>2022/08/12</td>
+        <td>2022/05/11</td>
+        <td>2022/04/23</td>
+        <td>2022/08/08</td>
+    </tr>
+    <tr align="center">
+        <td>使用語言</td>
+        <td>JavaScript</td>
+        <td>Go</td>
+        <td>JavaScript</td>
+        <td>Ruby</td>
+        <td>JavaScript</td>
+        <td>JavaScript</td>
+        <td>Ruby</td>
+        <td>JavaScript</td>
+    </tr>
+    <tr align="center">
+        <td>樣版框架</td>
+        <td>React</td>
+        <td>Go</td>
+        <td>JSX<br/>(React)</td>
+        <td>Liquid</td>
+        <td>Vue</td>
+        <td>EJS, Pug, Haml</td>
+        <td>Markdown</td>
+        <td>JSX<br/>(React)</td>
+    </tr>
+    <tr align="center">
+        <td>Markdown<br/>風格</td>
+        <td>自訂<br/>(第三方)</td>
+        <td>CommonMark</td>
+        <td>自訂</td>
+        <td>kramdown</td>
+        <td>自訂</td>
+        <td>GitHub</td>
+        <td>GitHub</td>
+        <td>GitHub</td>
+    </tr>
+    <tr align="center">
+        <td>階層式文章分類</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>多語系支援</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅<br/>(plugin)</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>多版本支援</td>
+        <td>❌</td>
+        <td>✅<br/>(第三方)</td>
+        <td>✅<br/>(需客製)</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>圖片最佳化</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅<br/>(第三方)</td>
+        <td>❌</td>
+        <td>✅<br/>(plugin)</td>
+    </tr>
+    <tr align="center">
+        <td>特長</td>
+        <td>應用程式</td>
+        <td>快速<br/>彈性高</td>
+        <td>CMS</td>
+        <td>部落格</td>
+        <td>Serverless</td>
+        <td>快速<br/>簡單</td>
+        <td>API 文件</td>
+        <td>文件<br/>部落格</td>
+    </tr>
+    <tr>
+    </tr>
+</table>
 
 ### 口袋名單功能比較
 
+因為公司主要使用的版控工具是 GitLab，協作工具是 Office 365，所以上面內建的工具和能在上面跑的工具就先被列入口袋名單了。
+
+<table style={{fontSize: '0.8em', width: '100%', tableLayout: 'fixed', overflow: 'unset', display:'inline-table'}}>
+    <tr align="center">
+        <td>功能/解決方案</td>
+        <td>OneNote</td>
+        <td>Jekyll</td>
+        <td>GitBook
+  Legacy</td>
+        <td>O365
+  Wiki</td>
+        <td>Teams
+  Wiki</td>
+        <td>GitLab
+  Wiki</td>
+        <td>Docusaurus</td>
+    </tr>
+    <tr align="center">
+        <td>架設平台</td>
+        <td>O365</td>
+        <td>GitLab Pages</td>
+        <td>GitLab Pages</td>
+        <td>O365</td>
+        <td>O365</td>
+        <td>GitLab Pages</td>
+        <td>GitLab Pages</td>
+    </tr>
+    <tr align="center">
+        <td>更新日期</td>
+        <td>N/A</td>
+        <td>2022/03/28</td>
+        <td>10/2/2016</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>2022/08/08</td>
+    </tr>
+    <tr align="center">
+        <td>版本控管</td>
+        <td>🔶<br/>(O365 版控)</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>階層式文章分類</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>圖床</td>
+        <td>Built-in</td>
+        <td>GitLab</td>
+        <td>GitLab</td>
+        <td>SharePoint</td>
+        <td>O365</td>
+        <td>GitLab</td>
+        <td>GitLab</td>
+    </tr>
+    <tr align="center">
+        <td>程式碼高亮</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>🔶</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>離線編輯器</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>全文檢索</td>
+        <td>✅<br/>(O365)</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>O365 整合</td>
+        <td>✅</td>
+        <td>✅<br/>(客製)</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅<br/>(客製)</td>
+    </tr>
+    <tr align="center">
+        <td>自訂版面</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>🔶</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>使用範圍</td>
+        <td>全團隊</td>
+        <td>全團隊</td>
+        <td>全團隊</td>
+        <td>全團隊</td>
+        <td>全團隊</td>
+        <td>專案/Repo</td>
+        <td>全團隊</td>
+    </tr>
+    <tr align="center">
+        <td>Markdown 語法支援</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>Plugins 支援</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>多版本支援</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>多語系支援</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>🔶</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>所視即所得表格編輯</td>
+        <td>✅</td>
+        <td>🔶<br/>(編輯器外掛)</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>🔶<br/>(編輯器外掛)</td>
+    </tr>
+    <tr align="center">
+        <td>可直接貼上圖片</td>
+        <td>✅</td>
+        <td>🔶<br/>(編輯器外掛)</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>🔶<br/>(編輯器外掛)</td>
+    </tr>
+    <tr align="center">
+        <td>圖表支援</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+    </tr>
+    <tr align="center">
+        <td>不需建置即可更新內容</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## 結論
+
+最後的大 PK 重點放在下列幾個項目上：
+
+1. 是否支援階層式的資料夾結構和文章呈現方式。
+2. 是否支援版控。
+3. 編輯體驗。
+4. 是否能和 O365 整合(例如能搜尋得到 O365 的文件)。
+
+整個比較下來之後，其實原本 GitBook Legacy 是最符合需求的，因為以下幾個原因：
+
+1. 它原生就支援階層式的資料夾結構來整理文件。
+2. GitBook Legacy 可以使用 GitLab 做為版控工具，並且可以發佈到 GitLab Pages。
+3. 它的離線編輯器使用起來相對接近 Word 的使用體驗，而且把 Git 的指令也都包在裡面了，對不寫 Code 的人來說接受度相對的高。
+
+- 它原生的設計就是用來寫書用的，所以很適合用在技術文件或是規格書上，還可以直接列印成一本實體書或是轉成 PDF 檔。
+
+不過， GitBook Legacy 的致命傷就是它早就被放生了，連離線編輯器都沒在維護了，加上它生成的網站相對不容易客製化(畢竟是書嘛，是要多炫炮?)。
+
+之後經過一段時間的研究，發現其實用 VSCode 配合一些 Extension 來編輯 Docusaurus 的文章也是可以達到不錯的使用者體驗。
+
+加上如果在本機安裝 Node.JS 之後的即時預覽體驗對工程師們是大大加分的(尤其是前端工程師，他們本來就是這樣在工作的)。
+
+所以依照一樣的條件來比較，Docusaurus 得出的結論如下：
+
+1. 它也原生就支援階層式的資料夾結構，而且比 GitBook Legacy 強的是原生就支援多語系和多版本。 (👍👍👍)
+2. 一樣可以使用 GitLab 作為版控工具，也可以發佈到 GitLab Pages。 (🤝)
+3. 編輯體驗對工程師來說大勝，對不寫 Code 的人來說就差不多。 (👍)
+4. Docusaurus 的離線全文檢索套件可以透過客製，讓它可以搜尋得到 O365 的文章。 (👍👍👍)
+
+- 另外，也有第三方的套件可以把 Docusaurus 的文章輸出成 PDF。
+
+所以最後出線的當然是 Docusaurus 啦!!
+
+好框架，不用嗎?
