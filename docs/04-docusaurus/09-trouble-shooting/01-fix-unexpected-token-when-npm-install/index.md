@@ -2,7 +2,6 @@
 title: 排除 npm install 時出現 Unexpected Token '.' 的問題
 description: 介紹由 Facebook 所開發的 Docusaurus 這個靜態網站產生器。
 author: ouch1978
-slug: ../01-fix-unexpected-token-when-npm-install
 tags: 
    - Docusaurus
    - Trouble Shooting

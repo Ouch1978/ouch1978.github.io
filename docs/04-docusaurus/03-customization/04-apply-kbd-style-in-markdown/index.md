@@ -2,7 +2,6 @@
 title: 讓你的 Markdown 有更漂亮的鍵盤按鍵表示方式
 description: 介紹在 Docusaurus 的 Markdown 中運用 HTML 的 kbd 標籤搭配自訂 CSS 樣式來呈現鍵盤按鍵的方法。
 author: ouch1978
-slug: ../apply-kbd-style-in-markdown
 tags: 
     - Docusaurus
 keywords: 

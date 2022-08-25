@@ -2,7 +2,6 @@
 title: Docusaurus 是什麼? 可以吃嗎?
 description: 介紹由 Facebook 所開發的 Docusaurus 這個靜態網站產生器。
 author: ouch1978
-slug: ../01-what-is-docusaurus
 tags: 
    - Docusaurus
 keywords: 

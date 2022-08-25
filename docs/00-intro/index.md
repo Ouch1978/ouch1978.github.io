@@ -1,7 +1,7 @@
 ---
 title: 關於這個網站
 author: ouch1978
-slug: ../docs-intro
+id: intro
 ---
 
 ## 這個網站都會放些什麼東西?

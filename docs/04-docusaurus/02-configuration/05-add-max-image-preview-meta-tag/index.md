@@ -2,7 +2,6 @@
 title: 強化 SEO - 為所有文章加上 max-image-preview 中繼標記
 description: 依據 Google 搜尋中心的說明文件中所述，在內容中加入吸引人的高畫質圖片會有助於個人內容更有機會顯示在探索專區上，這篇文章就來分享在 Docusaurus 中可以怎麼允許爬蟲爬到高畫質圖片的方法。
 author: ouch1978
-slug: ../05-add-max-image-preview-meta-tag
 tags: 
     - Docusaurus
 keywords: 

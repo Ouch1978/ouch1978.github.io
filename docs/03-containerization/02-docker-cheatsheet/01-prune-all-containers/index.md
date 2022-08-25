@@ -2,7 +2,6 @@
 title: 一次刪除所有資源的指令
 description: 收錄清理和容器相關資源的各種指令。
 author: ouch1978
-slug: ../prune-all-containers
 tags: 
   - Container
   - Docker

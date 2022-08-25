@@ -2,7 +2,6 @@
 title: 透過 GitHub Action 把網站發佈到 GitHub.io
 description: 輕鬆使用別人寫好的 GitHub Action 把 Docusaurus 網站發佈到 GitHub.io 的方法介紹。
 author: ouch1978
-slug: ../deploy-to-github-with-github-action
 tags: 
     - Docusaurus
 keywords: 

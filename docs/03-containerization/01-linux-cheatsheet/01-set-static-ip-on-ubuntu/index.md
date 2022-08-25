@@ -2,7 +2,6 @@
 title: 在 Ubuntu 中透過指令設定固定 IP
 description: 簡單介紹如何透過命令模式來在 Ubuntu 中設定固定 IP。
 author: ouch1978
-slug: ../set-fixed-ip-on-ubuntu
 tags: 
   - Container
   - Docker

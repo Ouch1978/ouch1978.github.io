@@ -2,7 +2,6 @@
 title: 為什麼我選用 Docusaurus?
 description: 說明我選用 Docusaurus 的過程，以及它和幾個熱門靜態網站產生器的功能比較。
 author: ouch1978
-slug: ../02-why-docusaurus
 tags: 
    - Docusaurus
 keywords: 

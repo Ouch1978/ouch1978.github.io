@@ -3,3 +3,6 @@ label: '容器化相關'
 collapsible: true # make the category collapsible
 collapsed: false # keep the category open by default
 className: red
+link:
+  type: generated-index
+  title: 容器化相關
