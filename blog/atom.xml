@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ouch1978.github.io/blog</id>
     <title>OUCH1978@GITHUB Blog</title>
-    <updated>2022-08-23T00:00:00.000Z</updated>
+    <updated>2022-08-29T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ouch1978.github.io/blog"/>
     <subtitle>OUCH1978@GITHUB Blog</subtitle>
     <icon>https://ouch1978.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[移除 Windows 10/Windows 11 桌面捷徑上的箭頭圖示]]></title>
+        <id>/2022/08/29/remove-windows-10-shortcut-arrow-on-desktop-icon</id>
+        <link href="https://ouch1978.github.io/blog/2022/08/29/remove-windows-10-shortcut-arrow-on-desktop-icon"/>
+        <updated>2022-08-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[每次重灌 Windows 時或是拿到新電腦時，對於桌面捷徑上的小箭頭圖示一直都很反感，每次都要先消滅那些箭頭才會覺得可以繼續工作。不過有的時候照著網路上的作法可能當下有效，重新開機或是過沒多久那個可惡的箭頭就又復活了。特別來寫一篇文章來記錄一下目前我試過最有效的方法。]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="前言">前言<a class="hash-link" href="#前言" title="Direct link to heading">​</a></h2><p>每次重灌 Windows 時或是拿到新電腦時，對於桌面捷徑上的小箭頭圖示一直都很反感，每次都要先消滅那些箭頭才會覺得可以繼續工作。</p><p>不過有的時候照著網路上的作法可能當下有效，重新開機或是過沒多久那個可惡的箭頭就又復活了。</p><p>特別來寫一篇文章來記錄一下我目前試過最有效的方法。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="去去箭頭走">去去，箭頭走<a class="hash-link" href="#去去箭頭走" title="Direct link to heading">​</a></h2><p>廢話不多說，來消滅箭頭吧!!</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="透過手動的方式修改登錄檔">透過手動的方式修改登錄檔<a class="hash-link" href="#透過手動的方式修改登錄檔" title="Direct link to heading">​</a></h3><p>網路上比較常見的作法應該是把透過調整登錄檔，把圖示改成 Windows 內建在 shell32.dll 中的空白圖示(<code>%windir%\System32\shell32.dll,-50</code>)。</p><p>但是我實測過幾台電腦之後，發現這個方法在某些不明的狀況下會失效。</p><p>比較有效的方法是直接把它改成實體的空白圖示檔，作法如下：</p><ol><li><p>請先按滑鼠右鍵另存新檔下載 <a target="_blank" title="下載空白圖示檔" href="/assets/files/blank-2bb9f8a9043a8368a440874bf9d85f5f.ico">空白圖示檔</a> 並且把它放在 C:\Windows 下，或是任意一個你喜歡的地方，並且記住它的完整路徑，包含檔名。</p></li><li><p>按滑鼠右鍵另存新檔下載 <a target="_blank" title="下載移除捷徑箭頭登錄檔" href="/assets/files/移除捷徑箭頭-e97f3dbdd3c204d83e79edd796cde61d.reg">移除捷徑箭頭登錄檔</a> 。</p></li><li><p>雙擊移除捷徑箭頭登錄檔執行它。</p></li><li><p>按下鍵盤的 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd> 叫出工作管理員，並且重新啟動檔案總管。</p><p><img loading="lazy" alt="重啟檔案總管" src="/assets/images/restart-windows-file-explorer-0c433798ce5bdc72d5088b46d745a492.png" title="重啟檔案總管" width="1002" height="891" class="img_ev3q"></p></li></ol><p>如果要還原這個設定，讓箭頭回來的話，只需要按滑鼠右鍵另存新檔下載 <a target="_blank" title="還原移除捷徑箭頭登錄檔" href="/assets/files/還原捷徑箭頭-e8a8b08b7964896d2dbde33ce7558cfd.reg">還原捷徑箭頭登錄檔</a> 雙擊執行，然後一樣重新啟動檔案總管即可。</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="透過現成的-windows-調整小工具">透過現成的 Windows 調整小工具<a class="hash-link" href="#透過現成的-windows-調整小工具" title="Direct link to heading">​</a></h3><p>網路上能找到用來移除捷徑箭頭的小工具應該有不少。</p><p>不過我比較習慣使用的是 <a href="https://winaerotweaker.com/download/" target="_blank" rel="noopener noreferrer" title="下載 Winaero Tweaker">Winaero Tweaker</a> ，它除了移除箭頭小圖示之外，還有不少其它的功能。</p><p>下載安裝之後，開啟它的執行檔，會先出現使用者授權提示畫面，這邊就直接按下同意就好。</p><p><img loading="lazy" alt="同意授權" src="/assets/images/agree-winaero-tweaker-eula-b6c1fd2c89c74dc047f9151c1b4cfa20.png" title="同意授權" width="1180" height="789" class="img_ev3q"></p><p>接著在搜尋框中輸入 <code>arrow</code>，就可以快速找到修改捷徑箭頭的功能，然後以滑鼠雙擊 'Shortcuts \Shortcut Arrow'。</p><p><img loading="lazy" alt="在搜尋框輸入 arrow 來快速找到修改捷徑箭頭的功能" src="/assets/images/enter-arrow-to-find-change-shortcut-arrow-function-dc3a150259a7ba038b8c3fa708835ed0.png" title="在搜尋框輸入 arrow 來快速找到修改捷徑箭頭的功能" width="1350" height="819" class="img_ev3q"></p><p>接著依序點選 'No Arrow' 和左下角的 'Restart Explorer'，就大功告成啦!!</p><p><img loading="lazy" alt="依序點選 No Arrow 和左下角的 Restart Explorer" src="/assets/images/select-no-arrow-and-click-restart-explorer-94ecf3372c8983f7f25e1121dc8a3b13.png" title="依序點選 No Arrow 和左下角的 Restart Explorer" width="1350" height="819" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="碎碎唸">碎碎唸<a class="hash-link" href="#碎碎唸" title="Direct link to heading">​</a></h2><p>相信應該會有不少人跟我一樣不喜歡那個箭頭，所以才會有不只一種可以把它移除的工具出現。</p><p>不過，我也不懂為什麼微軟一直要把這個功能留著，而且不把它改成是可以設定的選項，如果有朋友知道原因的話，不妨在下面留言跟大家分享一下。</p><p>還有還有，如果有朋友有找到更簡單的方法的話，也請不吝跟大家分享喔!!</p>]]></content>
+        <author>
+            <name>ouch1978</name>
+        </author>
+        <category label="Windows 10" term="Windows 10"/>
+        <category label="Windows 11" term="Windows 11"/>
+        <category label="小技巧" term="小技巧"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[解決安裝 SQL Server Management Studio 時發生 xxx.msi 找不到的問題]]></title>
         <id>/2022/08/23/solve-smss-installation-package-missing-issue</id>
