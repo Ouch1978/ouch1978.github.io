@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[7648],{68707:function(a){a.exports=JSON.parse('{"label":"\u7591\u96e3\u6392\u89e3","permalink":"/blog/tags/\u7591\u96e3\u6392\u89e3","allTagsPath":"/blog/tags","count":1}')}}]);

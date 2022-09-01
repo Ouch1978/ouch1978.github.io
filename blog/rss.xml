@@ -4,10 +4,20 @@
         <title>OUCH1978@GITHUB Blog</title>
         <link>https://ouch1978.github.io/blog</link>
         <description>OUCH1978@GITHUB Blog</description>
-        <lastBuildDate>Mon, 29 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 01 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-TW</language>
+        <item>
+            <title><![CDATA[修復 Windows 11 開始功能表右鍵選單消失的問題]]></title>
+            <link>https://ouch1978.github.io/blog/2022/09/01/fix-windows-11-missing-context-menu-on-start-button</link>
+            <guid>/2022/09/01/fix-windows-11-missing-context-menu-on-start-button</guid>
+            <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天安裝了 Windows 11 更新重新開機之後，用著用著，就覺得哪裡怪怪的，在開始功能表上按下右鍵時完全沒有反應。本來以為是滑鼠右鍵壞了，但是在桌面上或是檔案總管按滑鼠右鍵又可以正常叫出右鍵選單。上網 Google 了一下，發現原來我並不孤單，還有不少人也遇過相同的狀況。參考了一下別人的解法，一個一個試，總算讓我在試到第三個方法的時候成功把它救回來了。這邊就來紀錄一下我試過的方法有哪些。]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="前言">前言<a class="hash-link" href="#前言" title="Direct link to heading">​</a></h2><p>昨天安裝了 Windows 11 更新重新開機之後，用著用著，就覺得哪裡怪怪的，在開始功能表上按下右鍵時完全沒有反應。</p><p>本來以為是滑鼠右鍵壞了，但是在桌面上或是檔案總管按滑鼠右鍵又可以正常叫出右鍵選單。</p><p>上網 Google 了一下，發現原來我並不孤單，還有不少人也遇過相同的狀況。</p><p>參考了一下別人的解法，一個一個試，總算讓我在試到第三個方法的時候成功把它救回來了。</p><p>這邊就來紀錄一下我試過的方法有哪些。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="解決過程">解決過程<a class="hash-link" href="#解決過程" title="Direct link to heading">​</a></h2><p>先說結論，結果我是一直作到 <a href="#%E6%96%B9%E6%B3%95%E4%B8%89%E9%80%8F%E9%81%8E%E7%99%BB%E9%8C%84%E6%AA%94%E4%BF%AE%E5%BE%A9">方法三：透過登錄檔修復</a> 才成功解決的。</p><p>遇到相同狀況的朋友，不妨直接試第三個方法，看看能不能一次就解決。</p><p>以下就依照我試過的方法先後順序分享。</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="方法一重啟檔案總管">方法一：重啟檔案總管<a class="hash-link" href="#方法一重啟檔案總管" title="Direct link to heading">​</a></h3><p>按下鍵盤的 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd> 叫出工作管理員，點選左下角的更多詳細資料之後，找到檔案總管並且按下右下角的<code>重新啟動</code>按鈕。</p><p><img loading="lazy" alt="重啟檔案總管" src="/assets/images/restart-windows-file-explorer-aa0cd0aba86566412298929ca6c9359e.png" title="重啟檔案總管" width="1002" height="891" class="img_ev3q"></p><p>嗯... 沒效!! 下面一位~</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="方法二複製-winx-資料夾">方法二：複製 WinX 資料夾<a class="hash-link" href="#方法二複製-winx-資料夾" title="Direct link to heading">​</a></h3><p>複製 <code>C:\Users\Default\AppData\Local\Microsoft\Windows\WinX</code> 資料夾。</p><p><img loading="lazy" alt="複製 WinX 資料夾" src="/assets/images/copy-winx-folder-4b6ca093214004ceadc738b2e12f9a75.png" title="複製 WinX 資料夾" width="1691" height="1035" class="img_ev3q"></p><p>然後把複製的內容貼到 <code>%AppData%\..\Local\Microsoft\Windows\</code> 下。</p><p><img loading="lazy" alt="貼上到使用者資料夾" src="/assets/images/paste-to-corresponding-folder-under-user-folder-c1999861f07c08663a7a13b1e9decd2c.png" title="貼上到使用者資料夾" width="1691" height="1035" class="img_ev3q"></p><p>然後透過 <a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E9%87%8D%E5%95%9F%E6%AA%94%E6%A1%88%E7%B8%BD%E7%AE%A1">方法一</a> 的步驟來重啟檔案總管。</p><p>嗯... 還是沒效，無三不成禮就對了。</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="方法三透過登錄檔修復">方法三：透過登錄檔修復<a class="hash-link" href="#方法三透過登錄檔修復" title="Direct link to heading">​</a></h3><p>下載 <a target="_blank" title="修復 Windows 11 開始功能表右鍵選單消失登錄檔壓縮包" href="/assets/files/修復 Windows 11 開始功能表右鍵選單消失登錄檔-d59d112fef8a2df06269ec78b6c13409.zip">修復 Windows 11 開始功能表右鍵選單消失登錄檔壓縮包</a> 之後解壓縮。</p><p>然後以滑鼠雙擊執行裡面的 <code>fix-windows-11-missing-context-menu-on-start-button.reg</code> 檔。</p><p>最後再透過 <a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E9%87%8D%E5%95%9F%E6%AA%94%E6%A1%88%E7%B8%BD%E7%AE%A1">方法一</a> 的步驟來重啟檔案總管。</p><p>如果你運氣沒有比我差的話，應該就可以看到開始功能表的右鍵選單回來啦!!</p>]]></content:encoded>
+            <category>Windows 11</category>
+            <category>疑難排解</category>
+        </item>
         <item>
             <title><![CDATA[移除 Windows 10/Windows 11 桌面捷徑上的箭頭圖示]]></title>
             <link>https://ouch1978.github.io/blog/2022/08/29/remove-windows-10-shortcut-arrow-on-desktop-icon</link>
