@@ -487,6 +487,9 @@ kbd {
 
 code {
   font-family: "Noto Sans TC", sans-serif;
+  font-size: initial;
+  vertical-align: initial;
+  padding: 2px 6px;
 }
 
 div[class^="admonitionHeading_"] {
