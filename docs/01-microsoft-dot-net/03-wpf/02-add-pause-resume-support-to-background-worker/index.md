@@ -136,4 +136,4 @@ namespace ResumableBackgroundWorker
 
 本文的完整範例原始碼連結如下，請自行取用：
 
-[![Sample](/img/source-code.png)](https://github.com/Ouch1978/WpfCustomWindow)
+[![Sample](/img/source-code.png)](https://github.com/Ouch1978/wpf-resumable-background-worker "WPF resumable background worker")
