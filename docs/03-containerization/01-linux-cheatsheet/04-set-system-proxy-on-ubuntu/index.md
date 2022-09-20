@@ -24,7 +24,7 @@ keywords:
 
 ## 編輯 /etc/environment 檔
 
-在 Console 輸入下列指令透過 nano 來編輯 /etc/environment 檔：
+在 Console 輸入下列指令透過 nano 來編輯 /etc/environment 檔，來把 Proxy 相關設定寫入環境變數：
 
 ```sh
 sudo nano /etc/environment
@@ -42,10 +42,17 @@ no_prxoy="127.0.0.1,localhost"
 ```
 
 :::warning 注意
-請自行將上面範例的帳號、密碼、IP 和 Port 替換為你的 Proxy 的設定。
+1. 請自行將上面範例的帳號、密碼、IP 和 Port 替換為你的 Proxy 的設定。
+2. 完成之後，請重新登入讓 Ubuntu 自動讀取環境變數。
 :::
 
-完成之後，應該大部份透過系統來存取網路的軟體就都能上網囉。
+我們也可以透過下面這個指令來確認加入的值是不是有生效：
+
+```sh
+sudo env | grep proxy
+```
+
+沒意外的話，應該大部份透過系統來存取網路的軟體就都能上網囉。
 
 ## 針對特定的軟體設定 Proxy
 
