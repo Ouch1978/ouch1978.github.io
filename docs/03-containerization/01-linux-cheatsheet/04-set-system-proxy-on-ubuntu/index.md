@@ -100,7 +100,9 @@ ftp_proxy = http://account:password@192.168.178.2:8080/
 ### 讓 Docker 透過 Proxy 上網
 
 :::warning 注意
-下列動作請務必在安裝完 Docker 之後再執行。
+
+1. 這邊指的 Docker 是指 Docker Deamon，也就是讓 Docker 可以透過 Proxy 去拉映像檔，和 Container 使用 Proxy 是兩回事喔!!
+2. 下列動作請務必在安裝完 Docker 之後再執行。
 :::
 
 首先請先透過下面的指令建立設定檔的資料夾：
