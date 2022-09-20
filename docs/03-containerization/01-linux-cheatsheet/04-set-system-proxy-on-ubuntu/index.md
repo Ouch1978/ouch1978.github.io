@@ -32,7 +32,7 @@ sudo nano /etc/environment
 
 接著在裡面加上下列內容：
 
-``` title="/etc/environment" {3-6}
+```toml title="/etc/environment" {3-6}
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 http_proxy="http://account:password@192.168.178.2:8080/"
@@ -88,7 +88,7 @@ sudo nano ~/.wgetrc
 
 在裡面加上下列內容：
 
-```txt title="~/.wgetrc" {1-4}
+```toml title="~/.wgetrc" {1-4}
 use_proxy = on
 http_proxy = http://account:password@192.168.178.2:8080/
 https_proxy = http://account:password@192.168.178.2:8080/
@@ -117,7 +117,7 @@ sudo nano /etc/systemd/system/docker.service.d/proxy.conf
 
 設定檔的格式請參考如下：
 
-```txt title="/etc/systemd/system/docker.service.d/proxy.conf" {1-4}
+```toml title="/etc/systemd/system/docker.service.d/proxy.conf" {1-4}
 [Service]
 Environment="HTTP_PROXY=http://account:password@192.168.178.2:8080/"
 Environment="HTTPS_PROXY=http://account:password@192.168.178.2:8080/"

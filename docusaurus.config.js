@@ -93,7 +93,7 @@ module.exports = {
       }
     },
     prism: {
-      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php", "aspnet"],
+      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php", "aspnet","toml"],
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
