@@ -11,6 +11,14 @@ draft: true
 
 ### Application Structure
 
+## Debug
+
+### Debug on Windows
+
+### Debug on Android
+
+### Debug on iOS
+
 ## XAML
 
 ### XAML Hot Reload

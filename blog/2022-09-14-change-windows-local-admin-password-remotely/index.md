@@ -30,7 +30,7 @@ keywords:
 
 PsPasswd.exe 是 PsTools 裡的一個工具。
 
-而 PsTools 則是由微軟 Azure CTO - Mark Russinovich 所開發的一系列小工具的集合。
+PsTools 是由微軟 Azure CTO - Mark Russinovich 所開發的一系列小工具的集合。
 
 之所以會取名叫 PsTools，是因為它的第一個小工具 PsList(用來顯示目前執行中的程序清單) 致敬了標準 UNIX 作業系統裡顯示目前執行中的程序清單的指令就叫 `PS`，而他把所有小工具都加上 Ps 這個前綴詞來讓它們看起來是一個同捆包的概念，整個套裝就叫 PsTools。
 

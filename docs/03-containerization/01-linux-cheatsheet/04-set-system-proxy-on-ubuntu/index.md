@@ -20,7 +20,7 @@ keywords:
 
 比較常見的作法是讓 VM 透過 Proxy Server 上網。
 
-這篇就簡單分享如何在 Ubuntu 中要怎麼指定透過哪台 Proxy Server 來上網。
+這篇就簡單分享在 Ubuntu 中要怎麼指定透過哪台 Proxy Server 來上網。
 
 ## 編輯 /etc/environment 檔
 
