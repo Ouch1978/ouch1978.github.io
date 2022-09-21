@@ -5,10 +5,13 @@ author: ouch1978
 tags: 
   - Container
   - Docker
+  - Linux
 keywords:
   - Docker
   - Proxy
+  - Linux 
   - Container
+  - Ubuntu
   - 容器
 ---
 
@@ -63,6 +66,7 @@ sudo nano ~/.docker/config.json
 3. ~/.docker/config.json 中設定的值
 4. 環境變數檔
 若有在 ~/.docker/config.json 中設定代理伺服器，則透過環境變數檔指定的代理伺服器將不會生效。
+5. 寫在 Docker file 裡
 :::
 
 ### 方法一：直接指定
@@ -120,5 +124,64 @@ docker run --env-file proxy.list ubuntu env | grep PROXY
 :::warning 警告
 若有在 ~/.docker/config.json 中設定代理伺服器，則透過環境變數檔指定的代理伺服器將不會生效。
 :::
+
+## 透過 Docker Compose 檔指定
+
+使用 Docker Compose 的時候也可以在 yml 檔中指定代理伺服器，方法如下：
+
+### 透過 environment 參數指定
+
+```yml title="docker-compose.yml"
+version: "3"
+
+services:
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    environment:
+    - HTTP_PROXY="http://111.111.111.111:8080"
+    - HTTPS_PROXY
+```
+
+基本上和直接使用 Docker 指令時大同小異，如果只指定變數名稱，就會把目前作業系統的環境變數帶進去。
+
+結果如下：
+
+![透過 Docker Compose 檔指令代理伺服器](set-proxy-in-docker-compose.png "透過 Docker Compose 檔指令代理伺服器")
+
+### 使用環境變數檔
+
+使用 Docker 指令的時候可以用環境變數檔，Docker Compose 當然也要來一下：
+
+```yml title="docker-compose.yml"
+version: "3"
+
+services:
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    env_file:
+    - proxy.list
+```
+
+:::warning 警告
+和使用 Docker 指令時一樣，若有在 ~/.docker/config.json 中設定代理伺服器，則透過環境變數檔指定的代理伺服器將不會生效。
+:::
+
+## 怎麼檢查容器裡的環境變數呢?
+
+其實上面已經用過很多次了，只要透過 `env` 這個指令就可以了。
+
+例如：
+
+```sh
+docker exec -it {容器 ID} env | grep PROXY
+```
+
+環境變數是一個很好用的東西，不光光只能指定代理伺服器而已喔!!
 
 以上。
