@@ -2,11 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ouch1978.github.io/blog</id>
     <title>OUCH1978@GITHUB Blog</title>
-    <updated>2022-09-14T00:00:00.000Z</updated>
+    <updated>2022-09-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ouch1978.github.io/blog"/>
     <subtitle>OUCH1978@GITHUB Blog</subtitle>
     <icon>https://ouch1978.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[一張圖看懂寫程式時常見的幾種鎖]]></title>
+        <id>/2022/09/21/common-locks-in-programming-world</id>
+        <link href="https://ouch1978.github.io/blog/2022/09/21/common-locks-in-programming-world"/>
+        <updated>2022-09-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[透過一張圖片快速瞭解寫程式時常見的鎖的種類及特性。]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="前言">前言<a class="hash-link" href="#前言" title="Direct link to heading">​</a></h2><p>在寫程式的世界裡，充斥著各種不同的鎖，不同的鎖適用的情境也有所不同。</p><p>不同種類的鎖的特性和使用情境也是面試時常常被拿來當作考題的題目。</p><p>這篇文章就簡單的透過一張圖來介紹幾種比較常見的鎖。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="所以我說那張圖呢">所以我說，那張圖呢?<a class="hash-link" href="#所以我說那張圖呢" title="Direct link to heading">​</a></h2><p>下面這張圖就是今天的主角。</p><p><img loading="lazy" alt="寫程式時常見的各種鎖" src="/assets/images/common-locks-in-programming-world-cf0154f4511529d84af5ec5a708279fc.png" title="寫程式時常見的各種鎖" width="2179" height="1105" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="看圖說故事">看圖說故事<a class="hash-link" href="#看圖說故事" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="樂觀鎖">樂觀鎖<a class="hash-link" href="#樂觀鎖" title="Direct link to heading">​</a></h3><p>樂觀鎖從字面上來看，它就是很樂觀。(喂!~)</p><p>通常它會被用在資源發生衝突的機率很低的情境下，或是就算發生衝突時只要還原成原來的狀態就可以解決的情境。</p><p>另一個使用它的要素是上鎖的成本很高，例如每次上鎖的時間都是幾分鐘，甚至幾小時起跳，過程中其它執行緒只能乾等。</p><p>當多個執行緒要存取同一個資源時，它會放行所有執行緒，最後再檢查是不是有衝突。</p><p>如果真的發生衝突的話就進行回滾(rollback)，放棄這次的操作。</p><p>我們常見的 SVN 、 Git 和 O365 的多人共編功能就是使用樂觀鎖的概念實作出來的。</p><p>所以大家都可以很開心的一起編輯，很開心的存檔或是 Commit，然後很開心的解衝突。(咦!?)</p><p>當然，我們可以選擇花更多的時間解決衝突，或是放棄努力好幾個小時的成果，這就是使用樂觀鎖可能增加的成本。</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="悲觀鎖">悲觀鎖<a class="hash-link" href="#悲觀鎖" title="Direct link to heading">​</a></h3><p>悲觀鎖的悲觀指的是：資源有很大的機會同時被多個執行緒存取，所以要透過上鎖的機制來確保資料的正確性。</p><p>在使用上需要特別注意，每次上鎖的時間越短越好，否則會造成極大的資源浪費。</p><p>大家可以試著想像看看：</p><p>一個有著十個人的開發團隊，一起撰寫同一個專案，但是同時只允許一個人進行開發。</p><p>一旦有一個人 check out 程式碼，其他人就不能對整份程式碼進行任何修改，直到程式碼被 check in ，交出存取權為止。</p><p>如果有人忘記交出存取權，其他人就只能一直乾等，那將會是多可怕的一件事啊~(<del>開心，大家都可以回家啦!!</del>)</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="互斥鎖">互斥鎖<a class="hash-link" href="#互斥鎖" title="Direct link to heading">​</a></h4><p>互斥鎖就是我們常看到的 Mutex。</p><p>最常見的用法就是在多執行緒中避免兩個執行緒同時存取同一個資源。</p><p>和自旋鎖的差別是，當執行緒遇到上鎖的物件時，它會進行 Sleep Waiting，等到鎖被釋放通知它之後才繼續存取的動作。</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="自旋鎖">自旋鎖<a class="hash-link" href="#自旋鎖" title="Direct link to heading">​</a></h4><p>自旋鎖的特色是當執行緒遇到上鎖的物件時，它會進行 Busy Waiting，不斷反覆的去詢問鎖釋放了沒，直到它可以存取為止。</p><p>由於自旋鎖會不斷的去做詢問的動作，所以會比互斥所更快獲取下一次存取物件的機會(效能相對好)。</p><p>但是隨之而來的副作用是：和互斥鎖相比，自旋鎖會佔用相對多的 CPU 資源。</p><p>而且，自旋鎖在 CPU 只有單核單緒的情況下是無法發揮作用的(整顆 CPU 的執行緒都被它整碗端走了啊~~)。</p><div class="theme-admonition theme-admonition-tip alert alert--success admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>小提示</div><div class="admonitionContent_S0QG"><p>如果能保證每次上鎖的時間很短的情境下，使用自旋鎖的效能會比使用互斥鎖來得好。</p></div></div><h4 class="anchor anchorWithStickyNavbar_LWe7" id="讀寫鎖">讀/寫鎖<a class="hash-link" href="#讀寫鎖" title="Direct link to heading">​</a></h4><p>顧名思義，讀/寫鎖分為讀鎖和寫鎖兩種。</p><p>更精準的說，應該分為<code>讀優先鎖</code>和<code>寫優先鎖</code>。</p><p>為了確保資料的正確性，寫鎖通常會確保同時只有一個執行緒可以修改資料(獨佔鎖)。</p><p>寫優先鎖會讓寫入的動作完成之後，才讓讀取的動作進行，以確保讀取時都是讀取到最新的資料。</p><p>讀取的動作在物件沒被上鎖時，則會允許多個執行緒同時讀取它(共享鎖)，因為大家讀到的資料都一樣，沒有先後的問題。</p><p>讀優先鎖則是會儘可能讓多個執行緒讀取的動作先作完，再放行寫入的動作。</p><p>大多數情境下的讀/寫鎖也都會藉由實作互斥鎖或是自旋鎖來實現。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="結語">結語<a class="hash-link" href="#結語" title="Direct link to heading">​</a></h2><p>本來只想放一張圖就好的，但是還是忍不住寫了一大堆字。</p><p>關於執行緒餓死和鎖死的原理就先跳過不說了。</p><p>如果有覺得應該要被加在圖裡的鎖或是希望補充的內容，也歡迎提供建議喔!!</p>]]></content>
+        <author>
+            <name>Ouch Liu</name>
+            <uri>https://github.com/ouch1978</uri>
+        </author>
+        <category label="Programming" term="Programming"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[從遠端修改 Windows 本機帳號的密碼，還可以一次改多台!!]]></title>
         <id>/2022/09/14/change-windows-local-admin-password-remotely</id>
