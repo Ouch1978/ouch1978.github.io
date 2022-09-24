@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[2270],{99493:function(e){e.exports=JSON.parse('{"label":"SQL Server","permalink":"/blog/tags/sql-server","allTagsPath":"/blog/tags","count":1}')}}]);
