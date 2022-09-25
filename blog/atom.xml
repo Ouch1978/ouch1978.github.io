@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ouch1978.github.io/blog</id>
     <title>OUCH1978@GITHUB Blog</title>
-    <updated>2022-09-24T00:00:00.000Z</updated>
+    <updated>2022-09-25T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ouch1978.github.io/blog"/>
     <subtitle>OUCH1978@GITHUB Blog</subtitle>
     <icon>https://ouch1978.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[一張圖看懂同步、非同步與多執行緒的差別]]></title>
+        <id>/2022/09/25/understand-sync-async-and-multi-thread-with-one-pic</id>
+        <link href="https://ouch1978.github.io/blog/2022/09/25/understand-sync-async-and-multi-thread-with-one-pic"/>
+        <updated>2022-09-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[同步、非同步和多執行緒的差別常常是面試的必考題之一。應該也有很多人不只看過、用過，甚至已經寫到用起來像吃飯喝水一樣的自然。但是，當遇到有人要求用比較淺顯易懂的方式來解釋這三者的差別時，我敢說，有很多人就是講不出來。我幾乎敢這樣講，但我也不敢完全否認，還是有些人可以回答得出來。]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="前言">前言<a class="hash-link" href="#前言" title="Direct link to heading">​</a></h2><p>同步、非同步和多執行緒的差別常常是面試的必考題之一。</p><p>應該也有很多人不只看過、用過，甚至已經寫到用起來像吃飯喝水一樣的自然。</p><p>但是，當遇到有人要求用比較淺顯易懂的方式來解釋這三者的差別時，我敢說，有很多人就是講不出來。</p><p>我幾乎敢這樣講，但我也不敢完全否認，還是有些人可以回答得出來。(喂!~)</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="所以我說那張圖呢">所以，我說那張圖呢?<a class="hash-link" href="#所以我說那張圖呢" title="Direct link to heading">​</a></h2><p>這邊就以常見的速食店當例子，來說明同步、非同步和多執行緒的差異。</p><p><img loading="lazy" alt="同步、非同步與多執行緒的差異" src="/assets/images/difference-between-sync-async-and-multi-thread-3e2596569ce293b96b8b38c99fe67078.png" title="同步、非同步與多執行緒的差異 - 以速食店為例" width="2197" height="955" class="img_ev3q"></p><div class="theme-admonition theme-admonition-tip alert alert--success admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>小提示</div><div class="admonitionContent_S0QG"><ol><li>可以把店員看作是執行緒，就可以和程式運作的方式互相對應。</li><li>倒飲料、炸薯條和煎肉排等等動作可以對應到程式中需要等待 I/O 的各種動作。</li></ol></div></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="同步">同步<a class="hash-link" href="#同步" title="Direct link to heading">​</a></h3><p>同步的運作方式應該是最常見的程式運作方式。</p><p>從圖裡我們可以看到，當店員作了一個動作之後，一定得要等到該動作完成、取得回應之後，才能繼續下一個動作。</p><p>在這樣的運作方式下，會花極大的時間在空轉和等待上。</p><p>所以在大部份的同步處理下，效率都是相對差的。</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="非同步">非同步<a class="hash-link" href="#非同步" title="Direct link to heading">​</a></h3><p>非同步和同步最大的差別，就是店員不用傻傻的等待上一個動作完成，就可以開始去處理下一個動作。</p><p>等到前面的工作完成，他再繼續往後處理就好。</p><p>從圖裡可以明顯的看得出來，非同步和同步相比，雖然都是只有一個店員，但是整個出餐速度快了許多。</p><p>也因為等待的時間還可以處理其它工作的關係，真正閒置的時間也大幅的縮短。</p><p>所以都在單一員工的情況下，非同步的效率是相對高的。</p><div class="theme-admonition theme-admonition-warning alert alert--danger admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>警告</div><div class="admonitionContent_S0QG"><p>非同步並不會多生出一個執行緒!!<br>
+非同步並不會多生出一個執行緒!!<br>
+非同步並不會多生出一個執行緒!!<br></p><p>很重要，所以要說三次。</p></div></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="多執行緒">多執行緒<a class="hash-link" href="#多執行緒" title="Direct link to heading">​</a></h3><p>多執行緒最接近現實生活中快餐店的運作方式。</p><p>由一個櫃檯負責點餐和收集所有餐點，其它工作則由其他的人負責，而且三個人都是同時平行處理的。</p><p>在大多數的正常情況下，多執行緒的效率會是三者裡面最好的。</p><p>不過，在店員越多的情況下，溝通的成本就越高，一個人出錯就可能影響到整個出餐的流程。</p><p>使用多執行緒時也一樣，執行緒越多，Context switch 的成本也越高，對協調各執行緒的要求就越嚴格，各執行緒的容錯率也越低。</p><p>在現實生活中的速食店裡，也常常可以看到當店裡一忙起來之後，有人開始介入其他人的工作，接著就整個場面開始大亂，有打工過的朋友應該很能體會。</p><div class="theme-admonition theme-admonition-tip alert alert--success admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>小提示</div><div class="admonitionContent_S0QG"><p>上面的圖很刻意的避開資源共用的問題，但是在現實的程式裡面，解決各資源之間的衝突也是很重要的一環。</p></div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="結語">結語<a class="hash-link" href="#結語" title="Direct link to heading">​</a></h2><p>希望這篇文章可以幫助到已經用到麻木，但是還想不出一個簡單解釋這三者的朋友。</p><p>尤其是需要面試的朋友，總不能回面試官再問就是居心叵測，畢竟機會可能只有一次，晚了人家就不要了。(逃~~)</p>]]></content>
+        <author>
+            <name>Ouch Liu</name>
+            <uri>https://github.com/ouch1978</uri>
+        </author>
+        <category label="Programming" term="Programming"/>
+        <category label="一張圖看懂系列" term="一張圖看懂系列"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[延長 MSDTC 分散式交易連線快取的時間，提升系統效能]]></title>
         <id>/2022/09/24/prevent-msdtc-connection-being-recycled</id>
@@ -35,6 +51,7 @@
             <uri>https://github.com/ouch1978</uri>
         </author>
         <category label="Programming" term="Programming"/>
+        <category label="一張圖看懂系列" term="一張圖看懂系列"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[從遠端修改 Windows 本機帳號的密碼，還可以一次改多台!!]]></title>
