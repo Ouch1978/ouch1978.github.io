@@ -4,6 +4,7 @@ description: 透過一張圖片快速瞭解寫程式時常見的鎖的種類及�
 authors: ouch1978
 tags: 
   - Programming
+  - 一張圖看懂系列
 keywords:
   - 程式設計
   - 樂觀鎖
