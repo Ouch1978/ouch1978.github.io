@@ -18,6 +18,8 @@ keywords:
 
 但是，故事的發展永遠沒有想像得那麼簡單...
 
+<!--truncate-->
+
 專案成功建立了，但是 Android 專案建置失敗!!! **`Build Failed! Build Failed!! Build Failed!!!`**
 
 ![Build Fail](Build-Failed.png)

@@ -18,6 +18,8 @@ keywords:
 
 其實這個樣版已經存在蠻久的了，只是可能大部份的人可能不是找不到它，就是會忽略它，或是不知道該怎麼使用它。
 
+<!--truncate-->
+
 ## 下載
 
 在 Windows 開發人員中心裡的 [UWP app 的設計下載](https://msdn.microsoft.com/windows/uwp/design-downloads/index "UWP app 的設計下載") 一區裡面其實有不少設計相關的資源。

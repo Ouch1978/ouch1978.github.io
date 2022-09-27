@@ -1,0 +1,151 @@
+[
+  {
+    "title": "透過 GitHub Action 自動執行 DocSearch 的爬蟲",
+    "description": "介紹透過 GitHub Action 自動執行 DocSearch 的爬蟲的方法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "DocSearch",
+      "GitHub Action",
+      "爬蟲"
+    ],
+    "id": "2022-08-25T13:47:45.725Z",
+    "path": "./docs/04-docusaurus/02-configuration/03-automatically-run-docsearch-scraper-from-github-action/index.md"
+  },
+  {
+    "title": "消除在數學公式裡使用中文時出現的警告",
+    "description": "解決在數學公式中使用中文，編譯時會出現 LaTeX-incompatible input and strict mode is set to 'warn' 警告的方法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "Latex",
+      "Katex",
+      "warn"
+    ],
+    "id": "2022-08-25T13:47:45.733Z",
+    "path": "./docs/04-docusaurus/02-configuration/04-fix-latex-incompatible-input-warning/index.md"
+  },
+  {
+    "title": "強化 SEO - 為所有文章加上 max-image-preview 中繼標記",
+    "description": "依據 Google 搜尋中心的說明文件中所述，在內容中加入吸引人的高畫質圖片會有助於個人內容更有機會顯示在探索專區上，這篇文章就來分享在 Docusaurus 中可以怎麼允許爬蟲爬到高畫質圖片的方法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "meta tag",
+      "google discover"
+    ],
+    "id": "2022-08-25T13:47:45.734Z",
+    "path": "./docs/04-docusaurus/02-configuration/05-add-max-image-preview-meta-tag/index.md"
+  },
+  {
+    "title": "在文件庫的文章下方加上 Disqus 留言區",
+    "description": "介紹在 Docusaurus 的文章中加入 Disqus 留言區的方法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "留言",
+      "客製",
+      "Disqus",
+      "Docs"
+    ],
+    "id": "2022-08-25T13:47:45.734Z",
+    "path": "./docs/04-docusaurus/03-customization/01-add-disqus-to-docusaurus-doc/index.md"
+  },
+  {
+    "title": "在部落格文章下方加上 Disqus 留言區",
+    "description": "介紹在 Docusaurus 的部落格文章中加入 Disqus 留言區的方法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "留言",
+      "客製",
+      "Disqus",
+      "Blog"
+    ],
+    "id": "2022-08-25T13:47:45.735Z",
+    "path": "./docs/04-docusaurus/03-customization/02-add-disqus-to-docusaurus-blog-post/index.md"
+  },
+  {
+    "title": "在 Sidebar 中隱藏最後一層的資料夾名稱",
+    "description": "介紹透過程式碼來讓 Docusaurus 不要把文件的最後一層資料夾顯示在 Sidebar 中的方法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "客製",
+      "隱藏",
+      "資料夾"
+    ],
+    "id": "2022-08-25T13:47:45.736Z",
+    "path": "./docs/04-docusaurus/03-customization/03-hiding-last-level-folder-name-of-doc-in-sidebar/index.md"
+  },
+  {
+    "title": "讓你的 Markdown 有更漂亮的鍵盤按鍵表示方式",
+    "description": "介紹在 Docusaurus 的 Markdown 中運用 HTML 的 kbd 標籤搭配自訂 CSS 樣式來呈現鍵盤按鍵的方法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "客製",
+      "kbd",
+      "css"
+    ],
+    "id": "2022-08-25T13:47:45.736Z",
+    "path": "./docs/04-docusaurus/03-customization/04-apply-kbd-style-in-markdown/index.md"
+  },
+  {
+    "title": "排除 npm install 時出現 Unexpected Token '.' 的問題",
+    "description": "介紹由 Facebook 所開發的 Docusaurus 這個靜態網站產生器。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus",
+      "Trouble Shooting"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "Unexpeted Token",
+      "npm",
+      "nvm",
+      "node.js"
+    ],
+    "id": "2022-08-25T13:47:45.737Z",
+    "path": "./docs/04-docusaurus/09-trouble-shooting/01-fix-unexpected-token-when-npm-install/index.md"
+  },
+  {
+    "title": "排除執行 yarn 時出現 yarn.ps1 cannot be loaded 的問題",
+    "description": "在 Windows 裡要透過 yarn 來完成某些動作(例如 `yarn install`)的時候可能會出現這個錯誤：yarn : File C:\\Program Files\\nodejs\\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. At line:1 char:1 + yarn + ~~~~ + CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess 這篇就來分享一下這個問題的解法。",
+    "author": "ouch1978",
+    "tags": [
+      "Docusaurus",
+      "Trouble Shooting"
+    ],
+    "keywords": [
+      "Docusaurus",
+      "yarn",
+      "UnauthorizedAccess",
+      "yarn.ps1",
+      "node.js"
+    ],
+    "id": "2022-08-26T14:43:47.178Z",
+    "path": "./docs/04-docusaurus/09-trouble-shooting/02-fix-yarn-ps1-cannot-be-loaded-error/index.md"
+  }
+]

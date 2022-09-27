@@ -12,6 +12,8 @@ keywords:
 
 在 [初探 VISUAL STUDIO 2017 RC - 安裝篇][installation] 分享了 Visual Studio 2017 RC 的安裝體驗，這篇就要針對基本 IDE 的使用者體驗增強部份來作一些分享。
 
+<!--truncate-->
+
 ## 程式啟動與開啟專案的速度提升
 
 根據官方的說法，Visual Studio 2017 的啟動速度比 Visual Studio 2015 提升了 50% 以上，如同 [初探 VISUAL STUDIO 2017 RC - 安裝篇][installation] 文末所提的，我親自實測 Visual Studio 2015 和 Visual Studio 2017 RC 從點下圖示到出現開始畫面的時間分別為 19.45 秒和 9.23 秒。

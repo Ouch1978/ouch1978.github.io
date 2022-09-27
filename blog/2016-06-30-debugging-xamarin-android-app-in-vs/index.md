@@ -20,6 +20,8 @@ keywords:
 
 我們也可以透過Visual Studio選單裡的 -> **`Tools`** -> **`Android`** -> **`Android Emulator Manager`** 來建立虛擬的Android裝置以便於進行除錯。
 
+<!--truncate-->
+
 ![Android Emulator Manager](Android-Emulator-Manager.png)
 
 正常的情況下，應用程式被佈署到模擬器之後，Visual Studio應該還是會處於在除錯的模式下，但是我遇到的神奇狀況是這樣：應用程式的確有被佈署到模擬器中，但是Visual Studio就自動結束了除錯模式了，而且模擬器裡的應用程式也會自動被送到背景去。

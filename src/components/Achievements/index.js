@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./Achievements.module.css";
 
-const FeatureList = [
+const AchievementList = [
   {
     title: "Certified ScrumMaster",
     image: "../../img/seal-csm.png",
@@ -30,7 +30,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({ image, title, earned }) {
+function Achievement({ image, title, earned }) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
@@ -50,8 +50,8 @@ export default function Achievements() {
       <h1>認證與成就</h1>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {AchievementList.map((props, idx) => (
+            <Achievement key={idx} {...props} />
           ))}
         </div>
       </div>
