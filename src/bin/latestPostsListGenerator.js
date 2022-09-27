@@ -5,8 +5,8 @@ const matter = require("gray-matter");
 const moment = require("moment");
 
 // 全局定义
-const docsPath = "./docs"; // docs 目录
-const blogPath = "./blog"; // blog 目录
+const docsPath = ".docusaurus/docusaurus-plugin-content-docs/default"; // docs 目录
+const blogPath = ".docusaurus/docusaurus-plugin-content-blog/default"; // blog 目录
 const srcPath = "./src";
 
 generateList();
@@ -15,7 +15,7 @@ function generateList() {
   let allPosts = {}; // 所有文章
 
   //遍历 docs 下所有文件夹和文件
-  const docFiles = glob.sync(`${docsPath}/**/*.md`);
+  const docFiles = glob.sync(`${docsPath}/site-docs-*.md`);
   docFiles.map((file) => {
     const matterData = matter.read(file);
 
@@ -31,7 +31,7 @@ function generateList() {
   });
 
   // 遍历 blog 下所有文件
-  const blogFiles = glob.sync(`${blogPath}/**/*.md`);
+  const blogFiles = glob.sync(`${blogPath}/site-blog-*.md`);
   blogFiles.map((file) => {
     const matterData = matter.read(file);
     const latestModifiedAt = fs.statSync(file).mtime;

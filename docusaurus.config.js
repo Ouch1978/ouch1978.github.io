@@ -139,6 +139,7 @@ module.exports = {
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
           remarkPlugins: [math, remarkGridTables],
           rehypePlugins: [[katex, { strict: false }]],
+          showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           breadcrumbs: true,
           /*
