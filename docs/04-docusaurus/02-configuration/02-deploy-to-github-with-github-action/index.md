@@ -2,16 +2,16 @@
 title: 透過 GitHub Action 把網站發佈到 GitHub.io
 description: 輕鬆使用別人寫好的 GitHub Action 把 Docusaurus 網站發佈到 GitHub.io 的方法介紹。
 author: ouch1978
-tags: 
-    - Docusaurus
-keywords: 
-    - Docusaurus
-    - 佈署
-    - GitHub
-    - 自動
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - 佈署
+  - GitHub
+  - 自動
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -40,11 +40,11 @@ last_update:
 module.exports = {
   // ...
   title: "OUCH1978@GITHUB", //網站的標題名稱
-  tagline: "不務正業的架構師",  //網站的副標
-  url: 'https://ouch1978.github.io', //要發佈的網址
-  baseUrl: '/', //起始 URL
-  projectName: 'OUCH1978@GITHUB', //專案名稱，通常就是 Repo 的名字
-  organizationName: 'Ouch1978', //組織名稱，通常就是 GitHub 上的帳號
+  tagline: "不務正業的架構師", //網站的副標
+  url: "https://ouch1978.github.io", //要發佈的網址
+  baseUrl: "/", //起始 URL
+  projectName: "OUCH1978@GITHUB", //專案名稱，通常就是 Repo 的名字
+  organizationName: "Ouch1978", //組織名稱，通常就是 GitHub 上的帳號
   trailingSlash: false, //網址的結尾是不是要自動加斜線
   // ...
 };
@@ -78,7 +78,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build slides
-        run: yarn reveal        
+        run: yarn reveal
       - name: Build website
         run: yarn build
 

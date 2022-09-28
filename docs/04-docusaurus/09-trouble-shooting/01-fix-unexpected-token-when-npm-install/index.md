@@ -2,18 +2,18 @@
 title: 排除 npm install 時出現 Unexpected Token '.' 的問題
 description: 介紹由 Facebook 所開發的 Docusaurus 這個靜態網站產生器。
 author: ouch1978
-tags: 
-   - Docusaurus
-   - Trouble Shooting
-keywords: 
-   - Docusaurus
-   - Unexpeted Token
-   - npm
-   - nvm
-   - node.js
+tags:
+  - Docusaurus
+  - Trouble Shooting
+keywords:
+  - Docusaurus
+  - Unexpeted Token
+  - npm
+  - nvm
+  - node.js
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 症狀
@@ -34,7 +34,7 @@ last_update:
 
 1. 下載 [NVM for Windows 1.1.9 installer](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe "NVM for Windows 1.1.9 installer") 進行安裝。
 
- 或是 
+或是
 
 2. 下載 [NVM for Windows 1.1.9 updater](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-update.zip "NVM for Windows 1.1.9 updater") 更新舊有的版本。
 
@@ -54,6 +54,6 @@ last_update:
 
 ## 參考資料
 
-* [Unexpected token '.' when trying to run 'npm install'](https://stackoverflow.com/questions/70958371/unexpected-token-when-trying-to-run-npm-install "Unexpected token '.' when trying to run 'npm install'")
+- [Unexpected token '.' when trying to run 'npm install'](https://stackoverflow.com/questions/70958371/unexpected-token-when-trying-to-run-npm-install "Unexpected token '.' when trying to run 'npm install'")
 
-* [libnpmfund - npm ERR! Unexpected token '.'](https://github.com/coreybutler/nvm-windows/issues/814 "libnpmfund - npm ERR! Unexpected token '.'")
+- [libnpmfund - npm ERR! Unexpected token '.'](https://github.com/coreybutler/nvm-windows/issues/814 "libnpmfund - npm ERR! Unexpected token '.'")

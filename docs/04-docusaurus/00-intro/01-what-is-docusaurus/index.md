@@ -2,17 +2,17 @@
 title: Docusaurus 是什麼? 可以吃嗎?
 description: 介紹由 Facebook 所開發的 Docusaurus 這個靜態網站產生器。
 author: ouch1978
-tags: 
-   - Docusaurus
-keywords: 
-   - Docusaurus
-   - 介紹
-   - 知識庫
-   - 共筆
-   - 團隊協作
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - 介紹
+  - 知識庫
+  - 共筆
+  - 團隊協作
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978  
+  author: Ouch Liu
 ---
 
 ## 先從身世說起
@@ -72,33 +72,33 @@ Docusaurus 也支援了不同的團隊的需求，例如 Jest 需要多語系、
 
 ## Docusaurus 有哪些特色呢?
 
-* 📦 **安裝容易、開箱即用**：只要使用官方的樣版，無需太多設定，幾分鐘之內就可以架出一個包含文件庫與部落格的網站。
-* 🧩 **支援 plugin**：文件庫和部落格等等模組都以 plugin 方式封裝，而且有越來越多的第三方 plugin 可用。
-* 🛠 **高可客製化**：所有模組都元件化，從整個網站的外觀到單一元件都可以客製。
-* 📝 **易撰寫**：基本上，只需要學會 Markdown 語法，就可以寫出格式一致而且精美的文章，只需要專注在內容，不需要煩惱樣式和排版問題。
-* 🧑‍💻 **開發者友善**：不論是程式碼高亮、數學公式、流程圖等等，都可以輕鬆呈現。
-* 🧑‍🤝‍🧑 **部落格支援多作者**：同一篇部落格文章可以有多位作者共篇，且可以列出所有人名。
-* 📚 **多版本支援**：可以輕鬆製作出不同版號的內容，並透過下拉式選單供使用者切換不同版本的內容。
-* 🌏 **多語系支援**：框架本身支援多語系，我們只需要專注在內容，就可以實作出一個多語系的網站。
-* 🔍 **全文檢索**：預設以 Algolia 作為全文檢索平台，並可以免費使用原本需要付費的爬蟲和後台等功能。
-* 👁️‍🗨️ **SEO 友善**：透過獨立、靜態的 HTML 檔，讓每個路徑都是可以被存取的。
-* 🚀 **易佈署**：輕鬆就能佈署到 GitHub Pages 、 GitLab Pages 、Netlify 及 Vercel 等等平台。
+- 📦 **安裝容易、開箱即用**：只要使用官方的樣版，無需太多設定，幾分鐘之內就可以架出一個包含文件庫與部落格的網站。
+- 🧩 **支援 plugin**：文件庫和部落格等等模組都以 plugin 方式封裝，而且有越來越多的第三方 plugin 可用。
+- 🛠 **高可客製化**：所有模組都元件化，從整個網站的外觀到單一元件都可以客製。
+- 📝 **易撰寫**：基本上，只需要學會 Markdown 語法，就可以寫出格式一致而且精美的文章，只需要專注在內容，不需要煩惱樣式和排版問題。
+- 🧑‍💻 **開發者友善**：不論是程式碼高亮、數學公式、流程圖等等，都可以輕鬆呈現。
+- 🧑‍🤝‍🧑 **部落格支援多作者**：同一篇部落格文章可以有多位作者共篇，且可以列出所有人名。
+- 📚 **多版本支援**：可以輕鬆製作出不同版號的內容，並透過下拉式選單供使用者切換不同版本的內容。
+- 🌏 **多語系支援**：框架本身支援多語系，我們只需要專注在內容，就可以實作出一個多語系的網站。
+- 🔍 **全文檢索**：預設以 Algolia 作為全文檢索平台，並可以免費使用原本需要付費的爬蟲和後台等功能。
+- 👁️‍🗨️ **SEO 友善**：透過獨立、靜態的 HTML 檔，讓每個路徑都是可以被存取的。
+- 🚀 **易佈署**：輕鬆就能佈署到 GitHub Pages 、 GitLab Pages 、Netlify 及 Vercel 等等平台。
 
 ## 有哪些大咖在用 Docusaurus?
 
 因為算是 React.js 親兒子的關係， 和 React.js 相關框架的官網或是說明文件也都直接用它來打造，例如：
 
-* React Native 的 [官網](https://reactnative.dev/)
-* React.js 的入門學習網站 [Create React App](https://create-react-app.dev/)
-* Jest 的 [官網](https://jestjs.io/)
+- React Native 的 [官網](https://reactnative.dev/)
+- React.js 的入門學習網站 [Create React App](https://create-react-app.dev/)
+- Jest 的 [官網](https://jestjs.io/)
 
 因為它原生樣版就內建文件庫和部落格，所以也有越來越多技術類的官網用它來打造，比較知名的例如：
 
-* Ionic 的 [官網](https://ionicframework.com/docs/)
-* webdriver.io 的 [官網](https://webdriver.io/)
-* gulp.js 的 [官網](https://gulpjs.com/)
-* Sauce Labs 的 [文件庫](https://docs.saucelabs.com/)
-* Algolia 的 DocSearch [官網](https://docsearch.algolia.com/)
+- Ionic 的 [官網](https://ionicframework.com/docs/)
+- webdriver.io 的 [官網](https://webdriver.io/)
+- gulp.js 的 [官網](https://gulpjs.com/)
+- Sauce Labs 的 [文件庫](https://docs.saucelabs.com/)
+- Algolia 的 DocSearch [官網](https://docsearch.algolia.com/)
 
 ## Docusaurus 適合用在哪些地方?
 

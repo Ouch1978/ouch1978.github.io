@@ -2,7 +2,7 @@
 title: 在 Ubuntu 中設定全域的 Proxy
 description: 簡單介紹如何透過命令模式來在 Ubuntu 中設定全域的 Proxy。
 author: ouch1978
-tags: 
+tags:
   - Container
   - Docker
   - Ubuntu
@@ -12,7 +12,7 @@ keywords:
   - Proxy
 last_update:
   date: 2022/09/21 GMT+8
-  author: ouch1978   
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -45,9 +45,10 @@ no_prxoy="127.0.0.1,localhost"
 ```
 
 :::warning 注意
+
 1. 請自行將上面範例的帳號、密碼、IP 和 Port 替換為你的 Proxy 的設定。
 2. 完成之後，請重新登入讓 Ubuntu 自動讀取環境變數。
-:::
+   :::
 
 我們也可以透過下面這個指令來確認加入的值是不是有生效：
 
@@ -106,7 +107,7 @@ ftp_proxy = http://account:password@192.168.178.2:8080/
 
 1. 這邊指的 Docker 是指 Docker Deamon，也就是讓 Docker 可以透過 Proxy 去拉映像檔，和 Container 使用 Proxy 是兩回事喔!!
 2. 下列動作請務必在安裝完 Docker 之後再執行。
-:::
+   :::
 
 首先請先透過下面的指令建立設定檔的資料夾：
 

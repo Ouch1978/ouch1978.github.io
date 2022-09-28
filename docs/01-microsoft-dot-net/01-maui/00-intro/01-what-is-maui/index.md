@@ -2,15 +2,15 @@
 title: 什麼是 MAUI? - 一探 MAUI 的前世今生
 description: 分別從懶人包以及考古的角度介紹 MAUI。
 author: ouch1978
-tags: 
-   - MAUI
-keywords: 
-   - 歷史
-   - 考古
-   - XAML
+tags:
+  - MAUI
+keywords:
+  - 歷史
+  - 考古
+  - XAML
 last_update:
   date: 2022/08/25
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -116,12 +116,12 @@ Xamarin.Forms 主打的就是可以讓你用 XAML 設計一次 UI，然後就能
 根據 [XAML Standard GitHub Repo](https://github.com/microsoft/xaml-standard "XAML Standard GitHub Repo") 在 2018 年 10 月的官方說法如下：
 
 > **原則**
->  
-> * 不同的平台具備不同的特性和功能。為了達到最佳的使用者體驗，開發者必需建立符合平台及各種裝置的原生特性及功能的原生應用程式。
 >
-> * Windows 10 XAML 和 WPF 針對 Windows 的原生體驗進行了優化，並且專注於公開 Windows 平臺的完整和獨特功能。藉由 Windows 10 XAML 與 WPF 的能力，開發者們得以駕馭 Windows 平台的完整和獨特功能。包括對滑鼠、鍵盤與觸控提供豐富且高水準的使用者體驗。
+> - 不同的平台具備不同的特性和功能。為了達到最佳的使用者體驗，開發者必需建立符合平台及各種裝置的原生特性及功能的原生應用程式。
 >
-> * 我們將繼續優化 Xamarin.Forms 作為原生移動開發的抽象層，並優化 Windows 10 XAML 和 WPF 的 Windows 原生體驗。XAML Standard 是一項協調工作，旨在找到可以在 Microsoft 的 XAML UI 系統之間共用的概念和標記語言的折衷，以便更輕鬆地使用 XAML，而不管目標平臺如何。
+> - Windows 10 XAML 和 WPF 針對 Windows 的原生體驗進行了優化，並且專注於公開 Windows 平臺的完整和獨特功能。藉由 Windows 10 XAML 與 WPF 的能力，開發者們得以駕馭 Windows 平台的完整和獨特功能。包括對滑鼠、鍵盤與觸控提供豐富且高水準的使用者體驗。
+>
+> - 我們將繼續優化 Xamarin.Forms 作為原生移動開發的抽象層，並優化 Windows 10 XAML 和 WPF 的 Windows 原生體驗。XAML Standard 是一項協調工作，旨在找到可以在 Microsoft 的 XAML UI 系統之間共用的概念和標記語言的折衷，以便更輕鬆地使用 XAML，而不管目標平臺如何。
 
 然後，它又死掉了...(我怎麼說又呢!?)
 
@@ -137,13 +137,13 @@ MAUI 是 `.NET Multi-platform App UI` 這幾個字的縮寫。
 
 MAUI 支援的平台如下：
 
-* Android - 5.0 (API 21) 以上的版本。
-* iOS - 10 以上的版本。
-* macOS - 10.15 以上的版本(透過 Mac Catalyst)。
-* Windows 10 - Build 1809 以上的版本。
-* Windows 11
-* Tizen - 由三星維護，可參考 [Tizen.NET](https://github.com/Samsung/Tizen.NET "Tizen.NET")
-* Linux - 由第三方社群維護，目前還在開發中，可參考 [.NET Multi-platform App UI (MAUI) for Linux](https://github.com/jsuarezruiz/maui-linux ".NET Multi-platform App UI (MAUI) for Linux")
+- Android - 5.0 (API 21) 以上的版本。
+- iOS - 10 以上的版本。
+- macOS - 10.15 以上的版本(透過 Mac Catalyst)。
+- Windows 10 - Build 1809 以上的版本。
+- Windows 11
+- Tizen - 由三星維護，可參考 [Tizen.NET](https://github.com/Samsung/Tizen.NET "Tizen.NET")
+- Linux - 由第三方社群維護，目前還在開發中，可參考 [.NET Multi-platform App UI (MAUI) for Linux](https://github.com/jsuarezruiz/maui-linux ".NET Multi-platform App UI (MAUI) for Linux")
 
 ### 開發工具
 
@@ -175,10 +175,10 @@ MAUI 支援的平台如下：
 
 目前 MAUI 雖然已經釋出正式版了，不過還有一些功能得要等到 .NET 7 才會提供，例如：
 
-* 地圖控制項(可以暫時使用 Xamarin.Forms 的地圖控制項作為替代方案)
-* 雙螢幕支援
-* 提升啟動速度
-* 降低程式容量
+- 地圖控制項(可以暫時使用 Xamarin.Forms 的地圖控制項作為替代方案)
+- 雙螢幕支援
+- 提升啟動速度
+- 降低程式容量
 
 ## 後記
 

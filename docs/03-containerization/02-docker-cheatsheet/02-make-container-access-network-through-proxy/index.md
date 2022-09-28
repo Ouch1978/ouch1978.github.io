@@ -2,20 +2,20 @@
 title: 讓容器透過代理伺服器(Proxy)存取網路
 description: 分別介紹透過 docker 指令和 docker-compose 為容器指定代理伺服器的方法。
 author: ouch1978
-tags: 
+tags:
   - Container
   - Docker
   - Linux
 keywords:
   - Docker
   - Proxy
-  - Linux 
+  - Linux
   - Container
   - Ubuntu
   - 容器
 last_update:
   date: 2022/09/21 GMT+8
-  author: ouch1978  
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -34,23 +34,23 @@ last_update:
 
 如果想要針對所有容器設定共同的代理伺服器的話，可以透過建立並編輯 ~/.docker/config.json 檔來達成：
 
-```sh  
+```sh
 sudo nano ~/.docker/config.json
 ```
 
 在裡面設定代理伺服器相關的資訊，例如：
 
 ```toml title="~/.docker/config.json"
-{ 
+{
   "proxies":
-    { 
-      "default": 
-        { 
-          "httpProxy": "http://13.59.91.109:80", 
-          "httpsProxy": "https://13.59.91.109:80", 
-          "noProxy": "127.0.0.0/8" 
-        } 
-    } 
+    {
+      "default":
+        {
+          "httpProxy": "http://13.59.91.109:80",
+          "httpsProxy": "https://13.59.91.109:80",
+          "noProxy": "127.0.0.0/8"
+        }
+    }
 }
 ```
 
@@ -64,13 +64,14 @@ sudo nano ~/.docker/config.json
 
 :::warning 警告
 容器在使用環境變數時有優先順序的差別，順序由高到低排列如下：
+
 1. 直接指定
 2. 作業系統的系統變數
 3. ~/.docker/config.json 中設定的值
 4. 環境變數檔
-若有在 ~/.docker/config.json 中設定代理伺服器，則透過環境變數檔指定的代理伺服器將不會生效。
+   若有在 ~/.docker/config.json 中設定代理伺服器，則透過環境變數檔指定的代理伺服器將不會生效。
 5. 寫在 Docker file 裡
-:::
+   :::
 
 ### 方法一：直接指定
 
@@ -144,8 +145,8 @@ services:
       - 3000:3000
     restart: unless-stopped
     environment:
-    - HTTP_PROXY="http://111.111.111.111:8080"
-    - HTTPS_PROXY
+      - HTTP_PROXY="http://111.111.111.111:8080"
+      - HTTPS_PROXY
 ```
 
 基本上和直接使用 Docker 指令時大同小異，如果只指定變數名稱，就會把目前作業系統的環境變數帶進去。
@@ -168,7 +169,7 @@ services:
       - 3000:3000
     restart: unless-stopped
     env_file:
-    - proxy.list
+      - proxy.list
 ```
 
 :::warning 警告

@@ -2,16 +2,16 @@
 title: 在 Ubuntu 中透過指令設定固定 IP
 description: 簡單介紹如何透過命令模式來在 Ubuntu 中設定固定 IP。
 author: ouch1978
-tags: 
+tags:
   - Container
   - Docker
   - Ubuntu
-keywords: 
+keywords:
   - Ubuntu
   - static ip
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978   
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -35,17 +35,17 @@ sudo nano /etc/netplan/01-netcfg.yaml
 接著編輯裡面的內容：
 
 ```yaml title="/etc/netplan/01-netcfg.yaml"
-network: 
-  version: 2 
-  renderer: networkd 
-  ethernets: 
-    ens3: 
-      dhcp4: no 
-      addresses: 
-          - 192.168.1.199/24 #要指定的 IP 和網段
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      dhcp4: no
+      addresses:
+        - 192.168.1.199/24 #要指定的 IP 和網段
       gateway4: 192.168.1.254 #要使用的 Gateway IP
-      nameservers: 
-          addresses: [192.18.41.6, 192.18.48.2] #預設的 DNS 伺服器
+      nameservers:
+        addresses: [192.18.41.6, 192.18.48.2] #預設的 DNS 伺服器
 ```
 
 存檔並退出之後，輸入下列指令讓設定生效：

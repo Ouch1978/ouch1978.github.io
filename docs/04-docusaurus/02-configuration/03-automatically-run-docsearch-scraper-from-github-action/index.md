@@ -2,16 +2,16 @@
 title: 透過 GitHub Action 自動執行 DocSearch 的爬蟲
 description: 介紹透過 GitHub Action 自動執行 DocSearch 的爬蟲的方法。
 author: ouch1978
-tags: 
-    - Docusaurus
-keywords: 
-    - Docusaurus
-    - DocSearch
-    - GitHub Action
-    - 爬蟲
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - DocSearch
+  - GitHub Action
+  - 爬蟲
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -42,11 +42,12 @@ last_update:
 
 這邊列出我試過的方法，有興趣的同學也可以試看看。
 
-* [构建更优的GitHub Action完成Algolia数据上传](https://chinese.freecodecamp.org/news/upload-algolia-index-with-github-action-build-by-myself/ "构建更优的GitHub Action完成Algolia数据上传")
-  * 我遇到的問題是：透過 algolia cli 去執行 `algolia import -s $FILE_PATH -a $APPLICATION_ID -k $ADMIN_API_KEY -n $INDEX_NAME` 之後會噴錯，然後還是很開心的印出 `🚀 Successfully uploaded!`。
+- [构建更优的 GitHub Action 完成 Algolia 数据上传](https://chinese.freecodecamp.org/news/upload-algolia-index-with-github-action-build-by-myself/ "构建更优的GitHub Action完成Algolia数据上传")
 
-* [Algolia DocSearch Scraper in Docker for GitHub Actions](https://github.com/signcl/docsearch-scraper-action "Algolia DocSearch Scraper in Docker for GitHub Actions")
-  * 我沒真的試過這個作法，主要原因是因為我不想把設定值那一大串 JSON 直接寫在 Action 裡，感覺還是獨立成一個 JSON 檔比較舒服。
+  - 我遇到的問題是：透過 algolia cli 去執行 `algolia import -s $FILE_PATH -a $APPLICATION_ID -k $ADMIN_API_KEY -n $INDEX_NAME` 之後會噴錯，然後還是很開心的印出 `🚀 Successfully uploaded!`。
+
+- [Algolia DocSearch Scraper in Docker for GitHub Actions](https://github.com/signcl/docsearch-scraper-action "Algolia DocSearch Scraper in Docker for GitHub Actions")
+  - 我沒真的試過這個作法，主要原因是因為我不想把設定值那一大串 JSON 直接寫在 Action 裡，感覺還是獨立成一個 JSON 檔比較舒服。
 
 ## 最終採行方案
 
@@ -69,15 +70,10 @@ last_update:
 ```json title=".github\scrapeConfig\docusaurus-v2.json" {2,3-4,6-7}
 {
   "index_name": "ouch1978.github.io",
-  "start_urls": [
-    "https://ouch1978.github.io/"
-  ],
-  "sitemap_urls": [
-    "https://ouch1978.github.io/sitemap.xml"
-  ],
+  "start_urls": ["https://ouch1978.github.io/"],
+  "sitemap_urls": ["https://ouch1978.github.io/sitemap.xml"],
   "sitemap_alternate_links": true,
-  "stop_urls": [
-  ],
+  "stop_urls": [],
   "selectors": {
     "lvl0": {
       "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
@@ -96,20 +92,8 @@ last_update:
   "strip_chars": " .,;:#",
   "custom_settings": {
     "separatorsToIndex": "_",
-    "attributesForFaceting": [
-      "language",
-      "version",
-      "type",
-      "docusaurus_tag"
-    ],
-    "attributesToRetrieve": [
-      "hierarchy",
-      "content",
-      "anchor",
-      "url",
-      "url_without_anchor",
-      "type"
-    ]
+    "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
+    "attributesToRetrieve": ["hierarchy", "content", "anchor", "url", "url_without_anchor", "type"]
   }
 }
 ```
@@ -142,7 +126,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build slides
-        run: yarn reveal        
+        run: yarn reveal
       - name: Build website
         run: yarn build
 
@@ -171,7 +155,7 @@ jobs:
           -e APPLICATION_ID -e API_KEY \
           -e CONFIG="$(cat .github/scrapeConfig/docusaurus-v2.json)" \
           algolia/docsearch-scraper
-  ```
+```
 
 ## 還是要推一下 Algolia
 

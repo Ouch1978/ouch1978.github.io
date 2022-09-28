@@ -2,17 +2,17 @@
 title: 在部落格文章下方加上 Disqus 留言區
 description: 介紹在 Docusaurus 的部落格文章中加入 Disqus 留言區的方法。
 author: ouch1978
-tags: 
-    - Docusaurus
-keywords: 
-    - Docusaurus
-    - 留言
-    - 客製
-    - Disqus
-    - Blog
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - 留言
+  - 客製
+  - Disqus
+  - Blog
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言

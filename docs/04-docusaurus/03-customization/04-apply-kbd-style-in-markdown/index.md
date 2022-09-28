@@ -2,16 +2,16 @@
 title: 讓你的 Markdown 有更漂亮的鍵盤按鍵表示方式
 description: 介紹在 Docusaurus 的 Markdown 中運用 HTML 的 kbd 標籤搭配自訂 CSS 樣式來呈現鍵盤按鍵的方法。
 author: ouch1978
-tags: 
-    - Docusaurus
-keywords: 
-    - Docusaurus
-    - 客製
-    - kbd
-    - css
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - 客製
+  - kbd
+  - css
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -106,6 +106,6 @@ kbd 標籤除了可以搭配 Unicode 符號之外，也可以搭配 Emoji 使用
 
 ## 參考資料
 
-* [<kbd\> does not work.](https://github.com/facebook/docusaurus/issues/2742 "<kbd\> does not work.")
+- [<kbd\> does not work.](https://github.com/facebook/docusaurus/issues/2742 "<kbd> does not work.")
 
-* [Nice effect with the KBD tag](https://www.rgagnon.com/jsdetails/js-nice-effect-the-KBD-tag.html "Nice effect with the KBD tag")
+- [Nice effect with the KBD tag](https://www.rgagnon.com/jsdetails/js-nice-effect-the-KBD-tag.html "Nice effect with the KBD tag")

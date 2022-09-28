@@ -2,17 +2,17 @@
 title: 在 Ubuntu 中透過指令調整磁碟大小
 description: 簡單介紹如何透過命令模式來在 Ubuntu 中調整磁碟大小。
 author: ouch1978
-tags: 
+tags:
   - Container
   - Docker
   - Ubuntu
-keywords: 
+keywords:
   - Ubuntu
   - 指令
   - Overlay
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978   
+  author: Ouch Liu
 ---
 
 ## 前言

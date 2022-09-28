@@ -1,19 +1,19 @@
 ---
-title: 排除使用 node-gyp 時出現的 gyp ERR! 相關錯誤訊息 
+title: 排除使用 node-gyp 時出現的 gyp ERR! 相關錯誤訊息
 description: "之前為了讓 Docusaurus 具備本地搜尋功能的時候，使用了 @easyops-cn/docusaurus-search-local 這個套件，而它裡面又引用了 nodejieba 這個套件。有趣的是，要讓 nodejieba 乖乖運作好像不是那麼單純的一件事，而且可能會蠻吃人品的。我在公司就幫不少同事處理過鬼打牆的狀況，這篇就來分享一下解法。"
 author: ouch1978
-tags: 
-   - Docusaurus
-   - Trouble Shooting
-keywords: 
-   - nodejieba
-   - easyops-cn/docusaurus-search-local
-   - gyp ERR!
-   - jieba
-   - Python
+tags:
+  - Docusaurus
+  - Trouble Shooting
+keywords:
+  - nodejieba
+  - easyops-cn/docusaurus-search-local
+  - gyp ERR!
+  - jieba
+  - Python
 last_update:
   date: 2022/08/28 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -116,8 +116,8 @@ npm config set msvs_version 2017
 
 ## 參考資料
 
-* [天空的垃圾場 v3：npm - 處理 node-gyp 和 canvas 的相依性](https://skychang.github.io/2020/03/10/npm-Fix%20node-gyp%20and%20canvas%20dependence/ "懷念 Sky Chang 長官")
+- [天空的垃圾場 v3：npm - 處理 node-gyp 和 canvas 的相依性](https://skychang.github.io/2020/03/10/npm-Fix%20node-gyp%20and%20canvas%20dependence/ "懷念 Sky Chang 長官")
 
-* [Use wasm version of jieba to avoid build nodejieba](https://github.com/easyops-cn/docusaurus-search-local/issues/140 "Use wasm version of jieba to avoid build nodejieba")
+- [Use wasm version of jieba to avoid build nodejieba](https://github.com/easyops-cn/docusaurus-search-local/issues/140 "Use wasm version of jieba to avoid build nodejieba")
 
-* [node-gyp on Windows](https://github.com/nodejs/node-gyp#on-windows "node-gyp on Windowss")
+- [node-gyp on Windows](https://github.com/nodejs/node-gyp#on-windows "node-gyp on Windowss")

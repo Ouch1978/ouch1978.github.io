@@ -2,7 +2,7 @@
 title: 在 Ubuntu 中修改時區以及啟用自動時間校正服務
 description: 簡單介紹如何透過命令模式來在 Ubuntu 中設定時區並且透過 ntp 自動校時。
 author: ouch1978
-tags: 
+tags:
   - Container
   - Docker
   - Ubuntu
@@ -13,7 +13,7 @@ keywords:
   - tzdata
 last_update:
   date: 2022/09/20 GMT+8
-  author: ouch1978  
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -36,8 +36,8 @@ sudo dpkg-reconfigure tzdata
 選取 OK 退出之後，Console 會顯示我們選取時區的時間，以及 UTC 的時間。
 
 > Current default time zone: 'Asia/Taipei' <br/>
-> Local time is now:      Tue Sep 20 08:31:07 CST 2022. <br/>
-> Universal Time is now:  Tue Sep 20 00:31:07 UTC 2022. <br/>
+> Local time is now: Tue Sep 20 08:31:07 CST 2022. <br/>
+> Universal Time is now: Tue Sep 20 00:31:07 UTC 2022. <br/>
 
 非常簡單。
 

@@ -2,7 +2,7 @@
 title: 一次刪除所有資源的指令
 description: 收錄清理和容器相關資源的各種指令。
 author: ouch1978
-tags: 
+tags:
   - Container
   - Docker
 keywords:
@@ -13,7 +13,7 @@ keywords:
   - 容器
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978  
+  author: Ouch Liu
 ---
 
 ## 前言

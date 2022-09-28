@@ -15,7 +15,7 @@ keywords:
    - node.js
 last_update:
   date: 2022/08/26 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 症狀
@@ -23,9 +23,10 @@ last_update:
 在 Windows 裡要透過 yarn 來完成某些動作(例如 `yarn install`)的時候可能會出現這個錯誤：
 
 > yarn : File C:\Program Files\nodejs\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.<br/>
-At line:1 char:1<br/>
- \+ yarn install<br/>
-   \+ \~~~~<br/> 
+> At line:1 char:1<br/>
+> \+ yarn install<br/>
+> \+ \~~~~<br/>
+
       &emsp;\+ CategoryInfo : SecurityError: (:) [], PSSecurityException<br/>
       &emsp;\+ FullyQualifiedErrorId : UnauthorizedAccess
 

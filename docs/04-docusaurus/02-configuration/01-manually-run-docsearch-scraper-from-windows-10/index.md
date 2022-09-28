@@ -2,17 +2,17 @@
 title: 在 Windows 10 手動執行 DocSearch 的爬蟲
 description: 介紹在 Windows 10 手動執行 DocSearch 的爬蟲的方法和流程。
 author: ouch1978
-tags: 
-    - Docusaurus
-    - Algolia
-keywords: 
-    - Docusaurus
-    - Algolia
-    - 搜尋
-    - 爬蟲
+tags:
+  - Docusaurus
+  - Algolia
+keywords:
+  - Docusaurus
+  - Algolia
+  - 搜尋
+  - 爬蟲
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -33,7 +33,7 @@ Docusaurus 官方的搜尋功能合作伙伴是 [Algolia](https://www.algolia.co
 
 我依照官方文件直接透過 PowerShell 執行指令，結果一直出現 `CONFIG is not a valid JSON` 的錯誤。
 
-後來問了谷歌大神，才發現[有人跟我遇到一樣的問題](<https://stackoverflow.com/questions/65807537/algolia-run-the-crawl-from-the-docker-image> "Algolia Run the crawl from the Docker image")。
+後來問了谷歌大神，才發現[有人跟我遇到一樣的問題](https://stackoverflow.com/questions/65807537/algolia-run-the-crawl-from-the-docker-image "Algolia Run the crawl from the Docker image")。
 
 原因是 PowerShell 不支援 cat 指令，改用 Git Bash 就可以正常執行。
 
@@ -51,7 +51,7 @@ choco install jq
 
 建立一個名稱為 .env 的檔案，內容如下：
 
-``` title=".env"
+```title=".env"
 APPLICATION_ID=你的網站在 Algolia 的 Application Id
 API_KEY=你的網站的 Admin API Key
 ```
@@ -64,54 +64,34 @@ API_KEY 是 Admin API Key，不是 Search-Only API Key 喔!!
 
 ```json title="config.json" {1-8}
 {
-    "index_name": "ouch1978.github.io",
-    "start_urls": [
-        "https://ouch1978.github.io/"
-    ],
-    "sitemap_urls": [
-        "https://ouch1978.github.io/sitemap.xml"
-    ],
-    "sitemap_alternate_links": true,
-    "stop_urls": [
-        "/tests"
-    ],
-    "selectors": {
-        "lvl0": {
-            "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
-            "type": "xpath",
-            "global": true,
-            "default_value": "Documentation"
-        },
-        "lvl1": "header h1",
-        "lvl2": "article h2",
-        "lvl3": "article h3",
-        "lvl4": "article h4",
-        "lvl5": "article h5, article td:first-child",
-        "lvl6": "article h6",
-        "text": "article p, article li, article td:last-child"
+  "index_name": "ouch1978.github.io",
+  "start_urls": ["https://ouch1978.github.io/"],
+  "sitemap_urls": ["https://ouch1978.github.io/sitemap.xml"],
+  "sitemap_alternate_links": true,
+  "stop_urls": ["/tests"],
+  "selectors": {
+    "lvl0": {
+      "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+      "type": "xpath",
+      "global": true,
+      "default_value": "Documentation"
     },
-    "strip_chars": " .,;:#",
-    "custom_settings": {
-        "separatorsToIndex": "_",
-        "attributesForFaceting": [
-            "language",
-            "version",
-            "type",
-            "docusaurus_tag"
-        ],
-        "attributesToRetrieve": [
-            "hierarchy",
-            "content",
-            "anchor",
-            "url",
-            "url_without_anchor",
-            "type"
-        ]
-    },
-    "conversation_id": [
-        "833762294"
-    ],
-    "nb_hits": 46250
+    "lvl1": "header h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5, article td:first-child",
+    "lvl6": "article h6",
+    "text": "article p, article li, article td:last-child"
+  },
+  "strip_chars": " .,;:#",
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
+    "attributesToRetrieve": ["hierarchy", "content", "anchor", "url", "url_without_anchor", "type"]
+  },
+  "conversation_id": ["833762294"],
+  "nb_hits": 46250
 }
 ```
 
@@ -151,5 +131,5 @@ docker run --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" alg
 
 ## 參考資料
 
-* [Run your own](https://docsearch.algolia.com/docs/legacy/run-your-own/ "Run your own")
-* [愧怍-第二个博客搭建之Docusaurus](https://kuizuo.cn/develop/%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BDocusaurus/#%E6%89%8B%E5%8A%A8%E7%88%AC%E5%8F%96 "愧怍-第二个博客搭建之Docusaurus")
+- [Run your own](https://docsearch.algolia.com/docs/legacy/run-your-own/ "Run your own")
+- [愧怍-第二个博客搭建之 Docusaurus](https://kuizuo.cn/develop/%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BDocusaurus/#%E6%89%8B%E5%8A%A8%E7%88%AC%E5%8F%96 "愧怍-第二个博客搭建之Docusaurus")

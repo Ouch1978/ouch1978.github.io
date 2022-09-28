@@ -2,16 +2,16 @@
 title: 消除在數學公式裡使用中文時出現的警告
 description: 解決在數學公式中使用中文，編譯時會出現 LaTeX-incompatible input and strict mode is set to 'warn' 警告的方法。
 author: ouch1978
-tags: 
-    - Docusaurus
-keywords: 
-    - Docusaurus
-    - Latex
-    - Katex
-    - warn
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - Latex
+  - Katex
+  - warn
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -58,7 +58,7 @@ $$
 
 ```markdown
 $$
- \thinspace A - B \thinspace  
+ \thinspace A - B \thinspace
 $$
 
 或
@@ -99,6 +99,6 @@ $$
 
 ## 參考資料
 
-* [Katax Options](https://katex.org/docs/options.html "Katax Options")
+- [Katax Options](https://katex.org/docs/options.html "Katax Options")
 
-* [How to add custom KaTeX options?](https://github.com/facebook/docusaurus/discussions/7073 "How to add custom KaTeX options?")
+- [How to add custom KaTeX options?](https://github.com/facebook/docusaurus/discussions/7073 "How to add custom KaTeX options?")

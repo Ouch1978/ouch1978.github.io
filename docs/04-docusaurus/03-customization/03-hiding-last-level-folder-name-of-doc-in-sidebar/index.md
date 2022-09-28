@@ -2,21 +2,21 @@
 title: 在 Sidebar 中隱藏最後一層的資料夾名稱
 description: 介紹透過程式碼來讓 Docusaurus 不要把文件的最後一層資料夾顯示在 Sidebar 中的方法。
 author: ouch1978
-tags: 
-    - Docusaurus
-keywords: 
-    - Docusaurus
-    - 客製
-    - 隱藏
-    - 資料夾
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - 客製
+  - 隱藏
+  - 資料夾
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
 
-在之前版本的 Docusaurus中(其實我也忘記是哪個版本了...)，自動產生的 Sidebar 會將每一層的資料夾都當成一個項目輸出。
+在之前版本的 Docusaurus 中(其實我也忘記是哪個版本了...)，自動產生的 Sidebar 會將每一層的資料夾都當成一個項目輸出。
 
 舉例來說，如果我想要把和同一篇文章相關的 markdown 檔和圖片放在同一個資料夾下，像下面這樣：
 
@@ -134,7 +134,7 @@ docs
 
 最後，除了感謝官方已經實現了我當初的願望之外，一定要再次特別感謝強者我同事~~ [Alber Lin](https://gitlab.com/Albert-Lin)。
 
-當初還好有他幫我 Code Review，幫把我破破的 JavaScript  調整得成現在這個漂亮的樣子，也幫我找到我當初沒想到的一個 Case。
+當初還好有他幫我 Code Review，幫把我破破的 JavaScript 調整得成現在這個漂亮的樣子，也幫我找到我當初沒想到的一個 Case。
 
 如果不是他，就不會有今天這篇文章。
 

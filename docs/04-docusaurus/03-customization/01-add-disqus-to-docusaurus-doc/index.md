@@ -2,17 +2,17 @@
 title: 在文件庫的文章下方加上 Disqus 留言區
 description: 介紹在 Docusaurus 的文章中加入 Disqus 留言區的方法。
 author: ouch1978
-tags: 
-    - Docusaurus
-keywords: 
-    - Docusaurus
-    - 留言
-    - 客製
-    - Disqus
-    - Docs
+tags:
+  - Docusaurus
+keywords:
+  - Docusaurus
+  - 留言
+  - 客製
+  - Disqus
+  - Docs
 last_update:
   date: 2022/08/25 GMT+8
-  author: ouch1978
+  author: Ouch Liu
 ---
 
 ## 前言
@@ -59,19 +59,27 @@ import Footer from "@theme-original/DocItem/Footer";
 import type FooterType from "@theme/DocItem/Footer";
 import type { WrapperProps } from "@docusaurus/types";
 
-{/* highlight-start */}
+{
+  /* highlight-start */
+}
 import { DiscussionEmbed } from "disqus-react";
 import { useDoc } from "@docusaurus/theme-common/internal";
-{/* highlight-end */}
+{
+  /* highlight-end */
+}
 
 type Props = WrapperProps<typeof FooterType>;
 
 export default function FooterWrapper(props: Props): JSX.Element {
-  {/* highlight-start */}
+  {
+    /* highlight-start */
+  }
   const { metadata, frontMatter, assets } = useDoc();
   const { no_comments } = frontMatter;
   const { title, slug } = metadata;
-  {/* highlight-end */}
+  {
+    /* highlight-end */
+  }
   return (
     <>
       <Footer {...props} />
@@ -105,7 +113,9 @@ import React, { ComponentProps } from "react";
 import type DocItemFooterType from "@theme/DocItemFooter";
 import DocItemFooter from "@theme-original/DocItemFooter";
 
-{/* highlight-next-line */}
+{
+  /* highlight-next-line */
+}
 import { DiscussionEmbed } from "disqus-react";
 
 type Props = ComponentProps<typeof DocItemFooterType>;
@@ -113,7 +123,9 @@ type Props = ComponentProps<typeof DocItemFooterType>;
 export default function DocItemFooterWrapper(props: Props): JSX.Element {
   const { content: DocContent } = props;
   const { metadata, frontMatter } = DocContent;
-  {/* highlight-next-line */}
+  {
+    /* highlight-next-line */
+  }
   const { no_comments } = frontMatter;
   const { title, slug } = metadata;
   return (
@@ -148,13 +160,13 @@ export default function DocItemFooterWrapper(props: Props): JSX.Element {
 
 有興趣的同學可以參考下列幾篇文章：
 
-* [I’m killing Disqus comments on my blog. Here’s why.](https://medium.com/@gaunteweb/im-killing-disqus-comments-on-my-blog-here-s-why-d6054f731341)
+- [I’m killing Disqus comments on my blog. Here’s why.](https://medium.com/@gaunteweb/im-killing-disqus-comments-on-my-blog-here-s-why-d6054f731341)
 
-* [Disqus, the dark commenting system](https://supunkavinda.blog/disqus)
+- [Disqus, the dark commenting system](https://supunkavinda.blog/disqus)
 
-* [Disqus is slowing down your website, Here’s Proof](https://sitebee.co.uk/blog/disqus-is-slowing-down-your-website-heres-proof/)
+- [Disqus is slowing down your website, Here’s Proof](https://sitebee.co.uk/blog/disqus-is-slowing-down-your-website-heres-proof/)
 
-* [Beware of Disqus!](https://medium.com/patrickleenyc/beware-of-disqus-17fb58cfab10)
+- [Beware of Disqus!](https://medium.com/patrickleenyc/beware-of-disqus-17fb58cfab10)
 
 ~~謎之音：這麼爛你還用!?~~
 
