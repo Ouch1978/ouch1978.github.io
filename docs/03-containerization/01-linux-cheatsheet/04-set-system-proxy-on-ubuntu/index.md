@@ -10,6 +10,9 @@ keywords:
   - Ubuntu
   - 指令
   - Proxy
+last_update:
+  date: 2022/09/21 GMT+8
+  author: ouch1978   
 ---
 
 ## 前言

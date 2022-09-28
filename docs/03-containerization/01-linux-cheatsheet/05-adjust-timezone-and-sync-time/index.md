@@ -11,6 +11,9 @@ keywords:
   - 指令
   - ntp
   - tzdata
+last_update:
+  date: 2022/09/20 GMT+8
+  author: ouch1978  
 ---
 
 ## 前言

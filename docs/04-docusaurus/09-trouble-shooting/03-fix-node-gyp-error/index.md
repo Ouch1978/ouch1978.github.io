@@ -11,6 +11,9 @@ keywords:
    - gyp ERR!
    - jieba
    - Python
+last_update:
+  date: 2022/08/28 GMT+8
+  author: ouch1978
 ---
 
 ## 前言

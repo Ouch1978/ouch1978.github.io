@@ -10,6 +10,9 @@ keywords:
   - 比較
   - 靜態網站產生器
   - 團隊
+last_update:
+  date: 2022/08/25 GMT+8
+  author: ouch1978
 ---
 
 ## 契機
