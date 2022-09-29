@@ -24,7 +24,7 @@ function generateLatestBlogList() {
       const rawdata = fs.readFileSync(file);
       const blogPost = JSON.parse(rawdata);
 
-      if (blogPost != null) {
+      if (blogPost != null && blogPost.draft == false) {
         console.log(blogPost.permalink);
         allBlogPosts[blogPost.permalink] = blogPost;
         allBlogPosts[blogPost.permalink].id = blogPost.date;
@@ -49,7 +49,7 @@ function generateLatestDocsList() {
       const rawdata = fs.readFileSync(file);
       const doc = JSON.parse(rawdata);
 
-      if (doc != null) {
+      if (doc != null && doc.draft == false) {
         console.log(doc.permalink);
         allDocs[doc.permalink] = doc;
         allDocs[doc.permalink].id = doc.lastUpdatedAt;
