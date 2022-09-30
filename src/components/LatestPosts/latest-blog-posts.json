@@ -1,0 +1,81 @@
+[
+  {
+    "title": "一張圖看懂同步、非同步與多執行緒的差別",
+    "description": "同步、非同步和多執行緒的差別常常是面試的必考題之一。應該也有很多人不只看過、用過，甚至已經寫到用起來像吃飯喝水一樣的自然。但是，當遇到有人要求用比較淺顯易懂的方式來解釋這三者的差別時，我敢說，有很多人就是講不出來。我幾乎敢這樣講，但我也不敢完全否認，還是有些人可以回答得出來。",
+    "tags": [
+      {
+        "label": "Programming",
+        "permalink": "/blog/tags/programming"
+      },
+      {
+        "label": "一張圖看懂系列",
+        "permalink": "/blog/tags/一張圖看懂系列"
+      }
+    ],
+    "formattedDate": "2022年9月25日"
+  },
+  {
+    "title": "延長 MSDTC 分散式交易連線快取的時間，提升系統效能",
+    "description": "之前有同事跑來問我，為什麼我們的 ASP.NET WebAPI 閒置一段時間之後，被呼叫的第一個 API Call 都會因為超時而失敗? 當下我一開始很直覺的認為，應該是系統沒有作好預載(Preload)的動作，導致 Application Pool 被回收之後重啟的過程花費太多時間。 但是人生往往不是這麼簡單，在我們對系統加上預載相關設定之後，隔一段時間的第一個 API 呼叫都還是會超時。 經過一番抽絲剝繭之後，才發現原來真兇是 MSDTC…",
+    "tags": [
+      {
+        "label": "Programming",
+        "permalink": "/blog/tags/programming"
+      },
+      {
+        "label": "MSDTC",
+        "permalink": "/blog/tags/msdtc"
+      },
+      {
+        "label": "SQL Server",
+        "permalink": "/blog/tags/sql-server"
+      }
+    ],
+    "formattedDate": "2022年9月24日"
+  },
+  {
+    "title": "一張圖看懂寫程式時常見的幾種鎖",
+    "description": "透過一張圖片快速瞭解寫程式時常見的鎖的種類及特性。",
+    "tags": [
+      {
+        "label": "Programming",
+        "permalink": "/blog/tags/programming"
+      },
+      {
+        "label": "一張圖看懂系列",
+        "permalink": "/blog/tags/一張圖看懂系列"
+      }
+    ],
+    "formattedDate": "2022年9月21日"
+  },
+  {
+    "title": "從遠端修改 Windows 本機帳號的密碼，還可以一次改多台!!",
+    "description": "在管理 Server 的時候，偶爾會出現需要更改某台機器管理者密碼的情況。如果要改的機器只有一兩台的話，還可以辛苦一點直接用遠端桌面連線的方式連過去改。但是，如果一次要改五台以上，甚至是十台以上，可能就會需要更聰明一點的方法了。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "小技巧",
+        "permalink": "/blog/tags/小技巧"
+      }
+    ],
+    "formattedDate": "2022年9月14日"
+  },
+  {
+    "title": "修復 Windows 11 開始功能表右鍵選單消失的問題",
+    "description": "昨天安裝了 Windows 11 更新重新開機之後，用著用著，就覺得哪裡怪怪的，在開始功能表上按下右鍵時完全沒有反應。本來以為是滑鼠右鍵壞了，但是在桌面上或是檔案總管按滑鼠右鍵又可以正常叫出右鍵選單。上網 Google 了一下，發現原來我並不孤單，還有不少人也遇過相同的狀況。參考了一下別人的解法，一個一個試，總算讓我在試到第三個方法的時候成功把它救回來了。這邊就來紀錄一下我試過的方法有哪些。",
+    "tags": [
+      {
+        "label": "Windows 11",
+        "permalink": "/blog/tags/windows-11"
+      },
+      {
+        "label": "疑難排解",
+        "permalink": "/blog/tags/疑難排解"
+      }
+    ],
+    "formattedDate": "2022年9月1日"
+  }
+]

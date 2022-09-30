@@ -5,60 +5,45 @@ const matter = require("gray-matter");
 const moment = require("moment");
 
 const blogPath = "./.docusaurus/docusaurus-plugin-content-blog/default";
+const blogFilesPattern = "site-blog-*.json";
+const latestBlogPostList = "./src/components/LatestPosts/latest-blog-posts.json";
 
 const docsPath = "./.docusaurus/docusaurus-plugin-content-docs/default";
+const docFilesPattern = "site-docs-*.json";
+const latestDocsList = "./src/components/LatestPosts/latest-docs.json";
 
-generateLatestBlogList();
+generateLatestPostList(blogPath, blogFilesPattern, latestBlogPostList);
 
-generateLatestDocsList();
+generateLatestPostList(docsPath, docFilesPattern, latestDocsList);
 
-function generateLatestBlogList() {
-  let allBlogPosts = {};
+function generateLatestPostList(folderPath, filesPattern, outputPath) {
+  let allItems = {};
 
-  const blogFiles = glob.sync(path.join(blogPath, "site-blog-*.json"));
+  const blogFiles = glob.sync(path.join(folderPath, filesPattern));
 
-  blogFiles
-    .reverse()
-    .slice(0, 5)
-    .map((file) => {
-      const rawdata = fs.readFileSync(file);
-      const blogPost = JSON.parse(rawdata);
+  blogFiles.map((file) => {
+    const rawdata = fs.readFileSync(file);
+    const item = JSON.parse(rawdata);
 
-      if (blogPost != null && blogPost.draft == false) {
-        console.log(blogPost.permalink);
-        allBlogPosts[blogPost.permalink] = blogPost;
-        allBlogPosts[blogPost.permalink].id = blogPost.date;
-        allBlogPosts[blogPost.permalink].title = blogPost.title;
-        allBlogPosts[blogPost.permalink].tags = blogPost.tags;
-        allBlogPosts[blogPost.permalink].formattedDate = blogPost.formattedDate;
-      }
-    });
+    if (item != null && item.draft != true) {
+      console.log(item);
 
-  generateLatestFile(allBlogPosts, "./src/config/latest-blog-posts.json");
-}
+      item.date ??= item.lastUpdatedAt;
+      item.formattedDate ??= item.formattedLastUpdatedAt;
 
-function generateLatestDocsList() {
-  let allDocs = {};
+      allItems[item.date] = new Object();
+      allItems[item.date].title = item.title;
+      allItems[item.date].description = item.description;
+      allItems[item.date].tags = item.tags;
+      allItems[item.date].formattedDate = item.formattedDate;
+    }
+  });
 
-  const docFiles = glob.sync(path.join(docsPath, "site-docs-*.json"));
+  const allIds = Object.keys(allItems);
+  const latestIds = allIds.sort().reverse().slice(0, 5);
+  const latestItems = latestIds.map((v) => allItems[v]);
 
-  docFiles
-    .reverse()
-    .slice(0, 5)
-    .map((file) => {
-      const rawdata = fs.readFileSync(file);
-      const doc = JSON.parse(rawdata);
-
-      if (doc != null && doc.draft == false) {
-        console.log(doc.permalink);
-        allDocs[doc.permalink] = doc;
-        allDocs[doc.permalink].id = doc.lastUpdatedAt;
-        allDocs[doc.permalink].title = doc.title;
-        allDocs[doc.permalink].tags = doc.tags;
-        allDocs[doc.permalink].formattedDate = doc.formattedLastUpdatedAt;
-      }
-    });
-    generateLatestFile(allDocs, "./src/config/latest-docs.json");
+  generateLatestFile(latestItems, outputPath);
 }
 
 function generateLatestFile(allPosts, filePath) {
