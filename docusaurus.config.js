@@ -65,13 +65,16 @@ module.exports = {
       },
     ]
   ],
-  themes: [],
+  themes: ['@saucelabs/theme-github-codeblock'],
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    metadata: [{ name: 'robots', content: 'max-image-preview:large' }],
+    metadata: [{
+      name: 'robots',
+      content: 'max-image-preview:large'
+    }],
     docs: {
       sidebar: {
         hideable: true,
@@ -93,7 +96,7 @@ module.exports = {
       }
     },
     prism: {
-      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php", "aspnet","toml"],
+      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php", "aspnet", "toml"],
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
@@ -138,7 +141,11 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
           remarkPlugins: [math, remarkGridTables],
-          rehypePlugins: [[katex, { strict: false }]],
+          rehypePlugins: [
+            [katex, {
+              strict: false
+            }]
+          ],
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           breadcrumbs: true,
@@ -158,7 +165,11 @@ module.exports = {
           // Please change this to your repo.
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
           remarkPlugins: [math, remarkGridTables],
-          rehypePlugins: [[katex, { strict: false }]],
+          rehypePlugins: [
+            [katex, {
+              strict: false
+            }]
+          ],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -166,8 +177,7 @@ module.exports = {
       },
     ],
   ],
-  stylesheets: [
-    {
+  stylesheets: [{
       href: "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css",
       type: "text/css",
       integrity: "sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc",

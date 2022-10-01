@@ -1,6 +1,7 @@
 [
   {
     "title": "讓容器透過代理伺服器(Proxy)存取網路",
+    "permalink": "/docs/containerization/docker-cheatsheet/make-container-access-network-through-proxy/",
     "description": "分別介紹透過 docker 指令和 docker-compose 為容器指定代理伺服器的方法。",
     "tags": [
       {
@@ -16,10 +17,14 @@
         "permalink": "/docs/tags/linux"
       }
     ],
+    "date": 1663689600,
+    "yearMonth": "2022年9月",
+    "day": "20",
     "formattedDate": "2022年9月20日"
   },
   {
     "title": "在 Ubuntu 中修改時區以及啟用自動時間校正服務",
+    "permalink": "/docs/containerization/linux-cheatsheet/adjust-timezone-and-sync-time/",
     "description": "簡單介紹如何透過命令模式來在 Ubuntu 中設定時區並且透過 ntp 自動校時。",
     "tags": [
       {
@@ -35,10 +40,14 @@
         "permalink": "/docs/tags/ubuntu"
       }
     ],
+    "date": 1663603200,
+    "yearMonth": "2022年9月",
+    "day": "19",
     "formattedDate": "2022年9月19日"
   },
   {
     "title": "實作可暫停和繼續工作的 Background Worker",
+    "permalink": "/docs/microsoft-dot-net/wpf/add-pause-resume-support-to-background-worker/",
     "description": "原生的 Background Worker 是不支援暫停和繼續功能的，不過我們可以動一些手腳，讓它支援暫停和繼續。",
     "tags": [
       {
@@ -54,10 +63,14 @@
         "permalink": "/docs/tags/net"
       }
     ],
+    "date": 1662393600,
+    "yearMonth": "2022年9月",
+    "day": "5",
     "formattedDate": "2022年9月5日"
   },
   {
     "title": "WPF 透明背景自訂視窗分享",
+    "permalink": "/docs/microsoft-dot-net/wpf/wpf-custom-window/",
     "description": "分享一個我自製的透明背景自訂視窗 WPF 應用程式樣版，具備拖拉移動視窗、拖拉縮放視窗、縮小視窗、放大/還原視和關閉視窗功能。",
     "tags": [
       {
@@ -73,10 +86,14 @@
         "permalink": "/docs/tags/net"
       }
     ],
+    "date": 1662220800,
+    "yearMonth": "2022年9月",
+    "day": "3",
     "formattedDate": "2022年9月3日"
   },
   {
     "title": "排除使用 node-gyp 時出現的 gyp ERR! 相關錯誤訊息",
+    "permalink": "/docs/docusaurus/trouble-shooting/fix-node-gyp-error/",
     "description": "之前為了讓 Docusaurus 具備本地搜尋功能的時候，使用了 @easyops-cn/docusaurus-search-local 這個套件，而它裡面又引用了 nodejieba 這個套件。有趣的是，要讓 nodejieba 乖乖運作好像不是那麼單純的一件事，而且可能會蠻吃人品的。我在公司就幫不少同事處理過鬼打牆的狀況，這篇就來分享一下解法。",
     "tags": [
       {
@@ -88,6 +105,9 @@
         "permalink": "/docs/tags/trouble-shooting"
       }
     ],
+    "date": 1661616000,
+    "yearMonth": "2022年8月",
+    "day": "27",
     "formattedDate": "2022年8月27日"
   }
 ]

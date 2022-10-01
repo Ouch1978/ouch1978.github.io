@@ -31,10 +31,22 @@ function generateLatestPostList(folderPath, filesPattern, outputPath) {
       item.date ??= item.lastUpdatedAt;
       item.formattedDate ??= item.formattedLastUpdatedAt;
 
+      let tempDate = item.formattedDate.replace('日','');
+
+      let indexOfMonth = tempDate.indexOf('月');
+
+      let yearMonth = tempDate.substr(0, indexOfMonth + 1);
+
+      let day = tempDate.substr(indexOfMonth + 1);
+
       allItems[item.date] = new Object();
       allItems[item.date].title = item.title;
+      allItems[item.date].permalink = item.permalink;
       allItems[item.date].description = item.description;
       allItems[item.date].tags = item.tags;
+      allItems[item.date].date = item.date;
+      allItems[item.date].yearMonth = yearMonth;
+      allItems[item.date].day = day;
       allItems[item.date].formattedDate = item.formattedDate;
     }
   });

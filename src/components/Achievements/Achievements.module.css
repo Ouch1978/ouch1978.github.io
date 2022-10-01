@@ -1,4 +1,4 @@
-.features {
+.achievements {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.featureSvg {
+.achievementsSvg {
   max-width: 200px;
   max-height: 200px;
 }

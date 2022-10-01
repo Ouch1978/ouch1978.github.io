@@ -2,6 +2,7 @@
 title: 一張圖看懂寫程式時常見的幾種鎖
 description: 透過一張圖片快速瞭解寫程式時常見的鎖的種類及特性。
 authors: ouch1978
+image: common-locks-in-programming-world.png
 tags: 
   - Programming
   - 一張圖看懂系列

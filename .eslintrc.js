@@ -33,5 +33,7 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-shadow": "warn",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": "none"
   },
 };

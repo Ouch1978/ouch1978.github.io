@@ -34,7 +34,7 @@ function Achievement({ image, title, earned }) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <img src={image} className={styles.featureSvg} alt={title} />
+        <img src={image} className={styles.achievementsSvg} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3> {title} </h3>
@@ -46,7 +46,7 @@ function Achievement({ image, title, earned }) {
 
 export default function Achievements() {
   return (
-    <section className={styles.features}>
+    <section className={styles.achievements}>
       <h1>認證與成就</h1>
       <div className="container">
         <div className="row">

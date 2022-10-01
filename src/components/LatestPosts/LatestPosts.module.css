@@ -1,4 +1,4 @@
-.features {
+.latestPosts {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,9 +6,54 @@
   width: 100%;
 }
 
-.featureSvg {
-  max-width: 200px;
-  max-height: 200px;
+.latest_post_row {
+  flex-direction: column;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.latest_post_row_item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas:
+    "date title"
+    "date tags";
+  column-gap: 1.5em;
+  row-gap: .5em;
+  align-items: center;
+  padding: 1em 0em;
+  position: relative;
+  align-items: start;
+}
+
+.latest_post_row_item_title {
+  font-size: 1.75em;
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+}
+
+.latest_post_row_item_tags {
+  grid-area:tags;
 }
 
 
+.post_list_date_container {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-row:1/3;
+  min-width: 8em;
+}
+
+.post_list_date_yearmonth {
+  align-self: start;
+  font-family: "Noto Sans TC";
+  font-weight: 900;
+  text-align: center;
+}
+
+.post_list_date_day {
+  font-size: 4.75em;
+  font-weight: 900;
+  text-align: center;
+  margin-top: -0.2em;
+}

@@ -2,6 +2,7 @@
 title: 一張圖看懂同步、非同步與多執行緒的差別
 description: "同步、非同步和多執行緒的差別常常是面試的必考題之一。應該也有很多人不只看過、用過，甚至已經寫到用起來像吃飯喝水一樣的自然。但是，當遇到有人要求用比較淺顯易懂的方式來解釋這三者的差別時，我敢說，有很多人就是講不出來。我幾乎敢這樣講，但我也不敢完全否認，還是有些人可以回答得出來。"
 authors: ouch1978
+image: difference-between-sync-async-and-multi-thread.png
 tags: 
   - Programming
   - 一張圖看懂系列
