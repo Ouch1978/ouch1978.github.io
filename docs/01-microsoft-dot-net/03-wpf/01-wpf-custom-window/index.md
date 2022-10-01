@@ -2,6 +2,7 @@
 title: WPF 透明背景自訂視窗分享
 description: 分享一個我自製的透明背景自訂視窗 WPF 應用程式樣版，具備拖拉移動視窗、拖拉縮放視窗、縮小視窗、放大/還原視和關閉視窗功能。
 author: ouch1978
+image: custom-window-with-transparent-background.png
 tags:
   - WPF
   - C#

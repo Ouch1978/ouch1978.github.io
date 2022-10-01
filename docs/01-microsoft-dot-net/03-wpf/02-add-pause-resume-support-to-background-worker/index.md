@@ -2,6 +2,7 @@
 title: 實作可暫停和繼續工作的 Background Worker
 description: 原生的 Background Worker 是不支援暫停和繼續功能的，不過我們可以動一些手腳，讓它支援暫停和繼續。
 author: ouch1978
+image: resumable-background-worker.gif
 tags:
   - WPF
   - C#

@@ -2,6 +2,7 @@
 title: 什麼是 MAUI? - 一探 MAUI 的前世今生
 description: 分別從懶人包以及考古的角度介紹 MAUI。
 author: ouch1978
+image: the-xaml-multiverse.png
 tags:
   - MAUI
 keywords:
