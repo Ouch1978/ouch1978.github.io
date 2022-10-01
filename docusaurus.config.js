@@ -184,32 +184,18 @@ module.exports = {
       crossorigin: "anonymous",
     },
     {
-      href: "/fonts/noto-sans-tc-regular.woff2",
-      type: "font/woff2",
-      as: "font",
-      rel: "preload",
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
       crossorigin: "anonymous",
     },
     {
-      href: "/fonts/noto-sans-tc-700.woff2",
-      type: "font/woff2",
-      as: "font",
-      rel: "preload",
-      crossorigin: "anonymous",
-    }, {
-      href: "/fonts/noto-sans-tc-900.woff2",
-      type: "font/woff2",
-      as: "font",
-      rel: "preload",
-      crossorigin: "anonymous",
-    },
-    /*
-    {
+      rel: "stylesheet",
       href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap",
-      type: "text/css",
-      crossorigin: "anonymous",
     },
-    */
   ],
   scripts: [{
       src: "https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js",

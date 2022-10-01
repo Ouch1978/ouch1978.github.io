@@ -1,8 +1,8 @@
 [
   {
-    "title": "在首頁加上最新文章列表",
-    "permalink": "/docs/docusaurus/customization/add-new-post-list-into-home-page/",
-    "description": "介紹在 Docusaurus 的首頁加上最新文章列表的方法。",
+    "title": "以正確的姿勢使用 Google Fonts",
+    "permalink": "/docs/docusaurus/customization/use-google-fonts-with-correct-way/",
+    "description": "介紹以比較有效率的方法在 Docusaurus 中載入 Google Fonts 的方式。",
     "tags": [
       {
         "label": "Docusaurus",

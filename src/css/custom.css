@@ -3,46 +3,6 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-/* noto-sans-tc-regular - latin_chinese-traditional */
-@font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""),
-    /* IE6-IE8 */
-    url("/fonts/noto-sans-tc-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */
-    url("/fonts/noto-sans-tc-regular.woff") format("woff");
-  font-display: swap;
-}
-
-/* noto-sans-tc-700 - latin_chinese-traditional */
-
-@font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 700;
-  src: local(""),
-    /* IE6-IE8 */
-    url("/fonts/noto-sans-tc-700.woff2") format("woff2"),
-    /* Super Modern Browsers */
-    url("/fonts/noto-sans-tc-700.woff") format("woff");
-  font-display: swap;
-}
-
-/* noto-sans-tc-900 - latin_chinese-traditional */
-
-@font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 900;
-  src: local(""),
-    /* IE6-IE8 */
-    url("/fonts/noto-sans-tc-900.woff2") format("woff2"),
-    /* Super Modern Browsers */
-    url("/fonts/noto-sans-tc-900.woff") format("woff");
-  font-display: swap;
-}
 
 /* You can override the default Infima variables here. */
 :root {
