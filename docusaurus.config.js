@@ -72,9 +72,18 @@ module.exports = {
       maxHeadingLevel: 5,
     },
     metadata: [{
-      name: 'robots',
-      content: 'max-image-preview:large'
-    }],
+        name: 'robots',
+        content: 'max-image-preview:large'
+      },
+      {
+        name: 'og:type',
+        content: 'article'
+      },
+      {
+        name: 'fb:app_id',
+        content: '173025689387886'
+      }
+    ],
     docs: {
       sidebar: {
         hideable: true,
