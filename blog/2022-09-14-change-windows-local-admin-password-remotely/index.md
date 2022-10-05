@@ -5,6 +5,7 @@ authors: ouch1978
 tags: 
    - Windows
    - 小技巧
+   - PsTools
 keywords: 
    - Windows
    - Change local administrator password
