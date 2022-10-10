@@ -44,7 +44,7 @@ keywords:
 
 我寫了一個 Script 可以直接在 Git Bash 裡執行，內容如下：
 
-```bash title="gen_gitlab_ssh_key.sh"
+```bash title="gen_ssh_key.sh"
 #!/bin/bash
 #產生 Passphrase 並且存入環境變數
 export MY_PASSPHRASE=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c8)
@@ -57,6 +57,8 @@ ssh-keygen -t ed25519 -N $MY_PASSPHRASE -C $email -f ~/.ssh/id_ed25519_gitlab
 
 echo -e "您的 Passphrase 是: ${RED} $MY_PASSPHRASE ${NC}，請妥善保存。"
 ```
+
+直接把上述內容儲存到 %USERPROFILE% 資料夾下，然後在 Git Bash 中輸入 `. ./gen_ssh_key.sh` 執行即可。
 
 執行結果如下圖：
 ![產出公鑰和私鑰](generate-ssh-key-in-git-bash.png "產出公鑰和私鑰")
@@ -101,6 +103,8 @@ key=$(cat ~/.ssh/id_ed25519_gitlab.pub)
 #透過 CURL 將公鑰上傳到 GitLab
 curl -X POST -F "private_token=$personal_access_token" -F "title=MY_SSH_KEY" -F "key=$key" "$gitlab_url/api/v4/user/keys"
 ```
+
+直接把上述內容儲存到 %USERPROFILE% 資料夾下，然後在 Git Bash 中輸入 `. ./set_ssh_key_to_gitlab.sh` 執行即可。
 
 :::tip 小提醒
 需依據 GitLab 的版本調整使用的 API 版本，如果使用的 GitLab 為 9.5 版之前的版本請改用 v3 取代 v4。
