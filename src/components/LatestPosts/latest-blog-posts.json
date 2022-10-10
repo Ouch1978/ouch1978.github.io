@@ -1,5 +1,74 @@
 [
   {
+    "title": "在 VSCode 裡顯示隱藏的資料夾和檔案",
+    "permalink": "/blog/2022/10/10/show-hidden-items-in-vscode",
+    "description": "VSCode 預設不會顯示某些特定的資料夾和檔案，例如 .git 資料夾、 .svn 資料夾等等。 以一個 IDE 來講，不顯示這些資料夾都是很合情合理的，但是作為一個文字編輯器來看的話，這些資料夾不顯示的話就怪怪的了。 所以這篇就來分享一下讓 VSCode 顯示預設隱藏的資料夾或檔案的方法。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "小技巧",
+        "permalink": "/blog/tags/小技巧"
+      },
+      {
+        "label": "VSCode",
+        "permalink": "/blog/tags/vs-code"
+      }
+    ],
+    "date": "2022-10-10T00:00:00.000Z",
+    "yearMonth": "2022年10月",
+    "day": "10",
+    "formattedDate": "2022年10月10日"
+  },
+  {
+    "title": "快速搞定在 Windows 裡透過 SSH 通訊協定存取 GitLab 的 Repository",
+    "permalink": "/blog/2022/10/09/quick-guide-to-use-git-with-ssh",
+    "description": "雖然說 Git 一直以來都支援 HTTPS 和 SSH 這兩種通訊協定，不過近年來不論是 GitHub 還是 GitLab 都建議使用 SSH 來存取 Repository。 這篇文章就分享一下在 Windows 上快速設定使用 SSH 存取 GitLab Repository 的方法。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "小技巧",
+        "permalink": "/blog/tags/小技巧"
+      },
+      {
+        "label": "Git",
+        "permalink": "/blog/tags/git"
+      }
+    ],
+    "date": "2022-10-09T00:00:00.000Z",
+    "yearMonth": "2022年10月",
+    "day": "9",
+    "formattedDate": "2022年10月9日"
+  },
+  {
+    "title": "一次從遠端新增使用者帳號到多台 Windows Server 的本機群組",
+    "permalink": "/blog/2022/10/07/use-ssh-tokens-",
+    "description": "在管理 Widows Server 的時候，偶爾會因為團隊成員異動或是其它因素，得要將新的帳號加入 Windows Server 的本機群組。當 Server 一多起來，改起來就很花時間。這邊就來分享一個蠻有效率的方式，可以一次把帳號加到多台 Windows Server 裡。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "小技巧",
+        "permalink": "/blog/tags/小技巧"
+      },
+      {
+        "label": "PsTools",
+        "permalink": "/blog/tags/ps-tools"
+      }
+    ],
+    "date": "2022-10-07T00:00:00.000Z",
+    "yearMonth": "2022年10月",
+    "day": "7",
+    "formattedDate": "2022年10月7日"
+  },
+  {
     "title": "一次從遠端新增使用者帳號到多台 Windows Server 的本機群組",
     "permalink": "/blog/2022/10/05/add-user-into-group-to-multiple-windows-servers",
     "description": "在管理 Widows Server 的時候，偶爾會因為團隊成員異動或是其它因素，得要將新的帳號加入 Windows Server 的本機群組。當 Server 一多起來，改起來就很花時間。這邊就來分享一個蠻有效率的方式，可以一次把帳號加到多台 Windows Server 裡。",
@@ -40,70 +109,5 @@
     "yearMonth": "2022年9月",
     "day": "25",
     "formattedDate": "2022年9月25日"
-  },
-  {
-    "title": "延長 MSDTC 分散式交易連線快取的時間，提升系統效能",
-    "permalink": "/blog/2022/09/24/prevent-msdtc-connection-being-recycled",
-    "description": "之前有同事跑來問我，為什麼我們的 ASP.NET WebAPI 閒置一段時間之後，被呼叫的第一個 API Call 都會因為超時而失敗? 當下我一開始很直覺的認為，應該是系統沒有作好預載(Preload)的動作，導致 Application Pool 被回收之後重啟的過程花費太多時間。 但是人生往往不是這麼簡單，在我們對系統加上預載相關設定之後，隔一段時間的第一個 API 呼叫都還是會超時。 經過一番抽絲剝繭之後，才發現原來真兇是 MSDTC…",
-    "tags": [
-      {
-        "label": "Programming",
-        "permalink": "/blog/tags/programming"
-      },
-      {
-        "label": "MSDTC",
-        "permalink": "/blog/tags/msdtc"
-      },
-      {
-        "label": "SQL Server",
-        "permalink": "/blog/tags/sql-server"
-      }
-    ],
-    "date": "2022-09-24T00:00:00.000Z",
-    "yearMonth": "2022年9月",
-    "day": "24",
-    "formattedDate": "2022年9月24日"
-  },
-  {
-    "title": "一張圖看懂寫程式時常見的幾種鎖",
-    "permalink": "/blog/2022/09/21/common-locks-in-programming-world",
-    "description": "透過一張圖片快速瞭解寫程式時常見的鎖的種類及特性。",
-    "tags": [
-      {
-        "label": "Programming",
-        "permalink": "/blog/tags/programming"
-      },
-      {
-        "label": "一張圖看懂系列",
-        "permalink": "/blog/tags/一張圖看懂系列"
-      }
-    ],
-    "date": "2022-09-21T00:00:00.000Z",
-    "yearMonth": "2022年9月",
-    "day": "21",
-    "formattedDate": "2022年9月21日"
-  },
-  {
-    "title": "從遠端修改 Windows 本機帳號的密碼，還可以一次改多台!!",
-    "permalink": "/blog/2022/09/14/change-windows-local-admin-password-remotely",
-    "description": "在管理 Server 的時候，偶爾會出現需要更改某台機器管理者密碼的情況。如果要改的機器只有一兩台的話，還可以辛苦一點直接用遠端桌面連線的方式連過去改。但是，如果一次要改五台以上，甚至是十台以上，可能就會需要更聰明一點的方法了。",
-    "tags": [
-      {
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "label": "小技巧",
-        "permalink": "/blog/tags/小技巧"
-      },
-      {
-        "label": "PsTools",
-        "permalink": "/blog/tags/ps-tools"
-      }
-    ],
-    "date": "2022-09-14T00:00:00.000Z",
-    "yearMonth": "2022年9月",
-    "day": "14",
-    "formattedDate": "2022年9月14日"
   }
 ]
