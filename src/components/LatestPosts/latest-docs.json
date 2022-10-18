@@ -1,5 +1,28 @@
 [
   {
+    "title": "取得 GitLab 容器管理者密碼的正確姿勢",
+    "permalink": "/docs/containerization/docker-cheatsheet/gitlab-container-admin-password/",
+    "description": "在使用 Docker 容器架設 GitLab 的時候，第一個要面臨的問題就是：預設的管理者帳號密碼是什麼?上網搜尋的話，應該很容易就會找到下面這一段：'The default username is admin@local.host, and the default password is 5iveL!fe' 如果很開心的直接拿來用的話，應該會覺得自己是不是被旋轉了...",
+    "tags": [
+      {
+        "label": "Container",
+        "permalink": "/docs/tags/container"
+      },
+      {
+        "label": "Docker",
+        "permalink": "/docs/tags/docker"
+      },
+      {
+        "label": "GitLab",
+        "permalink": "/docs/tags/git-lab"
+      }
+    ],
+    "date": 1666108800,
+    "yearMonth": "2022年10月",
+    "day": "18",
+    "formattedDate": "2022年10月18日"
+  },
+  {
     "title": "解決透過 Docker Compose 啟動容器時出現的 Error response from daemon: i/o timeout 錯誤",
     "permalink": "/docs/containerization/trouble-shooting/solve-error-response-from-daemon-io-timeout/",
     "description": "有一次在透過 Docker Compose up 啟動容器的時候，直接回傳了 Error response from daemon: i/o timeout 錯誤。 我的 Compose File 裡面有兩個容器，其中一個有順利起來，另一個就是怎樣都起不來。 試了把容器都砍掉重建，還是出現一樣的錯誤。 甚至還出現過兩個容器都起不來的情況。",
@@ -86,28 +109,5 @@
     "yearMonth": "2022年9月",
     "day": "19",
     "formattedDate": "2022年9月19日"
-  },
-  {
-    "title": "實作可暫停和繼續工作的 Background Worker",
-    "permalink": "/docs/microsoft-dot-net/wpf/add-pause-resume-support-to-background-worker/",
-    "description": "原生的 Background Worker 是不支援暫停和繼續功能的，不過我們可以動一些手腳，讓它支援暫停和繼續。",
-    "tags": [
-      {
-        "label": "WPF",
-        "permalink": "/docs/tags/wpf"
-      },
-      {
-        "label": "C#",
-        "permalink": "/docs/tags/c"
-      },
-      {
-        "label": ".NET",
-        "permalink": "/docs/tags/net"
-      }
-    ],
-    "date": 1662393600,
-    "yearMonth": "2022年9月",
-    "day": "5",
-    "formattedDate": "2022年9月5日"
   }
 ]
