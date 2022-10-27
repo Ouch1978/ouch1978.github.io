@@ -1,5 +1,28 @@
 [
   {
+    "title": "我的使用說明書",
+    "permalink": "/docs/agile/activities-and-games/my-user-manual/",
+    "description": "適合團隊建立的小活動-我的使用說明書。",
+    "tags": [
+      {
+        "label": "Agile",
+        "permalink": "/docs/tags/agile"
+      },
+      {
+        "label": "小遊戲",
+        "permalink": "/docs/tags/小遊戲"
+      },
+      {
+        "label": "小活動",
+        "permalink": "/docs/tags/小活動"
+      }
+    ],
+    "date": 1666800000,
+    "yearMonth": "2022年10月",
+    "day": "26",
+    "formattedDate": "2022年10月26日"
+  },
+  {
     "title": "取得 GitLab 容器管理者密碼的正確姿勢",
     "permalink": "/docs/containerization/docker-cheatsheet/gitlab-container-admin-password/",
     "description": "在使用 Docker 容器架設 GitLab 的時候，第一個要面臨的問題就是：預設的管理者帳號密碼是什麼?上網搜尋的話，應該很容易就會找到下面這一段：'The default username is admin@local.host, and the default password is 5iveL!fe' 如果很開心的直接拿來用的話，應該會覺得自己是不是被旋轉了...",
@@ -86,28 +109,5 @@
     "yearMonth": "2022年9月",
     "day": "20",
     "formattedDate": "2022年9月20日"
-  },
-  {
-    "title": "在 Ubuntu 中修改時區以及啟用自動時間校正服務",
-    "permalink": "/docs/containerization/linux-cheatsheet/adjust-timezone-and-sync-time/",
-    "description": "簡單介紹如何透過命令模式來在 Ubuntu 中設定時區並且透過 ntp 自動校時。",
-    "tags": [
-      {
-        "label": "Container",
-        "permalink": "/docs/tags/container"
-      },
-      {
-        "label": "Docker",
-        "permalink": "/docs/tags/docker"
-      },
-      {
-        "label": "Ubuntu",
-        "permalink": "/docs/tags/ubuntu"
-      }
-    ],
-    "date": 1663603200,
-    "yearMonth": "2022年9月",
-    "day": "19",
-    "formattedDate": "2022年9月19日"
   }
 ]
