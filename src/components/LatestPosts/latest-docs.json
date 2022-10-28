@@ -1,5 +1,28 @@
 [
   {
+    "title": "需求撰寫小遊戲 - 找出共同語言",
+    "permalink": "/docs/agile/activities-and-games/ubiquitous-language-game/",
+    "description": "需求明明有寫，產出就是漏東漏西? 東西都作完了，才發現需求漏了? 需求有看沒有懂? 讓我們透過這個小遊戲來讓團隊找出好需求的要素是什麼。",
+    "tags": [
+      {
+        "label": "Agile",
+        "permalink": "/docs/tags/agile"
+      },
+      {
+        "label": "小遊戲",
+        "permalink": "/docs/tags/小遊戲"
+      },
+      {
+        "label": "小活動",
+        "permalink": "/docs/tags/小活動"
+      }
+    ],
+    "date": 1666886400,
+    "yearMonth": "2022年10月",
+    "day": "27",
+    "formattedDate": "2022年10月27日"
+  },
+  {
     "title": "我的使用說明書",
     "permalink": "/docs/agile/activities-and-games/my-user-manual/",
     "description": "適合團隊建立的小活動-我的使用說明書。",
@@ -86,28 +109,5 @@
     "yearMonth": "2022年9月",
     "day": "30",
     "formattedDate": "2022年9月30日"
-  },
-  {
-    "title": "讓容器透過代理伺服器(Proxy)存取網路",
-    "permalink": "/docs/containerization/docker-cheatsheet/make-container-access-network-through-proxy/",
-    "description": "分別介紹透過 docker 指令和 docker-compose 為容器指定代理伺服器的方法。",
-    "tags": [
-      {
-        "label": "Container",
-        "permalink": "/docs/tags/container"
-      },
-      {
-        "label": "Docker",
-        "permalink": "/docs/tags/docker"
-      },
-      {
-        "label": "Linux",
-        "permalink": "/docs/tags/linux"
-      }
-    ],
-    "date": 1663689600,
-    "yearMonth": "2022年9月",
-    "day": "20",
-    "formattedDate": "2022年9月20日"
   }
 ]
