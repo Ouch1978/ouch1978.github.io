@@ -1,5 +1,28 @@
 [
   {
+    "title": "篩選 Redis Key 的正確姿勢",
+    "permalink": "/blog/2022/10/29/correct-way-to-fileter-redis-key",
+    "description": "還記得很久很久之前，曾經有一個同事來問我：為什麼我只是一句去查 Redis Key 的語法，程式都沒改過，但是卻越跑越慢?  一看他的程式碼，發現原來他用 LINQ 來過濾 Redis 的 Key...",
+    "tags": [
+      {
+        "label": "C#",
+        "permalink": "/blog/tags/c"
+      },
+      {
+        "label": "Redis",
+        "permalink": "/blog/tags/redis"
+      },
+      {
+        "label": "程式設計",
+        "permalink": "/blog/tags/程式設計"
+      }
+    ],
+    "date": "2022-10-29T00:00:00.000Z",
+    "yearMonth": "2022年10月",
+    "day": "29",
+    "formattedDate": "2022年10月29日"
+  },
+  {
     "title": "在 VSCode 裡顯示隱藏的資料夾和檔案",
     "permalink": "/blog/2022/10/10/show-hidden-items-in-vscode",
     "description": "VSCode 預設不會顯示某些特定的資料夾和檔案，例如 .git 資料夾、 .svn 資料夾等等。 以一個 IDE 來講，不顯示這些資料夾都是很合情合理的，但是作為一個文字編輯器來看的話，這些資料夾不顯示的話就怪怪的了。 所以這篇就來分享一下讓 VSCode 顯示預設隱藏的資料夾或檔案的方法。",
@@ -90,24 +113,5 @@
     "yearMonth": "2022年10月",
     "day": "5",
     "formattedDate": "2022年10月5日"
-  },
-  {
-    "title": "一張圖看懂同步、非同步與多執行緒的差別",
-    "permalink": "/blog/2022/09/25/understand-sync-async-and-multi-thread-with-one-pic",
-    "description": "同步、非同步和多執行緒的差別常常是面試的必考題之一。應該也有很多人不只看過、用過，甚至已經寫到用起來像吃飯喝水一樣的自然。但是，當遇到有人要求用比較淺顯易懂的方式來解釋這三者的差別時，我敢說，有很多人就是講不出來。我幾乎敢這樣講，但我也不敢完全否認，還是有些人可以回答得出來。",
-    "tags": [
-      {
-        "label": "Programming",
-        "permalink": "/blog/tags/programming"
-      },
-      {
-        "label": "一張圖看懂系列",
-        "permalink": "/blog/tags/一張圖看懂系列"
-      }
-    ],
-    "date": "2022-09-25T00:00:00.000Z",
-    "yearMonth": "2022年9月",
-    "day": "25",
-    "formattedDate": "2022年9月25日"
   }
 ]
