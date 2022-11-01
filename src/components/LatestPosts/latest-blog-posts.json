@@ -70,29 +70,6 @@
   },
   {
     "title": "一次從遠端新增使用者帳號到多台 Windows Server 的本機群組",
-    "permalink": "/blog/2022/10/07/use-ssh-tokens-",
-    "description": "在管理 Widows Server 的時候，偶爾會因為團隊成員異動或是其它因素，得要將新的帳號加入 Windows Server 的本機群組。當 Server 一多起來，改起來就很花時間。這邊就來分享一個蠻有效率的方式，可以一次把帳號加到多台 Windows Server 裡。",
-    "tags": [
-      {
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "label": "小技巧",
-        "permalink": "/blog/tags/小技巧"
-      },
-      {
-        "label": "PsTools",
-        "permalink": "/blog/tags/ps-tools"
-      }
-    ],
-    "date": "2022-10-07T00:00:00.000Z",
-    "yearMonth": "2022年10月",
-    "day": "7",
-    "formattedDate": "2022年10月7日"
-  },
-  {
-    "title": "一次從遠端新增使用者帳號到多台 Windows Server 的本機群組",
     "permalink": "/blog/2022/10/05/add-user-into-group-to-multiple-windows-servers",
     "description": "在管理 Widows Server 的時候，偶爾會因為團隊成員異動或是其它因素，得要將新的帳號加入 Windows Server 的本機群組。當 Server 一多起來，改起來就很花時間。這邊就來分享一個蠻有效率的方式，可以一次把帳號加到多台 Windows Server 裡。",
     "tags": [
@@ -113,5 +90,24 @@
     "yearMonth": "2022年10月",
     "day": "5",
     "formattedDate": "2022年10月5日"
+  },
+  {
+    "title": "一張圖看懂同步、非同步與多執行緒的差別",
+    "permalink": "/blog/2022/09/25/understand-sync-async-and-multi-thread-with-one-pic",
+    "description": "同步、非同步和多執行緒的差別常常是面試的必考題之一。應該也有很多人不只看過、用過，甚至已經寫到用起來像吃飯喝水一樣的自然。但是，當遇到有人要求用比較淺顯易懂的方式來解釋這三者的差別時，我敢說，有很多人就是講不出來。我幾乎敢這樣講，但我也不敢完全否認，還是有些人可以回答得出來。",
+    "tags": [
+      {
+        "label": "Programming",
+        "permalink": "/blog/tags/programming"
+      },
+      {
+        "label": "一張圖看懂系列",
+        "permalink": "/blog/tags/一張圖看懂系列"
+      }
+    ],
+    "date": "2022-09-25T00:00:00.000Z",
+    "yearMonth": "2022年9月",
+    "day": "25",
+    "formattedDate": "2022年9月25日"
   }
 ]
