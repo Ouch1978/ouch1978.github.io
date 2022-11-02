@@ -1,0 +1,5 @@
+position: 8 # float position is supported
+label: '敏捷工具箱'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+className: red

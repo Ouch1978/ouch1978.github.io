@@ -1,5 +1,28 @@
 [
   {
+    "title": "一張圖讓你略懂焦點討論法 - ORID",
+    "permalink": "/docs/agile/agile-toolbox/learn-orid-with-one-picture/",
+    "description": "焦點討論法 - ORID 是團隊進行 Retro 或是個人進行反思時一個很常被拿來使用的工具，也是我接觸引導的第一門課程。這篇文章就用一張圖來讓大家對 ORID 有最初步的認識。",
+    "tags": [
+      {
+        "label": "Agile",
+        "permalink": "/docs/tags/agile"
+      },
+      {
+        "label": "敏捷工具箱",
+        "permalink": "/docs/tags/敏捷工具箱"
+      },
+      {
+        "label": "小活動",
+        "permalink": "/docs/tags/小活動"
+      }
+    ],
+    "date": 1667318400,
+    "yearMonth": "2022年11月",
+    "day": "1",
+    "formattedDate": "2022年11月1日"
+  },
+  {
     "title": "解決 ElasticSearch 容器中出現的 max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144] 錯誤",
     "permalink": "/docs/containerization/trouble-shooting/fix-vm-max-map-count-is-too-low/",
     "description": "最近在透過容器架設 ElasticSearch Cluster 的時候，遇到容器怎樣都起不來的狀況。 一進去看容器的 Log，發現裡面出現了 max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144] 這個錯誤",
@@ -90,28 +113,5 @@
     "yearMonth": "2022年10月",
     "day": "18",
     "formattedDate": "2022年10月18日"
-  },
-  {
-    "title": "解決透過 Docker Compose 啟動容器時出現的 Error response from daemon: i/o timeout 錯誤",
-    "permalink": "/docs/containerization/trouble-shooting/solve-error-response-from-daemon-io-timeout/",
-    "description": "有一次在透過 Docker Compose up 啟動容器的時候，直接回傳了 Error response from daemon: i/o timeout 錯誤。 我的 Compose File 裡面有兩個容器，其中一個有順利起來，另一個就是怎樣都起不來。 試了把容器都砍掉重建，還是出現一樣的錯誤。 甚至還出現過兩個容器都起不來的情況。",
-    "tags": [
-      {
-        "label": "Container",
-        "permalink": "/docs/tags/container"
-      },
-      {
-        "label": "Docker",
-        "permalink": "/docs/tags/docker"
-      },
-      {
-        "label": "Trouble Shooting",
-        "permalink": "/docs/tags/trouble-shooting"
-      }
-    ],
-    "date": 1665072000,
-    "yearMonth": "2022年10月",
-    "day": "6",
-    "formattedDate": "2022年10月6日"
   }
 ]
