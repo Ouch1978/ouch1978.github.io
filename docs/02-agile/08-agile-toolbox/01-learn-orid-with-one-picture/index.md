@@ -1,6 +1,6 @@
 ---
 title: 一張圖讓你略懂焦點討論法 - ORID
-description: 焦點討論法 - ORID 是團隊進行 Retro 或是個人進行反思時一個很常被拿來使用的工具，也是我接觸引導的第一門課程。這篇文章就用一張圖來讓大家對 ORID 有最初步的認識。
+description: "焦點討論法 - ORID 是團隊進行 Retro 或是個人進行反思時一個很常被拿來使用的工具，也是我接觸引導的第一門課程。這篇文章就用一張圖來讓大家對 ORID 有最初步的認識。"
 author: ouch1978
 image: ./orid.png
 tags:
