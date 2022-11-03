@@ -1,5 +1,28 @@
 [
   {
+    "title": "Jenkins 會在 Git 的 SSH 路徑加上多餘斜線的因應解法",
+    "permalink": "/blog/2022/11/03/jenkins-extraneous-slash-in-ssh-path-workaround",
+    "description": "最近在把 Jenkins 裡透過 Git 拉 Repository 的路徑從 HTTPS 改成 SSH，不過發生了一件神奇的事：居然 SSH:// 會被改成 SSH:///。",
+    "tags": [
+      {
+        "label": "CI/CD",
+        "permalink": "/blog/tags/ci-cd"
+      },
+      {
+        "label": "DevOps",
+        "permalink": "/blog/tags/dev-ops"
+      },
+      {
+        "label": "ALM",
+        "permalink": "/blog/tags/alm"
+      }
+    ],
+    "date": "2022-11-03T00:00:00.000Z",
+    "yearMonth": "2022年11月",
+    "day": "3",
+    "formattedDate": "2022年11月3日"
+  },
+  {
     "title": "篩選 Redis Key 的正確姿勢",
     "permalink": "/blog/2022/10/29/correct-way-to-fileter-redis-key",
     "description": "還記得很久很久之前，曾經有一個同事來問我：為什麼我只是一句去查 Redis Key 的語法，程式都沒改過，但是卻越跑越慢?  一看他的程式碼，發現原來他用 LINQ 來過濾 Redis 的 Key...",
@@ -90,24 +113,5 @@
     "yearMonth": "2022年10月",
     "day": "5",
     "formattedDate": "2022年10月5日"
-  },
-  {
-    "title": "一張圖看懂同步、非同步與多執行緒的差別",
-    "permalink": "/blog/2022/09/25/understand-sync-async-and-multi-thread-with-one-pic",
-    "description": "同步、非同步和多執行緒的差別常常是面試的必考題之一。應該也有很多人不只看過、用過，甚至已經寫到用起來像吃飯喝水一樣的自然。但是，當遇到有人要求用比較淺顯易懂的方式來解釋這三者的差別時，我敢說，有很多人就是講不出來。我幾乎敢這樣講，但我也不敢完全否認，還是有些人可以回答得出來。",
-    "tags": [
-      {
-        "label": "Programming",
-        "permalink": "/blog/tags/programming"
-      },
-      {
-        "label": "一張圖看懂系列",
-        "permalink": "/blog/tags/一張圖看懂系列"
-      }
-    ],
-    "date": "2022-09-25T00:00:00.000Z",
-    "yearMonth": "2022年9月",
-    "day": "25",
-    "formattedDate": "2022年9月25日"
   }
 ]
