@@ -1,5 +1,24 @@
 [
   {
+    "title": "連線到遠端 Windows Server 時出現 There are no Remote Desktop License Servers available to provide a license 的因應措施",
+    "permalink": "/blog/2022/11/23/rdp-no-license-server-error-workaround",
+    "description": "最近要透過遠端桌面連線到某一台 Windows Server 時，突然出現這個錯誤訊息： 'The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license' 然後就再也無法從我的電腦連進去了。不過，很神奇的是，有位同事說他沒遇到問題，還是可以從他的電腦遠端連線到同一台 Server...",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "Trouble Shooting",
+        "permalink": "/blog/tags/trouble-shooting"
+      }
+    ],
+    "date": "2022-11-23T00:00:00.000Z",
+    "yearMonth": "2022年11月",
+    "day": "23",
+    "formattedDate": "2022年11月23日"
+  },
+  {
     "title": ".NET Framework 專案出現找不到 SQLite.Interop.dll 的因應措施",
     "permalink": "/blog/2022/11/10/fix-sqlite-interop-dll-missing",
     "description": "同一個有引用 System.Data.SQLite 的專案，在某些人的電腦會出現找不到 SQLite.Interop.dll 的問題，有的人不會。這篇就來分享如果電腦出現找不到 SQLite.Interop.dll 錯誤訊息的因應之道。",
@@ -90,28 +109,5 @@
     "yearMonth": "2022年10月",
     "day": "10",
     "formattedDate": "2022年10月10日"
-  },
-  {
-    "title": "快速搞定在 Windows 裡透過 SSH 通訊協定存取 GitLab 的 Repository",
-    "permalink": "/blog/2022/10/09/quick-guide-to-use-git-with-ssh",
-    "description": "雖然說 Git 一直以來都支援 HTTPS 和 SSH 這兩種通訊協定，不過近年來不論是 GitHub 還是 GitLab 都建議使用 SSH 來存取 Repository。 這篇文章就分享一下在 Windows 上快速設定使用 SSH 存取 GitLab Repository 的方法。",
-    "tags": [
-      {
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "label": "小技巧",
-        "permalink": "/blog/tags/小技巧"
-      },
-      {
-        "label": "Git",
-        "permalink": "/blog/tags/git"
-      }
-    ],
-    "date": "2022-10-09T00:00:00.000Z",
-    "yearMonth": "2022年10月",
-    "day": "9",
-    "formattedDate": "2022年10月9日"
   }
 ]
