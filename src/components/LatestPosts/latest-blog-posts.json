@@ -19,6 +19,25 @@
     "formattedDate": "2022年12月6日"
   },
   {
+    "title": "執行 npm login 時出現 Web login not supported 錯誤的因應措施",
+    "permalink": "/blog/2022/12/05/workaround-for-npm-web-login-not-support-error",
+    "description": "今天在處理把 npm 預設的 registry 改為公司內部的 Nexus Repository 伺服器時，執行到 npm login 這個指令就噴了 `Web login not supported` 這個錯誤。上網一查，原來苦主又不只我一個，看起來是因為 npm 9 之後相容性不同造成的。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "Trouble Shooting",
+        "permalink": "/blog/tags/trouble-shooting"
+      }
+    ],
+    "date": "2022-12-05T00:00:00.000Z",
+    "yearMonth": "2022年12月",
+    "day": "5",
+    "formattedDate": "2022年12月5日"
+  },
+  {
     "title": "連線到遠端 Windows Server 時出現 There are no Remote Desktop License Servers available to provide a license 的因應措施",
     "permalink": "/blog/2022/11/23/rdp-no-license-server-error-workaround",
     "description": "最近要透過遠端桌面連線到某一台 Windows Server 時，突然出現這個錯誤訊息： 'The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license' 然後就再也無法從我的電腦連進去了。不過，很神奇的是，有位同事說他沒遇到問題，還是可以從他的電腦遠端連線到同一台 Server...",
@@ -82,28 +101,5 @@
     "yearMonth": "2022年11月",
     "day": "3",
     "formattedDate": "2022年11月3日"
-  },
-  {
-    "title": "篩選 Redis Key 的正確姿勢",
-    "permalink": "/blog/2022/10/29/correct-way-to-fileter-redis-key",
-    "description": "還記得很久很久之前，曾經有一個同事來問我：為什麼我只是一句去查 Redis Key 的語法，程式都沒改過，但是卻越跑越慢?  一看他的程式碼，發現原來他用 LINQ 來過濾 Redis 的 Key...",
-    "tags": [
-      {
-        "label": "C#",
-        "permalink": "/blog/tags/c"
-      },
-      {
-        "label": "Redis",
-        "permalink": "/blog/tags/redis"
-      },
-      {
-        "label": "程式設計",
-        "permalink": "/blog/tags/程式設計"
-      }
-    ],
-    "date": "2022-10-29T00:00:00.000Z",
-    "yearMonth": "2022年10月",
-    "day": "29",
-    "formattedDate": "2022年10月29日"
   }
 ]
