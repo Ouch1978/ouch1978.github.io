@@ -1,5 +1,24 @@
 [
   {
+    "title": "在 Windows 刪除檔案或資料夾時出現 Source Path Too Long 錯誤的因應措施",
+    "permalink": "/blog/2022/12/06/workaround-for-source-path-too-long-when-deleting-folder",
+    "description": "今天在整理 Jenkins 的某個 Workspace 資料夾時，遇到了一個神奇的狀況：當我要刪除 node_modules 資料夾的時候，跳出了'Source Path Too Long'這個錯誤訊息。 就算我用 Ctrl + Del 也沒辦法把整個資料夾刪除。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "Trouble Shooting",
+        "permalink": "/blog/tags/trouble-shooting"
+      }
+    ],
+    "date": "2022-12-06T00:00:00.000Z",
+    "yearMonth": "2022年12月",
+    "day": "6",
+    "formattedDate": "2022年12月6日"
+  },
+  {
     "title": "連線到遠端 Windows Server 時出現 There are no Remote Desktop License Servers available to provide a license 的因應措施",
     "permalink": "/blog/2022/11/23/rdp-no-license-server-error-workaround",
     "description": "最近要透過遠端桌面連線到某一台 Windows Server 時，突然出現這個錯誤訊息： 'The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license' 然後就再也無法從我的電腦連進去了。不過，很神奇的是，有位同事說他沒遇到問題，還是可以從他的電腦遠端連線到同一台 Server...",
@@ -86,28 +105,5 @@
     "yearMonth": "2022年10月",
     "day": "29",
     "formattedDate": "2022年10月29日"
-  },
-  {
-    "title": "在 VSCode 裡顯示隱藏的資料夾和檔案",
-    "permalink": "/blog/2022/10/10/show-hidden-items-in-vscode",
-    "description": "VSCode 預設不會顯示某些特定的資料夾和檔案，例如 .git 資料夾、 .svn 資料夾等等。 以一個 IDE 來講，不顯示這些資料夾都是很合情合理的，但是作為一個文字編輯器來看的話，這些資料夾不顯示的話就怪怪的了。 所以這篇就來分享一下讓 VSCode 顯示預設隱藏的資料夾或檔案的方法。",
-    "tags": [
-      {
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "label": "小技巧",
-        "permalink": "/blog/tags/小技巧"
-      },
-      {
-        "label": "VSCode",
-        "permalink": "/blog/tags/vs-code"
-      }
-    ],
-    "date": "2022-10-10T00:00:00.000Z",
-    "yearMonth": "2022年10月",
-    "day": "10",
-    "formattedDate": "2022年10月10日"
   }
 ]
