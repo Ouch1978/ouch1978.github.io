@@ -1,5 +1,24 @@
 [
   {
+    "title": "啟用 WSL2 下 Ubuntu 的 SSH 遠端連線功能",
+    "permalink": "/blog/2022/12/07/enable-ssh-in-ubuntu-on-wsl2",
+    "description": "Windows Subsystem for Linux (WSL) 下的 Ubuntu 原本就有內建 SSH 服務，但是預設是關閉的，所以無法從外部連進去。 這篇文章就來分享怎麼設定 SSH 服務，讓它支援從外部透過 SSH 遠端連線進去操作。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "小技巧",
+        "permalink": "/blog/tags/小技巧"
+      }
+    ],
+    "date": "2022-12-07T00:00:00.000Z",
+    "yearMonth": "2022年12月",
+    "day": "7",
+    "formattedDate": "2022年12月7日"
+  },
+  {
     "title": "在 Windows 刪除檔案或資料夾時出現 Source Path Too Long 錯誤的因應措施",
     "permalink": "/blog/2022/12/06/workaround-for-source-path-too-long-when-deleting-folder",
     "description": "今天在整理 Jenkins 的某個 Workspace 資料夾時，遇到了一個神奇的狀況：當我要刪除 node_modules 資料夾的時候，跳出了'Source Path Too Long'這個錯誤訊息。 就算我用 Ctrl + Del 也沒辦法把整個資料夾刪除。",
@@ -30,6 +49,10 @@
       {
         "label": "Trouble Shooting",
         "permalink": "/blog/tags/trouble-shooting"
+      },
+      {
+        "label": "npm",
+        "permalink": "/blog/tags/npm"
       }
     ],
     "date": "2022-12-05T00:00:00.000Z",
@@ -78,28 +101,5 @@
     "yearMonth": "2022年11月",
     "day": "10",
     "formattedDate": "2022年11月10日"
-  },
-  {
-    "title": "Jenkins 會在 Git 的 SSH 路徑加上多餘斜線的因應解法",
-    "permalink": "/blog/2022/11/03/jenkins-extraneous-slash-in-ssh-path-workaround",
-    "description": "最近在把 Jenkins 裡透過 Git 拉 Repository 的路徑從 HTTPS 改成 SSH，不過發生了一件神奇的事：居然 SSH:// 會被改成 SSH:///。",
-    "tags": [
-      {
-        "label": "CI/CD",
-        "permalink": "/blog/tags/ci-cd"
-      },
-      {
-        "label": "DevOps",
-        "permalink": "/blog/tags/dev-ops"
-      },
-      {
-        "label": "ALM",
-        "permalink": "/blog/tags/alm"
-      }
-    ],
-    "date": "2022-11-03T00:00:00.000Z",
-    "yearMonth": "2022年11月",
-    "day": "3",
-    "formattedDate": "2022年11月3日"
   }
 ]
