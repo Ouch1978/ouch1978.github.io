@@ -34,7 +34,7 @@ function Achievement({ image, title, earned }) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <img src={image} className={styles.achievementsSvg} alt={title} />
+        <img src={image} className={styles.achievementsSvg} width="200" height="200" alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3> {title} </h3>

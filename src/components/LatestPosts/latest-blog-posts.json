@@ -1,5 +1,51 @@
 [
   {
+    "title": "透過 Python 取得 Skype 群組的 ID",
+    "permalink": "/blog/2022/12/30/get-skype-group-id-with-python",
+    "description": "最近在整理部門 Skype 機器人的程式，發現原來透過程式發送訊息給某個群組時只能透過它的 ID 來發送。前人都是透過 Skype Web 搭配開發者工具來擷取 Group ID，我就好奇，難道沒有更聰明一點的方法嗎?",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "Skype",
+        "permalink": "/blog/tags/skype"
+      },
+      {
+        "label": "Python",
+        "permalink": "/blog/tags/python"
+      }
+    ],
+    "date": "2022-12-30T00:00:00.000Z",
+    "yearMonth": "2022年12月",
+    "day": "30",
+    "formattedDate": "2022年12月30日"
+  },
+  {
+    "title": "解決 Python 在 VSCode 中執行時輸出的中文為亂碼的問題",
+    "permalink": "/blog/2022/12/29/solve-vscode-python-utf8-display",
+    "description": "在使用 VSCode 撰寫 Python 抓取 Skype 對話群組的時候，發現當群組名稱有中文時會噴 UnicodeEncodeError: 'cp950' codec can't encode 這個錯誤訊息，就算在程式中調整了編碼，顯示出來的也還是亂碼...",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "VSCode",
+        "permalink": "/blog/tags/vs-code"
+      },
+      {
+        "label": "Python",
+        "permalink": "/blog/tags/python"
+      }
+    ],
+    "date": "2022-12-29T00:00:00.000Z",
+    "yearMonth": "2022年12月",
+    "day": "29",
+    "formattedDate": "2022年12月29日"
+  },
+  {
     "title": "啟用 WSL2 下 Ubuntu 的 SSH 遠端連線功能",
     "permalink": "/blog/2022/12/07/enable-ssh-in-ubuntu-on-wsl2",
     "description": "Windows Subsystem for Linux (WSL) 下的 Ubuntu 原本就有內建 SSH 服務，但是預設是關閉的，所以無法從外部連進去。 這篇文章就來分享怎麼設定 SSH 服務，讓它支援從外部透過 SSH 遠端連線進去操作。",
@@ -11,6 +57,10 @@
       {
         "label": "小技巧",
         "permalink": "/blog/tags/小技巧"
+      },
+      {
+        "label": "WSL2",
+        "permalink": "/blog/tags/wsl-2"
       }
     ],
     "date": "2022-12-07T00:00:00.000Z",
@@ -59,47 +109,5 @@
     "yearMonth": "2022年12月",
     "day": "5",
     "formattedDate": "2022年12月5日"
-  },
-  {
-    "title": "連線到遠端 Windows Server 時出現 There are no Remote Desktop License Servers available to provide a license 的因應措施",
-    "permalink": "/blog/2022/11/23/rdp-no-license-server-error-workaround",
-    "description": "最近要透過遠端桌面連線到某一台 Windows Server 時，突然出現這個錯誤訊息： 'The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license' 然後就再也無法從我的電腦連進去了。不過，很神奇的是，有位同事說他沒遇到問題，還是可以從他的電腦遠端連線到同一台 Server...",
-    "tags": [
-      {
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "label": "Trouble Shooting",
-        "permalink": "/blog/tags/trouble-shooting"
-      }
-    ],
-    "date": "2022-11-23T00:00:00.000Z",
-    "yearMonth": "2022年11月",
-    "day": "23",
-    "formattedDate": "2022年11月23日"
-  },
-  {
-    "title": ".NET Framework 專案出現找不到 SQLite.Interop.dll 的因應措施",
-    "permalink": "/blog/2022/11/10/fix-sqlite-interop-dll-missing",
-    "description": "同一個有引用 System.Data.SQLite 的專案，在某些人的電腦會出現找不到 SQLite.Interop.dll 的問題，有的人不會。這篇就來分享如果電腦出現找不到 SQLite.Interop.dll 錯誤訊息的因應之道。",
-    "tags": [
-      {
-        "label": ".NET",
-        "permalink": "/blog/tags/net"
-      },
-      {
-        "label": "NuGet",
-        "permalink": "/blog/tags/nu-get"
-      },
-      {
-        "label": "C#",
-        "permalink": "/blog/tags/c"
-      }
-    ],
-    "date": "2022-11-10T00:00:00.000Z",
-    "yearMonth": "2022年11月",
-    "day": "10",
-    "formattedDate": "2022年11月10日"
   }
 ]
