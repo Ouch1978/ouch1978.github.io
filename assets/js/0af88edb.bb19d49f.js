@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[2290],{4121:function(a){a.exports=JSON.parse('{"label":"Skype","permalink":"/blog/tags/skype","allTagsPath":"/blog/tags","count":1}')}}]);
