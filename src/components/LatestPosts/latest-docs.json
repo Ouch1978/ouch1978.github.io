@@ -1,5 +1,51 @@
 [
   {
+    "title": "敏捷迭代小遊戲 - 傳球遊戲(丁字褲版)",
+    "permalink": "/docs/agile/activities-and-games/ball-game/",
+    "description": "傳球遊戲應該是敏捷小遊戲裡面數一數二經典的遊戲之一。 這邊就來分享一個我自己~~亂~~修改之後的版本，比較適合已經合作一段時間，彼此都已經互相熟悉的團隊。 這個版本只使用一顆球，跳過自我介紹的步驟，直接體會迭代的威力。",
+    "tags": [
+      {
+        "label": "Agile",
+        "permalink": "/docs/tags/agile"
+      },
+      {
+        "label": "小遊戲",
+        "permalink": "/docs/tags/小遊戲"
+      },
+      {
+        "label": "小活動",
+        "permalink": "/docs/tags/小活動"
+      }
+    ],
+    "date": 1673798400,
+    "yearMonth": "2023年1月",
+    "day": "15",
+    "formattedDate": "2023年1月15日"
+  },
+  {
+    "title": "敏捷迭代小遊戲 - 正三角形",
+    "permalink": "/docs/agile/activities-and-games/equilateral-triangle-game/",
+    "description": "無論有沒有在跑敏捷，只要團隊成員超過兩個人，無論在溝通或是協作上的複雜度就會随著人數增加。 就算是一個成員的小小動靜，也可能影響到整個團隊的穩定。 這個小遊戲的目的，就是要讓團隊體驗一下自己或是其他人可能會怎麼影響到整個團隊的運作和穩定",
+    "tags": [
+      {
+        "label": "Agile",
+        "permalink": "/docs/tags/agile"
+      },
+      {
+        "label": "小遊戲",
+        "permalink": "/docs/tags/小遊戲"
+      },
+      {
+        "label": "小活動",
+        "permalink": "/docs/tags/小活動"
+      }
+    ],
+    "date": 1673712000,
+    "yearMonth": "2023年1月",
+    "day": "14",
+    "formattedDate": "2023年1月14日"
+  },
+  {
     "title": "一張圖讓你略懂焦點討論法 - ORID",
     "permalink": "/docs/agile/agile-toolbox/learn-orid-with-one-picture/",
     "description": "焦點討論法 - ORID 是團隊進行 Retro 或是個人進行反思時一個很常被拿來使用的工具，也是我接觸引導的第一門課程。這篇文章就用一張圖來讓大家對 ORID 有最初步的認識。",
@@ -67,51 +113,5 @@
     "yearMonth": "2022年10月",
     "day": "27",
     "formattedDate": "2022年10月27日"
-  },
-  {
-    "title": "我的使用說明書",
-    "permalink": "/docs/agile/activities-and-games/my-user-manual/",
-    "description": "適合團隊建立的小活動-我的使用說明書。",
-    "tags": [
-      {
-        "label": "Agile",
-        "permalink": "/docs/tags/agile"
-      },
-      {
-        "label": "小遊戲",
-        "permalink": "/docs/tags/小遊戲"
-      },
-      {
-        "label": "小活動",
-        "permalink": "/docs/tags/小活動"
-      }
-    ],
-    "date": 1666800000,
-    "yearMonth": "2022年10月",
-    "day": "26",
-    "formattedDate": "2022年10月26日"
-  },
-  {
-    "title": "取得 GitLab 容器管理者密碼的正確姿勢",
-    "permalink": "/docs/containerization/docker-cheatsheet/gitlab-container-admin-password/",
-    "description": "在使用 Docker 容器架設 GitLab 的時候，第一個要面臨的問題就是：預設的管理者帳號密碼是什麼?上網搜尋的話，應該很容易就會找到下面這一段：'The default username is admin@local.host, and the default password is 5iveL!fe' 如果很開心的直接拿來用的話，應該會覺得自己是不是被旋轉了...",
-    "tags": [
-      {
-        "label": "Container",
-        "permalink": "/docs/tags/container"
-      },
-      {
-        "label": "Docker",
-        "permalink": "/docs/tags/docker"
-      },
-      {
-        "label": "GitLab",
-        "permalink": "/docs/tags/git-lab"
-      }
-    ],
-    "date": 1666108800,
-    "yearMonth": "2022年10月",
-    "day": "18",
-    "formattedDate": "2022年10月18日"
   }
 ]
