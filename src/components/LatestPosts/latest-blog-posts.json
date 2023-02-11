@@ -1,5 +1,28 @@
 [
   {
+    "title": "最速搞定 Windows Subsystem for Android 含 Play Store 的懶人包",
+    "permalink": "/blog/2023/02/11/easist-way-to-get-wsa-with-play-store-installed",
+    "description": "早在 Windows 11 正式推出之前，微軟就多次在各種不同的場合放話說 Windows 11 會支援 Android App。 總算，在 2022 年的 3 月推出了正式版；然而，都已經過了快一年了，台灣的使用者還是看得到吃不到。 這篇就來分享一個我最近找到的懶人包，可以超超超超超快速的搞定 Windows Subsystem for Android，而且連 Play Store 都幫你裝好了。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "Android",
+        "permalink": "/blog/tags/android"
+      },
+      {
+        "label": "偷吃步",
+        "permalink": "/blog/tags/偷吃步"
+      }
+    ],
+    "date": "2023-02-11T00:00:00.000Z",
+    "yearMonth": "2023年2月",
+    "day": "11",
+    "formattedDate": "2023年2月11日"
+  },
+  {
     "title": "透過 Python 取得 Skype 群組的 ID",
     "permalink": "/blog/2022/12/30/get-skype-group-id-with-python",
     "description": "最近在整理部門 Skype 機器人的程式，發現原來透過程式發送訊息給某個群組時只能透過它的 ID 來發送。前人都是透過 Skype Web 搭配開發者工具來擷取 Group ID，我就好奇，難道沒有更聰明一點的方法嗎?",
@@ -86,28 +109,5 @@
     "yearMonth": "2022年12月",
     "day": "6",
     "formattedDate": "2022年12月6日"
-  },
-  {
-    "title": "執行 npm login 時出現 Web login not supported 錯誤的因應措施",
-    "permalink": "/blog/2022/12/05/workaround-for-npm-web-login-not-support-error",
-    "description": "今天在處理把 npm 預設的 registry 改為公司內部的 Nexus Repository 伺服器時，執行到 npm login 這個指令就噴了 `Web login not supported` 這個錯誤。上網一查，原來苦主又不只我一個，看起來是因為 npm 9 之後相容性不同造成的。",
-    "tags": [
-      {
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "label": "Trouble Shooting",
-        "permalink": "/blog/tags/trouble-shooting"
-      },
-      {
-        "label": "npm",
-        "permalink": "/blog/tags/npm"
-      }
-    ],
-    "date": "2022-12-05T00:00:00.000Z",
-    "yearMonth": "2022年12月",
-    "day": "5",
-    "formattedDate": "2022年12月5日"
   }
 ]
