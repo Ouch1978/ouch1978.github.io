@@ -48,7 +48,7 @@ keywords:
 
 直接到下面的連結下載安裝包(可以依照不同平台和是否 root 連行選擇)。
 
-[安裝包列表](https://ahaan.co.uk/article/top_stories/google-play-store-windows-11-install#downloads "安裝包列表")
+[安裝包列表](https://ahaan.co.uk/article/top_stories/google-play-store-windows-11-install#download-the-patched,-already-rooted-wsa-packages-or-the-non-root-wsa-packages "安裝包列表")
 
 解壓縮安裝包之後，以`系統管理員權限`透過 PowerShell 切換到解壓後的資料夾下執行下列指令即可：
 
