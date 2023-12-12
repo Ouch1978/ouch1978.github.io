@@ -19,7 +19,7 @@ keywords:
 
 有這種東西嗎??當然有，不然寫這篇幹嘛，不過 Visual Studio 並沒有內建這個功能。
 
-很好運的，有個佛心來的外國人幫我們寫好這個功能的巨集，該巨集的網址為：<http://github.com/timabell/vs-formatter-macro>
+很好運的，有個佛心來的外國人幫我們寫好這個功能的巨集，該巨集的網址為：[http://github.com/timabell/vs-formatter-macro](http://github.com/timabell/vs-formatter-macro "http://github.com/timabell/vs-formatter-macro")
 
 只要下載 Formatting.vb 檔，並且使用 Visual Studio 的巨集編輯功能，將其匯入，就可以更輕鬆的做 Source Code 自動格式化的工作啦，操作步驟如下：
 

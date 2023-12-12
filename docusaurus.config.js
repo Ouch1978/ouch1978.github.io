@@ -10,10 +10,9 @@ const remarkParse = require("remark-parse");
 const stringify = require("rehype-stringify");
 const remark2rehype = require("remark-rehype");
 
-const remarkGridTables = require("remark-grid-tables");
+import { rehypeExtendedTable } from 'rehype-extended-table';
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
+import { themes as prismThemes } from 'prism-react-renderer';
 
 require("dotenv").config();
 
@@ -40,6 +39,16 @@ function unwrapCategory(items) {
 
   return newItems;
 }
+
+export default {
+  markdown: {
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+  },
+};
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -105,9 +114,9 @@ module.exports = {
       }
     },
     prism: {
-      additionalLanguages: ["powershell", "csharp", "cshtml", "java", "php", "aspnet", "toml"],
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+      additionalLanguages: ["aspnet", "bash", "css", "csharp", "cshtml", "diff", "git", "java", "javascript", "json", "markup-templating", "powershell", "php", "python", "sql", "toml", "typescript"],
+      theme: prismThemes.github,
+      darkTheme: prismThemes.vsDark,
     },
     navbar: {
       title: "OUCH1978@GITHUB",
@@ -149,8 +158,9 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
-          remarkPlugins: [math, remarkGridTables],
+          remarkPlugins: [math],
           rehypePlugins: [
+            [rehypeExtendedTable, {}],
             [katex, {
               strict: false
             }]
@@ -173,8 +183,9 @@ module.exports = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl: "https://github.com/ouch1978/ouch1978.github.io/edit/main",
-          remarkPlugins: [math, remarkGridTables],
+          remarkPlugins: [math],
           rehypePlugins: [
+            [rehypeExtendedTable, {}],
             [katex, {
               strict: false
             }]

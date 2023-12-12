@@ -64,7 +64,7 @@ Server 預設會使用的 Port 也會顯示在這邊，若有開啟防火牆的�
 
 ![image-04](04-about-gorilla-player.png "About Gorilla Player 中提供的資訊")
 
-> 也可以透過電腦上的瀏覽器直接瀏覽 <http://localhost:9014> 確認 Server 是否有正常啟動。
+> 也可以透過電腦上的瀏覽器直接瀏覽 [http://localhost:9014](http://localhost:9014 "http://localhost:9014") 確認 Server 是否有正常啟動。
 
 確認 Server 正常啟動之後，再來是 Visual Studio 的部份，我們可以先任意開啟一個 Xamrain Form 專案來進行測試。
 

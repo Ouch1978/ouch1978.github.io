@@ -30,7 +30,7 @@ keywords:
 
 自從踩到 ZeroSSL 三次免費憑證的雷之後，我就開始尋找其它非 ACME 的解決方案，後來找到了這個網站：
 
-<https://gethttpsforfree.com/>
+[https://gethttpsforfree.com/](https://gethttpsforfree.com/ "https://gethttpsforfree.com/")
 
 基本上，它的原理也是透過 Let's Encrypt 來產生憑證，但是它把整個過程都透過同一個網頁呈現出來。
 
@@ -51,7 +51,7 @@ keywords:
 準備好上述三樣，就可以一步一步往下作囉!!
 
 :::tip 小提示
-接下來幾個步驟的指令都可以透過點擊 <https://gethttpsforfree.com/> 中每個步驟的 `(how do I generate this?)` 連結來顯示說明。
+接下來幾個步驟的指令都可以透過點擊 [https://gethttpsforfree.com/](https://gethttpsforfree.com/ "https://gethttpsforfree.com/") 中每個步驟的 `(how do I generate this?)` 連結來顯示說明。
 本文為了方便操作，把每個步驟的指令一次收錄。
 :::
 
@@ -182,7 +182,7 @@ openssl req -new -sha256 -key domain.key -subj "/" \
 
 ## 後記
 
-目前透過 <https://gethttpsforfree.com/> 所產出的憑證效期都是三個月，如果到期的話就只要回來再整個流程重新跑一次即可。
+目前透過 [https://gethttpsforfree.com/](https://gethttpsforfree.com/ "https://gethttpsforfree.com/") 所產出的憑證效期都是三個月，如果到期的話就只要回來再整個流程重新跑一次即可。
 
 雖然步驟是多了點，不過真的很無腦。
 

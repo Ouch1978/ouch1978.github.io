@@ -24,10 +24,7 @@ keywords:
 
 不過，[這篇文章](http://andreklein.net/how-to-force-microsoft-onedrive-to-sync/ "How To Force Microsoft OneDrive To Sync More Often")裡面有個不錯的方法，我還蠻喜歡的：
 
-> sync.bat
-> {:.filename}
-
-```shell
+```shell title="sync.bat"
 @echo off
 taskkill /f /im onedrive.exe
 start %localappdata%\Microsoft\OneDrive\OneDrive.exe /background

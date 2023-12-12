@@ -106,6 +106,6 @@ kbd 標籤除了可以搭配 Unicode 符號之外，也可以搭配 Emoji 使用
 
 ## 參考資料
 
-- [<kbd\> does not work.](https://github.com/facebook/docusaurus/issues/2742 "<kbd> does not work.")
+- [\<kbd\> does not work.](https://github.com/facebook/docusaurus/issues/2742 "\<kbd> does not work.")
 
 - [Nice effect with the KBD tag](https://www.rgagnon.com/jsdetails/js-nice-effect-the-KBD-tag.html "Nice effect with the KBD tag")
