@@ -1,5 +1,5 @@
 position: 1 # float position is supported
-label: '使用說明'
+label: '快速上手 Docusaurus'
 collapsible: true # make the category collapsible
 collapsed: false # keep the category open by default
 className: red

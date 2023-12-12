@@ -1,5 +1,20 @@
 [
   {
+    "title": "Markdown 語法小抄",
+    "permalink": "/docs/docusaurus/how-to-use/markdown-cheatsheet/",
+    "description": "Docusaurus 支援基本的 Markdown 語法，要寫文章的話基本上得先大概知道 Markdown 怎麼用。",
+    "tags": [
+      {
+        "label": "Docusaurus",
+        "permalink": "/docs/tags/docusaurus"
+      }
+    ],
+    "date": 1678204800,
+    "yearMonth": "2023年3月",
+    "day": "7",
+    "formattedDate": "2023年3月7日"
+  },
+  {
     "title": "敏捷迭代小遊戲 - 棉花糖挑戰",
     "permalink": "/docs/agile/activities-and-games/the-marshmallow-challenge/",
     "description": "棉花糖挑戰是我第一次帶給團隊的敏捷小遊戲。 當時主要是為了讓團隊體驗不同的 Retrospective 進行方式。 對團隊來說，算是一種很新鮮的體驗，對我來說也是一種很新鮮的嘗試，而且效果也很不錯。 團隊成員在活動後的 Retrospective 環節更願意發表意見了。",
@@ -90,28 +105,5 @@
     "yearMonth": "2022年11月",
     "day": "1",
     "formattedDate": "2022年11月1日"
-  },
-  {
-    "title": "解決 ElasticSearch 容器中出現的 max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144] 錯誤",
-    "permalink": "/docs/containerization/trouble-shooting/fix-vm-max-map-count-is-too-low/",
-    "description": "最近在透過容器架設 ElasticSearch Cluster 的時候，遇到容器怎樣都起不來的狀況。 一進去看容器的 Log，發現裡面出現了 max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144] 這個錯誤",
-    "tags": [
-      {
-        "label": "Container",
-        "permalink": "/docs/tags/container"
-      },
-      {
-        "label": "Docker",
-        "permalink": "/docs/tags/docker"
-      },
-      {
-        "label": "Trouble Shooting",
-        "permalink": "/docs/tags/trouble-shooting"
-      }
-    ],
-    "date": 1667232000,
-    "yearMonth": "2022年10月",
-    "day": "31",
-    "formattedDate": "2022年10月31日"
   }
 ]
