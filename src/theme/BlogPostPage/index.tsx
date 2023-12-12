@@ -38,7 +38,7 @@ function BlogPostPageContent({ sidebar, children }: { sidebar: BlogSidebar; chil
         <DiscussionEmbed
           shortname="ouch1978"
           config={{
-            identifier: slug,
+            identifier: metadata.permalink,
             title: title,
             language: "zh-TW",
           }}

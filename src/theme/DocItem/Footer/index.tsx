@@ -19,7 +19,7 @@ export default function FooterWrapper(props: Props): JSX.Element {
         <DiscussionEmbed
           shortname="ouch1978"
           config={{
-            identifier: slug,
+            identifier: metadata.permalink,
             title: title,
             language: "zh-TW",
           }}
