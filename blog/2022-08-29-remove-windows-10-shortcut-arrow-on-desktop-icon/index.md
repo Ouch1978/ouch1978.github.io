@@ -55,7 +55,7 @@ keywords:
 
 網路上應該能找到不少用來移除捷徑箭頭的小工具。
 
-不過我比較習慣使用的是 [Winaero Tweaker](https://winaerotweaker.com/download/ "下載 Winaero Tweaker") ，它除了移除箭頭小圖示之外，還有不少其它的功能。
+不過我比較習慣使用的是 [Winaero Tweaker](https://winaerotweaker.com/#download/ "下載 Winaero Tweaker") ，它除了移除箭頭小圖示之外，還有不少其它的功能。
 
 下載安裝之後，開啟它的執行檔，會先出現使用者授權提示畫面，這邊就直接按下同意就好。
 
