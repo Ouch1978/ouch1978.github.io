@@ -19,25 +19,6 @@
     "formattedDate": "2023年12月12日"
   },
   {
-    "title": "救回桌面版 Skype 的分割模式",
-    "permalink": "/blog/2023/10/18/prevent-skype-desktop-from-update-to-keep-split-mode",
-    "description": "Skype 自動更新之後... 咦!? 分割模式怎麼又不見了咧!?(為什麼我說又?) 沒了分割模式的 Skype 用起來真的很不習慣，就讓我們把熟悉的分割模式救回來吧!!",
-    "tags": [
-      {
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "label": "偷吃步",
-        "permalink": "/blog/tags/偷吃步"
-      }
-    ],
-    "date": "2023-10-18T00:00:00.000Z",
-    "yearMonth": "2023年10月",
-    "day": "18",
-    "formattedDate": "2023年10月18日"
-  },
-  {
     "title": "最速搞定 Windows Subsystem for Android 含 Play Store 的懶人包",
     "permalink": "/blog/2023/02/11/easist-way-to-get-wsa-with-play-store-installed",
     "description": "早在 Windows 11 正式推出之前，微軟就多次在各種不同的場合放話說 Windows 11 會支援 Android App。 總算，在 2022 年的 3 月推出了正式版；然而，都已經過了快一年了，台灣的使用者還是看得到吃不到。 這篇就來分享一個我最近找到的懶人包，可以超超超超超快速的搞定 Windows Subsystem for Android，而且連 Play Store 都幫你裝好了。",
@@ -105,5 +86,28 @@
     "yearMonth": "2022年12月",
     "day": "29",
     "formattedDate": "2022年12月29日"
+  },
+  {
+    "title": "啟用 WSL2 下 Ubuntu 的 SSH 遠端連線功能",
+    "permalink": "/blog/2022/12/07/enable-ssh-in-ubuntu-on-wsl2",
+    "description": "Windows Subsystem for Linux (WSL) 下的 Ubuntu 原本就有內建 SSH 服務，但是預設是關閉的，所以無法從外部連進去。 這篇文章就來分享怎麼設定 SSH 服務，讓它支援從外部透過 SSH 遠端連線進去操作。",
+    "tags": [
+      {
+        "label": "Windows",
+        "permalink": "/blog/tags/windows"
+      },
+      {
+        "label": "小技巧",
+        "permalink": "/blog/tags/小技巧"
+      },
+      {
+        "label": "WSL2",
+        "permalink": "/blog/tags/wsl-2"
+      }
+    ],
+    "date": "2022-12-07T00:00:00.000Z",
+    "yearMonth": "2022年12月",
+    "day": "7",
+    "formattedDate": "2022年12月7日"
   }
 ]
