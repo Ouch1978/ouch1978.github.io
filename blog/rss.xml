@@ -958,7 +958,7 @@
 <p>如果要還原這個設定，讓箭頭回來的話，只需要雙擊執行 <code>還原捷徑箭頭.reg</code> ，然後一樣重新啟動檔案總管即可。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="透過現成的-windows-調整小工具">透過現成的 Windows 調整小工具<a href="https://ouch1978.github.io/blog/2022/08/29/remove-windows-10-shortcut-arrow-on-desktop-icon#%E9%80%8F%E9%81%8E%E7%8F%BE%E6%88%90%E7%9A%84-windows-%E8%AA%BF%E6%95%B4%E5%B0%8F%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
 <p>網路上應該能找到不少用來移除捷徑箭頭的小工具。</p>
-<p>不過我比較習慣使用的是 <a href="https://winaerotweaker.com/download/" target="_blank" rel="noopener noreferrer" title="下載 Winaero Tweaker">Winaero Tweaker</a> ，它除了移除箭頭小圖示之外，還有不少其它的功能。</p>
+<p>不過我比較習慣使用的是 <a href="https://winaerotweaker.com/#download/" target="_blank" rel="noopener noreferrer" title="下載 Winaero Tweaker">Winaero Tweaker</a> ，它除了移除箭頭小圖示之外，還有不少其它的功能。</p>
 <p>下載安裝之後，開啟它的執行檔，會先出現使用者授權提示畫面，這邊就直接按下同意就好。</p>
 <p><img loading="lazy" alt="同意授權" src="https://ouch1978.github.io/assets/images/agree-winaero-tweaker-eula-b6c1fd2c89c74dc047f9151c1b4cfa20.png" title="同意授權" width="1180" height="789" class="img_ev3q"></p>
 <p>接著在搜尋框中輸入 <code>arrow</code>，就可以快速找到修改捷徑箭頭的功能，然後以滑鼠雙擊 'Shortcuts \Shortcut Arrow'。</p>
