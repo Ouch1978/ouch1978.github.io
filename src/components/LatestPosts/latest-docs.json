@@ -1,5 +1,20 @@
 [
   {
+    "title": "在文件庫和部落格的文章下方加上 giscus 留言區",
+    "permalink": "/docs/docusaurus/customization/add-giscus-to-docusaurus/",
+    "description": "介紹在 Docusaurus 的文章中加入 giscus 留言區的方法。",
+    "tags": [
+      {
+        "label": "Docusaurus",
+        "permalink": "/docs/tags/docusaurus"
+      }
+    ],
+    "date": 1702483200,
+    "yearMonth": "2023年12月",
+    "day": "13",
+    "formattedDate": "2023年12月13日"
+  },
+  {
     "title": "Markdown 語法小抄",
     "permalink": "/docs/docusaurus/how-to-use/markdown-cheatsheet/",
     "description": "Docusaurus 支援基本的 Markdown 語法，要寫文章的話基本上得先大概知道 Markdown 怎麼用。",
@@ -82,28 +97,5 @@
     "yearMonth": "2023年1月",
     "day": "14",
     "formattedDate": "2023年1月14日"
-  },
-  {
-    "title": "一張圖讓你略懂焦點討論法 - ORID",
-    "permalink": "/docs/agile/agile-toolbox/learn-orid-with-one-picture/",
-    "description": "焦點討論法 - ORID 是團隊進行 Retro 或是個人進行反思時一個很常被拿來使用的工具，也是我接觸引導的第一門課程。這篇文章就用一張圖來讓大家對 ORID 有最初步的認識。",
-    "tags": [
-      {
-        "label": "Agile",
-        "permalink": "/docs/tags/agile"
-      },
-      {
-        "label": "敏捷工具箱",
-        "permalink": "/docs/tags/敏捷工具箱"
-      },
-      {
-        "label": "小活動",
-        "permalink": "/docs/tags/小活動"
-      }
-    ],
-    "date": 1667318400,
-    "yearMonth": "2022年11月",
-    "day": "1",
-    "formattedDate": "2022年11月1日"
   }
 ]

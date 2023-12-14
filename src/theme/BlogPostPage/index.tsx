@@ -10,7 +10,7 @@ import TOC from "@theme/TOC";
 import type { Props } from "@theme/BlogPostPage";
 import type { BlogSidebar } from "@docusaurus/plugin-content-blog";
 
-import { DiscussionEmbed } from "disqus-react";
+import GiscusComment from '@site/src/components/GiscusComment';
 
 function BlogPostPageContent({ sidebar, children }: { sidebar: BlogSidebar; children: ReactNode }): JSX.Element {
   const { metadata, toc } = useBlogPost();
@@ -34,15 +34,8 @@ function BlogPostPageContent({ sidebar, children }: { sidebar: BlogSidebar; chil
     >
       <BlogPostItem>{children}</BlogPostItem>
 
-      {!no_comments && (
-        <DiscussionEmbed
-          shortname="ouch1978"
-          config={{
-            identifier: metadata.permalink,
-            title: title,
-            language: "zh-TW",
-          }}
-        />
+      {!no_comments && (        
+        <GiscusComment />
       )}
 
       {(nextItem || prevItem) && <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />}

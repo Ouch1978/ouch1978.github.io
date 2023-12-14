@@ -3,27 +3,22 @@ import Footer from "@theme-original/DocItem/Footer";
 import type FooterType from "@theme/DocItem/Footer";
 import type { WrapperProps } from "@docusaurus/types";
 
-import { DiscussionEmbed } from "disqus-react";
+//import GiscusComment
+import GiscusComment from '@site/src/components/GiscusComment';
+
 import { useDoc } from "@docusaurus/theme-common/internal";
 
 type Props = WrapperProps<typeof FooterType>;
 
 export default function FooterWrapper(props: Props): JSX.Element {
-  const { metadata, frontMatter, assets } = useDoc();
+  const { frontMatter } = useDoc();
   const { no_comments } = frontMatter;
-  const { title, slug } = metadata;
+
   return (
     <>
       <Footer {...props} />
       {!no_comments && (
-        <DiscussionEmbed
-          shortname="ouch1978"
-          config={{
-            identifier: metadata.permalink,
-            title: title,
-            language: "zh-TW",
-          }}
-        />
+        <GiscusComment />
       )}
     </>
   );
