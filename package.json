@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "license": "UNLICENSED",
   "private": true,
-  "repository": "npm/npm",
   "scripts": {
     "docusaurus": "docusaurus",
     "reveal": "reveal-md slides/ --listing-template templates/listing.html --static static/slides",
