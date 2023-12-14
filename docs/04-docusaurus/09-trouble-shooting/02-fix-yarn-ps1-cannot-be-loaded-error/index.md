@@ -22,7 +22,7 @@ last_update:
 
 在 Windows 裡要透過 yarn 來完成某些動作(例如 `yarn install`)的時候可能會出現這個錯誤：
 
-> yarn : File C:\Program Files\nodejs\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.<br/>
+> yarn : File C:\Program Files\nodejs\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170.<br/>
 > At line:1 char:1<br/>
 > \+ yarn install<br/>
 > \+ \~~~~<br/>
@@ -36,7 +36,7 @@ last_update:
 
 ## 排除方法
 
-其實從錯誤訊息裡面提供的[連結](https:/go.microsoft.com/fwlink/?LinkID=135170 "About Execution Policies")就可以找到解法。
+其實從錯誤訊息裡面提供的[連結](https://go.microsoft.com/fwlink/?LinkID=135170 "About Execution Policies")就可以找到解法。
 
 解法很簡單，只要以系統管理員身份開啟 PowerShell，然後輸入下面的指令：
 
