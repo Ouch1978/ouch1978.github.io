@@ -46,7 +46,7 @@ function Achievement({ image, title, earned }) {
 export default function Achievements() {
   return (
     <section className={styles.achievements}>
-      <h1>認證與成就</h1>
+      <h1 className={styles.title}>認證與成就</h1>
       <div className="container">
         <div className="row">
           {AchievementList.map((props, idx) => (

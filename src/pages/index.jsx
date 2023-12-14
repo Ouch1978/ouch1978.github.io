@@ -12,8 +12,10 @@ export default function Home() {
     <Layout title={`首頁`} description={siteConfig.tagline}>
       <Hero />
       <main>
-        <LatestPosts />
-        <Achievements />
+        <div id="homepage">
+          <LatestPosts />
+          <Achievements />
+        </div>
       </main>
     </Layout>
   );
