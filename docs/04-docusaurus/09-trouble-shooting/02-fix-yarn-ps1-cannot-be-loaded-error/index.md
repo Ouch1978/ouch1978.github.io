@@ -1,6 +1,6 @@
 ---
 title: 排除執行 yarn 時出現 yarn.ps1 cannot be loaded 的問題
-description: "在 Windows 裡要透過 yarn 來完成某些動作(例如 `yarn install`)的時候可能會出現這個錯誤：yarn : File C:\\Program Files\\nodejs\\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+description: "在 Windows 裡要透過 yarn 來完成某些動作(例如 `yarn install`)的時候可能會出現這個錯誤：yarn : File C:\\Program Files\\nodejs\\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170.
 At line:1 char:1 + yarn + ~~~~ + CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess
 這篇就來分享一下這個問題的解法。"
 author: ouch1978
