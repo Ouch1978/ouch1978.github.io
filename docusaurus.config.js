@@ -225,5 +225,10 @@ module.exports = {
       src: "/assets/enablePangu.js",
       async: true,
     },
+    {
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120664310721472",
+      async: true,
+      crossorigin: "anonymous",
+    }
   ],
 };
