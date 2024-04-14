@@ -14,9 +14,8 @@
       }
     ],
     "date": "2023-12-12T00:00:00.000Z",
-    "yearMonth": "2023年12月",
-    "day": "12",
-    "formattedDate": "2023年12月12日"
+    "yearMonth": "2023 年 12 月",
+    "day": "12"
   },
   {
     "title": "最速搞定 Windows Subsystem for Android 含 Play Store 的懶人包",
@@ -37,9 +36,8 @@
       }
     ],
     "date": "2023-02-11T00:00:00.000Z",
-    "yearMonth": "2023年2月",
-    "day": "11",
-    "formattedDate": "2023年2月11日"
+    "yearMonth": "2023 年 02 月",
+    "day": "11"
   },
   {
     "title": "透過 Python 取得 Skype 群組的 ID",
@@ -60,9 +58,8 @@
       }
     ],
     "date": "2022-12-30T00:00:00.000Z",
-    "yearMonth": "2022年12月",
-    "day": "30",
-    "formattedDate": "2022年12月30日"
+    "yearMonth": "2022 年 12 月",
+    "day": "30"
   },
   {
     "title": "解決 Python 在 VSCode 中執行時輸出的中文為亂碼的問題",
@@ -83,9 +80,8 @@
       }
     ],
     "date": "2022-12-29T00:00:00.000Z",
-    "yearMonth": "2022年12月",
-    "day": "29",
-    "formattedDate": "2022年12月29日"
+    "yearMonth": "2022 年 12 月",
+    "day": "29"
   },
   {
     "title": "啟用 WSL2 下 Ubuntu 的 SSH 遠端連線功能",
@@ -106,8 +102,7 @@
       }
     ],
     "date": "2022-12-07T00:00:00.000Z",
-    "yearMonth": "2022年12月",
-    "day": "7",
-    "formattedDate": "2022年12月7日"
+    "yearMonth": "2022 年 12 月",
+    "day": "07"
   }
 ]

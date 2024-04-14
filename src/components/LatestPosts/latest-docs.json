@@ -9,10 +9,9 @@
         "permalink": "/docs/tags/docusaurus"
       }
     ],
-    "date": 1702483200,
-    "yearMonth": "2023年12月",
-    "day": "13",
-    "formattedDate": "2023年12月13日"
+    "date": 1702483200000,
+    "yearMonth": "2023 年 12 月",
+    "day": "14"
   },
   {
     "title": "Markdown 語法小抄",
@@ -24,10 +23,9 @@
         "permalink": "/docs/tags/docusaurus"
       }
     ],
-    "date": 1678204800,
-    "yearMonth": "2023年3月",
-    "day": "7",
-    "formattedDate": "2023年3月7日"
+    "date": 1678204800000,
+    "yearMonth": "2023 年 03 月",
+    "day": "08"
   },
   {
     "title": "敏捷迭代小遊戲 - 棉花糖挑戰",
@@ -47,10 +45,9 @@
         "permalink": "/docs/tags/小活動"
       }
     ],
-    "date": 1673971200,
-    "yearMonth": "2023年1月",
-    "day": "17",
-    "formattedDate": "2023年1月17日"
+    "date": 1673971200000,
+    "yearMonth": "2023 年 01 月",
+    "day": "18"
   },
   {
     "title": "敏捷迭代小遊戲 - 傳球遊戲(丁字褲版)",
@@ -70,10 +67,9 @@
         "permalink": "/docs/tags/小活動"
       }
     ],
-    "date": 1673798400,
-    "yearMonth": "2023年1月",
-    "day": "15",
-    "formattedDate": "2023年1月15日"
+    "date": 1673798400000,
+    "yearMonth": "2023 年 01 月",
+    "day": "16"
   },
   {
     "title": "敏捷迭代小遊戲 - 正三角形",
@@ -93,9 +89,8 @@
         "permalink": "/docs/tags/小活動"
       }
     ],
-    "date": 1673712000,
-    "yearMonth": "2023年1月",
-    "day": "14",
-    "formattedDate": "2023年1月14日"
+    "date": 1673712000000,
+    "yearMonth": "2023 年 01 月",
+    "day": "15"
   }
 ]

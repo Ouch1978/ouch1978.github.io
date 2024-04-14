@@ -29,15 +29,11 @@ function generateLatestPostList(folderPath, filesPattern, outputPath) {
       console.log(item);
 
       item.date ??= item.lastUpdatedAt;
-      item.formattedDate ??= item.formattedLastUpdatedAt;
 
-      let tempDate = item.formattedDate.replace('日','');
+      //Extract year and month from date
+      const yearMonth = moment(item.date).format("YYYY 年 MM 月");
 
-      let indexOfMonth = tempDate.indexOf('月');
-
-      let yearMonth = tempDate.substr(0, indexOfMonth + 1);
-
-      let day = tempDate.substr(indexOfMonth + 1);
+      const day = moment(item.date).format("DD");
 
       allItems[item.date] = new Object();
       allItems[item.date].title = item.title;
@@ -47,7 +43,6 @@ function generateLatestPostList(folderPath, filesPattern, outputPath) {
       allItems[item.date].date = item.date;
       allItems[item.date].yearMonth = yearMonth;
       allItems[item.date].day = day;
-      allItems[item.date].formattedDate = item.formattedDate;
     }
   });
 
