@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[1418],{52130:s=>{s.exports=JSON.parse('{"label":"Windows","permalink":"/blog/tags/windows","allTagsPath":"/blog/tags","count":14,"unlisted":false}')}}]);

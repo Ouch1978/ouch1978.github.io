@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[6875],{66566:a=>{a.exports=JSON.parse('{"label":"docker","permalink":"/blog/tags/docker","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

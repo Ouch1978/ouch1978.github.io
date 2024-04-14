@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[5162],{92081:a=>{a.exports=JSON.parse('{"label":"WSL2","permalink":"/blog/tags/wsl-2","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

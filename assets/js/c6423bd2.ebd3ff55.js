@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[8645],{4954:l=>{l.exports=JSON.parse('{"label":"Silverlight","permalink":"/blog/tags/silverlight","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

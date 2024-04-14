@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[4717],{24507:s=>{s.exports=JSON.parse('{"label":"DevOps","permalink":"/blog/tags/dev-ops","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
