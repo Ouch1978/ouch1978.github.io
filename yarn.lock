@@ -2225,7 +2225,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/types@npm:3.2.1":
+"@docusaurus/types@npm:3.2.1, @docusaurus/types@npm:^3.0.0":
   version: 3.2.1
   resolution: "@docusaurus/types@npm:3.2.1"
   dependencies:
@@ -2761,13 +2761,6 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
   checksum: 10c0/c2921992d23018e0b232ecbe32d27a6779cef5912494f758fe42bf7b98729b2fe5fa133c228a6e3cae0c72af237263ca14f5815f00c68c307e898ce858c5ad0b
-  languageName: node
-  linkType: hard
-
-"@saucelabs/theme-github-codeblock@npm:^0.1.1":
-  version: 0.1.5
-  resolution: "@saucelabs/theme-github-codeblock@npm:0.1.5"
-  checksum: 10c0/d3b9a8510b020b5ccb6e37dfc9bf5b60faffd4c93f0da8cd8eae052a38c4cd8514596c7bd88033ed294a8654e6a43508f85a8c47428268c2a0dab4646dad69e7
   languageName: node
   linkType: hard
 
@@ -6633,6 +6626,15 @@ __metadata:
   peerDependencies:
     "@docusaurus/theme-classic": ">=2.2.0"
   checksum: 10c0/f95687dae6cc0bd301a6c11d7a32781dcb5cf39ff0bba133f8620a7bf77b18240cdfc6edfe2f45c219522bac908228f058aa5ecdd7c0871221cdc34743b11109
+  languageName: node
+  linkType: hard
+
+"docusaurus-theme-github-codeblock@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "docusaurus-theme-github-codeblock@npm:2.0.2"
+  dependencies:
+    "@docusaurus/types": "npm:^3.0.0"
+  checksum: 10c0/9de760df4b3811f219eecbe877fbc574685f8c01d8ad6547dea657c91c06b09cc16220491470ea7d913c93bfaa0464b7a0ffef4e49cf884efc3c86fe9013dd8c
   languageName: node
   linkType: hard
 
@@ -12042,7 +12044,6 @@ __metadata:
     "@fortawesome/react-fontawesome": "npm:^0.1.17"
     "@giscus/react": "npm:^2.3.0"
     "@mdx-js/react": "npm:^3.0.0"
-    "@saucelabs/theme-github-codeblock": "npm:^0.1.1"
     "@svgr/webpack": "npm:^6.2.1"
     "@types/react": "npm:^18.2.29"
     "@types/react-helmet": "npm:^6.1.2"
@@ -12054,6 +12055,7 @@ __metadata:
     clsx: "npm:^1.1.1"
     dayjs: "npm:^1.10.7"
     docusaurus-plugin-image-zoom: "npm:^1.0.1"
+    docusaurus-theme-github-codeblock: "npm:^2.0.2"
     docusaurus2-dotenv: "npm:^1.4.0"
     entities: "npm:^2.2.0"
     eslint: "npm:^8.21.0"

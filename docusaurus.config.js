@@ -74,7 +74,7 @@ module.exports = {
       },
     ]
   ],
-  themes: ['@saucelabs/theme-github-codeblock'],
+  themes: ['docusaurus-theme-github-codeblock'],
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
