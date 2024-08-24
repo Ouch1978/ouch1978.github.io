@@ -9,7 +9,6 @@ const unified = require("unified");
 const remarkParse = require("remark-parse");
 const stringify = require("rehype-stringify");
 const remark2rehype = require("remark-rehype");
-const pangu = require("pangu");
 
 import { rehypeExtendedTable } from 'rehype-extended-table';
 
