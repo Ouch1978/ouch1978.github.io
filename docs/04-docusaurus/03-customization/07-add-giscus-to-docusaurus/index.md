@@ -12,7 +12,7 @@ keywords:
   - Docs
   - Blog
 last_update:
-  date: 2023/12/14 GMT+8
+  date: 2024/08/24 GMT+8
   author: Ouch Liu
 ---
 
@@ -216,41 +216,65 @@ yarn run swizzle @docusaurus/theme-classic DocItem/Footer --wrap --typescript
 
 抽取出原始碼之後，對 `src/theme/DocItem/Footer/index.tsx` 進行下列的調整：
 
+### Docusaurus 3.5.1 版 DocItem/Footer 適用
+
+```jsx title="src/theme/DocItem/Footer/index.tsx"
+import React from 'react';
+import Footer from '@theme-original/DocItem/Footer';
+import type FooterType from '@theme/DocItem/Footer';
+import type {WrapperProps} from '@docusaurus/types';
+
+/* highlight-start */
+//import GiscusComment
+import GiscusComment from '@site/src/components/GiscusComment';
+/* highlight-end */
+
+import { useDoc } from "@docusaurus/plugin-content-docs/client";
+
+type Props = WrapperProps<typeof FooterType>;
+
+export default function FooterWrapper(props: Props): JSX.Element {
+  return (
+    <>
+      <Footer {...props} />
+
+      {/* highlight-next-line */}
+      <GiscusComment />
+    </>
+  );
+}
+```
+
+### Docusaurus 3.2.1 版 DocItem/Footer 適用
+
 ```jsx title="src/theme/DocItem/Footer/index.tsx"
 import React from "react";
 import Footer from "@theme-original/DocItem/Footer";
 import type FooterType from "@theme/DocItem/Footer";
 import type { WrapperProps } from "@docusaurus/types";
 
-{
-  /* highlight-start */
-}
+
+/* highlight-start */
 import GiscusComment from '@site/src/components/GiscusComment';
 import { useDoc } from "@docusaurus/theme-common/internal";
-{
-  /* highlight-end */
-}
+/* highlight-end */
+
 
 type Props = WrapperProps<typeof FooterType>;
 
 export default function FooterWrapper(props: Props): JSX.Element {
-  {
-    /* highlight-start */
-  }
+
+  /* highlight-start */
   const { metadata, frontMatter, assets } = useDoc();
-  const { no_comments } = frontMatter;
   const { title, slug } = metadata;
-  {
-    /* highlight-end */
-  }
+  /* highlight-end */
+
   return (
     <>
       <Footer {...props} />
-      {/* highlight-start */}
-      {!no_comments && (
-        <GiscusComment />
-      )}
-      {/* highlight-end */}
+
+      {/* highlight-next-line */}
+      <GiscusComment />
     </>
   );
 }
@@ -268,7 +292,92 @@ export default function FooterWrapper(props: Props): JSX.Element {
 yarn run swizzle @docusaurus/theme-classic BlogPostPage --eject --typescript
 ```
 
-然後編輯抽出來的 `src/theme/BlogPostPage/index.tsx` 這個檔案：
+### Docusaurus 3.5.1 版 BlogPostPage 適用
+
+編輯抽出來的 `src/theme/BlogPostPage/index.tsx` 這個檔案：
+
+```jsx title="src/theme/BlogPostPage/index.tsx"
+import React, {type ReactNode} from 'react';
+import clsx from 'clsx';
+import {HtmlClassNameProvider, ThemeClassNames} from '@docusaurus/theme-common';
+import {
+  BlogPostProvider,
+  useBlogPost,
+} from '@docusaurus/plugin-content-blog/client';
+import BlogLayout from '@theme/BlogLayout';
+import BlogPostItem from '@theme/BlogPostItem';
+import BlogPostPaginator from '@theme/BlogPostPaginator';
+import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
+import BlogPostPageStructuredData from '@theme/BlogPostPage/StructuredData';
+import TOC from '@theme/TOC';
+import ContentVisibility from '@theme/ContentVisibility';
+import type {Props} from '@theme/BlogPostPage';
+import type {BlogSidebar} from '@docusaurus/plugin-content-blog';
+
+/* highlight-start */
+//import GiscusComment
+import GiscusComment from '@site/src/components/GiscusComment';
+/* highlight-end */
+
+function BlogPostPageContent({
+  sidebar,
+  children,
+}: {
+  sidebar: BlogSidebar;
+  children: ReactNode;
+}): JSX.Element {
+  const {metadata, toc} = useBlogPost();
+  const {nextItem, prevItem, frontMatter} = metadata;
+  const {
+    hide_table_of_contents: hideTableOfContents,
+    toc_min_heading_level: tocMinHeadingLevel,
+    toc_max_heading_level: tocMaxHeadingLevel,
+  } = frontMatter;
+  return (
+    <BlogLayout
+      sidebar={sidebar}
+      toc={
+        !hideTableOfContents && toc.length > 0 ? (
+          <TOC toc={toc} minHeadingLevel={tocMinHeadingLevel} maxHeadingLevel={tocMaxHeadingLevel} />
+        ) : undefined
+      }
+    >
+      <ContentVisibility metadata={metadata} />
+
+      <BlogPostItem>{children}</BlogPostItem>
+      
+      {/* highlight-next-line */}
+      <GiscusComment />
+
+      {(nextItem || prevItem) && <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />}
+    </BlogLayout>
+  );
+}
+
+export default function BlogPostPage(props: Props): JSX.Element {
+  const BlogPostContent = props.content;
+  return (
+    <BlogPostProvider content={props.content} isBlogPostPage>
+      <HtmlClassNameProvider
+        className={clsx(
+          ThemeClassNames.wrapper.blogPages,
+          ThemeClassNames.page.blogPostPage,
+        )}>
+        <BlogPostPageMetadata />
+        <BlogPostPageStructuredData />
+        <BlogPostPageContent sidebar={props.sidebar}>
+          <BlogPostContent />
+        </BlogPostPageContent>
+      </HtmlClassNameProvider>
+    </BlogPostProvider>
+  );
+}
+
+```
+
+### Docusaurus 3.2.1 版 BlogPostPage 適用
+
+編輯抽出來的 `src/theme/BlogPostPage/index.tsx` 這個檔案：
 
 ```jsx title="src/theme/BlogPostPage/index.tsx"
 import React, { type ReactNode } from "react";
@@ -283,7 +392,7 @@ import TOC from "@theme/TOC";
 import type { Props } from "@theme/BlogPostPage";
 import type { BlogSidebar } from "@docusaurus/plugin-content-blog";
 
-{/* highlight-next-line */}
+/* highlight-next-line */
 import GiscusComment from '@site/src/components/GiscusComment';
 
 function BlogPostPageContent({ sidebar, children }: { sidebar: BlogSidebar; children: ReactNode }): JSX.Element {
@@ -293,9 +402,6 @@ function BlogPostPageContent({ sidebar, children }: { sidebar: BlogSidebar; chil
     hide_table_of_contents: hideTableOfContents,
     toc_min_heading_level: tocMinHeadingLevel,
     toc_max_heading_level: tocMaxHeadingLevel,
-    {/* highlight-start */}
-    no_comments
-    {/* highlight-end */}
   } = frontMatter;
   return (
     <BlogLayout
@@ -308,11 +414,8 @@ function BlogPostPageContent({ sidebar, children }: { sidebar: BlogSidebar; chil
     >
       <BlogPostItem>{children}</BlogPostItem>
 
-      {/* highlight-start */}
-      {!no_comments && (
-        <GiscusComment />
-      )}
-      {/* highlight-end */}
+      {/* highlight-next-line */}
+      <GiscusComment />
 
       {(nextItem || prevItem) && <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />}
     </BlogLayout>
@@ -333,7 +436,3 @@ export default function BlogPostPage(props: Props): JSX.Element {
   );
 }
 ```
-
-:::tip 小提示
-可以透過文章 front matter 中的 `no_comments` 這個屬性來決定是否要顯示 gisqus 留言區。
-:::

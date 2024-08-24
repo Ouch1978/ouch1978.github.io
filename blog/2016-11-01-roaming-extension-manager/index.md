@@ -12,6 +12,8 @@ keywords:
 
 常常在工作的時候找到不錯用的 Visual Studio 擴充功能，但是往往回家又得再安裝一次，有時候忙過頭隔個幾天想安裝就忘記名字叫什麼了。一直在想說怎麼沒有一個功能可以在不同的電腦之間同步安裝過的擴充功能，果不其然，還真的有耶!!
 
+<!-- truncate -->
+
 前一陣子重灌了工作機的作業系統，也重新安裝了 Visual Studio 2015 ，雖說 Visual Studio 會自動透過 Microsoft Account 把我的設定同步回來，但是卻不包含擴充功能的同步，所以之後又得要再手動把之前裝過的擴充功能一個一個安裝回來，真的是蠻花時間也蠻讓我頭痛的。
 
 向谷歌大神求救之後，發現有不少人有相同的問題，而微軟也從善如流的就開發出了這樣的一個擴充功能，也就是我們今天的主角 -- [Roaming Extension Manager](https://visualstudiogallery.msdn.microsoft.com/7b421a95-c32c-4433-a2be-a41b276013ab "Roaming Extension Manager")

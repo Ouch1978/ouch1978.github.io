@@ -5,10 +5,12 @@
     "description": "Skype 自動更新之後... 咦!? 分割模式怎麼又不見了咧!?(為什麼我說又?) 沒了分割模式的 Skype 用起來真的很不習慣，就讓我們把熟悉的分割模式救回來吧!!",
     "tags": [
       {
+        "inline": true,
         "label": "Windows",
         "permalink": "/blog/tags/windows"
       },
       {
+        "inline": true,
         "label": "偷吃步",
         "permalink": "/blog/tags/偷吃步"
       }
@@ -23,14 +25,17 @@
     "description": "早在 Windows 11 正式推出之前，微軟就多次在各種不同的場合放話說 Windows 11 會支援 Android App。 總算，在 2022 年的 3 月推出了正式版；然而，都已經過了快一年了，台灣的使用者還是看得到吃不到。 這篇就來分享一個我最近找到的懶人包，可以超超超超超快速的搞定 Windows Subsystem for Android，而且連 Play Store 都幫你裝好了。",
     "tags": [
       {
+        "inline": true,
         "label": "Windows",
         "permalink": "/blog/tags/windows"
       },
       {
+        "inline": true,
         "label": "Android",
         "permalink": "/blog/tags/android"
       },
       {
+        "inline": true,
         "label": "偷吃步",
         "permalink": "/blog/tags/偷吃步"
       }
@@ -45,14 +50,17 @@
     "description": "最近在整理部門 Skype 機器人的程式，發現原來透過程式發送訊息給某個群組時只能透過它的 ID 來發送。前人都是透過 Skype Web 搭配開發者工具來擷取 Group ID，我就好奇，難道沒有更聰明一點的方法嗎?",
     "tags": [
       {
+        "inline": true,
         "label": "Windows",
         "permalink": "/blog/tags/windows"
       },
       {
+        "inline": true,
         "label": "Skype",
         "permalink": "/blog/tags/skype"
       },
       {
+        "inline": true,
         "label": "Python",
         "permalink": "/blog/tags/python"
       }
@@ -67,14 +75,17 @@
     "description": "在使用 VSCode 撰寫 Python 抓取 Skype 對話群組的時候，發現當群組名稱有中文時會噴 UnicodeEncodeError: 'cp950' codec can't encode 這個錯誤訊息，就算在程式中調整了編碼，顯示出來的也還是亂碼...",
     "tags": [
       {
+        "inline": true,
         "label": "Windows",
         "permalink": "/blog/tags/windows"
       },
       {
+        "inline": true,
         "label": "VSCode",
         "permalink": "/blog/tags/vs-code"
       },
       {
+        "inline": true,
         "label": "Python",
         "permalink": "/blog/tags/python"
       }
@@ -89,14 +100,17 @@
     "description": "Windows Subsystem for Linux (WSL) 下的 Ubuntu 原本就有內建 SSH 服務，但是預設是關閉的，所以無法從外部連進去。 這篇文章就來分享怎麼設定 SSH 服務，讓它支援從外部透過 SSH 遠端連線進去操作。",
     "tags": [
       {
+        "inline": true,
         "label": "Windows",
         "permalink": "/blog/tags/windows"
       },
       {
+        "inline": true,
         "label": "小技巧",
         "permalink": "/blog/tags/小技巧"
       },
       {
+        "inline": true,
         "label": "WSL2",
         "permalink": "/blog/tags/wsl-2"
       }
