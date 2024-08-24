@@ -47,7 +47,7 @@ keywords:
 
 2. 把資料夾裡面的 `Skype-Setup.exe` 更名為 `Skype-Setup.exe.bak`。
 
-3. 建立一個新的資料夾，取名為 `Skype-Setup.exe.bak`。
+3. 建立一個新的資料夾，取名為 `Skype-Setup.exe`。
 
 重新啟動 Skype 之後，應該會發現更新的功能壞掉了，就算手動按下重試也是會繼續失敗的。
 
