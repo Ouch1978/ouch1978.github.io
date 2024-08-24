@@ -1,5 +1,20 @@
 [
   {
+    "title": "在文件庫和部落格的文章下方加上 giscus 留言區",
+    "permalink": "/docs/docusaurus/customization/add-giscus-to-docusaurus/",
+    "description": "介紹在 Docusaurus 的文章中加入 giscus 留言區的方法。",
+    "tags": [
+      {
+        "inline": true,
+        "label": "Docusaurus",
+        "permalink": "/docs/tags/docusaurus"
+      }
+    ],
+    "date": 1724428800000,
+    "yearMonth": "2024 年 08 月",
+    "day": "24"
+  },
+  {
     "title": "從 GitHub 公開 Repository 中引用範例程式碼的方法",
     "permalink": "/docs/docusaurus/customization/add-github-codeblock/",
     "description": "介紹如何在 Docusaurus 中引用 GitHub 公開 Repository 裡的範例程式碼。",
@@ -12,21 +27,6 @@
     ],
     "date": 1713024000000,
     "yearMonth": "2024 年 04 月",
-    "day": "14"
-  },
-  {
-    "title": "在文件庫和部落格的文章下方加上 giscus 留言區",
-    "permalink": "/docs/docusaurus/customization/add-giscus-to-docusaurus/",
-    "description": "介紹在 Docusaurus 的文章中加入 giscus 留言區的方法。",
-    "tags": [
-      {
-        "inline": true,
-        "label": "Docusaurus",
-        "permalink": "/docs/tags/docusaurus"
-      }
-    ],
-    "date": 1702483200000,
-    "yearMonth": "2023 年 12 月",
     "day": "14"
   },
   {
