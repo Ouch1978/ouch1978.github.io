@@ -9,6 +9,7 @@ const unified = require("unified");
 const remarkParse = require("remark-parse");
 const stringify = require("rehype-stringify");
 const remark2rehype = require("remark-rehype");
+const pangu = require("pangu");
 
 import { rehypeExtendedTable } from 'rehype-extended-table';
 
@@ -217,14 +218,7 @@ module.exports = {
       href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap",
     },
   ],
-  scripts: [{
-      src: "https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js",
-      async: true,
-    },
-    {
-      src: "/assets/enablePangu.js",
-      async: true,
-    },
+  scripts: [
     {
       src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120664310721472",
       async: true,
