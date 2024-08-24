@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",(()=>{pangu.spacingElementByTagName("article"),pangu.spacingElementByTagName("nav"),pangu.spacingElementByClassName("table-of-contents")}));
+document.addEventListener("DOMContentLoaded",(()=>{}));
