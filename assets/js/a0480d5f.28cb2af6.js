@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[6253],{26206:a=>{a.exports=JSON.parse('{"label":"WPF","permalink":"/blog/tags/wpf","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

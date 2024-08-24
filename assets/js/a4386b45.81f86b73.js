@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[6244],{45329:a=>{a.exports=JSON.parse('{"label":"XAML","permalink":"/blog/tags/xaml","allTagsPath":"/blog/tags","count":3,"unlisted":false}')}}]);

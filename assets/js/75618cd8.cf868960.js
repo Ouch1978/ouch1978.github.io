@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[1219],{34312:t=>{t.exports=JSON.parse('{"permalink":"/blog/tags/appium","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

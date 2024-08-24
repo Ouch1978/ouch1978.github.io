@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[4741],{61067:a=>{a.exports=JSON.parse('{"label":"C#","permalink":"/blog/tags/c","allTagsPath":"/blog/tags","count":8,"unlisted":false}')}}]);

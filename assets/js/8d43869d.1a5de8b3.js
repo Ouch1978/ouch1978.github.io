@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[8857],{29848:a=>{a.exports=JSON.parse('{"label":"MSDTC","permalink":"/blog/tags/msdtc","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

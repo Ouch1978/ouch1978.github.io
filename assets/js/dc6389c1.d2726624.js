@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkouch1978_at_github=self.webpackChunkouch1978_at_github||[]).push([[9440],{70934:t=>{t.exports=JSON.parse('{"label":"PowerPoint","permalink":"/blog/tags/power-point","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);
