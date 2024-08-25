@@ -9,12 +9,12 @@ keywords:
   - K8s
   - Kubernetes
 last_update:
-  date: 2022/08/25 GMT+8
+  date: 2024/08/25 GMT+8
   author: Ouch Liu
 ---
 
 import Drawio from '@theme/Drawio'
-import k8sGraph from '!!raw-loader!./k8s-architecture.drawio';
+import k8sGraph from '!!raw-loader!../k8s-for-dummies.drawio';
 
 ## 前言
 

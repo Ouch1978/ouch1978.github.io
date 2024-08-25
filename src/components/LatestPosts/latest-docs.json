@@ -1,5 +1,25 @@
 [
   {
+    "title": "K8s 基本架構",
+    "permalink": "/docs/containerization/k8s-for-dummies/k8s-architecture/",
+    "description": "簡單介紹 K8s 基本架構與各元件職責。",
+    "tags": [
+      {
+        "inline": true,
+        "label": "Container",
+        "permalink": "/docs/tags/container"
+      },
+      {
+        "inline": true,
+        "label": "K8s",
+        "permalink": "/docs/tags/k-8-s"
+      }
+    ],
+    "date": 1724515200000,
+    "yearMonth": "2024 年 08 月",
+    "day": "25"
+  },
+  {
     "title": "在文件庫和部落格的文章下方加上 giscus 留言區",
     "permalink": "/docs/docusaurus/customization/add-giscus-to-docusaurus/",
     "description": "介紹在 Docusaurus 的文章中加入 giscus 留言區的方法。",
@@ -68,30 +88,5 @@
     "date": 1673971200000,
     "yearMonth": "2023 年 01 月",
     "day": "18"
-  },
-  {
-    "title": "敏捷迭代小遊戲 - 傳球遊戲(丁字褲版)",
-    "permalink": "/docs/agile/activities-and-games/ball-game/",
-    "description": "傳球遊戲應該是敏捷小遊戲裡面數一數二經典的遊戲之一。 這邊就來分享一個我自己~~亂~~修改之後的版本，比較適合已經合作一段時間，彼此都已經互相熟悉的團隊。 這個版本只使用一顆球，跳過自我介紹的步驟，直接體會迭代的威力。",
-    "tags": [
-      {
-        "inline": true,
-        "label": "Agile",
-        "permalink": "/docs/tags/agile"
-      },
-      {
-        "inline": true,
-        "label": "小遊戲",
-        "permalink": "/docs/tags/小遊戲"
-      },
-      {
-        "inline": true,
-        "label": "小活動",
-        "permalink": "/docs/tags/小活動"
-      }
-    ],
-    "date": 1673798400000,
-    "yearMonth": "2023 年 01 月",
-    "day": "16"
   }
 ]
