@@ -8091,6 +8091,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"docusaurus-plugin-drawio@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "docusaurus-plugin-drawio@npm:0.4.0"
+  dependencies:
+    raw-loader: "npm:^4.0.2"
+  checksum: 10c0/20e17510183270bd70e5ad88016c15b881b6e7b82ede43f202cb97220d1e8853307884a469558b14ad7e3d1369a19eabc9c5d975796ca43e97a86e9bcc0f6075
+  languageName: node
+  linkType: hard
+
 "docusaurus-plugin-image-zoom@npm:^1.0.1":
   version: 1.0.1
   resolution: "docusaurus-plugin-image-zoom@npm:1.0.1"
@@ -13556,6 +13565,7 @@ __metadata:
     cheerio-select: "npm:^1.4.0"
     clsx: "npm:^1.1.1"
     dayjs: "npm:^1.10.7"
+    docusaurus-plugin-drawio: "npm:^0.4.0"
     docusaurus-plugin-image-zoom: "npm:^1.0.1"
     docusaurus-theme-github-codeblock: "npm:^2.0.2"
     docusaurus2-dotenv: "npm:^1.4.0"
@@ -14818,6 +14828,18 @@ __metadata:
     iconv-lite: "npm:0.4.24"
     unpipe: "npm:1.0.0"
   checksum: 10c0/5dad5a3a64a023b894ad7ab4e5c7c1ce34d3497fc7138d02f8c88a3781e68d8a55aa7d4fd3a458616fa8647cc228be314a1c03fb430a07521de78b32c4dd09d2
+  languageName: node
+  linkType: hard
+
+"raw-loader@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "raw-loader@npm:4.0.2"
+  dependencies:
+    loader-utils: "npm:^2.0.0"
+    schema-utils: "npm:^3.0.0"
+  peerDependencies:
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 10c0/981ebe65e1cee7230300d21ba6dcd8bd23ea81ef4ad2b167c0f62d93deba347f27921d330be848634baab3831cf9f38900af6082d6416c2e937fe612fa6a74ff
   languageName: node
   linkType: hard
 
