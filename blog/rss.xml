@@ -37,7 +37,7 @@
 <p>把資料夾裡面的 <code>Skype-Setup.exe</code> 更名為 <code>Skype-Setup.exe.bak</code>。</p>
 </li>
 <li>
-<p>建立一個新的資料夾，取名為 <code>Skype-Setup.exe.bak</code>。</p>
+<p>建立一個新的資料夾，取名為 <code>Skype-Setup.exe</code>。</p>
 </li>
 </ol>
 <p>重新啟動 Skype 之後，應該會發現更新的功能壞掉了，就算手動按下重試也是會繼續失敗的。</p>
