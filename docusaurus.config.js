@@ -75,7 +75,10 @@ module.exports = {
     ],
     ['drawio', {}],
   ],
-  themes: ['docusaurus-theme-github-codeblock'],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['docusaurus-theme-github-codeblock', '@docusaurus/theme-mermaid'],
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
