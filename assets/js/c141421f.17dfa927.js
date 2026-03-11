@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkouch1978_at_github=globalThis.webpackChunkouch1978_at_github||[]).push([[957],{40936(a){a.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkouch1978_at_github=globalThis.webpackChunkouch1978_at_github||[]).push([[8644],{98644(h,c,e){e.d(c,{createArchitectureServices:()=>t.S});var t=e(85877);e(6902)}}]);
