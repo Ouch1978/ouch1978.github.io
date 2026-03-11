@@ -20,8 +20,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-      - name: Build slides
-        run: yarn reveal        
       - name: Build website
         run: yarn build
 

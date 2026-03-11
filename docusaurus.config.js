@@ -67,6 +67,7 @@ module.exports = {
     locales: ['zh-TW'],
   },
   plugins: [
+    path.join(__dirname, "plugins", "serve-static-sites"),
     require.resolve("docusaurus-plugin-image-zoom"),
     ["docusaurus2-dotenv",
       {
@@ -140,10 +141,19 @@ module.exports = {
           position: "left",
         },
         {
-          to: "pathname:///slides",
+          href: "/slides/",
           label: "投影片",
           position: "right",
-        }
+          target: "_blank",
+          rel: "noopener noreferrer",
+        },
+        {
+          href: "/fortune-slip/",
+          label: "心有千籤解",
+          position: "right",
+          target: "_blank",
+          rel: "noopener noreferrer",
+        },
       ],
     },
     footer: {
