@@ -1,5 +1,6 @@
 position: 9 # float position is supported
 label: '疑難排解'
+key: docusaurus-trouble-shooting
 collapsible: true # make the category collapsible
 collapsed: false # keep the category open by default
 className: red

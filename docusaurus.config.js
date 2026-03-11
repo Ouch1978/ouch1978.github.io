@@ -57,7 +57,6 @@ module.exports = {
   url: "https://ouch1978.github.io", //process.env.URL,
   baseUrl: "/", //process.env.BASE_URL,
   onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   trailingSlash: false,
   organizationName: "Ouch1978", // Usually your GitHub org/user name.
@@ -78,6 +77,9 @@ module.exports = {
   ],
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
   },
   themes: ['docusaurus-theme-github-codeblock', '@docusaurus/theme-mermaid'],
   themeConfig: {
