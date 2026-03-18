@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /fortune-slip/
+
+Sitemap: https://ouch1978.github.io/fortune-slip/sitemap.xml

@@ -2,33 +2,118 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/fortune-slip/pwa-512x512.svg" />
-    <link rel="apple-touch-icon" href="/fortune-slip/pwa-512x512.svg" />
+    <!-- ?v=5d027878 busts cache when icon file changes (injected in dev by Vite, in build by inject-seo) -->
+    <link rel="icon" type="image/png" href="pwa-512x512.png?v=5d027878" />
+    <link rel="apple-touch-icon" href="pwa-512x512.png?v=5d027878" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#8B0000" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="心有千籤解" />
-    <meta name="description" content="線上擲筊求籤應用程式" />
+    <meta name="description" content="免費免安裝，加主畫面即用：線上擲筊、抽籤、籤詩解讀，支援 AI 解籤。僅 AI 解籤需連網，省流量。可分享結果或帶出 prompt 用自家 AI 解籤。" />
+    <meta name="keywords" content="線上抽籤,擲筊,籤詩,解籤,AI 解籤,求籤,觀音靈籤,媽祖籤,免安裝,加主畫面,省流量,PWA" />
     <meta name="format-detection" content="telephone=no" />
+    <!-- Canonical (injected at build; see scripts/inject-seo.mjs) -->
+    <link rel="canonical" href="https://ouch1978.github.io/fortune-slip/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="心有千籤解" />
+    <meta property="og:description" content="免費免安裝，加主畫面即用：線上擲筊、抽籤、籤詩解讀，支援 AI 解籤。僅 AI 解籤需連網，省流量。可分享結果或帶出 prompt 用自家 AI 解籤。" />
+    <meta property="og:url" content="https://ouch1978.github.io/fortune-slip/" />
+    <meta property="og:image" content="https://ouch1978.github.io/fortune-slip/pwa-512x512.png" />
+    <meta property="og:locale" content="zh_TW" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="心有千籤解" />
+    <meta name="twitter:description" content="免費免安裝，加主畫面即用：線上擲筊、抽籤、籤詩解讀，支援 AI 解籤。僅 AI 解籤需連網，省流量。可分享結果或帶出 prompt 用自家 AI 解籤。" />
+    <meta name="twitter:image" content="https://ouch1978.github.io/fortune-slip/pwa-512x512.png" />
     
     <!-- Base font: Noto Serif TC -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <!-- Preconnect to external resources -->
+    <!-- Preconnect to external resources (WASM 由 sql.js 非同步載入，不 preload 以免 console 報未於數秒內使用) -->
     <link rel="preconnect" href="https://sql.js.org" crossorigin />
     
-    <!-- Preload critical WASM file -->
-    <link rel="preload" href="https://sql.js.org/dist/sql-wasm.wasm" as="fetch" type="application/wasm" crossorigin />
-    
-    <title>心有千籤解</title>
-    <script type="module" crossorigin src="/fortune-slip/assets/index-NA8jUJlp.js"></script>
+    <title>心有千籤解｜線上擲筊抽籤、籤詩 AI 解籤，免安裝隨時求籤</title>
+    <!-- BL-SEO-02: 結構化資料（build 時 https://ouch1978.github.io/fortune-slip/ 由 inject-seo.mjs 替換） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "心有千籤解",
+          "description": "免費免安裝，加主畫面即用：線上擲筊、抽籤、籤詩解讀，支援 AI 解籤。擲筊與抽籤可離線使用，僅 AI 解籤需連網，省流量。可分享結果或帶出 prompt 用自家 AI 解籤。",
+          "url": "https://ouch1978.github.io/fortune-slip/",
+          "applicationCategory": "LifestyleApplication"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "什麼是心有千籤解？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "心有千籤解是一款免費、免安裝的線上求籤應用，提供擲筊、抽籤、籤詩展示與 AI 解籤，可加主畫面、隨時在手機或電腦上求籤並分享結果；額度用盡時可帶出解籤 prompt 用自家 AI（如 ChatGPT、Gemini）解籤。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "如何線上求籤？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "依序操作：選擇籤本（如觀音靈籤）→ 稟告（姓名、生辰、住址、求籤原因）→ 擲筊取得聖筊 → 抽籤 → 查看籤詩與解說；可選擇使用 AI 解籤取得個人化解讀。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "支援 AI 解籤嗎？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "支援。抽籤後可一鍵取得 AI 解籤；若當日額度用盡，系統會提供解籤 prompt 並引導至 Gemini、ChatGPT、Grok 等，以使用者自己的帳號完成解籤。解讀結果僅供參考與文化體驗。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "安裝到主畫面後，一定要有網路才能用嗎？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不一定要。加主畫面後，求籤與看籤詩在已載入的情況下可不耗網路；只有使用「AI 解籤」時需要連網。建議首次使用時連網載入，之後即可省流量使用。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "心有千籤解哪些功能需要網路？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "只有 AI 解籤需要網路（呼叫 AI 解讀籤詩）。選籤本、稟告、擲筊、抽籤、看籤詩內容都可離線使用（已載入過即可）。"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "如何線上求籤",
+          "description": "在心有千籤解中完成擲筊、抽籤與籤詩解讀的步驟。",
+          "step": [
+            { "@type": "HowToStep", "name": "選擇籤本", "text": "在首頁選擇欲使用的籤本（例如觀音靈籤、媽祖籤等）。" },
+            { "@type": "HowToStep", "name": "稟告", "text": "填寫或確認姓名、生辰、住址及求籤原因，向神明稟告。" },
+            { "@type": "HowToStep", "name": "擲筊", "text": "擲筊直至取得聖筊（一正一反），表示神明允諾賜籤。" },
+            { "@type": "HowToStep", "name": "抽籤", "text": "依介面指引抽籤，取得籤詩與籤號。" },
+            { "@type": "HowToStep", "name": "看籤詩與解籤", "text": "查看籤詩內容與解說；可選擇使用 AI 解籤取得個人化解讀。" }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script type="module" crossorigin src="/fortune-slip/assets/index-BUdQlE-T.js"></script>
     <link rel="modulepreload" crossorigin href="/fortune-slip/assets/vendor-motion-CyOzohJ1.js">
     <link rel="modulepreload" crossorigin href="/fortune-slip/assets/vendor-react-Dt30rxNw.js">
-    <link rel="modulepreload" crossorigin href="/fortune-slip/assets/vendor-gsap-DDlvirwQ.js">
-    <link rel="stylesheet" crossorigin href="/fortune-slip/assets/index-DgeFEJFo.css">
-  <link rel="manifest" href="/fortune-slip/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/fortune-slip/registerSW.js"></script></head>
+    <link rel="stylesheet" crossorigin href="/fortune-slip/assets/index-D2THNa0c.css">
+  <link rel="manifest" href="/fortune-slip/manifest.webmanifest"></head>
   <body>
     <div id="root"></div>
   </body>
