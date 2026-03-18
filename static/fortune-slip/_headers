@@ -4,7 +4,7 @@
 # Allow DeviceMotion / DeviceOrientation (shake, tilt) on same origin
 /fortune-slip/
   Cache-Control: no-cache, no-store, must-revalidate
-  Permissions-Policy: accelerometer=(self), gyroscope=(self)
+  Permissions-Policy: accelerometer=(self), gyroscope=(self), magnetometer=(self)
 
 /fortune-slip/sw.js
   Cache-Control: no-cache, no-store, must-revalidate
@@ -14,4 +14,4 @@
 
 /fortune-slip/index.html
   Cache-Control: no-cache, no-store, must-revalidate
-  Permissions-Policy: accelerometer=(self), gyroscope=(self)
+  Permissions-Policy: accelerometer=(self), gyroscope=(self), magnetometer=(self)
