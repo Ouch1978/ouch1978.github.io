@@ -1,0 +1,14 @@
+# Cache-Control for PWA update reliability (Cloudflare Pages)
+# See docs/PWA_快取更新問題_根因與解決方案_SA.md
+
+/fortune-slip/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/fortune-slip/registerSW.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/fortune-slip/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/fortune-slip/
+  Cache-Control: no-cache, no-store, must-revalidate
