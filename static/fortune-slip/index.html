@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="心有千籤解" />
-    <meta name="description" content="免費免安裝，加主畫面即用：線上擲筊、抽籤、籤詩解讀，支援 AI 解籤。僅 AI 解籤需連網，省流量。可分享結果或帶出 prompt 用自家 AI 解籤。" />
+    <meta name="description" content="免費線上求籤與 AI 解籤：免安裝即可擲筊、抽籤、看籤詩。目前籤本含觀音一百籤、澎湖天后宮靈籤、雷雨師一百籤、金錢卦三十二籤；感情或事業等主題可搭配 AI 解讀。僅 AI 解籤需連網。" />
     <meta name="keywords" content="線上抽籤,擲筊,籤詩,解籤,AI 解籤,求籤,觀音靈籤,媽祖籤,免安裝,加主畫面,省流量,PWA" />
     <meta name="format-detection" content="telephone=no" />
     <!-- Canonical (injected at build; see scripts/inject-seo.mjs) -->
@@ -19,14 +19,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="心有千籤解" />
-    <meta property="og:description" content="免費免安裝，加主畫面即用：線上擲筊、抽籤、籤詩解讀，支援 AI 解籤。僅 AI 解籤需連網，省流量。可分享結果或帶出 prompt 用自家 AI 解籤。" />
+    <meta property="og:description" content="免費線上求籤與 AI 解籤：免安裝即可擲筊、抽籤、看籤詩。目前籤本含觀音一百籤、澎湖天后宮靈籤、雷雨師一百籤、金錢卦三十二籤；感情或事業等主題可搭配 AI 解讀。僅 AI 解籤需連網。" />
     <meta property="og:url" content="https://ouch1978.github.io/fortune-slip/" />
     <meta property="og:image" content="https://ouch1978.github.io/fortune-slip/pwa-512x512.png" />
     <meta property="og:locale" content="zh_TW" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="心有千籤解" />
-    <meta name="twitter:description" content="免費免安裝，加主畫面即用：線上擲筊、抽籤、籤詩解讀，支援 AI 解籤。僅 AI 解籤需連網，省流量。可分享結果或帶出 prompt 用自家 AI 解籤。" />
+    <meta name="twitter:description" content="免費線上求籤與 AI 解籤：免安裝即可擲筊、抽籤、看籤詩。目前籤本含觀音一百籤、澎湖天后宮靈籤、雷雨師一百籤、金錢卦三十二籤；感情或事業等主題可搭配 AI 解讀。僅 AI 解籤需連網。" />
     <meta name="twitter:image" content="https://ouch1978.github.io/fortune-slip/pwa-512x512.png" />
     
     <!-- Base font: Noto Serif TC -->
@@ -36,7 +36,7 @@
     <!-- Preconnect to external resources (WASM 由 sql.js 非同步載入，不 preload 以免 console 報未於數秒內使用) -->
     <link rel="preconnect" href="https://sql.js.org" crossorigin />
     
-    <title>心有千籤解｜線上擲筊抽籤、籤詩 AI 解籤，免安裝隨時求籤</title>
+    <title>心有千籤解｜免費線上求籤、擲筊抽籤與 AI 解籤</title>
     <!-- BL-SEO-02: 結構化資料（build 時 https://ouch1978.github.io/fortune-slip/ 由 inject-seo.mjs 替換） -->
     <script type="application/ld+json">
     {
@@ -65,7 +65,7 @@
               "name": "如何線上求籤？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "依序操作：選擇籤本（如觀音靈籤）→ 稟告（姓名、生辰、住址、求籤原因）→ 擲筊取得聖筊 → 抽籤 → 查看籤詩與解說；可選擇使用 AI 解籤取得個人化解讀。"
+                "text": "依序操作：選擇籤本（如觀音一百籤、澎湖天后宮靈籤等）→ 稟告（姓名、生辰、住址、求籤原因）→ 擲筊取得聖筊 → 抽籤 → 查看籤詩與解說；可選擇使用 AI 解籤取得個人化解讀。"
               }
             },
             {
@@ -99,7 +99,7 @@
           "name": "如何線上求籤",
           "description": "在心有千籤解中完成擲筊、抽籤與籤詩解讀的步驟。",
           "step": [
-            { "@type": "HowToStep", "name": "選擇籤本", "text": "在首頁選擇欲使用的籤本（例如觀音靈籤、媽祖籤等）。" },
+            { "@type": "HowToStep", "name": "選擇籤本", "text": "在首頁選擇欲使用的籤本（例如觀音一百籤、澎湖天后宮靈籤、雷雨師一百籤、金錢卦三十二籤）。" },
             { "@type": "HowToStep", "name": "稟告", "text": "填寫或確認姓名、生辰、住址及求籤原因，向神明稟告。" },
             { "@type": "HowToStep", "name": "擲筊", "text": "擲筊直至取得聖筊（一正一反），表示神明允諾賜籤。" },
             { "@type": "HowToStep", "name": "抽籤", "text": "依介面指引抽籤，取得籤詩與籤號。" },
@@ -109,12 +109,12 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/fortune-slip/assets/index-slMHw74D.js"></script>
+    <script type="module" crossorigin src="/fortune-slip/assets/index-C_hqnobi.js"></script>
     <link rel="modulepreload" crossorigin href="/fortune-slip/assets/vendor-motion-CyOzohJ1.js">
     <link rel="modulepreload" crossorigin href="/fortune-slip/assets/vendor-react-Dt30rxNw.js">
-    <link rel="stylesheet" crossorigin href="/fortune-slip/assets/index-C-Y6Zzyu.css">
+    <link rel="stylesheet" crossorigin href="/fortune-slip/assets/index-DIHgj1SV.css">
   <link rel="manifest" href="/fortune-slip/manifest.webmanifest"></head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>

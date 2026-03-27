@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ouch1978.github.io/fortune-slip/about.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ouch1978.github.io/fortune-slip/ai-fortune-slip-faq.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ouch1978.github.io/fortune-slip/guangong-ai-fortune-slip.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ouch1978.github.io/fortune-slip/how-to-pray-online.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ouch1978.github.io/fortune-slip/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ouch1978.github.io/fortune-slip/about.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://ouch1978.github.io/fortune-slip/mazu-ai-fortune-slip.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ouch1978.github.io/fortune-slip/online-ai-fortune-slip.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ouch1978.github.io/fortune-slip/yuelao-ai-fortune-slip.html</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

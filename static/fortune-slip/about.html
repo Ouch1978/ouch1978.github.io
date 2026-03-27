@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="心有千籤解使用說明：如何線上求籤、擲筊抽籤步驟、AI 解籤與常見問題。" />
+    <meta name="description" content="心有千籤解怎麼用：手機或電腦免費求籤、擲筊抽籤、白話解籤，以及常見問題與服務說明。" />
     <link rel="canonical" href="https://ouch1978.github.io/fortune-slip/about.html" />
     <link rel="icon" type="image/png" href="https://ouch1978.github.io/fortune-slip/pwa-512x512.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -12,48 +12,146 @@
     <style>
       :root { --color-primary: #8B0000; --color-text: #2D2D2D; --color-bg: #FFF8E7; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: "Noto Serif TC", serif; background: var(--color-bg); color: var(--color-text); line-height: 1.6; padding: 1.5rem 1rem 2rem; max-width: 48rem; margin: 0 auto; font-size: 0.95rem; }
+      body { font-family: "Noto Serif TC", serif; background: var(--color-bg); color: var(--color-text); line-height: 1.65; padding: 1.5rem 1rem 2rem; max-width: 48rem; margin: 0 auto; font-size: 0.95rem; }
       a { color: var(--color-primary); }
       .back { display: inline-block; margin-bottom: 1.5rem; font-weight: 600; }
       h1 { font-size: 1.35rem; color: var(--color-primary); margin-bottom: 0.75rem; }
-      h2 { font-size: 1.1rem; color: var(--color-primary); margin-top: 1.25rem; margin-bottom: 0.5rem; }
+      h2 { font-size: 1.1rem; color: var(--color-primary); margin-top: 1.35rem; margin-bottom: 0.5rem; }
       h3 { font-size: 1rem; margin-top: 1rem; margin-bottom: 0.4rem; }
-      p, dl, ol { margin-bottom: 0.5rem; }
+      p, dl, ol { margin-bottom: 0.6rem; }
       dl, ol { margin-left: 0.5rem; }
-      dt { font-weight: 600; margin-top: 0.5rem; }
-      dd { margin-left: 1rem; margin-bottom: 0.25rem; }
-      li { margin-bottom: 0.35rem; }
+      dt { font-weight: 600; margin-top: 0.65rem; }
+      dd { margin-left: 0; margin-bottom: 0.5rem; }
+      dd ul { margin-top: 0.35rem; margin-bottom: 0.35rem; padding-left: 1.35rem; }
+      ul { margin-bottom: 0.6rem; padding-left: 1.35rem; }
+      li { margin-bottom: 0.4rem; }
+      ol li { margin-bottom: 0.45rem; }
     </style>
   </head>
   <body>
-    <a href="https://ouch1978.github.io/fortune-slip/" class="back">← 返回心有千籤解</a>
+    <a href="./" class="back">← 返回心有千籤解</a>
     <h1>使用說明</h1>
-    <p>心有千籤解是免費、免安裝的線上求籤應用，提供擲筊、抽籤、籤詩展示與 AI 解籤，可加主畫面、隨時求籤並分享結果；額度用盡時可帶出解籤 prompt 用自家 AI 解籤。</p>
-    <h2>PWA 與網路使用</h2>
-    <p>加主畫面後，擲筊與抽籤流程可離線使用；僅 AI 解籤需連網。首次從主畫面開啟時若未連網可能無法載入，建議首次使用時連網載入，之後即可省流量使用。免下載 App，瀏覽器加主畫面即用，不佔手機空間。</p>
+    <p>心有千籤解是<strong>免費</strong>的線上求籤，用手機或電腦的<strong>瀏覽器</strong>打開就能用，不必去 App 商店下載。</p>
+    <ul>
+      <li>擲筊、抽籤、看籤詩</li>
+      <li>需要時可請系統用白話說明籤意（我們稱為「AI 解籤」）</li>
+      <li>可把結果分享給親友</li>
+      <li>想方便一點，可把捷徑<strong>加到手機主畫面</strong>，之後點圖示就能開</li>
+    </ul>
+
+    <h2>手機怎麼用、要不要網路</h2>
+    <p><strong>要不要先下載 App？</strong></p>
+    <ul>
+      <li>不用。用 Chrome、Safari 等瀏覽器開網址即可。</li>
+      <li>若想跟一般 App 一樣從桌面開：在瀏覽器選單找「加入主畫面」或「加入螢幕」（各手機用詞略不同）。</li>
+      <li>這樣<strong>不必經過</strong> App Store、Google Play 安裝，也不會占掉像大型遊戲那麼多空間；手機仍會存一點資料，讓下次開比較快。</li>
+    </ul>
+    <p><strong>網路要一直開著嗎？</strong></p>
+    <ul>
+      <li><strong>第一次</strong>請先連上 Wi‑Fi 或手機上網，把頁面開出來一次。</li>
+      <li>之後求籤、看籤詩，多半<strong>不必一直開著網路</strong>也能操作。</li>
+      <li>只有按<strong>「AI 解籤」</strong>時，一定要連上網路。</li>
+      <li>若從主畫面捷徑開、但從來沒連過網，有時會打不開，請先連網再試一次。</li>
+    </ul>
+
     <h2>常見問題</h2>
     <dl>
       <dt>什麼是心有千籤解？</dt>
-      <dd>免費免安裝的線上求籤應用，提供擲筊、抽籤、籤詩與 AI 解籤，可加主畫面、分享結果或帶出 prompt 用自家 AI（如 ChatGPT、Gemini）解籤。</dd>
-      <dt>如何線上求籤？</dt>
-      <dd>選擇籤本 → 稟告（姓名、生辰、住址、求籤原因）→ 擲筊取得聖筊 → 抽籤 → 查看籤詩與解說；可選用 AI 解籤。</dd>
-      <dt>支援 AI 解籤嗎？</dt>
-      <dd>支援。抽籤後可一鍵 AI 解籤；額度用盡時會提供解籤 prompt 並引導至 Gemini、ChatGPT、Grok 等，以自己帳號解籤。解讀僅供參考與文化體驗。</dd>
-      <dt>安裝到主畫面後，一定要有網路才能用嗎？</dt>
-      <dd>不一定要。加主畫面後，求籤與看籤詩在已載入的情況下可不耗網路；只有使用「AI 解籤」時需要連網。建議首次使用時連網載入，之後即可省流量使用。</dd>
-      <dt>心有千籤解哪些功能需要網路？</dt>
-      <dd>只有 AI 解籤需要網路（呼叫 AI 解讀籤詩）。選籤本、稟告、擲筊、抽籤、看籤詩內容都可離線使用（已載入過即可）。</dd>
+      <dd>
+        <ul>
+          <li>免費的線上求籤，有擲筊、抽籤、籤詩說明。</li>
+          <li>可加到手機主畫面，或分享結果給別人。</li>
+          <li>若內建 AI 解籤額度已滿，畫面上會引導您把解籤內容複製到 ChatGPT、Gemini 等，用您自己的帳號繼續問。</li>
+        </ul>
+      </dd>
+      <dt>怎麼開始求籤？</dt>
+      <dd>
+        <ul>
+          <li>選籤本 → 填稟告（姓名、生辰、住址、想問的事）</li>
+          <li>擲筊到聖筊 → 抽籤 → 看籤詩</li>
+          <li>需要再按「AI 解籤」看白話說明</li>
+        </ul>
+      </dd>
+      <dt>有 AI 解籤嗎？</dt>
+      <dd>
+        <ul>
+          <li>有。抽籤後可按鍵請系統用白話解讀。</li>
+          <li>額度已滿時，請依畫面複製文字到 ChatGPT、Gemini、Grok 等網站，用您自己的帳號操作。</li>
+          <li>解讀僅供參考與文化體驗，請勿當成唯一依據。</li>
+        </ul>
+      </dd>
+      <dt>加到主畫面後，一定要上網才能用嗎？</dt>
+      <dd>
+        <ul>
+          <li>不一定。曾成功開過一次後，求籤、看籤詩通常不必一直開網路。</li>
+          <li>只有按「AI 解籤」時一定要連網。</li>
+          <li>第一次使用建議先連網，之後較省流量。</li>
+        </ul>
+      </dd>
+      <dt>哪些一定要連網路？</dt>
+      <dd>
+        <ul>
+          <li><strong>一定要連網：</strong>按「AI 解籤」時（需連到網路上的解讀服務）。</li>
+          <li><strong>多半可不必一直連網：</strong>選籤本、稟告、擲筊、抽籤、看籤詩（須曾連網成功載入過）。</li>
+        </ul>
+      </dd>
     </dl>
+
     <h2>贊助方式</h2>
-    <p>若您想贊助我們，請於求籤結果頁點擊「支持作者」，選擇 Ko-fi 等管道；款項由各平台處理，本應用不經手金流。若連結無法開啟，請改日再試或透過 GitHub 與我們聯繫。</p>
+    <p>若您願意支持我們，可以這樣做：</p>
+    <ul>
+      <li>在<strong>求籤結果頁</strong>點「支持作者」。</li>
+      <li>會連到外部網站（例如 Ko-fi），依該網站步驟完成即可。</li>
+      <li>我們<strong>不經手現金</strong>，款項由平台處理。</li>
+      <li>若連結打不開，請改天再試，或到本專案的公開頁面（例如 GitHub 程式專案頁）留言聯絡。</li>
+    </ul>
+
     <h2>如何線上求籤（步驟）</h2>
     <ol>
-      <li><strong>選擇籤本</strong>：在首頁選擇欲使用的籤本（如觀音靈籤、媽祖籤等）。</li>
+      <li><strong>選擇籤本</strong>：在首頁選籤本（如觀音一百籤、澎湖天后宮靈籤、雷雨師一百籤、金錢卦三十二籤）。</li>
       <li><strong>稟告</strong>：填寫或確認姓名、生辰、住址及求籤原因，向神明稟告。</li>
-      <li><strong>擲筊</strong>：擲筊直至取得聖筊（一正一反），表示神明允諾賜籤。</li>
-      <li><strong>抽籤</strong>：依介面指引抽籤，取得籤詩與籤號。</li>
-      <li><strong>看籤詩與解籤</strong>：查看籤詩內容與解說；可選擇使用 AI 解籤取得個人化解讀。</li>
+      <li><strong>擲筊</strong>：擲到聖筊（一正一反）表示可以抽籤。</li>
+      <li><strong>抽籤</strong>：依畫面上指示抽籤，取得籤詩與籤號。</li>
+      <li><strong>看籤詩與解籤</strong>：閱讀籤詩與說明；需要時再按「AI 解籤」。</li>
     </ol>
-    <p style="margin-top: 1.5rem;"><a href="https://ouch1978.github.io/fortune-slip/" class="back">← 返回心有千籤解</a></p>
+
+    <h2 id="terms-of-service">服務條款</h2>
+    <p><strong>最後更新：</strong>2025 年 3 月 27 日</p>
+    <h3>使用前先知道</h3>
+    <ul>
+      <li>這是文化與娛樂參考，不能代替廟裡儀式，也不代表任何廟方或宗教人士。</li>
+      <li>AI 解籤產出為 AI 生成、虛構、娛樂／文化體驗性質，與任何真人、廟方、宗教人士無關；為電腦自動產生，不一定適合您的狀況，請勿當成專業醫療、法律、投資建議。</li>
+      <li>解籤口吻（角色／語氣）僅為文風模擬，不代表任何第三人。</li>
+      <li>人生重大決定請您自己多方考量，不要只依籤詩或 AI 內容。</li>
+      <li>若不同意條款，請停止使用本服務。</li>
+    </ul>
+
+    <h3>一、服務說明</h3>
+    <p>心有千籤解（以下稱「本服務」）提供線上擲筊、抽籤、籤詩展示，以及可選之 AI 解籤等數位體驗。本服務旨在文化與娛樂參考，非宗教儀式之替代，亦非任何宗教場所或人士之代表。</p>
+    <h3>二、AI 生成內容</h3>
+    <p>AI 解籤等功能產出之文字，係由人工智慧模型依演算法自動生成，具有隨機性與不確定性。營運團隊不保證其正確性、完整性或適用於您的個別情境；該等內容不代表營運團隊之立場、意見或背書。</p>
+    <h3>三、非專業建議</h3>
+    <p>本服務非醫療、法律、心理諮商、投資理財或其他專業服務。籤詩、解說與 AI 產出僅供參考與娛樂，不應作為就醫、訴訟、投資、婚姻、職涯或其他重大決策之唯一或主要依據。</p>
+    <h3>四、免責與責任限制</h3>
+    <p>於相關法令允許之最大範圍內，使用者因使用或無法使用本服務、或信賴本服務內容所生之任何直接、間接、附隨、衍生或懲罰性損害，營運團隊不負賠償責任。若您不同意本條款，請停止使用本服務。</p>
+    <h3>五、使用者行為</h3>
+    <p>您同意不以本服務從事違法、侵害他人權益、干擾系統運作或濫用 AI 之行為。若因可歸責於您之行為致第三人或營運團隊受有損害，您應自行負責並賠償。</p>
+    <h3>六、智慧財產與內容</h3>
+    <p>本服務之介面、程式、文宣與編排受相關法律保護。籤詩等資料之權利歸屬依其來源與授權為準；使用者於合理範圍內分享畫面時，仍應遵守法令與第三方權利。</p>
+    <h3>七、條款變更</h3>
+    <p>營運團隊得視需要修訂本條款；重大變更時將於應用程式內或以其他合理方式提示。條款更新後若您繼續使用本服務，視為您已閱讀並同意更新後之內容。</p>
+    <h3>八、聯絡方式</h3>
+    <p>如有服務相關問題，請透過本專案公開之聯絡管道（例如 GitHub 或贊助／關於頁所載方式）與我們聯繫。</p>
+
+    <h2>延伸閱讀</h2>
+    <ul>
+      <li><a href="online-ai-fortune-slip.html">線上求籤與 AI 解籤完整指南</a></li>
+      <li><a href="how-to-pray-online.html">線上求籤怎麼問？5 個高命中提問技巧</a></li>
+      <li><a href="yuelao-ai-fortune-slip.html">感情／姻緣類：提問與 AI 解讀</a></li>
+      <li><a href="mazu-ai-fortune-slip.html">媽祖廟籤（澎湖天后宮靈籤）與 AI 解讀</a></li>
+      <li><a href="guangong-ai-fortune-slip.html">事業與決策類：提問與 AI 解讀</a></li>
+      <li><a href="ai-fortune-slip-faq.html">線上求籤與 AI 解籤常見問答</a></li>
+    </ul>
+    <p style="margin-top: 1.5rem;"><a href="./" class="back">← 返回心有千籤解</a></p>
   </body>
 </html>
