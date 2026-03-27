@@ -26,6 +26,27 @@
       ul { margin-bottom: 0.6rem; padding-left: 1.35rem; }
       li { margin-bottom: 0.4rem; }
       ol li { margin-bottom: 0.45rem; }
+      .diagram-caption { font-size: 0.9rem; color: #444; margin-bottom: 0.5rem; }
+      .mermaid-wrap {
+        margin: 0.75rem 0 1.35rem;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 14px;
+        border: 1px solid rgba(139, 0, 0, 0.18);
+        background: linear-gradient(165deg, #fffdf9 0%, #faf6ec 42%, #f3ead8 100%);
+        box-shadow:
+          0 4px 24px rgba(44, 28, 18, 0.07),
+          0 1px 2px rgba(139, 0, 0, 0.06),
+          inset 0 1px 0 rgba(255, 255, 255, 0.65);
+        padding: 1.1rem 0.85rem 1.2rem;
+      }
+      .mermaid-wrap .mermaid { margin: 0; }
+      .mermaid-wrap .mermaid svg {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
@@ -46,31 +67,85 @@
       <li>若想跟一般 App 一樣從桌面開：在瀏覽器選單找「加入主畫面」或「加入螢幕」（各手機用詞略不同）。</li>
       <li>這樣<strong>不必經過</strong> App Store、Google Play 安裝，也不會占掉像大型遊戲那麼多空間；手機仍會存一點資料，讓下次開比較快。</li>
     </ul>
-    <p><strong>網路要一直開著嗎？</strong></p>
+    <p><strong>網路要一直開著嗎？加到主畫面後呢？</strong></p>
     <ul>
       <li><strong>第一次</strong>請先連上 Wi‑Fi 或手機上網，把頁面開出來一次。</li>
-      <li>之後求籤、看籤詩，多半<strong>不必一直開著網路</strong>也能操作。</li>
-      <li>只有按<strong>「AI 解籤」</strong>時，一定要連上網路。</li>
-      <li>若從主畫面捷徑開、但從來沒連過網，有時會打不開，請先連網再試一次。</li>
+      <li>曾成功載入過後，求籤、看籤詩通常<strong>不必一直開著網路</strong>；只有按<strong>「AI 解籤」</strong>時一定要連網。</li>
+      <li>若從主畫面捷徑開、但從未連過網，有時會打不開，請先連網再試一次。</li>
     </ul>
+
+    <h2>擲筊與聖筊次數</h2>
+    <p>擲筊分兩個階段，各籤本在<strong>第二階段</strong>所需的連續聖筊數不同（以 App 畫面上的「聖筊數」為準）：</p>
+    <ul>
+      <li><strong>稟告後（請示能否求籤）</strong>：各籤本皆需擲出<strong>一次</strong>聖筊，神明允許後才可抽籤。</li>
+      <li><strong>抽籤後（確認這支籤）</strong>：<strong>雷雨師一百籤</strong>需連續<strong>一次</strong>聖筊即可查看籤詩；<strong>其他籤本</strong>（如觀音一百籤、澎湖天后宮靈籤、金錢卦三十二籤）需連續<strong>三次</strong>聖筊。若非聖筊，請依畫面指示重抽或重新稟告。</li>
+    </ul>
+
+    <h2 id="fortune-flow">求籤流程圖</h2>
+    <p class="diagram-caption">以下為 App 內主要流程（<strong>直向</strong>）。「聖筊達標」表示第二階段已擲滿該籤本所需聖筊（雷雨師 1 次、其他籤本 3 次），細節見上文「擲筊與聖筊次數」。圖中「非聖筊」不畫回「抽籤」節點，是為了讓 Mermaid 維持由上而下排版；實際操作仍依畫面重抽。</p>
+    <div class="mermaid-wrap" role="img" aria-label="求籤直向流程圖：① 請示與抽籤在上，② 確認與閱讀在下">
+<pre class="mermaid">
+flowchart TD
+  subgraph phase1["① 請示與抽籤"]
+    direction TB
+    pick([選擇籤本])
+    pray[稟告]
+    castAsk{{擲筊請示}}
+    draw[抽籤]
+    pick --> pray --> castAsk
+    castAsk -->|聖筊| draw
+    castAsk -.->|非聖筊| pray
+  end
+  subgraph phase2["② 確認與閱讀"]
+    direction TB
+    castConfirm{{擲筊確認籤號}}
+    view([查看籤詩與說明])
+    ai[/可選 · AI 解籤/]
+    retry[非聖筊：依畫面重抽籤]
+    castConfirm -->|聖筊達標| view
+    castConfirm -.->|非聖筊| retry
+    view --> ai
+  end
+  draw --> castConfirm
+  classDef nodeStart fill:#8B0000,color:#fffef8,stroke:#5c0000,stroke-width:2px
+  classDef nodeStep fill:#fffef6,color:#2D2D2D,stroke:#a03838,stroke-width:1.5px
+  classDef nodeGate fill:#fff8e7,color:#2D2D2D,stroke:#8B0000,stroke-width:2.5px
+  classDef nodeEnd fill:#6b1010,color:#fff8e7,stroke:#3d0808,stroke-width:2px
+  classDef nodeOpt fill:#f0ebe0,color:#3d3530,stroke:#9a7b5c,stroke-width:1.5px,stroke-dasharray: 6 4
+  classDef nodeRetry fill:#faf0e6,color:#5c4030,stroke:#b8860b,stroke-width:1.5px,stroke-dasharray: 4 3
+  class pick nodeStart
+  class pray,draw nodeStep
+  class castAsk,castConfirm nodeGate
+  class view nodeEnd
+  class ai nodeOpt
+  class retry nodeRetry
+  style phase1 fill:#faf6ee,stroke:#c9a77a,stroke-width:1.5px,color:#5c4030
+  style phase2 fill:#f5f0e6,stroke:#c9a77a,stroke-width:1.5px,color:#5c4030
+</pre>
+    </div>
+
+    <h2>如何線上求籤（步驟）</h2>
+    <ol>
+      <li><strong>選擇籤本</strong>：在首頁選籤本（如觀音一百籤、澎湖天后宮靈籤、雷雨師一百籤、金錢卦三十二籤）。</li>
+      <li><strong>稟告</strong>：填寫或確認姓名、生辰、住址及求籤原因，向神明稟告。</li>
+      <li><strong>擲筊請示</strong>：擲出聖筊表示神明允許求籤（此階段各籤本皆為一次聖筊）。</li>
+      <li><strong>抽籤</strong>：依畫面指示抽籤，取得籤號。</li>
+      <li><strong>擲筊確認籤號</strong>：依籤本擲滿所需聖筊次數後，才可查看籤詩（雷雨師一百籤為一次，其他籤本為三次；見「擲筊與聖筊次數」）。</li>
+      <li><strong>看籤詩與解籤</strong>：閱讀籤詩與說明；需要時再按「AI 解籤」。</li>
+    </ol>
 
     <h2>常見問題</h2>
     <dl>
       <dt>什麼是心有千籤解？</dt>
       <dd>
         <ul>
-          <li>免費的線上求籤，有擲筊、抽籤、籤詩說明。</li>
-          <li>可加到手機主畫面，或分享結果給別人。</li>
+          <li>功能與使用方式見本頁開頭與「如何線上求籤」；可加主畫面、分享結果。</li>
           <li>若內建 AI 解籤額度已滿，畫面上會引導您把解籤內容複製到 ChatGPT、Gemini 等，用您自己的帳號繼續問。</li>
         </ul>
       </dd>
       <dt>怎麼開始求籤？</dt>
       <dd>
-        <ul>
-          <li>選籤本 → 填稟告（姓名、生辰、住址、想問的事）</li>
-          <li>擲筊到聖筊 → 抽籤 → 看籤詩</li>
-          <li>需要再按「AI 解籤」看白話說明</li>
-        </ul>
+        <p>請依上文「如何線上求籤（步驟）」操作即可；聖筊次數與流程圖見「擲筊與聖筊次數」「求籤流程圖」。白話解讀請在結果頁使用「AI 解籤」（額度與連網說明見「有 AI 解籤嗎？」）。</p>
       </dd>
       <dt>有 AI 解籤嗎？</dt>
       <dd>
@@ -78,21 +153,6 @@
           <li>有。抽籤後可按鍵請系統用白話解讀。</li>
           <li>額度已滿時，請依畫面複製文字到 ChatGPT、Gemini、Grok 等網站，用您自己的帳號操作。</li>
           <li>解讀僅供參考與文化體驗，請勿當成唯一依據。</li>
-        </ul>
-      </dd>
-      <dt>加到主畫面後，一定要上網才能用嗎？</dt>
-      <dd>
-        <ul>
-          <li>不一定。曾成功開過一次後，求籤、看籤詩通常不必一直開網路。</li>
-          <li>只有按「AI 解籤」時一定要連網。</li>
-          <li>第一次使用建議先連網，之後較省流量。</li>
-        </ul>
-      </dd>
-      <dt>哪些一定要連網路？</dt>
-      <dd>
-        <ul>
-          <li><strong>一定要連網：</strong>按「AI 解籤」時（需連到網路上的解讀服務）。</li>
-          <li><strong>多半可不必一直連網：</strong>選籤本、稟告、擲筊、抽籤、看籤詩（須曾連網成功載入過）。</li>
         </ul>
       </dd>
     </dl>
@@ -105,15 +165,6 @@
       <li>我們<strong>不經手現金</strong>，款項由平台處理。</li>
       <li>若連結打不開，請改天再試，或到本專案的公開頁面（例如 GitHub 程式專案頁）留言聯絡。</li>
     </ul>
-
-    <h2>如何線上求籤（步驟）</h2>
-    <ol>
-      <li><strong>選擇籤本</strong>：在首頁選籤本（如觀音一百籤、澎湖天后宮靈籤、雷雨師一百籤、金錢卦三十二籤）。</li>
-      <li><strong>稟告</strong>：填寫或確認姓名、生辰、住址及求籤原因，向神明稟告。</li>
-      <li><strong>擲筊</strong>：擲到聖筊（一正一反）表示可以抽籤。</li>
-      <li><strong>抽籤</strong>：依畫面上指示抽籤，取得籤詩與籤號。</li>
-      <li><strong>看籤詩與解籤</strong>：閱讀籤詩與說明；需要時再按「AI 解籤」。</li>
-    </ol>
 
     <h2 id="terms-of-service">服務條款</h2>
     <p><strong>最後更新：</strong>2025 年 3 月 27 日</p>
@@ -153,5 +204,37 @@
       <li><a href="ai-fortune-slip-faq.html">線上求籤與 AI 解籤常見問答</a></li>
     </ul>
     <p style="margin-top: 1.5rem;"><a href="./" class="back">← 返回心有千籤解</a></p>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: "base",
+        securityLevel: "strict",
+        themeVariables: {
+          fontFamily: '"Noto Serif TC", "Noto Serif", serif',
+          fontSize: "15px",
+          primaryColor: "#fffef6",
+          primaryTextColor: "#2D2D2D",
+          primaryBorderColor: "#8B0000",
+          secondaryColor: "#f5edd8",
+          tertiaryColor: "#ebe0d0",
+          lineColor: "#7a3030",
+          edgeLabelBackground: "#fff8e7",
+          clusterBkg: "#faf6ee",
+          clusterBorder: "#c9a77a",
+          titleColor: "#6b1010",
+          darkMode: false,
+        },
+        flowchart: {
+          curve: "basis",
+          padding: 12,
+          useMaxWidth: true,
+          htmlLabels: true,
+          nodeSpacing: 36,
+          rankSpacing: 44,
+          diagramPadding: 8,
+        },
+      });
+    </script>
   </body>
 </html>
