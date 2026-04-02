@@ -1,0 +1,8 @@
+position: 1 # float position is supported
+label: 'Vibe Coding'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+className: red
+link:
+  type: generated-index
+  title: Vibe Coding

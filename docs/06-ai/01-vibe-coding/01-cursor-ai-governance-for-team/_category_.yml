@@ -1,0 +1,8 @@
+position: 1 # float position is supported
+label: 'Cursor AI 團隊治理'
+collapsible: true # make the category collapsible
+collapsed: true # start collapsed; expand when needed
+className: red
+link:
+  type: generated-index
+  title: Cursor AI 團隊治理

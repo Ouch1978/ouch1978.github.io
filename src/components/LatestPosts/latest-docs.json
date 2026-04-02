@@ -1,5 +1,25 @@
 [
   {
+    "title": "Agentic AI 加入後，我看到的隱憂與治理破口 - 以 Cursor AI 為例",
+    "permalink": "/docs/ai/vibe-coding/cursor-ai-governance-for-team/ai-agent-concerns-governance-gaps-cursor",
+    "description": "團隊導入 GitHub Copilot、Cursor AI 之後：產能提高與 Code Review、工程治理怎麼跟著變？本篇整理痛點、辦公室常見對話、試錯心得與無為/控管取捨；並說明為何要把 Agentic AI 納入與真人同一套可預期、可 Review、可版控的流程。",
+    "tags": [
+      {
+        "inline": true,
+        "label": "AI",
+        "permalink": "/docs/tags/ai"
+      },
+      {
+        "inline": true,
+        "label": "Cursor",
+        "permalink": "/docs/tags/cursor"
+      }
+    ],
+    "date": 1775059200000,
+    "yearMonth": "2026 年 04 月",
+    "day": "01"
+  },
+  {
     "title": "K8s 基本架構",
     "permalink": "/docs/containerization/k8s-for-dummies/k8s-architecture/",
     "description": "簡單介紹 K8s 基本架構與各元件職責。",
@@ -63,30 +83,5 @@
     "date": 1678204800000,
     "yearMonth": "2023 年 03 月",
     "day": "07"
-  },
-  {
-    "title": "敏捷迭代小遊戲 - 棉花糖挑戰",
-    "permalink": "/docs/agile/activities-and-games/the-marshmallow-challenge/",
-    "description": "棉花糖挑戰是我第一次帶給團隊的敏捷小遊戲。 當時主要是為了讓團隊體驗不同的 Retrospective 進行方式。 對團隊來說，算是一種很新鮮的體驗，對我來說也是一種很新鮮的嘗試，而且效果也很不錯。 團隊成員在活動後的 Retrospective 環節更願意發表意見了。",
-    "tags": [
-      {
-        "inline": true,
-        "label": "Agile",
-        "permalink": "/docs/tags/agile"
-      },
-      {
-        "inline": true,
-        "label": "小遊戲",
-        "permalink": "/docs/tags/小遊戲"
-      },
-      {
-        "inline": true,
-        "label": "小活動",
-        "permalink": "/docs/tags/小活動"
-      }
-    ],
-    "date": 1673971200000,
-    "yearMonth": "2023 年 01 月",
-    "day": "17"
   }
 ]
