@@ -1,7 +1,7 @@
 [
   {
     "title": "Agentic AI 加入後，我看到的隱憂與治理破口 - 以 Cursor AI 為例",
-    "permalink": "/docs/ai/vibe-coding/cursor-ai-governance-for-team/ai-agent-concerns-governance-gaps-cursor",
+    "permalink": "/docs/ai/vibe-coding/cursor-ai-governance-for-team/",
     "description": "團隊導入 GitHub Copilot、Cursor AI 之後：產能提高與 Code Review、工程治理怎麼跟著變？本篇整理痛點、辦公室常見對話、試錯心得與無為/控管取捨；並說明為何要把 Agentic AI 納入與真人同一套可預期、可 Review、可版控的流程。",
     "tags": [
       {
