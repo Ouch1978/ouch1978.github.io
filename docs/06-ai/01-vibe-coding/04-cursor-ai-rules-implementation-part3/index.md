@@ -1,5 +1,5 @@
 ---
-title: 多 Repo 的 Cursor AI 規則治理 — 我怎麼活下來的
+title: cursor-ai-rul多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的es-diagnosis-part1
 description: 複製實戰案例與 Phase 計畫，在 KB 與多 Repo 並存的環境下把你的 Cursor AI 規則變成能維運的工程資產。
 author: ouch1978
 tags:
@@ -34,9 +34,9 @@ import TabItem from '@theme/TabItem';
 
 **Cursor AI 多 Repo 規則治理實戰系列**
 
-1. [當我的多 Repo 規則開始打架 — Cursor AI 治理首部曲](./cursor-ai-rules-diagnosis-part1) — 痛點診斷與隔離原則
-2. [Cursor AI 規則集中管理行得通嗎？ — 我的翻車之路](./cursor-ai-rules-management-part2) — 反模式與官方對照
-3. **本篇：多 Repo 的 Cursor AI 規則治理 — 我怎麼活下來的** — 落地案例與執行藍圖
+1. [當我的多 Repo 規則開始打架 - Cursor AI 治理首部曲](./cursor-ai-rules-diagnosis-part1) — 痛點診斷與隔離原則
+2. [Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路](./cursor-ai-rules-management-part2) — 反模式與官方對照
+3. **本篇：cursor-ai-rul多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的es-diagnosis-part1** — 落地案例與執行藍圖
 
 :::
 
@@ -567,5 +567,5 @@ CI/CD 驗證是治理的「最後一哩路」——但不是必須的第一步�
 
 - [Cursor 官方文件：Rules](https://cursor.com/zh-Hant/docs/rules)
 - 前篇：[Agentic AI 加入後，我看到的隱憂與治理破口](./cursor-ai-governance-for-team)
-- 系列 Part 1：[當我的多 Repo 規則開始打架](./cursor-ai-rules-diagnosis-part1)
-- 系列 Part 2：[Cursor AI 規則集中管理行得通嗎？ — 我的翻車之路](./cursor-ai-rules-management-part2)
+- 系列 Part 1：[當我的多 Repo 規則開始打架 - Cursor AI 治理首部曲](./cursor-ai-rules-diagnosis-part1)
+- 系列 Part 2：[Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路](./cursor-ai-rules-management-part2)

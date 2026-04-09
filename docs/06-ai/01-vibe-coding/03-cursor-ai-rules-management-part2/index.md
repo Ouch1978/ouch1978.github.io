@@ -1,5 +1,5 @@
 ---
-title: Cursor AI 規則集中管理行得通嗎？ — 我的翻車之路
+title: Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路
 description: 判斷你的團隊是否正在用 KB 或獨立 Rule Repo 當集中式規則控制中心，了解為什麼這兩條路在多 Repo 環境下往往行不通，並對照 Cursor 官方指南收斂到正確的分層策略。
 author: ouch1978
 tags:
@@ -32,9 +32,9 @@ import TabItem from '@theme/TabItem';
 
 **Cursor AI 多 Repo 規則治理實戰系列**
 
-1. [當我的多 Repo 規則開始打架 — Cursor AI 治理首部曲](./cursor-ai-rules-for-multi-repos) — 痛點診斷與隔離原則
-2. **本篇：Cursor AI 規則集中管理行得通嗎？ — 我的翻車之路** — 反模式與官方對照
-3. [多 Repo 的 Cursor AI 規則治理 — 我怎麼活下來的](./cursor-ai-rules-implementation-part3) — 落地案例與執行藍圖
+1. [當我的多 Repo 規則開始打架 - Cursor AI 治理首部曲](./cursor-ai-rules-for-multi-repos) — 痛點診斷與隔離原則
+2. **本篇：Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路** — 反模式與官方對照
+3. [多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的](./cursor-ai-rules-implementation-part3) — 落地案例與執行藍圖
 
 :::
 
@@ -422,6 +422,6 @@ graph LR
 ## 參考資源
 
 - [Cursor 官方文件：Rules](https://cursor.com/zh-Hant/docs/rules)
-- 前篇：[《Agentic AI 加入後，我看到的隱憂與治理破口》](./cursor-ai-governance-for-team)
+- 前篇：[Agentic AI 加入後，我看到的隱憂與治理破口](./cursor-ai-governance-for-team)
 - 系列 Part 1：[當我的多 Repo 規則開始打架](./cursor-ai-rules-for-multi-repos)
-- 系列 Part 3：[多 Repo 的 Cursor AI 規則治理 — 我怎麼活下來的](./cursor-ai-rules-implementation-part3)
+- 系列 Part 3：[多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的](./cursor-ai-rules-implementation-part3)

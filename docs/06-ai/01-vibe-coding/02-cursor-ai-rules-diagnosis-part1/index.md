@@ -1,5 +1,5 @@
 ---
-title: 當我的多 Repo 規則開始打架 — Cursor AI 治理首部曲
+title: 當我的多 Repo 規則開始打架 - Cursor AI 治理首部曲
 description: 你的多 Repo Cursor AI 規則也在打架嗎？用自評表判斷團隊的規則亂象有多嚴重，搞懂 Team／Project／User 三層隔離原則，為後續的治理打下基礎。
 author: ouch1978
 tags:
@@ -31,9 +31,9 @@ import TabItem from '@theme/TabItem';
  
 **Cursor AI 多 Repo 規則治理實戰系列**
  
-1. **本篇：當我的多 Repo 規則開始打架 — Cursor AI 治理首部曲** — 痛點診斷與隔離原則
-2. [Cursor AI 規則集中管理行得通嗎？ — 我的翻車之路](./cursor-ai-rules-management-part2) — 反模式與官方對照
-3. [多 Repo 的 Cursor AI 規則治理 — 我怎麼活下來的](./cursor-ai-rules-implementation-part3) — 落地案例與執行藍圖
+1. **本篇：當我的多 Repo 規則開始打架 - Cursor AI 治理首部曲** — 痛點診斷與隔離原則
+2. [Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路](./cursor-ai-rules-management-part2) - 反模式與官方對照
+3. [多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的](./cursor-ai-rules-implementation-part3) - 落地案例與執行藍圖
  
 :::
  
@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
  
 - 目標讀者：架構師、多 Repo 環境的技術主管、導入 Cursor AI 的團隊 Lead。
 - 讀完你能：用自評表判斷團隊規則亂象的嚴重度，並理解 Team／Project／User 三層隔離是後續一切治理手段的前提。
-- 延伸閱讀：對 Agentic AI 治理框架有興趣的讀者，可參考[《Agentic AI 加入後，我看到的隱憂與治理破口》](./cursor-ai-governance-for-team)（非必要）。
+- 延伸閱讀：對 Agentic AI 治理框架有興趣的讀者，可參考[Agentic AI 加入後，我看到的隱憂與治理破口](./cursor-ai-governance-for-team)（非必要）。
  
 :::
  
