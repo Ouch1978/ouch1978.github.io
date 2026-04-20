@@ -50,6 +50,12 @@ export default {
   },
 };
 
+const config = {
+  future: {
+    experimental_faster: true,
+  },
+};
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "OUCH1978@GITHUB",

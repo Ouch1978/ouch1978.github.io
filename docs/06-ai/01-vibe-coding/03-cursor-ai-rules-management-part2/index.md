@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 1. [當我的多 Repo 規則開始打架 - Cursor AI 治理首部曲](./cursor-ai-rules-for-multi-repos) — 痛點診斷與隔離原則
 2. **本篇：Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路** — 反模式與官方對照
-3. [多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的](./cursor-ai-rules-implementation-part3) — 落地案例與執行藍圖
+3. [多 Repo 的 Cursor AI 規則治理：從受限環境出發的最小可行方案](./cursor-ai-rules-implementation-part3) — 落地案例與執行藍圖
 
 :::
 
@@ -67,6 +67,7 @@ import TabItem from '@theme/TabItem';
 :::note 背景補充
 更重要的是——在我們公司，Team Rules 的管理權掌握在 MIS 部門手上，我沒辦法改。<br/>
 也就是說，「直接用 Team Rules 來統一跨 Repo 規範」這條最直覺的路，從一開始就不在我的選項內。<br/>
+另外，Cursor AI 本身有支援 `Remote Rules`，但是前提是 Rules Repo 得要使用官方的 GitHub 或是 GitLab，而我們公司用的是自架的 GitLab，所以這個方案對我們來說也不適用。<br/>
 這也是我開始把腦筋動到「集中控管的 Rule」的根本原因。
 :::
 
@@ -424,4 +425,4 @@ graph LR
 - [Cursor 官方文件：Rules](https://cursor.com/zh-Hant/docs/rules)
 - 前篇：[Agentic AI 加入後，我看到的隱憂與治理破口](./cursor-ai-governance-for-team)
 - 系列 Part 1：[當我的多 Repo 規則開始打架](./cursor-ai-rules-for-multi-repos)
-- 系列 Part 3：[多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的](./cursor-ai-rules-implementation-part3)
+- 系列 Part 3：[多 Repo 的 Cursor AI 規則治理：從受限環境出發的最小可行方案](./cursor-ai-rules-implementation-part3)

@@ -1,5 +1,65 @@
 [
   {
+    "title": "多 Repo 的 Cursor AI 規則治理：從受限環境出發的最小可行方案",
+    "permalink": "/docs/ai/vibe-coding/cursor-ai-rules-implementation-part3/",
+    "description": "從無法使用 Team Rules 的企業限制出發，整理一條透過 Cursor Config Sync 擴充套件作為 MVP 起點的 Cursor AI 規則治理路線。",
+    "tags": [
+      {
+        "inline": true,
+        "label": "AI",
+        "permalink": "/docs/tags/ai"
+      },
+      {
+        "inline": true,
+        "label": "Cursor",
+        "permalink": "/docs/tags/cursor"
+      },
+      {
+        "inline": true,
+        "label": "治理",
+        "permalink": "/docs/tags/治理"
+      },
+      {
+        "inline": true,
+        "label": "多 Repo",
+        "permalink": "/docs/tags/多-repo"
+      },
+      {
+        "inline": true,
+        "label": "規則衝突",
+        "permalink": "/docs/tags/規則衝突"
+      },
+      {
+        "inline": true,
+        "label": "Agentic AI",
+        "permalink": "/docs/tags/agentic-ai"
+      },
+      {
+        "inline": true,
+        "label": "SSOT",
+        "permalink": "/docs/tags/ssot"
+      },
+      {
+        "inline": true,
+        "label": "Project Rules",
+        "permalink": "/docs/tags/project-rules"
+      },
+      {
+        "inline": true,
+        "label": "Team Rules",
+        "permalink": "/docs/tags/team-rules"
+      },
+      {
+        "inline": true,
+        "label": "落地實踐",
+        "permalink": "/docs/tags/落地實踐"
+      }
+    ],
+    "date": 1776614400000,
+    "yearMonth": "2026 年 04 月",
+    "day": "20"
+  },
+  {
     "title": "Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路",
     "permalink": "/docs/ai/vibe-coding/cursor-ai-rules-management-part2/",
     "description": "判斷你的團隊是否正在用 KB 或獨立 Rule Repo 當集中式規則控制中心，了解為什麼這兩條路在多 Repo 環境下往往行不通，並對照 Cursor 官方指南收斂到正確的分層策略。",
@@ -143,20 +203,5 @@
     "date": 1724515200000,
     "yearMonth": "2024 年 08 月",
     "day": "25"
-  },
-  {
-    "title": "在文件庫和部落格的文章下方加上 giscus 留言區",
-    "permalink": "/docs/docusaurus/customization/add-giscus-to-docusaurus/",
-    "description": "介紹在 Docusaurus 的文章中加入 giscus 留言區的方法。",
-    "tags": [
-      {
-        "inline": true,
-        "label": "Docusaurus",
-        "permalink": "/docs/tags/docusaurus"
-      }
-    ],
-    "date": 1724428800000,
-    "yearMonth": "2024 年 08 月",
-    "day": "24"
   }
 ]

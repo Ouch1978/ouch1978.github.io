@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
  
 1. **本篇：當我的多 Repo 規則開始打架 - Cursor AI 治理首部曲** — 痛點診斷與隔離原則
 2. [Cursor AI 規則集中管理行得通嗎？ - 我的翻車之路](./cursor-ai-rules-management-part2) - 反模式與官方對照
-3. [多 Repo 的 Cursor AI 規則治理 - 我怎麼活下來的](./cursor-ai-rules-implementation-part3) - 落地案例與執行藍圖
+3. [多 Repo 的 Cursor AI 規則治理：從受限環境出發的最小可行方案](./cursor-ai-rules-implementation-part3) - 落地案例與執行藍圖
  
 :::
  

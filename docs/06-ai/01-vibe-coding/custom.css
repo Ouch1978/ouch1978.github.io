@@ -36,6 +36,17 @@
 
   --ifm-container-width-xl: 100%; /* Default is usually around 1320px */
   --ifm-container-width: 100%;   /* Default is usually around 1140px */
+  
+}
+
+@media (min-width: 997px) {
+    .docItemCol_VOVn {
+        max-width: 80% !important;
+    }
+}
+
+.col--3 {
+    --ifm-col-width: calc(1 / 5 * 100%);
 }
 
 /* Optional: Remove side padding for a true edge-to-edge look */
