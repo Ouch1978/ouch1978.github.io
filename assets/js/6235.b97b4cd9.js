@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkouch1978_at_github=globalThis.webpackChunkouch1978_at_github||[]).push([[6235],{56235(h,a,u){u.d(a,{createInfoServices:()=>c.v});var c=u(41009);u(6902)}}]);
