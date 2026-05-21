@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkouch1978_at_github=globalThis.webpackChunkouch1978_at_github||[]).push([[492],{35443(a){a.exports=JSON.parse('{"metadata":{"permalink":"/blog/page/4","page":4,"postsPerPage":10,"totalPages":7,"totalCount":68,"previousPage":"/blog/page/3","nextPage":"/blog/page/5","blogDescription":"\u90e8\u843d\u683c","blogTitle":"\u90e8\u843d\u683c"}}')}}]);

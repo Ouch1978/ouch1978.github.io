@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-TW" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.1">
+<title data-rh="true">只是多兩個 Background Job，為什麼讓 Redis 記憶體暴增三倍？從 Hangfire 看需求背後的可靠性成本 | OUCH1978@GITHUB</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://ouch1978.github.io/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs"><meta data-rh="true" property="og:locale" content="zh_TW"><meta data-rh="true" name="docusaurus_locale" content="zh-TW"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="zh-TW"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" name="robots" content="max-image-preview:large"><meta data-rh="true" name="og:type" content="article"><meta data-rh="true" name="fb:app_id" content="173025689387886"><meta data-rh="true" property="og:title" content="只是多兩個 Background Job，為什麼讓 Redis 記憶體暴增三倍？從 Hangfire 看需求背後的可靠性成本 | OUCH1978@GITHUB"><meta data-rh="true" name="description" content="還記得之前有一個專案，需要在每一局遊戲中新增兩個 Background Job，從原本一局有 5 個 Background Job 變成 7 個。乍看之下，這只是沒什麼大不了的小事，但是沒想到，只是新增兩個 Background Job，卻讓 Redis 的記憶體使用量暴增了三倍...."><meta data-rh="true" property="og:description" content="還記得之前有一個專案，需要在每一局遊戲中新增兩個 Background Job，從原本一局有 5 個 Background Job 變成 7 個。乍看之下，這只是沒什麼大不了的小事，但是沒想到，只是新增兩個 Background Job，卻讓 Redis 的記憶體使用量暴增了三倍...."><meta data-rh="true" name="keywords" content="hangfire:job,ParameterTypes,Redis Memory,Background Job,Reliability Cost"><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2026-05-21T00:00:00.000Z"><meta data-rh="true" property="article:author" content="https://github.com/ouch1978"><meta data-rh="true" property="article:tag" content="Hangfire,Redis,Troubleshooting,Reliability Engineering"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://ouch1978.github.io/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs"><link data-rh="true" rel="alternate" href="https://ouch1978.github.io/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs" hreflang="zh-TW"><link data-rh="true" rel="alternate" href="https://ouch1978.github.io/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://XA2FZH7CHR-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://ouch1978.github.io/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs","mainEntityOfPage":"https://ouch1978.github.io/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs","url":"https://ouch1978.github.io/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs","headline":"只是多兩個 Background Job，為什麼讓 Redis 記憶體暴增三倍？從 Hangfire 看需求背後的可靠性成本","name":"只是多兩個 Background Job，為什麼讓 Redis 記憶體暴增三倍？從 Hangfire 看需求背後的可靠性成本","description":"還記得之前有一個專案，需要在每一局遊戲中新增兩個 Background Job，從原本一局有 5 個 Background Job 變成 7 個。乍看之下，這只是沒什麼大不了的小事，但是沒想到，只是新增兩個 Background Job，卻讓 Redis 的記憶體使用量暴增了三倍....","datePublished":"2026-05-21T00:00:00.000Z","author":{"@type":"Person","name":"Ouch Liu","description":"不務正業的架構師","url":"https://github.com/ouch1978","image":"https://avatars.githubusercontent.com/u/18132883?v=4"},"keywords":["hangfire:job","ParameterTypes","Redis Memory","Background Job","Reliability Cost"],"isPartOf":{"@type":"Blog","@id":"https://ouch1978.github.io/blog","name":"部落格"}}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="OUCH1978@GITHUB RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="OUCH1978@GITHUB Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-20523508-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview")</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="OUCH1978@GITHUB" href="/opensearch.xml">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/docusaurus-plugin-drawio/viewer.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&amp;display=swap">
+<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120664310721472" async crossorigin="anonymous"></script><link rel="stylesheet" href="/assets/css/styles.d0b87312.css">
+<script src="/assets/js/runtime~main.f0795803.js" defer="defer"></script>
+<script src="/assets/js/main.d1fac3f7.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="主導航" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="切換導覽列" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">OUCH1978@GITHUB</b></a><a class="navbar__item navbar__link" href="/docs/intro">文件庫</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog">部落格</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="/slides" class="navbar__item navbar__link" target="_blank" rel="noopener noreferrer">投影片</a><a href="/fortune-slip" class="navbar__item navbar__link" target="_blank" rel="noopener noreferrer">心有千籤解</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="切換淺色/深色模式（當前為system mode）"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="搜尋 (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">搜尋</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><main class="col col--9 col--offset-1"><article class=""><header><h1 class="title_f1Hy">只是多兩個 Background Job，為什麼讓 Redis 記憶體暴增三倍？從 Hangfire 看需求背後的可靠性成本</h1><div class="container_mt6G margin-vert--md"><time datetime="2026-05-21T00:00:00.000Z">2026年5月21日</time> · <!-- -->預估閱讀時間： 25 分鐘</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--12 authorCol_Hf19"><div class="avatar margin-bottom--sm"><a href="https://github.com/ouch1978" target="_blank" rel="noopener noreferrer" class="avatar__photo-link"><img class="avatar__photo authorImage_XqGP" src="https://avatars.githubusercontent.com/u/18132883?v=4" alt="Ouch Liu"></a><div class="avatar__intro authorDetails_lV9A"><div class="avatar__name"><a href="https://github.com/ouch1978" target="_blank" rel="noopener noreferrer"><span class="authorName_yefp" translate="no">Ouch Liu</span></a></div><small class="authorTitle_nd0D" title="不務正業的架構師">不務正業的架構師</small><div class="authorSocials_rSDt"></div></div></div></div></div></header><div id="__blog-post-container" class="markdown"><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="前言">前言<a href="#前言" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>之前有一個專案，需要在每一局遊戲中新增兩個 Background Job，從原本一局有 5 個 Background Job 變成 7 個。</p>
+<p>乍看之下，這件事真的很容易被當成小改動。</p>
+<p>不就是多兩個 Background Job 嗎？</p>
+<p>結果上到 UAT 之後，Redis 的記憶體使用量直接暴增三倍，差點把 Redis 的記憶體吃到見底。</p>
+<p>這件事情最有價值的地方，不是我們最後找到了哪幾個 Redis Key 變大，而是它提醒了我們一件很容易被忽略的事：</p>
+<blockquote>
+<p>在高頻系統裡，每一個 Background Job 都不是免費的。</p>
+</blockquote>
+<p>Background Job 不單單只是「排程執行」這麼簡單的一件事而已。</p>
+<p>它背後還包含 Job metadata、serialized arguments、state history、retry、failed details、Batch metadata、TTL 保留，以及後續清理成本。</p>
+<p>這些成本如果沒有在需求設計階段就被看見，那它最後可 能就會在上線之後對 Redis 帶來極大的壓力，並且對系統的穩定度帶來極高的風險。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="緣起只是新增兩個-job-啊">緣起：只是新增兩個 Job 啊<a href="#緣起只是新增兩個-job-啊" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>話說，在 2025 年春節之前，我們正在趕著讓新專案上線；而這個專案主要的功能，是要幫會員自動下單。</p>
+<p>因為可以下單的時間剛好位於每場遊戲的開始與結束時間範圍裡，所以我們很自然地想到：既然原本就已經有一套用 Hangfire 的 Background Job 控制遊戲狀態的機制，那這次新增的自動下單流程，也可以沿用同樣的設計。</p>
+<p>因為每一局裡面有兩個可以自動下單的時間點，於是，我們就在每局遊戲裡新增兩個 Background Job。</p>
+<p>從開發角度看，這個設計很直覺，也沒有什麼特別奇怪的地方。</p>
+<p>在測試環境裡，功能也都正常。</p>
+<p>但上到 UAT 後，問題就出現了。</p>
+<p>Redis 的記憶體使用量竟然暴增了三倍，幾乎快把 Redis 的記憶體吃光。</p>
+<p>一開始，我們很直覺地以為是 Hangfire 的歷史資料保存太久，導致 Redis 被舊資料塞滿。所以就先把 Hangfire 的 Job 與 State 的 TTL，從原本的 16 天縮短到 3 天。</p>
+<p>本來以為這樣應該可以快速把歷史資料清掉，但是改善的程度微乎其微。</p>
+<p>深入鑽研到每個 Job 的 Redis Key 之後才發現，問題沒有那麼單純。</p>
+<p>真正的問題不是 Redis 壞掉，也不是 Hangfire 本身設定錯誤，而是 Hangfire 在 Redis 裡為每一個 Job 建立與保留的資料結構會吃的記憶體，遠比我們原本想像得更多；而 Job 本身攜帶的參數，在序列化之後，也比我們想像得更佔空間。</p>
+<p>接下來，我就用這次分析的經驗，從 Redis Key 與容量的 角度，整理一下 Hangfire 在 Redis 中會產生哪些 Key、這些 Key 的資料型別與用途，以及為什麼只是新增兩個 Job，最後卻有可能讓 Redis 記憶體暴增三倍。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="被低估的-background-job-成本">被低估的 Background Job 成本<a href="#被低估的-background-job-成本" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>這次事件最重要的收穫，不是發現某一個 Redis key 特別大，而是讓我們重新意識到：</p>
+<blockquote>
+<p>在高頻遊戲場景下，每新增一個 Background Job，都不是一個獨立的小功能，而是一個會被「場次數 × 保留時間 × 狀態歷史 × 失敗重試 × Batch metadata」放大的系統成本。</p>
+</blockquote>
+<p>對產品負責人（PRD Owner）來說，「每局新增兩個任務」看起來可能只是多兩個流程節點。</p>
+<p>但對系統來說，它代表的是：</p>
+<ul>
+<li class="">每局多兩份 Job metadata</li>
+<li class="">每局多兩份 serialized arguments</li>
+<li class="">每局多兩份 state / history</li>
+<li class="">每局多兩個可能 retry / failed / succeeded 的生命週期</li>
+<li class="">如果使用 Batch，還會額外增加 Batch metadata 與狀態索引</li>
+<li class="">如果 TTL 設得太長，這些資料會在 Redis 裡累積好幾天，甚至更久</li>
+</ul>
+<p>所以，在評估這類需求時，不應該只問「開發需要多久的時間?」。</p>
+<p>從架構師的角度來看，還要問：</p>
+<blockquote>
+<p>這個需求會不會隨著場次、會員、訂單或交易數被放大？</p>
+</blockquote>
+<p>如果答案是會，那就不能只用功能開發的角度來看它，而要把它放進容量、保留策略、失敗處理、可觀測性與清理機制裡一起評估。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="架構師和產品負責人在設計這類需求時應該先問的問題">架構師和產品負責人在設計這類需求時應該先問的問題<a href="#架構師和產品負責人在設計這類需求時應該先問的問題" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>如果一個需求會依照「每局」、「每單」、「每會員」、「每交易」去新增 Background Job，那就不應該只從單一角色的角度來看。</p>
+<p>產品負責人會關心的是：這個需求是不是必要、什麼情境要做、成功與失敗時的產品行為是什麼。</p>
+<p>架構師要關心的是：這個需求會怎麼被流量放大、會產生多少資料、失敗時怎麼補償、資料要保留多久，以及這些成本會不會反過來影響系統可靠性。</p>
+<p>兩邊看的角度不同，但目標其實是一樣的：</p>
+<blockquote>
+<p>在需求進入開發之前，先把會被放大的成本與風險看出來。</p>
+</blockquote>
+<p>這不是要阻止需求，而是要避免開發完成、上線之後，才發現容量、可靠性或維運成本比預期高很多。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="產品負責人應該先問的問題">產品負責人應該先問的問題<a href="#產品負責人應該先問的問題" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>產品負責人不一定需要知道 Hangfire 在 Redis 裡會建立哪些 Key，但需要知道這個需求會在什麼情境下被觸發、會不會大量發生，以及失敗時對使用者或業務流程的影響。</p>
+<table><thead><tr><th>問題</th><th>為什麼重要</th></tr></thead><tbody><tr><td>這個 Job 是每局都要產生，還是只在特定條件下產生？</td><td>決定資料量是否會被場次數線性放大</td></tr><tr><td>這個流程是否一定要非同步執行？</td><td>有些流程可以同步完成，有些才真的需要 Background Job</td></tr><tr><td>使用者或業務方是否需要知道這個 Job 的執行  結果？</td><td>決定是否需要狀態查詢、通知、補償或人工介入</td></tr><tr><td>Job 失敗時，業務上可以接受什麼結果？</td><td>決定 retry、補償、告警與人工處理策略</td></tr><tr><td>這個需求是否有 SLA / RTO / RPO？</td><td>決定可靠性要求與技術設計成本</td></tr><tr><td>是否需要保留完整執行紀錄？需要保留在哪裡、保留多久？</td><td>影響 Hangfire Redis、Log、Audit Table 或其他儲存成本</td></tr><tr><td>這個需求未來是否可能擴大到更多遊戲、更多會員或更多交易？</td><td>決定目前設計是不是只適合短期需求，還是需要預留成長空間</td></tr></tbody></table>
+<p>從產品角度看，這些問題的重點不是技術細節，而是要先釐清需求的「觸發頻率」、「失敗後果」和「業務可接受範圍」。</p>
+<p>如果這些問題沒有先講清楚，後面架構師就很難判斷到底該做輕量設計、完整補償機制，還是需要更嚴格的可靠性設計。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="架構師應該先問的問題">架構師應該先問的問題<a href="#架構師應該先問的問題" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>架構師要補上的，是需求被系統執行後會產生的真實成本。</p>
+<p>也就是說，不只是問「這個功能做不做得到」，而是要問「它一天會發生幾次、每次會留下多少資料、失敗時會放大多少，以及這些資料要在系統裡活多久」。</p>
+<table><thead><tr><th>問題</th><th>為什麼重要</th></tr></thead><tbody><tr><td>Job 是否真的需要獨立存在？</td><td>有些流程可以合併、內聚，或改成事件內部處理</td></tr><tr><td>每日預估會新增多少 Job？尖峰每分鐘會新增多少？</td><td>用來估容量、吞吐量與告警門檻</td></tr><tr><td>Job 參數是否只傳 ID？</td><td>傳 DTO 會讓 Redis 成本不受控</td></tr><tr><td>Hangfire 的全域 Job expiration 與 Batch expiration 設定是否符合這個需求的量級？</td><td>Hangfire 通常不是針對單一 Job 設定 Redis 保存時間，而是透過整體 storage / expiration 策略影響資料保留量</td></tr><tr><td>Job 是否需要 Batch 管理？</td><td>Batch 會帶來額外 metadata、state 與 index</td></tr><tr><td>Job 失敗時是否需要完整 stack trace 留在 Hangfire state？</td><td>例外細節可能比正常參數更大</td></tr><tr><td>retry 次數與補償策略是否明確？</td><td>避免失敗資料、重試排程與狀態歷史無限制膨脹</td></tr><tr><td>Hangfire 預設會把 failed Job 的 exception 寫回 Redis，這個保留時間是否符合排查需求？</td><td>避免大量 failed Job 的 exception details 長時間累積在 Redis</td></tr><tr><td>是否需要為這類 Job 建立專屬監控指標？</td><td>例如 Job 建立量、失敗率、平均 payload 大小、Redis memory growth rate</td></tr></tbody></table>
+<p>從架構角度看，這些問題的重點是把需求轉成容量模型與可靠性設計。</p>
+<p>如果一個需求會被高頻觸發，那它就不只是功能設計，而是資料成長模型、失敗處理模型和維運模型。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="兩個角色要對齊的不是答案而是成本邊界">兩個角色要對齊的不是答案，而是成本邊界<a href="#兩個角色要對齊的不是答案而是成本邊界" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>產品負責人和架構師不需要看同一種細節。</p>
+<p>產品負責人不一定需要知道 <code>hangfire:job:{id}:history</code> 裡面長什麼樣子；架構師也不應該只用「Redis 會變大」來否定需求。</p>
+<p>真正需要對齊的是幾個成本邊界：</p>
+<ul>
+<li class="">這個需求一天最多可能產生多少 Job？</li>
+<li class="">這些 Job 成功、失敗、重試時分別要保留多久？</li>
+<li class="">哪些資料需要留在 Hangfire，哪些資料應該移到 Log / APM / Audit Table？</li>
+<li class="">失敗時是自動補償、人工處理，還是可以接受 eventual consistency？</li>
+<li class="">當 Redis memory growth rate 超過預期時，誰要收到告警，誰要決定處理策略？</li>
+</ul>
+<p>這些問題如果能在需求設計階段先想清楚，後面要做架構設計、容量估算、告警設定或維運交接時，就不會每次都變成臨時補洞。</p>
+<p>這也是我後來越來越在意 PRD Owner 和架構師協作方式的原因。</p>
+<p>好的 PRD Owner 不只是把功能寫清楚，也應該能看出需求背後可能被放大的產品成本。</p>
+<p>好的架構師也不只是把系統做出來，而是要能把這些成本翻譯成產品可以理解、也能一起做決策的風險邊界。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hangfire-在-redis-中常見的-key-與資料結構">Hangfire 在 Redis 中常見的 Key 與資料結構<a href="#hangfire-在-redis-中常見的-key-與資料結構" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>以我們使用的 Hangfire.Pro.Redis 2.8.3 版為例，Hangfire 在 Redis 中會使用多種 Key 來保存 Job、Queue、State、Server 等資訊。常見的 Key 與資料結構如下：</p>
+<p>針對每個 Key 的資料結構與作用，簡單說明如下：</p>
+<table><thead><tr><th>Key 範例</th><th>Redis 結構</th><th>作用</th><th>備註</th></tr></thead><tbody><tr><td><code>hangfire:job:{id}</code></td><td>Hash</td><td>單一 Job 的詳細資料</td><td>包含 <code>Method</code>、<code>Type</code>、<code>ParameterTypes</code>、<code>Arguments</code>、建立時間與狀態等</td></tr><tr><td><code>hangfire:recurring-job:{id}</code></td><td>Hash</td><td>定期任務的 metadata</td><td>包含 Cron、方法參考與參數</td></tr><tr><td><code>hangfire:queue:{queueName}</code></td><td>List</td><td>儲存待處理 Job id</td><td>隊列長度與 enqueued jobs 數量成正比</td></tr><tr><td><code>hangfire:processing</code></td><td>Sorted Set</td><td>正在執行中的 Job id</td><td>通常以時間相關 score 排序；實際語意以版本與實作為準</td></tr><tr><td><code>hangfire:failed</code></td><td>Sorted Set</td><td>失敗 Job 的索引</td><td>常見大型 key；通常保存 Job id 與時間相關 score，不等於完整失敗明細</td></tr><tr><td><code>hangfire:deleted</code></td><td>List</td><td>刪除 Job 的標記</td><td>保留已刪除 Job id 作後續清理</td></tr><tr><td><code>hangfire:queues</code></td><td>Set</td><td>所有 queue 名稱</td><td>只是索引，容量很小</td></tr><tr><td><code>hangfire:recurring-jobs</code></td><td>Sorted Set</td><td>定期任務索引</td><td>以識別碼排序、快速查找</td></tr><tr><td><code>hangfire:retries</code></td><td>Sorted Set</td><td>需重試 Job 的清單</td><td>用於 retry 排程與延遲處理</td></tr><tr><td><code>hangfire:servers</code></td><td>Set</td><td>已註冊 server id</td><td>追蹤所有 active server</td></tr><tr><td><code>hangfire:succeeded</code></td><td>List</td><td>成功完成的 Job id</td><td>主要用於成功 Job 的索引、統計或清理；實際用途以版本與 storage 實作為準</td></tr><tr><td><code>hangfire:stats</code></td><td>Hash</td><td>系統統計資料</td><td>保存各種計數值與指標</td></tr><tr><td><code>hangfire:batch:{id}</code></td><td>Hash</td><td>單一 Batch 的 metadata</td><td>例如建立時間、描述等基本資訊</td></tr><tr><td><code>hangfire:batch:{id}:state</code></td><td>Hash</td><td>Batch 目前狀態</td><td>保存當前狀態名稱、時間與摘要</td></tr><tr><td><code>hangfire:batch:{id}:states</code></td><td>List</td><td>Batch 狀態歷史</td><td>保存狀態變更紀錄</td></tr><tr><td><code>hangfire:batch:{id}:pending</code></td><td>Sorted Set</td><td>Batch 中等待或尚未完成的 Job 索引</td><td>依 Hangfire Pro Redis 實作維護</td></tr><tr><td><code>hangfire:batch:{id}:succeeded</code></td><td>Sorted Set</td><td>Batch 中已成功完成的 Job 索引</td><td>依完成狀態維護</td></tr><tr><td><code>hangfire:batch:{id}:finished</code></td><td>Sorted Set</td><td>Batch 中已結束的 Job 索引</td><td>追蹤已結束 Job</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="容易佔用大量記憶體的-key-們">容易佔用大量記憶體的 Key 們<a href="#容易佔用大量記憶體的-key-們" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>從我們這次看到的案例來看，真正需要優先檢查的通常不是 queue list 本身，而是每個 <code>job</code> 的 hash，以及該 job 的 state / history。</p>
+<ul>
+<li class="">
+<p>Job Hash (<code>hangfire:job:{id}</code>)</p>
+<p><code>hangfire:job:{id}</code> 這個 hash 裡面，會保存這個 Job 要執行什麼方法、類型是什麼、參數型別有哪些，以及實際傳進去的參數內容。</p>
+<p>幾個比較值得注意的欄位如下：</p>
+<ul>
+<li class=""><code>Method</code> / <code>Type</code>：表示這個 Job 要呼叫的類別與方法。這些欄位與 <code>ParameterTypes</code> 合起來，描述了要呼叫的目標方法與參數型別。</li>
+<li class=""><code>ParameterTypes</code>：以陣列形式保存每個參數的完整型別名稱，通常包含 namespace、assembly 與版本資訊。這些字串本身就會佔用空間；若參數型別很多或型別名稱很長，佔用會更高。</li>
+<li class=""><code>Arguments</code>：實際參數序列化後的字串，通常是 JSON。這個欄位的大小直接取決於傳入的參數內容，從幾十 bytes 到數 KB 都有可能。</li>
+</ul>
+<p>以我們看到的狀況來說，簡單 Job 只帶一個或兩個 ID / 整數時，通常會比傳入完整 DTO 小很多；如果帶入複雜 DTO，包含多個欄位、長字串或集合，就很容易讓 <code>Arguments</code> 明顯放大。實際大小應以 Redis <code>MEMORY USAGE</code> 或欄位長度檢查為準。</p>
+</li>
+<li class="">
+<p>Current State</p>
+<p>在我們觀察到的資料中，Hangfire 會在 <code>hangfire:job:{id}:state</code> 相關資料中保存目前狀態欄位，例如 <code>State</code>、<code>Checked</code>、<code>FailedAt</code>、<code>ExceptionType</code>、<code>ExceptionMessage</code> 與 <code>ExceptionDetails</code>。實際欄位會依狀態與版本有所不同。</p>
+<p>這裡比較麻煩的是失敗狀態。</p>
+<p>當 Job 失敗時，Hangfire 會保存失敗狀態需要的錯誤資訊。<code>ExceptionMessage</code> 與 <code>ExceptionDetails</code> 本身就可能變得很大。如果同一類錯誤大量發生，Redis 裡累積的就不只是 Job 狀態，還會包含大量失敗資訊。</p>
+</li>
+<li class="">
+<p>History</p>
+<p><code>hangfire:job:{id}:history</code> 的 list 會保存狀態事件的紀錄。不同狀態會有不同內容，失敗相關紀錄可能包含 <code>ExceptionType</code>、<code>ExceptionMessage</code> 或 <code>ExceptionDetails</code> 這類資訊。</p>
+<p>如果 Job 有多次 retry 或狀態變更，history list 的元素就會累積。正常情況下可能還好，但如果 Job 不斷失敗、重試、再失敗，這些歷史資料就會變成額外的記憶體壓力。</p>
+</li>
+<li class="">
+<p>Batch</p>
+<p>以我們環境看到的 Batch 資料來說，Batch 自己也會有 metadata、state 與狀態歷史，例如 <code>hangfire:batch:{id}</code>、<code>hangfire:batch:{id}:state</code>、<code>hangfire:batch:{id}:states</code>。</p>
+<p>Batch 本身的 state 資料不一定是最大宗，但如果 Batch 數量多、底下 Job 多，或狀態變更頻繁，相關的 state、states 與 sorted set index 也會跟著累積。</p>
+<p>另外，Batch 相關資料的保存時間也要和 Job expiration 一起看。否則很容易只調整了 Job 的保留策略，卻忽略 Batch metadata 或相關索引是否仍然累積。</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="記憶體用  量計算範例新增-job-前後的記憶體用量對照">記憶體用量計算範例：新增 Job 前後的記憶體用量對照<a href="#記憶體用量計算範例新增-job-前後的記憶體用量對照" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>先用一個簡化過的例子來看。</p>
+<p>假設原本每局遊戲有 5 個 Job，每個 Job hash 佔 1 KB，每個 Job 的狀態歷史佔 2 KB：</p>
+<ul>
+<li class="">5 個 Job hash：5 × 1 KB = 5 KB</li>
+<li class="">5 個 Job state history：5 × 2 KB = 10 KB</li>
+<li class="">合計：15 KB / 局</li>
+</ul>
+<p>後來新增 2 個參數較多的 Job，總 Job 數變成 7 個。假設這兩個新 Job 的 hash 各佔 2 KB：</p>
+<ul>
+<li class="">5 個舊 Job hash：5 × 1 KB = 5 KB</li>
+<li class="">2 個新 Job hash：2 × 2 KB = 4 KB</li>
+<li class="">7 個 Job state history：7 × 2 KB = 14 KB</li>
+<li class="">合計：23 KB / 局</li>
+</ul>
+<p>這樣算起來，單局 Redis 佔用從大約 15 KB 增加到 23 KB，大約是 1.5 倍。</p>
+<p>但實際上，我們看到的是三倍。</p>
+<p>原因就在於，真實世界不會只照這個簡化模型成長。裡面還包含：</p>
+<ul>
+<li class="">Batch metadata</li>
+<li class="">Batch 相關索引</li>
+<li class="">TTL 保留時間</li>
+<li class="">歷史資料累積</li>
+<li class="">retry / failed state</li>
+<li class="">sorted set index 成長</li>
+<li class="">exception message / stack trace 膨脹</li>
+</ul>
+<p>也就是說，新增兩個複雜 Job 的直接成本，只是第一層。真正讓 Redis 記憶體膨脹的，是資料保留時間、失敗狀態、Batch metadata 與狀態索引一起疊上去之後的結果。</p>
+<p>如果要把這件事一般化，一個 Background Job 在 Redis 裡的成本可以先粗略拆成：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">單筆 Job 成本 =</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Job Hash</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">+ Current State</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">+ History List</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">+ Queue / State-related Index</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">+ Batch 相關資料分攤成本</span><br></div></code></pre></div></div>
+<p>放到高頻場景裡，整體成本則可以估成：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">Redis 使用量 ≒</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">每局 Job 數</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">× 每日場次數</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">× 單筆 Job 平均大小</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">× 保留天數</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">× 狀態膨脹係數</span><br></div></code></pre></div></div>
+<p>這裡最容易被低估的不是公式本身，而是每個因子都可能被流量與保留時間放大。</p>
+<ul>
+<li class=""><code>每局 Job 數</code>：需求每加一個流程節點，就可能多一個 Job。</li>
+<li class=""><code>每日場次數</code>：高頻遊戲不是一天幾十筆，而可能是數千到數十萬筆。</li>
+<li class=""><code>單筆 Job 平均大小</code>：如果 arguments 傳 DTO，而不是 ID，會快速放大。</li>
+<li class=""><code>保留天數</code>：TTL 從 3 天變 16 天，不只是多 13 天，而是整體資料保留量接近 5 倍。</li>
+<li class=""><code>狀態膨脹係數</code>：失敗、retry、exception details、Batch 相關 state / index 都可能放大資料量。</li>
+</ul>
+<p>這也是為什麼「只是多兩個 Job」最後看起來會一點都不小。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="記憶體用量暴增的原因job-參數序列化">記憶體用量暴增的原因：Job 參數序列化<a href="#記憶體用量暴增的原因job-參數序列化" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>接下來看最容易被忽略的一塊：Job 參數。</p>
+<p>Hangfire 的 <code>Arguments</code> 欄位通常會使用 JSON 進行序列化，而且 Hangfire 同時也會在 <code>ParameterTypes</code> 中保留參數型別描述。</p>
+<p>這裡有幾個很容易讓大小飆升的因素。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-傳入完整物件而不是-id">1. 傳入完整物件，而不是 ID<a href="#1-傳入完整物件而不是-id" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>這是最常見，也最容易踩到的點。</p>
+<p>如果 Job 參數裡直接傳整個 DTO，例如使用者資料、訂單物件，或包含多個關聯清單的物件，那 Hangfire 就會把整個物件圖序列化成 JSON。</p>
+<p>屬性越多、巢狀越深、字串越長，序列化後的內容就越大。</p>
+<p>比較安全的作法是：</p>
+<blockquote>
+<p>Job 參數只傳必要的 ID，真正需要的資料等 Job 執行時再去資料庫或快取查。</p>
+</blockquote>
+<p>這樣做的好處不只是省 Redis 記憶體，也比較容易避免把某個時間點的完整資料快照長時間留在 Job 裡，造成後續資料判讀或除錯上的困難。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-傳入大型字串或二進位資料">2. 傳入大型字串或二進位資料<a href="#2-傳入大型字串或二進位資料" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>如果把幾 KB 的文字欄位，或 base64 編碼的二進位內容，直接塞進 Job arguments，那 Job hash 就會直接被放大。</p>
+<p>這種資料如果真的需要被 Job 使用，通常比較適合先放到外部儲存，例如資料庫、物件儲存，或另一個有明確生命週期的儲存位置。</p>
+<p>Job 裡只需要傳 reference，例如 URI、資料 ID 或外部儲存 key。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-參數型別名稱與-serialization-metadata">3. 參數型別名稱與 serialization metadata<a href="#3-參數型別名稱與-serialization-metadata" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p><code>ParameterTypes</code> 裡會記錄參數型別資訊，通常會包含 namespace、type、assembly 等資訊。實際格式會依 Hangfire 序列化設定與版本而不同。</p>
+<p>這些字串單看不大，但在大量 Job、複雜泛型、或參數型別很多的情況下，就會累積成可觀的容量。</p>
+<p>尤其是當很多 Job 傳入不同型別，但實際內容只是幾個 ID 或簡單值時，這些型別資訊就會變成一種隱性成本。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-例外與狀態描述">4. 例外與狀態描述<a href="#4-例外與狀態描述" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>如果 Job 經常失敗，而且 Hangfire state / history 裡保 留大量 exception message 或 details，單筆 state / history 的大小就可能明顯增加。</p>
+<p>這也是為什麼有時候 Redis 記憶體成長，不一定只來自正常 Job 參數太大，也可能和 failed Job 數量與錯誤資訊大小有關。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-json-序列化本身的冗餘">5. JSON 序列化本身的冗餘<a href="#5-json-序列化本身的冗餘" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>JSON 的好處是可讀性高，除錯方便。</p>
+<p>但它的缺點也很明顯：欄位名稱會重複出現，格式是明文，也沒有壓縮。</p>
+<p>所以如果把大量資料直接塞進 Job arguments，JSON 的體積很快就會放大。</p>
+<p>這不是說一定要改成二元序列化，而是要先回到最根本的問題：</p>
+<blockquote>
+<p>這些資料真的應該被塞進 Job arguments 裡嗎？</p>
+</blockquote>
+<p>大多數時候，答案其實是否定的。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="從可靠性工程角度治理-background-job">從可靠性工程角度治理 Background Job<a href="#從可靠性工程角度治理-background-job" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>這次事件也讓我們重新整理 Background Job 的治理方式。</p>
+<p>Background Job 的可靠性，不只是「Job 有沒有成功執行」而已。</p>
+<p>更完整一點看，它應該包含整個 Job lifecycle 是否可觀測、可控、可清理。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-job-建立量要可量測">1. Job 建立量要可量測<a href="#1-job-建立量要可量測" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>我認為，所謂的量測指的是至少要能回答下面這些問題：</p>
+<ul>
+<li class="">每分鐘新增多少 Job？</li>
+<li class="">每小時新增多少 Job？</li>
+<li class="">每日新增多少 Job？</li>
+<li class="">哪一類 Job 數量最多？</li>
+<li class="">哪一類 Job 的 arguments 最大？</li>
+<li class="">Job failed 之後處理的機制是什麼？ 要自動 Retry 嗎？ Retry 幾次？</li>
+</ul>
+<p>如果這些問題都答不出來，代表 Background Job 已經變成黑盒子。</p>
+<p>這時候即使系統目前還能正常運作，也很難在容量壓力出現前提早預警。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-job-保留策略要先理解-hangfire-的限制">2. Job 保留策略要先理解 Hangfire 的限制<a href="#2-job-保留策略要先理解-hangfire-的限制" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>這裡要特別講清楚一件事：Hangfire 並不是讓我們很自由地針對「每一種 Job」或「每一筆 Job」設定不同的 Redis 保存時間。</p>
+<p>以我們使用 Hangfire.Pro.Redis 的情境來看，比較實際能控制的是整體 Job expiration、Batch expiration，以及系統如何使用 Job、Batch、Retry 和 Failed state。也就是說，這裡的重點不是「幫每一種 Job 都設不同 TTL」，而是：</p>
+<blockquote>
+<p>在設計需求時，要先知道目前 Hangfire storage 的保留策略會套用到哪些資料，以及這個保留時間放到高頻場景裡是否合理。</p>
+</blockquote>
+<p>如果今天新增的是低頻管理任務，保存幾天可能不是問題。</p>
+<p>但如果新增的是每局、每單、每會員都會產生的高頻 Job，同樣的保存時間就會被放大成很可觀的 Redis memory footprint。</p>
+<p>所以比較務實的檢查方式會是：</p>
+<table><thead><tr><th>檢查項目</th><th>要確認什麼</th></tr></thead><tbody><tr><td>全域 Job expiration 設定</td><td>目前 Job 成功、失敗、刪除後大約會保留多久</td></tr><tr><td>Batch expiration 設定</td><td>Batch metadata、state、states 與相關 index 是否會比預期保留更  久</td></tr><tr><td>高頻 Job 是否真的需要進 Hangfire</td><td>有些高頻流程可能更適合事件流、內部狀態機或合併處理</td></tr><tr><td>成功 Job 是否需要保留完整資訊</td><td>如果只是統計或追蹤，可能不該依賴 Hangfire storage 作長期查詢</td></tr><tr><td>Failed Job 的保存量是否可接受</td><td>Failed state 會包含 exception 資訊，失敗率一高就會快速放大</td></tr></tbody></table>
+<p>也就是說，這裡真正要治理的不是「單一 Job TTL」，而是 Hangfire storage 的整體資料保留行為。</p>
+<p>如果保留策略沒有先算過，高頻 Job 只要數量一放大，Redis 記憶體壓力就會跟著放大。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-失敗資料要可控">3. 失敗資料要可控<a href="#3-失敗資料要可控" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>失敗資訊很重要，但不應該無限制累積在 Redis。</p>
+<p>需要控制的項目包含：</p>
+<ul>
+<li class="">Exception message 長度</li>
+<li class="">Stack trace 保存策略</li>
+<li class="">Retry 次數</li>
+<li class="">Failed Job 與其 state / history 的保留行為</li>
+<li class="">應用程式本身是否已將足夠的錯誤脈絡寫到 ELK / APM，而不是只依賴 Hangfire Dashboard 查看錯誤</li>
+</ul>
+<p>尤其是高頻 Job，如果同一類錯誤在短時間內大量發生，錯誤訊息與 exception details 可能會比正常 Job arguments 更快推高 Redis 記憶體使用量。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-要清楚區分hangfire-預設會寫入-redis-的資料和我們額外塞進去的資料">4. 要清楚區分「Hangfire 預設會寫入 Redis 的資料」和「我們額外塞進去的資料」<a href="#4-要清楚區分hangfire-預設會寫入-redis-的資料和我們額外塞進去的資料" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h3>
+<p>這一點要避免講得太誇張。</p>
+<p>在預設情況下，Hangfire 不會主動把所有診斷資料都塞進 Redis。它主要保存的是 Job 執行所需的資料、狀態、歷史，以及 failed Job 相關的 exception 資訊。</p>
+<p>也就是說，真正需要注意的不是「Redis 會保存所有診斷資料」，而是這兩件事：</p>
+<ol>
+<li class="">failed Job 的 exception 本來就會寫回 Hangfire storage。</li>
+<li class="">我們自己傳進 Job arguments 的資料，也會被序列化後保存在 Redis。</li>
+</ol>
+<p>所以 Redis 記憶體壓力通常不是來自什麼神祕資料，而是來自這些很正常、也很合理的資料：</p>
+<table><thead><tr><th>資料類型</th><th>為什麼會在 Redis 裡</th></tr></thead><tbody><tr><td>Job arguments</td><td>Hangfire 需要知道執行 Job 時要帶哪些參數</td></tr><tr><td>ParameterTypes</td><td>Hangfire 需要知道方法參數型別</td></tr><tr><td>Current state</td><td>Hangfire 需要知道 Job 目前狀態</td></tr><tr><td>State history</td><td>Hangfire 需要追蹤 Job 狀態變化</td></tr><tr><td>Failed exception</td><td>Job 失敗後，Hangfire 會保存錯誤資訊，方便 Dashboard 與排查使用</td></tr><tr><td>Batch metadata / index</td><td>使用 Batch 時，Hangfire 需要維護 Batch 狀態與索引</td></tr></tbody></table>
+<p>這些資料本身都合理。</p>
+<p>問題在於，當 Job 數量很高、arguments 很大、failed Job 很多，或 Batch metadata 累積太多時，合理的資料也會變成不合理的記憶體壓力。</p>
+<p>因此，比較精準的說法不是「不要讓 Redis 承擔所有診斷資料」，而是：</p>
+<blockquote>
+<p>不要把 Hangfire Redis 當成長期查詢、完整診斷或大型 payload 的保存位置。</p>
+</blockquote>
+<p>Hangfire storage 應該保存 Job lifecycle 必要的資料；真正長期分析用的資訊，例如完整業務追蹤、趨勢統計、跨系統查詢與長期 audit，應該放在更適合的地方。</p>
+<p>比較合理的 分工會像這樣：</p>
+<table><thead><tr><th>資料類型</th><th>建議保存位置</th></tr></thead><tbody><tr><td>Job 執行必要資料與狀態</td><td>Hangfire Redis</td></tr><tr><td>Failed Job 的必要 exception 資訊</td><td>Hangfire Redis，但要注意保留時間與失敗量</td></tr><tr><td>詳細應用程式 log / trace</td><td>ELK / APM / Log system</td></tr><tr><td>業務追蹤 ID 與 audit record</td><td>SQL Server / Audit Table</td></tr><tr><td>大型 payload</td><td>DB / Object Storage / Blob Storage / 明確生命週期的外部儲存</td></tr><tr><td>趨勢統計</td><td>Grafana / ELK / Prometheus</td></tr></tbody></table>
+<p>這樣講會比較精準：Redis 裡的資料大多不是多餘的；真正要避免的是把過大的 arguments、過長的保留時間、過高的失敗率和高頻 Job 疊在一起，最後讓 Hangfire storage 變成容量瓶頸。</p>
+<p>這通常不會立刻壞掉。</p>
+<p>但等到它真的壞掉的時候，通常就不會只是單一 Job 壞掉，而是整個背景任務系統的可靠性一起被拖下去。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="設計-hangfire-job-的實務建議">設計 Hangfire Job 的實務建議<a href="#設計-hangfire-job-的實務建議" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>整理成比較實務一點的原則，大概會是這幾條。</p>
+<ul>
+<li class="">盡量只在 Job 中傳 <code>ID</code> 或輕量參數，避免傳整個大型 DTO。</li>
+<li class="">如果必須讓 Job 使用大型資料，先存外部，例如資料庫、物件儲存，或另一個有明確生命週期的儲存位置，只在 Job 參數中傳 URI、資料 ID 或 key。</li>
+<li class="">檢查 Hangfire 的整體 Job expiration 與 Batch expiration 設定：重點不是單一 Job 能不能個別設定 TTL，而是目前全域保存策略放到高頻 Job 場景裡是否合理。</li>
+<li class="">避免在 Job 參數或自訂狀態資料中放入不必要的  大型內容；Hangfire 預設會保存的 failed exception 則應透過失敗率、保留策略與外部 log 來一起治理。</li>
+<li class="">如果確實需要傳較複雜的資料，優先考慮只保留必要欄位或改傳 reference；不要第一時間就用壓縮或自訂序列化硬解，因為那會增加反序列化兼容性與除錯成本。</li>
+<li class="">對高頻 Job 建立基本指標，例如每日新增 Job 數、抽樣 Job hash 大小、失敗 Job 數、retry 次數、Redis memory growth rate。</li>
+</ul>
+<p>這幾件事不一定需要一次全部做到，但至少要先知道自己目前缺哪一塊。</p>
+<p>不知道，才是最危險的。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="記憶體用量排查小技巧">記憶體用量排查小技巧<a href="#記憶體用量排查小技巧" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>最後整理幾個實務排查時可以用的方向。</p>
+<ol>
+<li class="">在 Redis 中觀察 key 分佈，找出佔用最多記憶體的 keys。可以使用 <code>redis-cli --bigkeys</code> 或 memprof 類工具。</li>
+<li class="">列出某個 queue 或 server 的 Job id，檢視單一 <code>hangfire:job:{id}</code> 的 hash 欄位，特別是 <code>Arguments</code>、<code>ParameterTypes</code>、<code>Method</code> 與 <code>Type</code>。</li>
+<li class="">比較簡單 Job 與複雜 Job 的 <code>Arguments</code> 長度，確認是否為參數內容差異導致大小差距。可以使用 <code>HGET</code> 取得該欄位並輸出長度。</li>
+<li class="">如果懷疑 Batch 相關資料累積，檢查 Batch metadata、Batch 相關索引與其保留行為。</li>
+<li class="">針對 failed / retries / processing 等 sorted set，確認是否有異常累積或清理延遲。</li>
+<li class="">將 Redis memory growth rate 與每日 Job 建立量對齊，確認記憶體成長是否與新需求、新 Job 類型或錯誤率上升相關。</li>
+</ol>
+<p>這些檢查不一  定能一次找到答案，但可以幫助我們把問題從「Redis 怎麼突然變大」拆成比較具體的幾個方向：</p>
+<ul>
+<li class="">是 Job 數量變多？</li>
+<li class="">是單筆 Job 變大？</li>
+<li class="">是失敗資料變多？</li>
+<li class="">是 Hangfire storage 的保留時間太久？</li>
+<li class="">是 Batch metadata 或相關索引累積？</li>
+</ul>
+<p>問題能被拆開，才有機會被解掉。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="結論">結論<a href="#結論" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" translate="no">​</a></h2>
+<p>從 Redis 的角度來看 Hangfire，單一 Background Job 不只是一個短暫的工作描述。</p>
+<p>它在 Redis 中會拆成多個資料結構，例如 Job hash、state history、queue id、state index 與 Batch 相關資料。</p>
+<p>其中 <code>Method</code> / <code>Type</code>、<code>ParameterTypes</code> 與 <code>Arguments</code>，也就是 Job 的序列化參數，是影響記憶體消耗的主要來源。</p>
+<p>只要傳入複雜物件、長字串，或讓 failed state / history 累積大量錯誤資訊，就可能把單筆 Job 相關資料的記憶體消耗量放大。</p>
+<p>這次事件最重要的提醒是：問題不在 Hangfire 本身，也不在 Redis 本身，而是我們在需求設計階段低估了 Background Job 的生命週期成本。</p>
+<p>在高頻系統裡，一個看似很小的需求變更，只要會隨著場次、會員、訂單或交易數放大，就不應該只用開發工時來評估。</p>
+<p>它同時也需要被放進容量估算、Hangfire storage 保留策略、失敗處理、可觀測性與清理機制中一起設計。</p>
+<p>Background Job 不是免費的。</p>
+<p>每一個 Job 都會留下資料、狀態、歷史與失敗成本。</p>
+<p>這些成本如果沒有在設計階段就被看見，最後就會在上到 PRD 環境之後，輕則透過 Dashboard 讓你看見，嚴重一點點的話就是透過 Warning 讓你看到  ，最慘的就是整個系統直接死給你看啦。</p>
+<p>希望大家都不會走到最慘的那步。</p></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>標籤：</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/blog/tags/hangfire">Hangfire</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/blog/tags/redis">Redis</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/blog/tags/troubleshooting">Troubleshooting</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/blog/tags/reliability-engineering">Reliability Engineering</a></li></ul></div></div><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/ouch1978/ouch1978.github.io/edit/main/blog/2026-05-21-the-hidden-costs-in-hangfire-jobs/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>編輯本頁</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--next" href="/blog/2023/12/12/prevent-skype-desktop-from-update-to-keep-split-mode"><div class="pagination-nav__sublabel">上一篇</div><div class="pagination-nav__label">救回桌面版 Skype 的分割模式</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#前言" class="table-of-contents__link toc-highlight">前言</a></li><li><a href="#緣起只是新增兩個-job-啊" class="table-of-contents__link toc-highlight">緣起：只是新增兩個 Job 啊</a></li><li><a href="#被低估的-background-job-成本" class="table-of-contents__link toc-highlight">被低估的 Background Job 成本</a></li><li><a href="#架構師和產品負責人在設計這類需求時應該先問的問題" class="table-of-contents__link toc-highlight">架構師和產品負責人在設計這類需求時應該先問的問題</a><ul><li><a href="#產品負責人應該先問的問題" class="table-of-contents__link toc-highlight">產品負責人應該先問的問題</a></li><li><a href="#架構師應該先問的問題" class="table-of-contents__link toc-highlight">架構師應該先問的問題</a></li><li><a href="#兩個角色要對齊的不是答案而是成本邊界" class="table-of-contents__link toc-highlight">兩個角色要對齊的不是答案，而是成本邊界</a></li></ul></li><li><a href="#hangfire-在-redis-中常見的-key-與資料結構" class="table-of-contents__link toc-highlight">Hangfire 在 Redis 中常見的 Key 與資料結構</a><ul><li><a href="#容易佔用大量記憶體的-key-們" class="table-of-contents__link toc-highlight">容易佔用大量記憶體的 Key 們</a></li></ul></li><li><a href="#記憶體用量計算範例新增-job-前後的記憶體用量對照" class="table-of-contents__link toc-highlight">記憶體用量計算範例：新增 Job 前後的記憶體用量對照</a></li><li><a href="#記憶體用量暴增的原因job-參數序列化" class="table-of-contents__link toc-highlight">記憶體用量暴增的原因：Job 參數序列化</a><ul><li><a href="#1-傳入完整物件而不是-id" class="table-of-contents__link toc-highlight">1. 傳入完整物件，而不是 ID</a></li><li><a href="#2-傳入大型字串或二進位資料" class="table-of-contents__link toc-highlight">2. 傳入大型字串或二進位資料</a></li><li><a href="#3-參數型別名稱與-serialization-metadata" class="table-of-contents__link toc-highlight">3. 參數型別名稱與 serialization metadata</a></li><li><a href="#4-例外與狀態描述" class="table-of-contents__link toc-highlight">4. 例外與狀態描述</a></li><li><a href="#5-json-序列化本身的冗餘" class="table-of-contents__link toc-highlight">5. JSON 序列化本身的冗餘</a></li></ul></li><li><a href="#從可靠性工程角度治理-background-job" class="table-of-contents__link toc-highlight">從可靠性工程角度治理 Background Job</a><ul><li><a href="#1-job-建立量要可量測" class="table-of-contents__link toc-highlight">1. Job 建立量要可量測</a></li><li><a href="#2-job-保留策略要先理解-hangfire-的限制" class="table-of-contents__link toc-highlight">2. Job 保留策略要先理解 Hangfire 的限制</a></li><li><a href="#3-失敗資料要可控" class="table-of-contents__link toc-highlight">3. 失敗資料要可控</a></li><li><a href="#4-要清楚區分hangfire-預設會寫入-redis-的資料和我們額外塞進去的資料" class="table-of-contents__link toc-highlight">4. 要清楚區分「Hangfire 預設會寫入 Redis 的資料」和「我們額外塞進去的資料」</a></li></ul></li><li><a href="#設計-hangfire-job-的實務建議" class="table-of-contents__link toc-highlight">設計 Hangfire Job 的實務建議</a></li><li><a href="#記憶體用量排查小技巧" class="table-of-contents__link toc-highlight">記憶體用量排查小技巧</a></li><li><a href="#結論" class="table-of-contents__link toc-highlight">結論</a></li></ul></div></div></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Ouch Liu(劉耀群). Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
