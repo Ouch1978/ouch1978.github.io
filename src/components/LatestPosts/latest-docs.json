@@ -1,5 +1,60 @@
 [
   {
+    "title": "Cursor AI 的 Token 經濟學：如何透過 Rules、Skills 與 MCP 建構高 ROI 的整套 Combo",
+    "permalink": "/docs/ai/vibe-coding/the-tokenomics-of-cursor-ai/",
+    "description": "Cursor AI 用越深，Token 成本越容易失控。本文從 Rules、Skills、Subagent 與 MCP 的分工出發，拆解 All-in-One MCP、混合式 MCP、tool response 過肥與契約不一致造成的 Token 浪費，並整理出能提升 ROI 的架構重構心法。",
+    "tags": [
+      {
+        "inline": true,
+        "label": "AI",
+        "permalink": "/docs/tags/ai"
+      },
+      {
+        "inline": true,
+        "label": "Cursor AI",
+        "permalink": "/docs/tags/cursor-ai"
+      },
+      {
+        "inline": true,
+        "label": "Token",
+        "permalink": "/docs/tags/token"
+      },
+      {
+        "inline": true,
+        "label": "MCP",
+        "permalink": "/docs/tags/mcp"
+      },
+      {
+        "inline": true,
+        "label": "Rules",
+        "permalink": "/docs/tags/rules"
+      },
+      {
+        "inline": true,
+        "label": "Skills",
+        "permalink": "/docs/tags/skills"
+      },
+      {
+        "inline": true,
+        "label": "Subagent",
+        "permalink": "/docs/tags/subagent"
+      },
+      {
+        "inline": true,
+        "label": "Agentic AI",
+        "permalink": "/docs/tags/agentic-ai"
+      },
+      {
+        "inline": true,
+        "label": "ROI",
+        "permalink": "/docs/tags/roi"
+      }
+    ],
+    "date": 1777305600000,
+    "yearMonth": "2026 年 04 月",
+    "day": "28"
+  },
+  {
     "title": "多 Repo 的 Cursor AI 規則治理：從受限環境出發的最小可行方案",
     "permalink": "/docs/ai/vibe-coding/cursor-ai-rules-implementation-part3/",
     "description": "從無法使用 Team Rules 的企業限制出發，整理一條透過 Cursor Config Sync 擴充套件作為 MVP 起點的 Cursor AI 規則治理路線。",
@@ -183,25 +238,5 @@
     "date": 1775059200000,
     "yearMonth": "2026 年 04 月",
     "day": "02"
-  },
-  {
-    "title": "K8s 基本架構",
-    "permalink": "/docs/containerization/k8s-for-dummies/k8s-architecture/",
-    "description": "簡單介紹 K8s 基本架構與各元件職責。",
-    "tags": [
-      {
-        "inline": true,
-        "label": "Container",
-        "permalink": "/docs/tags/container"
-      },
-      {
-        "inline": true,
-        "label": "K8s",
-        "permalink": "/docs/tags/k-8-s"
-      }
-    ],
-    "date": 1724515200000,
-    "yearMonth": "2024 年 08 月",
-    "day": "25"
   }
 ]

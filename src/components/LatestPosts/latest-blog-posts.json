@@ -1,5 +1,35 @@
 [
   {
+    "title": "只是多兩個 Background Job，為什麼讓 Redis 記憶體暴增三倍？從 Hangfire 看需求背後的可靠性成本",
+    "permalink": "/blog/2026/05/21/the-hidden-costs-in-hangfire-jobs",
+    "description": "還記得之前有一個專案，需要在每一局遊戲中新增兩個 Background Job，從原本一局有 5 個 Background Job 變成 7 個。乍看之下，這只是沒什麼大不了的小事，但是沒想到，只是新增兩個 Background Job，卻讓 Redis 的記憶體使用量暴增了三倍....",
+    "tags": [
+      {
+        "inline": true,
+        "label": "Hangfire",
+        "permalink": "/blog/tags/hangfire"
+      },
+      {
+        "inline": true,
+        "label": "Redis",
+        "permalink": "/blog/tags/redis"
+      },
+      {
+        "inline": true,
+        "label": "Troubleshooting",
+        "permalink": "/blog/tags/troubleshooting"
+      },
+      {
+        "inline": true,
+        "label": "Reliability Engineering",
+        "permalink": "/blog/tags/reliability-engineering"
+      }
+    ],
+    "date": "2026-05-21T00:00:00.000Z",
+    "yearMonth": "2026 年 05 月",
+    "day": "21"
+  },
+  {
     "title": "救回桌面版 Skype 的分割模式",
     "permalink": "/blog/2023/12/12/prevent-skype-desktop-from-update-to-keep-split-mode",
     "description": "Skype 自動更新之後... 咦!? 分割模式怎麼又不見了咧!?(為什麼我說又?) 沒了分割模式的 Skype 用起來真的很不習慣，就讓我們把熟悉的分割模式救回來吧!!",
@@ -93,30 +123,5 @@
     "date": "2022-12-29T00:00:00.000Z",
     "yearMonth": "2022 年 12 月",
     "day": "29"
-  },
-  {
-    "title": "啟用 WSL2 下 Ubuntu 的 SSH 遠端連線功能",
-    "permalink": "/blog/2022/12/07/enable-ssh-in-ubuntu-on-wsl2",
-    "description": "Windows Subsystem for Linux (WSL) 下的 Ubuntu 原本就有內建 SSH 服務，但是預設是關閉的，所以無法從外部連進去。 這篇文章就來分享怎麼設定 SSH 服務，讓它支援從外部透過 SSH 遠端連線進去操作。",
-    "tags": [
-      {
-        "inline": true,
-        "label": "Windows",
-        "permalink": "/blog/tags/windows"
-      },
-      {
-        "inline": true,
-        "label": "小技巧",
-        "permalink": "/blog/tags/小技巧"
-      },
-      {
-        "inline": true,
-        "label": "WSL2",
-        "permalink": "/blog/tags/wsl-2"
-      }
-    ],
-    "date": "2022-12-07T00:00:00.000Z",
-    "yearMonth": "2022 年 12 月",
-    "day": "07"
   }
 ]
